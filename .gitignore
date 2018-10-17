@@ -39,5 +39,6 @@ rsconnect/
 # Other files
 
 src/R/conf/*test.csv
+src/R/conf/*test.xlsx
 src/R/process/*.csv
 src/R/inputs/*.csv
