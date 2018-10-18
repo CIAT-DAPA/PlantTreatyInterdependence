@@ -34,3 +34,10 @@ vignettes/*.pdf
 
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
+
+
+# Other files
+
+src/R/conf/*test.csv
+src/R/process/*.csv
+src/R/inputs/*.csv
