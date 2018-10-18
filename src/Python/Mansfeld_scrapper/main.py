@@ -4,6 +4,7 @@ import csv
 import mechanicalsoup
 from tqdm import tqdm
 from bs4 import BeautifulSoup
+import random
 
 ### PARAMETROS
 
@@ -28,7 +29,7 @@ def getSpecies(desc, url):
 
 
     last =144
-    last=2
+    last=1
     progress_bar = tqdm(total=last, desc=desc)
 
     ### INICIAR LA NAVEGACIÖN
@@ -37,35 +38,31 @@ def getSpecies(desc, url):
     for use in range(1, last+1):
         browser = mechanicalsoup.StatefulBrowser(user_agent=userAgent)
         browser.open(url)  # se abre la URL
+
+
         form = browser.select_form("#wwvFlowForm")
         browser["P8_NUTZID"] = 35
+        browser["P8_TXTSEARCH"] = ""
 
-        button = browser.get_current_page().find('input', id='P8_BOTNAM1')
-        #form.choose_submit(button)
 
-        soupi = BeautifulSoup(browser.get_current_page().text,"html.parser")
-        # create a new tag
-        new_tag = soupi.new_tag("input")
-        new_tag['id']='P8_BOTNAM1'
-        new_tag['type'] = 'submit'
-        new_tag['value'] = "Search"
-        new_tag['onclick'] = "apex.submit({request:'Go'});"
-        # insert the new tag after the current tag
-        button.insert_after(new_tag)
+
+        #browser.get_current_form().set("p_json", '{"salt":"255743010846329908763911115271411862552","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["35"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"yRVqUGCru5r-KGko4a2HEw","rowVersion":""}}', True)
 
         browser.get_current_form().set("p_flow_id", "185", True)
         browser.get_current_form().set("p_flow_step_id", "8", True)
-        browser.get_current_form().set("p_instance", "8027718183801", True)
-
+        browser.get_current_form().set("p_instance", str(30491967542815+random.randint(1,101)), True)
+        #browser.get_current_form().set("p_page_submission_id", "255743010846329908763911115271411862552", True)
+        browser.get_current_form().set("p_request", "Go", True)
         browser.get_current_form().set("p_reload_on_submit", "A", True)
-        browser.get_current_form().set("pSalt", "279827856718052088805285582740706439741", True)
 
+
+        #form.choose_submit(submit)
 
         response = browser.submit_selected()
 
         soup = BeautifulSoup(response.text, "html.parser")
         rows = soup.findAll("a")
-        print(response.url)
+        print(browser.get_current_page())
 
         # cerrar el navegador
         browser.close()
