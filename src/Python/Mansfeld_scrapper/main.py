@@ -6,7 +6,7 @@ import requests
 
 ### PARAMETROS
 
-userAgent = 'UOCBot/0.1: Mansfel scrapper'
+userAgent = 'UOCBot/0.1: Mansfeld Web Scrapper'
 
 
 
@@ -36,9 +36,9 @@ def getSpecies(desc, url):
         for name in soup.select("[name='p_arg_names']"):
             arg_names.append(name['value'])
 
+
         salt = soup.select_one("[id='pSalt']")['value']
         protected = soup.select_one("[id='pPageItemsProtected']")['value']
-
         p_json = str(
             '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["'+str(number)+'"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
 
