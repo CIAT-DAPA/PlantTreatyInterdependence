@@ -1,6 +1,5 @@
 import os
 import csv
-import mechanicalsoup
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 import requests
@@ -8,26 +7,14 @@ import requests
 ### PARAMETROS
 
 userAgent = 'UOCBot/0.1: Mansfel scrapper'
-terms_dict = {}
 
-
-# diccionario de cabecera y campos
-
-
-##################################################################
-
-def cleanValue(value):
-    value = value.replace("\n", "")
-    value = value.replace("\r", "")
-
-    return value
 
 
 def getSpecies(desc, url):
     # crear la lista de convocatorias
-    callsList = []
+    taxa = []
 
-    last = 144
+    last = 2
     progress_bar = tqdm(total=last, desc=desc)
 
     ### INICIAR LA NAVEGACIÖN
@@ -35,7 +22,7 @@ def getSpecies(desc, url):
     for use in range(1, last + 1):
 
         s = requests.Session()
-        s.headers = {"User-Agent": "Mozilla/5.0"}
+        s.headers = {"User-Agent": userAgent}
         res = s.get(url)
         soup = BeautifulSoup(res.text, "lxml")
 
@@ -65,8 +52,18 @@ def getSpecies(desc, url):
         soup2 = BeautifulSoup(response.text, "html.parser")
         rows = soup2.findAll("a")
 
+
+        flag = False;
         for row in rows:
-            print(row.text)
+            if flag:
+                if row.text != "":
+                    dict = {}
+                    dict.update({"taxon": row.text})
+                    dict.update({"use": use})
+                    taxa.append(dict)
+            if row.text == "Contact":
+                flag=True
+
 
         # actualizar la barra de progreso
         progress_bar.update(1)
@@ -75,7 +72,7 @@ def getSpecies(desc, url):
 
         # cerrar barra de progreso
         progress_bar.close()
-    return callsList
+    return taxa
 
 
 def writeCSV(filename, callsList):
@@ -91,6 +88,9 @@ def writeCSV(filename, callsList):
 
     # escribir archivo de salida
     with open(filePath, 'w', newline='', encoding='utf-8') as csvFile:
+        terms_dict = {}
+        terms_dict["use"] = "use"
+        terms_dict["taxon"] = "taxon"
         # se usa un escritor de diccionarios
         writer = csv.DictWriter(csvFile, delimiter=fieldSeparator, fieldnames=terms_dict, quoting=csv.QUOTE_ALL)
 
