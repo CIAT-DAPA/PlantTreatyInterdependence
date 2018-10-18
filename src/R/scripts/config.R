@@ -53,12 +53,12 @@ conf.import.countries = function(f){
 # (string) f: Path of file to crops into database
 conf.import.crops = function(f){
   crops = read.csv(paste0(conf.folder, "/", f), header = T)
-  print(paste0("........Crops were loaded from file"))
+  print(paste0("........Crops were loaded from file ",dim(crops)[1]))
   
   # Get list of crops in database
   process.crops.query = dbSendQuery(db_cnn,paste0("select id,name from crops"))
   process.crops = fetch(process.crops.query, n=-1)
-  print(paste0("........Crops were loaded"))
+  print(paste0("........Crops were loaded from database ",dim(process.crops)[1] ))
   
   if(dim(process.crops)[1]>0){
     crops = crops[!which(crops$Item %in% process.crops$name),]
