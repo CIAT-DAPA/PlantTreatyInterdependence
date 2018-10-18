@@ -151,6 +151,6 @@ speciesCSV = "mansfeld.species.csv"
 uses = getUses()
 writeItemCSV(filename=usesCSV, items=uses)
 species = getSpecies(desc=speciesCSV, uses=uses)
-writeSpeciesCSV(filename=speciesCSV, species=species)
+writeSpeciesCSV(filename=speciesCSV, items=species)
 
 ##################################################################
