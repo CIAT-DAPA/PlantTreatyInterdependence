@@ -14,17 +14,23 @@ def getSpecies(desc, url):
     # crear la lista de convocatorias
     taxa = []
 
-    last = 2
+    last = 144
     progress_bar = tqdm(total=last, desc=desc)
 
     ### INICIAR LA NAVEGACIÖN
 
-    for use in range(1, last + 1):
+    for number in range(1, last + 1):
 
         s = requests.Session()
         s.headers = {"User-Agent": userAgent}
         res = s.get(url)
         soup = BeautifulSoup(res.text, "lxml")
+        options = soup.find_all("option")
+
+        use = ""
+        for option in options:
+            if str('"'+str(number)+'"') in str(option):
+             use = option.text
 
         arg_names = []
         for name in soup.select("[name='p_arg_names']"):
@@ -34,7 +40,7 @@ def getSpecies(desc, url):
         protected = soup.select_one("[id='pPageItemsProtected']")['value']
 
         p_json = str(
-            '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["'+str(use)+'"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
+            '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["'+str(number)+'"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
 
         values = {
             'p_flow_id': soup.select_one("[name='p_flow_id']")['value'],
@@ -71,7 +77,7 @@ def getSpecies(desc, url):
         # time.sleep(0.1)
 
         # cerrar barra de progreso
-        progress_bar.close()
+    progress_bar.close()
     return taxa
 
 
