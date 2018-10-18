@@ -7,40 +7,57 @@ import requests
 ### PARAMETROS
 
 userAgent = 'UOCBot/0.1: Mansfeld Web Scrapper'
+url_start = "http://mansfeld.ipk-gatersleben.de/apex/f?p=185:8:"
+url_post = "http://mansfeld.ipk-gatersleben.de/apex/wwv_flow.accept"
+
+def getUses():
+    url = url_start
+
+    dict = {}
+    s = requests.Session()
+    s.headers = {"User-Agent": userAgent}
+    res = s.get(url)
+    soup = BeautifulSoup(res.text, "lxml")
+    options = soup.find_all("option")
 
 
+    for option in options:
+        dict.update({option['value']: option.text})
 
-def getSpecies(desc, url):
-    # crear la lista de convocatorias
+
+    return dict
+
+def getSpecies(desc, uses):
+    # crear la lista de taxones
     taxa = []
+    url = url_start
 
-    last = 144
-    progress_bar = tqdm(total=last, desc=desc)
+    progress_bar = tqdm(total=uses.__len__(), desc=desc)
 
-    ### INICIAR LA NAVEGACIÖN
+    ### INICIAR LA NAVEGACIÓN
 
-    for number in range(1, last + 1):
+    for key, value in uses.items():
 
         s = requests.Session()
         s.headers = {"User-Agent": userAgent}
         res = s.get(url)
         soup = BeautifulSoup(res.text, "lxml")
-        options = soup.find_all("option")
 
-        use = ""
-        for option in options:
-            if str('"'+str(number)+'"') in str(option):
-             use = option.text
+
+        use = value
+
 
         arg_names = []
         for name in soup.select("[name='p_arg_names']"):
             arg_names.append(name['value'])
 
 
+
+        #prepare values
         salt = soup.select_one("[id='pSalt']")['value']
         protected = soup.select_one("[id='pPageItemsProtected']")['value']
         p_json = str(
-            '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["'+str(number)+'"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
+            '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["'+str(key)+'"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
 
         values = {
             'p_flow_id': soup.select_one("[name='p_flow_id']")['value'],
@@ -53,7 +70,8 @@ def getSpecies(desc, url):
         }
 
         s.headers.update({'Referer': url})
-        response = s.post("http://mansfeld.ipk-gatersleben.de/apex/wwv_flow.accept", data=values)
+
+        response = s.post(url_post, data=values)
 
         soup2 = BeautifulSoup(response.text, "html.parser")
         rows = soup2.findAll("a")
@@ -71,17 +89,17 @@ def getSpecies(desc, url):
                 flag=True
 
 
-        # actualizar la barra de progreso
+        # update progress bar
         progress_bar.update(1)
-        # añadiendo delay
+        # adding delay
         # time.sleep(0.1)
 
-        # cerrar barra de progreso
+    # close progress bar
     progress_bar.close()
     return taxa
 
 
-def writeCSV(filename, callsList):
+def writeSpeciesCSV(filename, items):
     # PARAMETROS ESCRITURA DEL ARCHIVO DE SALIDA
     # directorio actual donde se va a ubicar el archivo
     currentDir = os.path.dirname(__file__)
@@ -104,17 +122,35 @@ def writeCSV(filename, callsList):
         writer.writerow(terms_dict)
 
         # escribir valores por cada beca
-        for call in callsList:
-            writer.writerow(call)
+        for item in items:
+            writer.writerow(item)
 
+def writeItemCSV(filename, items):
+    # PARAMETROS ESCRITURA DEL ARCHIVO DE SALIDA
+    # directorio actual donde se va a ubicar el archivo
+    currentDir = os.path.dirname(__file__)
+    # ruta completa del archivo
+    filePath = os.path.join(currentDir, filename)
+    # separador de columnas
+    fieldSeparator = ','
+
+    ### ESCRIBIR ARCHIVO DE SALIDA
+
+    # escribir archivo de salida
+    with open(filePath, 'w', newline='', encoding='utf-8') as csvFile:
+
+        w = csv.DictWriter(csvFile, fieldnames=items.keys(), delimiter=fieldSeparator, quoting=csv.QUOTE_ALL)
+        w.writeheader()
+        w.writerow(items)
 
 ##################################################################
 
-# URL de la página del ICETEX a consultar las becas
 
-fileCSV1 = "species.csv"
-url1 = "http://mansfeld.ipk-gatersleben.de/apex/f?p=185:8:"
-callsList1 = getSpecies(desc=fileCSV1, url=url1)
-writeCSV(fileCSV1, callsList1)
+usesCSV = "mansfeld.uses.csv"
+speciesCSV = "mansfeld.species.csv"
+uses = getUses()
+writeItemCSV(filename=usesCSV, items=uses)
+species = getSpecies(desc=speciesCSV, uses=uses)
+writeSpeciesCSV(filename=speciesCSV, species=species)
 
 ##################################################################
