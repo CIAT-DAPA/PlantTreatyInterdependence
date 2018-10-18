@@ -28,7 +28,6 @@ def getSpecies(desc, url):
     callsList = []
 
     last = 144
-    last = 1
     progress_bar = tqdm(total=last, desc=desc)
 
     ### INICIAR LA NAVEGACIÖN
@@ -48,7 +47,7 @@ def getSpecies(desc, url):
         protected = soup.select_one("[id='pPageItemsProtected']")['value']
 
         p_json = str(
-            '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["35"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
+            '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["'+str(use)+'"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
 
         values = {
             'p_flow_id': soup.select_one("[name='p_flow_id']")['value'],
@@ -62,10 +61,12 @@ def getSpecies(desc, url):
 
         s.headers.update({'Referer': url})
         response = s.post("http://mansfeld.ipk-gatersleben.de/apex/wwv_flow.accept", data=values)
-        print(response.text)
 
         soup2 = BeautifulSoup(response.text, "html.parser")
         rows = soup2.findAll("a")
+
+        for row in rows:
+            print(row.text)
 
         # actualizar la barra de progreso
         progress_bar.update(1)
