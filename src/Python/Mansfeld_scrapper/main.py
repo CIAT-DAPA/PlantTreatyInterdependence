@@ -1,9 +1,9 @@
-import os
 import csv
-from tqdm import tqdm
-from bs4 import BeautifulSoup
-import requests
+import os
 from urllib.parse import urljoin
+import requests
+from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 ### PARAMETROS
 
@@ -11,11 +11,9 @@ userAgent = 'UOCBot/0.1: Mansfeld Web Scrapper'
 url_base = "http://mansfeld.ipk-gatersleben.de/apex/"
 url_start = "http://mansfeld.ipk-gatersleben.de/apex/f?p=185:8:"
 url_post = "http://mansfeld.ipk-gatersleben.de/apex/wwv_flow.accept"
-
-terms = {}
-terms["use"] = "use"
-terms["taxon"] = "taxon"
-terms["name"] = "name"
+usesCSV = "mansfeld.uses.csv"
+speciesCSV = "mansfeld.species.csv"
+separator= '\t'
 
 
 def getUses():
@@ -28,111 +26,91 @@ def getUses():
     soup = BeautifulSoup(res.text, "lxml")
     options = soup.find_all("option")
 
-    for option in options:
-        dict.update({option['value']: option.text})
+    with open(usesCSV, 'w') as file:
+        for option in options:
+            dict.update({option['value']: option.text})
+            file.writelines(str(option['value'] + separator + option.text) + '\n')
 
+    file.close()
     return dict
 
 
 def getSpecies(desc, uses):
     # crear la lista de taxones
-    taxa = []
     url = url_start
 
     progress_bar = tqdm(total=uses.__len__(), desc=desc)
 
     ### INICIAR LA NAVEGACIÓN
 
-    for key, value in uses.items():
+    with open(speciesCSV, 'w') as file:
 
-        s = requests.Session()
-        s.headers = {"User-Agent": userAgent}
-        res = s.get(url)
-        soup = BeautifulSoup(res.text, "lxml")
+        for key, value in uses.items():
 
-        use = value
+            s = requests.Session()
+            s.headers = {"User-Agent": userAgent}
+            res = s.get(url)
+            soup = BeautifulSoup(res.text, "lxml")
 
-        arg_names = []
-        for name in soup.select("[name='p_arg_names']"):
-            arg_names.append(name['value'])
+            use = value
 
-        # prepare values
-        salt = soup.select_one("[id='pSalt']")['value']
-        protected = soup.select_one("[id='pPageItemsProtected']")['value']
-        p_json = str(
-            '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["' + str(
-                key) + '"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
+            arg_names = []
+            for name in soup.select("[name='p_arg_names']"):
+                arg_names.append(name['value'])
 
-        values = {
-            'p_flow_id': soup.select_one("[name='p_flow_id']")['value'],
-            'p_flow_step_id': soup.select_one("[name='p_flow_step_id']")['value'],
-            'p_instance': soup.select_one("[name='p_instance']")['value'],
-            'p_page_submission_id': soup.select_one("[name='p_page_submission_id']")['value'],
-            'p_request': "Go",
-            'p_reload_on_submit': "A",
-            'p_json': p_json
-        }
+            # prepare values
+            salt = soup.select_one("[id='pSalt']")['value']
+            protected = soup.select_one("[id='pPageItemsProtected']")['value']
+            p_json = str(
+                '{"salt": "' + salt + '","pageItems":{"itemsToSubmit":[{"n":"P8_NUTZID","v":["' + str(
+                    key) + '"]},{"n":"P8_TXTSEARCH","v":""}],"protected":"' + protected + '","rowVersion":""}}')
 
-        s.headers.update({'Referer': url})
+            values = {
+                'p_flow_id': soup.select_one("[name='p_flow_id']")['value'],
+                'p_flow_step_id': soup.select_one("[name='p_flow_step_id']")['value'],
+                'p_instance': soup.select_one("[name='p_instance']")['value'],
+                'p_page_submission_id': soup.select_one("[name='p_page_submission_id']")['value'],
+                'p_request': "Go",
+                'p_reload_on_submit': "A",
+                'p_json': p_json
+            }
 
-        response = s.post(url_post, data=values)
+            s.headers.update({'Referer': url})
 
-        soup2 = BeautifulSoup(response.text, "html.parser")
-        rows = soup2.findAll('a', href=True)
+            response = s.post(url_post, data=values)
 
-        flag = False;
-        for row in rows:
-            if flag:
-                if row.text != "":
-                    dict = {}
-                    dict.update({"taxon": row.text})
-                    dict.update({"use": use})
-                    url3 = urljoin(url_base, row['href'])
-                    response3 = s.post(url3)
-                    soup3 = BeautifulSoup(response3.text, "html.parser")
-                    trs = soup3.findAll("tr")
-                    name = ""
-                    for tr in trs:
-                        if name == "" and '::NO::sprachlink:E.' in str(tr):
-                            tds = tr.findAll('td')
-                            name = tds[1].text
-                    dict.update({"name": name})
-                    taxa.append(dict)
-            if row.text == "Contact":
-                flag = True
+            soup2 = BeautifulSoup(response.text, "html.parser")
+            rows = soup2.findAll('a', href=True)
 
-        # update progress bar
-        progress_bar.update(1)
-        # adding delay
-        # time.sleep(0.1)
+            flag = False;
+            for row in rows:
+                if flag:
+                    if row.text != "":
+                        taxon = row.text
+                        url3 = urljoin(url_base, row['href'])
+                        response3 = s.post(url3)
+                        soup3 = BeautifulSoup(response3.text, "html.parser")
+                        trs = soup3.findAll("tr")
+                        name = ""
+                        for tr in trs:
+                            if name == "" and '::NO::sprachlink:E.' in str(tr):
+                                tds = tr.findAll('td')
+                                name = tds[1].text
 
+                        file.writelines(use + separator + taxon + separator + name + '\n')
+                if row.text == "Contact":
+                    flag = True
+
+            file.flush()
+            # update progress bar
+            progress_bar.update(1)
+            # adding delay
+            # time.sleep(0.1)
+
+    file.close()
     # close progress bar
     progress_bar.close()
-    return taxa
 
-
-def writeSpeciesCSV(filename, items):
-    # PARAMETROS ESCRITURA DEL ARCHIVO DE SALIDA
-    # directorio actual donde se va a ubicar el archivo
-    currentDir = os.path.dirname(__file__)
-    # ruta completa del archivo
-    filePath = os.path.join(currentDir, filename)
-    # separador de columnas
-    fieldSeparator = ','
-
-    ### ESCRIBIR ARCHIVO DE SALIDA
-
-    # escribir archivo de salida
-    with open(filePath, 'w', newline='', encoding='utf-8') as csvFile:
-        # se usa un escritor de diccionarios
-        writer = csv.DictWriter(csvFile, delimiter=fieldSeparator, fieldnames=terms, quoting=csv.QUOTE_ALL)
-
-        # escribir cabecera personalizada
-        writer.writerow(terms)
-
-        # escribir valores por cada beca
-        for item in items:
-            writer.writerow(item)
 
 
 def writeItemCSV(filename, items):
@@ -156,11 +134,7 @@ def writeItemCSV(filename, items):
 ##################################################################
 
 
-usesCSV = "mansfeld.uses.csv"
-speciesCSV = "mansfeld.species.csv"
 uses = getUses()
-writeItemCSV(filename=usesCSV, items=uses)
 species = getSpecies(desc=speciesCSV, uses=uses)
-writeSpeciesCSV(filename=speciesCSV, items=species)
 
 ##################################################################
