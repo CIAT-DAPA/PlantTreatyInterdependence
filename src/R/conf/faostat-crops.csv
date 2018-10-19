@@ -1,4 +1,4 @@
-faostat,name,id
+name,crop,id_crop
 Abaca,Abaca,1
 Manila fibre (abaca),Abaca,1
 Agave fibres nes,Agave,4
@@ -353,3 +353,5 @@ Macaroni,Wheat,228
 "Wheat+Flour,Wheat Equivalent",Wheat,228
 Yams,Yams,230
 Yautia (cocoyam),"Yautia, cocoyam",231
+Bananas and plantains,Bananas and plantains,256
+Butter of karite nuts,Karite nut,105
