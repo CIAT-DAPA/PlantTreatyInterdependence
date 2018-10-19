@@ -1,270 +1,270 @@
-Area.Code,Area
-1,Armenia
-2,Afghanistan
-3,Albania
-4,Algeria
-5,American Samoa
-7,Angola
-8,Antigua and Barbuda
-9,Argentina
-10,Australia
-11,Austria
-12,Bahamas
-13,Bahrain
-14,Barbados
-15,Belgium-Luxembourg
-16,Bangladesh
-17,Bermuda
-18,Bhutan
-19,Bolivia (Plurinational State of)
-20,Botswana
-21,Brazil
-22,Aruba
-23,Belize
-25,Solomon Islands
-26,Brunei Darussalam
-27,Bulgaria
-28,Myanmar
-29,Burundi
-32,Cameroon
-33,Canada
-35,Cabo Verde
-36,Cayman Islands
-37,Central African Republic
-38,Sri Lanka
-39,Chad
-40,Chile
-41,"China, mainland"
-44,Colombia
-45,Comoros
-46,Congo
-47,Cook Islands
-48,Costa Rica
-49,Cuba
-50,Cyprus
-51,Czechoslovakia
-52,Azerbaijan
-53,Benin
-54,Denmark
-55,Dominica
-56,Dominican Republic
-57,Belarus
-58,Ecuador
-59,Egypt
-60,El Salvador
-61,Equatorial Guinea
-62,Ethiopia PDR
-63,Estonia
-64,Faroe Islands
-65,Falkland Islands (Malvinas)
-66,Fiji
-67,Finland
-68,France
-69,French Guiana
-70,French Polynesia
-72,Djibouti
-73,Georgia
-74,Gabon
-75,Gambia
-79,Germany
-80,Bosnia and Herzegovina
-81,Ghana
-83,Kiribati
-84,Greece
-85,Greenland
-86,Grenada
-87,Guadeloupe
-88,Guam
-89,Guatemala
-90,Guinea
-91,Guyana
-93,Haiti
-95,Honduras
-96,"China, Hong Kong SAR"
-97,Hungary
-98,Croatia
-99,Iceland
-100,India
-101,Indonesia
-102,Iran (Islamic Republic of)
-103,Iraq
-104,Ireland
-105,Israel
-106,Italy
-107,Côte d'Ivoire
-108,Kazakhstan
-109,Jamaica
-110,Japan
-112,Jordan
-113,Kyrgyzstan
-114,Kenya
-115,Cambodia
-116,Democratic People's Republic of Korea
-117,Republic of Korea
-118,Kuwait
-119,Latvia
-120,Lao People's Democratic Republic
-121,Lebanon
-122,Lesotho
-123,Liberia
-124,Libya
-125,Liechtenstein
-126,Lithuania
-127,Marshall Islands
-128,"China, Macao SAR"
-129,Madagascar
-130,Malawi
-131,Malaysia
-132,Maldives
-133,Mali
-134,Malta
-135,Martinique
-136,Mauritania
-137,Mauritius
-138,Mexico
-141,Mongolia
-142,Montserrat
-143,Morocco
-144,Mozambique
-145,Micronesia (Federated States of)
-146,Republic of Moldova
-147,Namibia
-148,Nauru
-149,Nepal
-150,Netherlands
-151,Netherlands Antilles (former)
-153,New Caledonia
-154,The former Yugoslav Republic of Macedonia
-155,Vanuatu
-156,New Zealand
-157,Nicaragua
-158,Niger
-159,Nigeria
-160,Niue
-161,Norfolk Island
-162,Norway
-164,Pacific Islands Trust Territory
-165,Pakistan
-166,Panama
-167,Czechia
-168,Papua New Guinea
-169,Paraguay
-170,Peru
-171,Philippines
-173,Poland
-174,Portugal
-175,Guinea-Bissau
-176,Timor-Leste
-177,Puerto Rico
-178,Eritrea
-179,Qatar
-181,Zimbabwe
-182,Réunion
-183,Romania
-184,Rwanda
-185,Russian Federation
-186,Serbia and Montenegro
-187,"Saint Helena, Ascension and Tristan da Cunha"
-188,Saint Kitts and Nevis
-189,Saint Lucia
-190,Saint Pierre and Miquelon
-191,Saint Vincent and the Grenadines
-193,Sao Tome and Principe
-194,Saudi Arabia
-195,Senegal
-196,Seychelles
-197,Sierra Leone
-198,Slovenia
-199,Slovakia
-200,Singapore
-201,Somalia
-202,South Africa
-203,Spain
-205,Western Sahara
-206,Sudan (former)
-207,Suriname
-208,Tajikistan
-209,Eswatini
-209,Swaziland
-210,Sweden
-211,Switzerland
-212,Syrian Arab Republic
-213,Turkmenistan
-214,"China, Taiwan Province of"
-215,United Republic of Tanzania
-216,Thailand
-217,Togo
-218,Tokelau
-219,Tonga
-220,Trinidad and Tobago
-221,Oman
-222,Tunisia
-223,Turkey
-225,United Arab Emirates
-226,Uganda
-227,Tuvalu
-228,USSR
-229,United Kingdom
-230,Ukraine
-231,United States of America
-233,Burkina Faso
-234,Uruguay
-235,Uzbekistan
-236,Venezuela (Bolivarian Republic of)
-237,Viet Nam
-238,Ethiopia
-239,British Virgin Islands
-240,United States Virgin Islands
-243,Wallis and Futuna Islands
-244,Samoa
-248,Yugoslav SFR
-249,Yemen
-250,Democratic Republic of the Congo
-251,Zambia
-255,Belgium
-256,Luxembourg
-261,EU(12)ex.int
-266,EU(15)ex.int
-268,EU(25)ex.int
-269,EU(27)ex.int
-272,Serbia
-273,Montenegro
-276,Sudan
-277,South Sudan
-299,Occupied Palestinian Territory
-351,China
-5000,World
-5100,Africa
-5101,Eastern Africa
-5102,Middle Africa
-5103,Northern Africa
-5104,Southern Africa
-5105,Western Africa
-5200,Americas
-5203,Northern America
-5204,Central America
-5206,Caribbean
-5207,South America
-5300,Asia
-5301,Central Asia
-5302,Eastern Asia
-5303,Southern Asia
-5304,South-Eastern Asia
-5305,Western Asia
-5400,Europe
-5401,Eastern Europe
-5402,Northern Europe
-5403,Southern Europe
-5404,Western Europe
-5500,Oceania
-5501,Australia & New Zealand
-5502,Melanesia
-5503,Micronesia
-5504,Polynesia
-5706,European Union
-5801,Least Developed Countries
-5802,Land Locked Developing Countries
-5803,Small Island Developing States
-5815,Low Income Food Deficit Countries
-5817,Net Food Importing Developing Countries
-57060,European Union (exc intra-trade)
+name,country,id_country
+Armenia,Armenia,12
+Afghanistan,Afghanistan,2
+Albania,Albania,3
+Algeria,Algeria,4
+American Samoa,American Samoa,5
+Angola,Angola,7
+Antigua and Barbuda,Antigua and Barbuda,10
+Argentina,Argentina,11
+Australia,Australia,14
+Austria,Austria,15
+Bahamas,Bahamas,17
+Bahrain,Bahrain,18
+Barbados,Barbados,20
+Belgium-Luxembourg,Belgium-Luxembourg,23
+Bangladesh,Bangladesh,19
+Bermuda,Bermuda,26
+Bhutan,Bhutan,27
+Bolivia (Plurinational State of),Bolivia (Plurinational State of),28
+Botswana,Botswana,30
+Brazil,Brazil,32
+Aruba,Aruba,13
+Belize,Belize,24
+Solomon Islands,Solomon Islands,216
+Brunei Darussalam,Brunei Darussalam,35
+Bulgaria,Bulgaria,36
+Myanmar,Myanmar,160
+Burundi,Burundi,38
+Cameroon,Cameroon,42
+Canada,Canada,43
+Cabo Verde,Cabo Verde,40
+Cayman Islands,Cayman Islands,44
+Central African Republic,Central African Republic,45
+Sri Lanka,Sri Lanka,222
+Chad,Chad,46
+Chile,Chile,48
+"China, mainland","China, mainland",52
+Colombia,Colombia,56
+Comoros,Comoros,57
+Congo,Congo,58
+Cook Islands,Cook Islands,59
+Costa Rica,Costa Rica,60
+Cuba,Cuba,62
+Cyprus,Cyprus,64
+Czechoslovakia,Czechoslovakia,66
+Azerbaijan,Azerbaijan,16
+Benin,Benin,25
+Denmark,Denmark,69
+Dominica,Dominica,71
+Dominican Republic,Dominican Republic,72
+Belarus,Belarus,21
+Ecuador,Ecuador,73
+Egypt,Egypt,74
+El Salvador,El Salvador,75
+Equatorial Guinea,Equatorial Guinea,76
+Ethiopia PDR,Ethiopia PDR,81
+Estonia,Estonia,78
+Faroe Islands,Faroe Islands,83
+Falkland Islands (Malvinas),Falkland Islands (Malvinas),82
+Fiji,Fiji,84
+Finland,Finland,85
+France,France,86
+French Guiana,French Guiana,87
+French Polynesia,French Polynesia,88
+Djibouti,Djibouti,70
+Georgia,Georgia,92
+Gabon,Gabon,90
+Gambia,Gambia,91
+Germany,Germany,93
+Bosnia and Herzegovina,Bosnia and Herzegovina,29
+Ghana,Ghana,96
+Kiribati,Kiribati,127
+Greece,Greece,98
+Greenland,Greenland,99
+Grenada,Grenada,100
+Guadeloupe,Guadeloupe,101
+Guam,Guam,102
+Guatemala,Guatemala,103
+Guinea,Guinea,104
+Guyana,Guyana,106
+Haiti,Haiti,107
+Honduras,Honduras,110
+"China, Hong Kong SAR","China, Hong Kong SAR",50
+Hungary,Hungary,111
+Croatia,Croatia,61
+Iceland,Iceland,112
+India,India,113
+Indonesia,Indonesia,114
+Iran (Islamic Republic of),Iran (Islamic Republic of),115
+Iraq,Iraq,116
+Ireland,Ireland,117
+Israel,Israel,119
+Italy,Italy,120
+Côte d'Ivoire,CÃ´te d'Ivoire,39
+Kazakhstan,Kazakhstan,125
+Jamaica,Jamaica,121
+Japan,Japan,122
+Jordan,Jordan,124
+Kyrgyzstan,Kyrgyzstan,130
+Kenya,Kenya,126
+Cambodia,Cambodia,41
+Democratic People's Republic of Korea,Democratic People's Republic of Korea,67
+Republic of Korea,Republic of Korea,191
+Kuwait,Kuwait,129
+Latvia,Latvia,132
+Lao People's Democratic Republic,Lao People's Democratic Republic,131
+Lebanon,Lebanon,133
+Lesotho,Lesotho,134
+Liberia,Liberia,135
+Libya,Libya,136
+Liechtenstein,Liechtenstein,137
+Lithuania,Lithuania,138
+Marshall Islands,Marshall Islands,146
+"China, Macao SAR","China, Macao SAR",51
+Madagascar,Madagascar,140
+Malawi,Malawi,141
+Malaysia,Malaysia,142
+Maldives,Maldives,143
+Mali,Mali,144
+Malta,Malta,145
+Martinique,Martinique,147
+Mauritania,Mauritania,148
+Mauritius,Mauritius,149
+Mexico,Mexico,151
+Mongolia,Mongolia,155
+Montserrat,Montserrat,157
+Morocco,Morocco,158
+Mozambique,Mozambique,159
+Micronesia (Federated States of),Micronesia (Federated States of),152
+Republic of Moldova,Republic of Moldova,192
+Namibia,Namibia,161
+Nauru,Nauru,162
+Nepal,Nepal,163
+Netherlands,Netherlands,164
+Netherlands Antilles (former),Netherlands Antilles (former),165
+New Caledonia,New Caledonia,166
+The former Yugoslav Republic of Macedonia,The former Yugoslav Republic of Macedonia,234
+Vanuatu,Vanuatu,257
+New Zealand,New Zealand,167
+Nicaragua,Nicaragua,168
+Niger,Niger,169
+Nigeria,Nigeria,170
+Niue,Niue,171
+Norfolk Island,Norfolk Island,172
+Norway,Norway,174
+Pacific Islands Trust Territory,Pacific Islands Trust Territory,177
+Pakistan,Pakistan,178
+Panama,Panama,180
+Czechia,Czechia,65
+Papua New Guinea,Papua New Guinea,181
+Paraguay,Paraguay,182
+Peru,Peru,183
+Philippines,Philippines,184
+Poland,Poland,186
+Portugal,Portugal,187
+Guinea-Bissau,Guinea-Bissau,105
+Timor-Leste,Timor-Leste,235
+Puerto Rico,Puerto Rico,188
+Eritrea,Eritrea,77
+Qatar,Qatar,189
+Zimbabwe,Zimbabwe,268
+Réunion,RÃ©union,190
+Romania,Romania,193
+Rwanda,Rwanda,195
+Russian Federation,Russian Federation,194
+Serbia and Montenegro,Serbia and Montenegro,209
+"Saint Helena, Ascension and Tristan da Cunha","Saint Helena, Ascension and Tristan da Cunha",196
+Saint Kitts and Nevis,Saint Kitts and Nevis,197
+Saint Lucia,Saint Lucia,198
+Saint Pierre and Miquelon,Saint Pierre and Miquelon,199
+Saint Vincent and the Grenadines,Saint Vincent and the Grenadines,200
+Sao Tome and Principe,Sao Tome and Principe,204
+Saudi Arabia,Saudi Arabia,205
+Senegal,Senegal,206
+Seychelles,Seychelles,210
+Sierra Leone,Sierra Leone,211
+Slovenia,Slovenia,215
+Slovakia,Slovakia,214
+Singapore,Singapore,212
+Somalia,Somalia,217
+South Africa,South Africa,218
+Spain,Spain,221
+Western Sahara,Western Sahara,262
+Sudan (former),Sudan (former),224
+Suriname,Suriname,226
+Tajikistan,Tajikistan,232
+Eswatini,Eswatini,79
+Swaziland,Swaziland,228
+Sweden,Sweden,229
+Switzerland,Switzerland,230
+Syrian Arab Republic,Syrian Arab Republic,231
+Turkmenistan,Turkmenistan,242
+"China, Taiwan Province of","China, Taiwan Province of",53
+United Republic of Tanzania,United Republic of Tanzania,249
+Thailand,Thailand,233
+Togo,Togo,236
+Tokelau,Tokelau,237
+Tonga,Tonga,238
+Trinidad and Tobago,Trinidad and Tobago,239
+Oman,Oman,176
+Tunisia,Tunisia,240
+Turkey,Turkey,241
+United Arab Emirates,United Arab Emirates,247
+Uganda,Uganda,245
+Tuvalu,Tuvalu,244
+USSR,USSR,255
+United Kingdom,United Kingdom,248
+Ukraine,Ukraine,246
+United States of America,United States of America,251
+Burkina Faso,Burkina Faso,37
+Uruguay,Uruguay,253
+Uzbekistan,Uzbekistan,256
+Venezuela (Bolivarian Republic of),Venezuela (Bolivarian Republic of),258
+Viet Nam,Viet Nam,259
+Ethiopia,Ethiopia,80
+British Virgin Islands,British Virgin Islands,34
+United States Virgin Islands,United States Virgin Islands,252
+Wallis and Futuna Islands,Wallis and Futuna Islands,261
+Samoa,Samoa,202
+Yugoslav SFR,Yugoslav SFR,266
+Yemen,Yemen,263
+Democratic Republic of the Congo,Democratic Republic of the Congo,68
+Zambia,Zambia,267
+Belgium,Belgium,22
+Luxembourg,Luxembourg,139
+EU(12)ex.int,EU(12)ex.int,304
+EU(15)ex.int,EU(15)ex.int,305
+EU(25)ex.int,EU(25)ex.int,306
+EU(27)ex.int,EU(27)ex.int,307
+Serbia,Serbia,207
+Montenegro,Montenegro,156
+Sudan,Sudan,223
+South Sudan,South Sudan,220
+Occupied Palestinian Territory,Occupied Palestinian Territory,175
+China,China,49
+World,World,269
+Africa,Africa,270
+Eastern Africa,Eastern Africa,271
+Middle Africa,Middle Africa,272
+Northern Africa,Northern Africa,273
+Southern Africa,Southern Africa,274
+Western Africa,Western Africa,275
+Americas,Americas,276
+Northern America,Northern America,277
+Central America,Central America,278
+Caribbean,Caribbean,279
+South America,South America,280
+Asia,Asia,281
+Central Asia,Central Asia,282
+Eastern Asia,Eastern Asia,283
+Southern Asia,Southern Asia,284
+South-Eastern Asia,South-Eastern Asia,285
+Western Asia,Western Asia,286
+Europe,Europe,287
+Eastern Europe,Eastern Europe,288
+Northern Europe,Northern Europe,289
+Southern Europe,Southern Europe,290
+Western Europe,Western Europe,291
+Oceania,Oceania,292
+Australia & New Zealand,Australia & New Zealand,293
+Melanesia,Melanesia,294
+Micronesia,Micronesia,295
+Polynesia,Polynesia,296
+European Union,European Union,297
+Least Developed Countries,Least Developed Countries,298
+Land Locked Developing Countries,Land Locked Developing Countries,299
+Small Island Developing States,Small Island Developing States,300
+Low Income Food Deficit Countries,Low Income Food Deficit Countries,301
+Net Food Importing Developing Countries,Net Food Importing Developing Countries,302
+European Union (exc intra-trade),European Union (exc intra-trade),303
