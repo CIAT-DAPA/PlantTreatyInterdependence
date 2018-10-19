@@ -26,7 +26,7 @@ def getUses():
     soup = BeautifulSoup(res.text, "lxml")
     options = soup.find_all("option")
 
-    with open(usesCSV, 'w') as file:
+    with open(usesCSV, 'w', encoding="utf-8") as file:
         for option in options:
             dict.update({option['value']: option.text})
             file.writelines(str(option['value'] + separator + option.text) + '\n')
@@ -43,7 +43,7 @@ def getSpecies(desc, uses):
 
     ### INICIAR LA NAVEGACIÓN
 
-    with open(speciesCSV, 'w') as file:
+    with open(speciesCSV, 'w', encoding="utf-8") as file:
 
         for key, value in uses.items():
 
