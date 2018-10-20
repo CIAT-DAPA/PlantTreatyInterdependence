@@ -1,6 +1,7 @@
 import csv
 import os
 from urllib.parse import urljoin
+
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
@@ -13,7 +14,15 @@ url_start = "http://mansfeld.ipk-gatersleben.de/apex/f?p=185:8:"
 url_post = "http://mansfeld.ipk-gatersleben.de/apex/wwv_flow.accept"
 usesCSV = "mansfeld.uses.csv"
 speciesCSV = "mansfeld.species.csv"
-separator= '\t'
+separator = '\t'
+
+
+def cleanValue(value):
+    value = value.replace("\n", "")
+    value = value.replace("\r", "")
+    value = value.replace(separator, " ")
+
+    return value
 
 
 def getUses():
@@ -28,8 +37,11 @@ def getUses():
 
     with open(usesCSV, 'w', encoding="utf-8") as file:
         for option in options:
-            dict.update({option['value']: option.text})
-            file.writelines(str(option['value'] + separator + option.text) + '\n')
+            use = option.text
+            use = cleanValue(use)
+            id = str(option['value'])
+            dict.update({id: use})
+            file.writelines(id + separator + use + '\n')
 
     file.close()
     return dict
@@ -97,6 +109,9 @@ def getSpecies(desc, uses):
                                 tds = tr.findAll('td')
                                 name = tds[1].text
 
+                        taxon = cleanValue(taxon)
+                        use = cleanValue(use)
+                        name = cleanValue(name)
                         file.writelines(use + separator + taxon + separator + name + '\n')
                 if row.text == "Contact":
                     flag = True
