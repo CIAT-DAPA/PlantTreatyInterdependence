@@ -1,3 +1,4 @@
+import time
 import csv
 import os
 from urllib.parse import urljoin
@@ -120,7 +121,7 @@ def getSpecies(desc, uses):
             # update progress bar
             progress_bar.update(1)
             # adding delay
-            # time.sleep(0.1)
+            time.sleep(0.5)
 
     file.close()
     # close progress bar
