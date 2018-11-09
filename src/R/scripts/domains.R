@@ -143,22 +143,30 @@ process.load.measure = function(f){
   tmp.measure = select(tmp.measure, -starts_with("name"))
   names(tmp.measure) = gsub("Y","",names(tmp.measure))
   
-  tmp.years = dim(tmp.measure)[2]-3
+  tmp.years = dim(tmp.measure)[2]-6
   
   # Create records by every year
-  tmp.final = do.call("rbind",lapply((tmp.years-3):tmp.years,function(y){
-    tmp.value = data.frame(id_metric=tmp.measure$id_metric,
+  lapply(5:tmp.years,function(y){
+    tmp.values = tmp.measure[,y]
+    tmp.values[is.na(tmp.values)] = 0
+    tmp.df = data.frame(id_metric=tmp.measure$id_metric,
                            id_country=tmp.measure$id_country,
                            id_crop=tmp.measure$id_crop,
                            year=as.integer(names(tmp.measure)[y]),
-                           value=tmp.measure[,y])
-    tmp.value[is.na(tmp.value)] = 0
-    return (tmp.value)
-  }))
-  print(paste0("........The data was cleaned"))
+                           value=tmp.values)
+    
+    # Sum values where they have the same metric, country, crop and year 
+    # It is because when we transform the original crops to master crops, they could be the same
+    tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarize,value=sum(value))
+    
+    
+    dbWriteTable(db_cnn, value = tmp.df, name = "measures", append = TRUE, row.names=F)
+    print(paste0("........Records were saved year: ",names(tmp.measure)[y],"-",as.integer(names(tmp.measure)[y])," count: ", dim(tmp.df)[1]))
+  })
   
-  dbWriteTable(db_cnn, value = tmp.final, name = "measures", append = TRUE, row.names=F)
-  print(paste0("........Records were saved ", dim(tmp.final)[1]))
+  
+  
+  
 }
 
 process.load.countries = function(f){
@@ -179,8 +187,8 @@ process.load.countries = function(f){
 # (string) f: Name of file
 process.load = function(f){
   print(paste0("Star ", f))
-  print(paste0("....Metrics ", f))
-  process.load.metrics(f)
+  #print(paste0("....Metrics ", f))
+  #process.load.metrics(f)
   print(paste0("....Measures ", f))
   process.load.measure(f)
 }
