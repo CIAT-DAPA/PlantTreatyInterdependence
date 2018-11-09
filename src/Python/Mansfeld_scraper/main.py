@@ -104,15 +104,14 @@ def getSpecies(desc, uses):
                         response3 = s.post(url3)
                         soup3 = BeautifulSoup(response3.text, "html.parser")
                         trs = soup3.findAll("tr")
-                        name = ""
+                        name = separator
                         for tr in trs:
-                            if name == "" and '::NO::sprachlink:E.' in str(tr):
+                            if '::NO::sprachlink:E.' in str(tr):
                                 tds = tr.findAll('td')
-                                name = tds[1].text
+                                name = name + cleanValue(tds[1].text) + separator
 
                         taxon = cleanValue(taxon)
                         use = cleanValue(use)
-                        name = cleanValue(name)
                         file.writelines(use + separator + taxon + separator + name + '\n')
                 if row.text == "Contact":
                     flag = True
