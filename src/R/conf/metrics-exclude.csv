@@ -1,0 +1,17 @@
+id,name
+1,Production
+2,Import Quantity
+3,Export Quantity
+5,Losses
+6,Food supply quantity (tonnes)
+7,Stock Variation
+8,Feed
+9,Seed
+10,Other uses
+11,Processing
+17,Yield
+37,Gross Production Value (constant 2004-2006 1000 I$)
+38,Net Production Value (constant 2004-2006 1000 I$)
+39,Gross Production Value (current million SLC)
+40,Gross Production Value (constant 2004-2006 million SLC)
+42,Gross Production Value (constant 2004-2006 million US$)
