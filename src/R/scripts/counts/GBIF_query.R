@@ -14,17 +14,14 @@ path <- "D:/ToBackup/code/planttreaty/PlantTreatyInterdependence/src/R/scripts/c
 
 genus <-read.csv(paste0(path,"genus_raw.csv"), header=FALSE, sep=",")
 
-url_sp  <- "http://api.gbif.org/v1/species/search/"
+url_sp  <- "http://api.gbif.org/v1/species/search"
 limit = 1
 rank= "GENUS"
 
+paste0(url_sp,"?q=",genus$V1,"&rank=",rank,"&limit=",limit)
+genus$key <- fromJSON(paste0(url_sp,"?q=",genus$V1,"&rank=",rank,"&limit=",limit))$results$nubKey
 
-sp_data <- fromJSON(paste0(url_sp,"?q=",genus$V1,"&rank=",rank,"&limit=",limit))
+url_occ <- "http://api.gbif.org/v1/occurrence/search"
 
-genusKey = sp_data$results$nubKey
+genus$count <- fromJSON(paste0(url_occ,"?genusKey=",genus$key,"&limit=",limit))
 
-url_occ <- "http://api.gbif.org/v1/occurrence/search/"
-
-occ_data <- fromJSON(paste0(url_occ,"?genusKey=",genusKey,"&limit=",limit))
-
-genus$count <- occ_data$count
