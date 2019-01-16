@@ -148,13 +148,14 @@ process.load.measure = function(f){
   # Create records by every year
   lapply(5:tmp.years,function(y){
     tmp.values = tmp.measure[,y]
-    tmp.values[is.na(tmp.values)] = 0
+    #tmp.values[is.na(tmp.values)] = 0
     tmp.df = data.frame(id_metric=tmp.measure$id_metric,
                            id_country=tmp.measure$id_country,
                            id_crop=tmp.measure$id_crop,
                            year=as.integer(names(tmp.measure)[y]),
                            value=tmp.values)
-    
+    # Remove NA
+    tmp.df =  tmp.df[complete.cases(tmp.df), ]
     # Sum values where they have the same metric, country, crop and year 
     # It is because when we transform the original crops to master crops, they could be the same
     tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarize,value=sum(value))
