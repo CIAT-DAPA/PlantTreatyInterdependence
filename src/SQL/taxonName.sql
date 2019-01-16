@@ -1,0 +1,47 @@
+use genesys_2018;
+select t.taxonName, count(*)
+from  taxonomy2 t
+left join accession a on a.taxonomyId2 = t.id
+ where
+ (taxonName="Musa textilis"
+ or taxonName="Prunus dulcis"
+ or taxonName="Prunus armeniaca"
+ or taxonName="Vigna subterranea"
+ or taxonName="Musa acuminata"
+ or taxonName="Vaccinium corymbosum"
+ or taxonName="Anacardium occidentale"
+ or taxonName="Prunus avium"
+ or taxonName="Vigna unguiculata"
+ or taxonName="Vaccinium macrocarpon"
+ or taxonName="Cucumis sativus"
+ or taxonName="Solanum melongena"
+ or taxonName="Vicia faba"
+ or taxonName="Allium sativum"
+ or taxonName="Citrus paradisi"
+ or taxonName="Allium porrum"
+ or taxonName="Citrus limon"
+ or taxonName="Citrus aurantiifolia"
+ or taxonName="Cucumis melo"
+ or taxonName="Allium cepa"
+ or taxonName="Citrus sinensis"
+ or taxonName="Citrus reticulata"
+ or taxonName="Prunus persica"
+ or taxonName="Musa balbisiana"
+ or taxonName="Prunus domestica"
+ or taxonName="Solanum tuberosum"
+ or taxonName="Vigna unguiculata"
+ or taxonName="Cicer arietinum"
+ or taxonName="Lens culinaris"
+ or taxonName="Vicia faba"
+ or taxonName="Cajanus cajan"
+ or taxonName="Vigna angularis"
+ or taxonName="Vigna radiata"
+ or taxonName="Vigna subterranea"
+ or taxonName="Brassica napus"
+ or taxonName="Brassica rapa"
+ or taxonName="Solanum lycopersicum"
+ or taxonName="Brassica rapa"
+ or taxonName="Vicia sativa"
+ 
+ 
+ )group by taxonName;
