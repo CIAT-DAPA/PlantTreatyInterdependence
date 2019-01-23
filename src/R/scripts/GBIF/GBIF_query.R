@@ -83,7 +83,7 @@ runTaxa<- function(rank){
     taxa <-read.csv(paste0(path,rank,"_raw.csv"), header=TRUE, sep=",")
     colnames(taxa) <- c("taxa")
     
-    # taxa <- taxa[1:3,]
+    #taxa <- taxa[1:10,]
     
 
     # getting taxa key
@@ -132,7 +132,7 @@ runTaxa<- function(rank){
 
 runTaxa("species")
 
-runTaxa("genus")
+#runTaxa("genus")
 
 
 
