@@ -15,14 +15,14 @@ import java.util.Map;
 import java.util.Set;
 
 import org.ciat.view.Executer;
-import org.ciat.view.TaxaIO;
+import org.ciat.view.TempIO;
 import org.json.JSONObject;
 
-public class TaxonKeyFinder {
+public class TaxaMatchAPI {
 
-	private static TaxonKeyFinder instance = null;
-	private Map<String, String> matchedTaxaKeys = new HashMap<String, String>();
-	private Set<String> unmatchedTaxaKeys = new HashSet<String>();
+	private static TaxaMatchAPI instance = null;
+	private Map<String, String> matched = new HashMap<String, String>();
+	private Set<String> unmatched = new HashSet<String>();
 	private final String rankField = "rank";
 	private final String nameField = "scientificName";
 	private final String keyField = "nubKey";
@@ -31,11 +31,11 @@ public class TaxonKeyFinder {
 
 		// check first in the Map
 
-		String result = matchedTaxaKeys.get(name);
+		String result = matched.get(name);
 		if (result != null) {
 			return result;
 		} else {
-			if (unmatchedTaxaKeys.contains(name)) {
+			if (unmatched.contains(name)) {
 				return null;
 			} else {
 				result = "";
@@ -70,7 +70,7 @@ public class TaxonKeyFinder {
 						value = value.replaceAll("\r", "");
 						result += value;
 						// add result in the Map
-						matchedTaxaKeys.put(name, value);
+						matched.put(name, value);
 						return result;
 					}
 				}
@@ -86,7 +86,7 @@ public class TaxonKeyFinder {
 			e.printStackTrace();
 		}
 
-		unmatchedTaxaKeys.add(name);
+		unmatched.add(name);
 		return null;
 	}
 
@@ -142,17 +142,17 @@ public class TaxonKeyFinder {
 	}
 
 	public Map<String, String> getMatchedTaxa() {
-		return matchedTaxaKeys;
+		return matched;
 	}
 
 	public Set<String> getUnmatchedTaxa() {
-		return unmatchedTaxaKeys;
+		return unmatched;
 	}
 
-	public static TaxonKeyFinder getInstance() {
+	public static TaxaMatchAPI getInstance() {
 		if (instance == null) {
 
-			instance = new TaxonKeyFinder();
+			instance = new TaxaMatchAPI();
 
 			File input = new File(Executer.prop.getProperty("file.taxa.matched"));
 			if (input.exists()) {
@@ -161,9 +161,9 @@ public class TaxonKeyFinder {
 
 					String line = reader.readLine();
 					while (line != null) {
-						String[] values = line.split(TaxaIO.SEPARATOR);
+						String[] values = line.split(TempIO.SEPARATOR);
 						if (values.length == 2) {
-							instance.matchedTaxaKeys.put(values[1], values[0]);
+							instance.matched.put(values[1], values[0]);
 						}
 						line = reader.readLine();
 					}
@@ -175,14 +175,14 @@ public class TaxonKeyFinder {
 				}
 			}
 
-			System.out.println(instance.matchedTaxaKeys.size() + " taxa imported");
+			System.out.println(instance.matched.size() + " taxa imported");
 		}
 
 		return instance;
 	}
 
 	public void setMatchedTaxa(Map<String, String> matchedTaxa) {
-		this.matchedTaxaKeys = matchedTaxa;
+		this.matched = matchedTaxa;
 	}
 
 }

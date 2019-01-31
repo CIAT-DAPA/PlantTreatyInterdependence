@@ -12,9 +12,7 @@ import java.util.Map;
 import org.ciat.control.Normalizer;
 import org.ciat.model.MapCounter;
 import org.ciat.model.TargetTaxa;
-import org.ciat.model.TaxonKeyFinder;
-import org.ciat.model.Utils;
-
+import org.ciat.model.TaxaMatchAPI;
 public class CountExporter {
 
 	private static CountExporter instance = null;
@@ -50,8 +48,8 @@ public class CountExporter {
 		File output = new File(Executer.prop.getProperty("file.taxa.summary"));
 		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
 			writer.println("species.matched" + Normalizer.getStandardSeparator() + "species.unmatched");
-			writer.println(TaxonKeyFinder.getInstance().getMatchedTaxa().keySet().size()
-					+ Normalizer.getStandardSeparator() + TaxonKeyFinder.getInstance().getUnmatchedTaxa().size());
+			writer.println(TaxaMatchAPI.getInstance().getMatchedTaxa().keySet().size()
+					+ Normalizer.getStandardSeparator() + TaxaMatchAPI.getInstance().getUnmatchedTaxa().size());
 
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found " + output.getAbsolutePath());
@@ -72,10 +70,12 @@ public class CountExporter {
 		}
 
 		try (PrintWriter writerSummary = new PrintWriter(new BufferedWriter(new FileWriter(outputSummary)))) {
+
+			// print header
 			writerSummary.println("taxonkey" + Normalizer.getStandardSeparator() + header);
 
 			// for each target taxon in the list
-			for (String taxonkey : TargetTaxa.getInstance().getSpeciesKeys()) {
+			for (String taxonkey : columns.get("total").keySet()) {
 				String countsLine = "";
 				for (String name : columns.keySet()) {
 					int count = 0;
@@ -85,26 +85,8 @@ public class CountExporter {
 					countsLine += count + Normalizer.getStandardSeparator();
 				}
 
-				File outputDir = new File(Executer.prop.getProperty("path.counts") + "/" + taxonkey + "/");
-				if (!outputDir.exists()) {
-					outputDir.mkdirs();
-				} else {
-					Utils.clearOutputDirectory(outputDir);
-				}
+				writerSummary.println(taxonkey + Normalizer.getStandardSeparator() + countsLine);
 
-				File output = new File(outputDir.getAbsolutePath() + "/counts.csv");
-
-				try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
-
-					writer.println(header);
-					writer.println(countsLine);
-					writerSummary.println(taxonkey + Normalizer.getStandardSeparator() + countsLine);
-
-				} catch (FileNotFoundException e) {
-					System.out.println("File not found " + output.getAbsolutePath());
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found " + outputSummary.getAbsolutePath());

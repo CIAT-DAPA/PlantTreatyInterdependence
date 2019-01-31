@@ -9,29 +9,29 @@ import java.io.PrintWriter;
 import java.util.Map;
 import java.util.Set;
 
-public class TaxaIO {
+public class TempIO {
 
 	public static final String SEPARATOR = "\t";
 
-	public static void exportTaxaMatched(Map<String, String> matchedTaxa, File output) {
+	public static void exportMatched(Map<String, String> matched, File output) {
 		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
 
-			for (String name : matchedTaxa.keySet()) {
-				writer.println(matchedTaxa.get(name) + SEPARATOR + name);
+			for (String name : matched.keySet()) {
+				writer.println(matched.get(name) + SEPARATOR + name);
 			}
 
 		} catch (FileNotFoundException e) {
-			System.err.println("File not found: " + output);
+			System.out.println("File not found: " + output);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 	}
 
-	public static void exportTaxaUnmatched(Set<String> set, File output) {
+	public static void exportUnmatched(Set<String> unmatched, File output) {
 		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
 
-			for (String name : set) {
+			for (String name : unmatched) {
 				writer.println(name);
 			}
 

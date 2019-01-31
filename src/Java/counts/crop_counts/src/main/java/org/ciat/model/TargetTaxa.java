@@ -33,15 +33,15 @@ public class TargetTaxa {
 		return instance;
 	}
 
-	private  Set<String> loadTargetTaxa(File vocabularyFile) {
+	private Set<String> loadTargetTaxa(File vocabularyFile) {
 		Set<String> filters = new TreeSet<String>();
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(vocabularyFile)))) {
 
 			String line = reader.readLine();
 			while (line != null) {
-				String taxonKey = TaxonKeyFinder.getInstance().fetchTaxonKey(line);
-				if (taxonKey != null && !taxonKey.isEmpty()&& Utils.isNumeric(taxonKey)) {
-					filters.add(line);
+				String taxonKey = TaxaMatchAPI.getInstance().fetchTaxonKey(line);
+				if (taxonKey != null && !taxonKey.isEmpty() && Utils.isNumeric(taxonKey)) {
+					filters.add(taxonKey);
 				}
 				line = reader.readLine();
 			}
