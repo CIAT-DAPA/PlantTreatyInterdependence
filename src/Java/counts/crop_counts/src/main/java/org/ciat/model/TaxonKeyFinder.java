@@ -18,14 +18,14 @@ import org.ciat.view.Executer;
 import org.ciat.view.TaxaIO;
 import org.json.JSONObject;
 
-public class TaxonFinder {
+public class TaxonKeyFinder {
 
-	private static TaxonFinder instance = null;
+	private static TaxonKeyFinder instance = null;
 	private Map<String, String> matchedTaxaKeys = new HashMap<String, String>();
 	private Set<String> unmatchedTaxaKeys = new HashSet<String>();
 	private final String rankField = "rank";
 	private final String nameField = "scientificName";
-	private final String keyField = "usageKey";
+	private final String keyField = "nubKey";
 
 	public String fetchTaxonKey(String name) {
 
@@ -89,10 +89,10 @@ public class TaxonFinder {
 		unmatchedTaxaKeys.add(name);
 		return null;
 	}
-	
+
 	public String fetchTaxonName(String name) {
 
-		String result = "" ;
+		String result = "";
 		// make connection
 
 		URLConnection urlc;
@@ -112,13 +112,13 @@ public class TaxonFinder {
 				// get result
 				String json = br.readLine();
 
-
 				JSONObject object = new JSONObject(json);
 				if (object.has(rankField) && object.has(nameField)) {
 					String rank = object.get(rankField) + "";
 					// check if the taxon is an specie or subspecie
 					if (rank.contains("SPECIE") || rank.contains("VARIETY")) {
-						String value =  object.get(keyField)+ org.ciat.control.Normalizer.STANDARD_SEPARATOR + object.get(nameField) + "";
+						String value = object.get(keyField) + org.ciat.control.Normalizer.STANDARD_SEPARATOR
+								+ object.get(nameField) + "";
 						value = value.replaceAll("\n", "");
 						value = value.replaceAll("\r", "");
 						result += value;
@@ -149,16 +149,16 @@ public class TaxonFinder {
 		return unmatchedTaxaKeys;
 	}
 
-	public static TaxonFinder getInstance() {
+	public static TaxonKeyFinder getInstance() {
 		if (instance == null) {
-			
-			instance = new TaxonFinder();
-			
+
+			instance = new TaxonKeyFinder();
+
 			File input = new File(Executer.prop.getProperty("file.taxa.matched"));
 			if (input.exists()) {
 				try (BufferedReader reader = new BufferedReader(
 						new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
-					
+
 					String line = reader.readLine();
 					while (line != null) {
 						String[] values = line.split(TaxaIO.SEPARATOR);
@@ -167,17 +167,16 @@ public class TaxonFinder {
 						}
 						line = reader.readLine();
 					}
-					
+
 				} catch (FileNotFoundException e) {
 					System.out.println("File not found " + input.getAbsolutePath());
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
-			
-			System.out.println(instance.matchedTaxaKeys.size()+" taxa imported");
-		}
 
+			System.out.println(instance.matchedTaxaKeys.size() + " taxa imported");
+		}
 
 		return instance;
 	}

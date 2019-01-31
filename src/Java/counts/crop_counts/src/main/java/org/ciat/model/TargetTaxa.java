@@ -19,7 +19,7 @@ public class TargetTaxa {
 
 	private TargetTaxa() {
 		super();
-		this.speciesKeys = loadTargetTaxa(new File(Executer.prop.getProperty("resource.targettaxa")));
+		this.speciesKeys = loadTargetTaxa(new File(Executer.prop.getProperty("resource.taxa")));
 	}
 
 	public Set<String> getSpeciesKeys() {
@@ -39,7 +39,8 @@ public class TargetTaxa {
 
 			String line = reader.readLine();
 			while (line != null) {
-				if (!line.isEmpty()&& Utils.isNumeric(line)) {
+				String taxonKey = TaxonKeyFinder.getInstance().fetchTaxonKey(line);
+				if (taxonKey != null && !taxonKey.isEmpty()&& Utils.isNumeric(taxonKey)) {
 					filters.add(line);
 				}
 				line = reader.readLine();

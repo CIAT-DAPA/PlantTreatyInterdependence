@@ -5,7 +5,7 @@ import java.io.File;
 
 import org.ciat.control.GBIFNormalizer;
 import org.ciat.control.Normalizable;
-import org.ciat.model.TaxonFinder;
+import org.ciat.model.TaxonKeyFinder;
 
 public class ExecNormalizer extends Executer {
 
@@ -34,10 +34,10 @@ public class ExecNormalizer extends Executer {
 		
 		// export counters
 		log("Exporting taxa");
-		TaxaIO.exportTaxaMatched(TaxonFinder.getInstance().getMatchedTaxa(),new File(Executer.prop.getProperty("file.taxa.matched")));
-		TaxaIO.exportTaxaUnmatched(TaxonFinder.getInstance().getUnmatchedTaxa(),new File(Executer.prop.getProperty("file.taxa.unmatched")));
+		TaxaIO.exportTaxaMatched(TaxonKeyFinder.getInstance().getMatchedTaxa(),new File(Executer.prop.getProperty("file.taxa.matched")));
+		TaxaIO.exportTaxaUnmatched(TaxonKeyFinder.getInstance().getUnmatchedTaxa(),new File(Executer.prop.getProperty("file.taxa.unmatched")));
 		
-		TaxonFinder.getInstance().getUnmatchedTaxa();
+		TaxonKeyFinder.getInstance().getUnmatchedTaxa();
 		System.gc();
 		
 

@@ -12,7 +12,7 @@ import java.util.Map;
 import org.ciat.control.Normalizer;
 import org.ciat.model.MapCounter;
 import org.ciat.model.TargetTaxa;
-import org.ciat.model.TaxonFinder;
+import org.ciat.model.TaxonKeyFinder;
 import org.ciat.model.Utils;
 
 public class CountExporter {
@@ -50,8 +50,8 @@ public class CountExporter {
 		File output = new File(Executer.prop.getProperty("file.taxa.summary"));
 		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
 			writer.println("species.matched" + Normalizer.getStandardSeparator() + "species.unmatched");
-			writer.println(TaxonFinder.getInstance().getMatchedTaxa().keySet().size()
-					+ Normalizer.getStandardSeparator() + TaxonFinder.getInstance().getUnmatchedTaxa().size());
+			writer.println(TaxonKeyFinder.getInstance().getMatchedTaxa().keySet().size()
+					+ Normalizer.getStandardSeparator() + TaxonKeyFinder.getInstance().getUnmatchedTaxa().size());
 
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found " + output.getAbsolutePath());
