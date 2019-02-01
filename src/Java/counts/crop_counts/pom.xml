@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.ciat</groupId>
+	<artifactId>crop_counts</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+	<name>${project.artifactId}</name>
+	<url>https://github.com/CIAT-DAPA/PlantTreatyInterdependence</url>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
+		<maven.eclipse.plugin.version>2.10</maven.eclipse.plugin.version>
+		<maven.jar.plugin.version>3.0.0</maven.jar.plugin.version>
+		<jdk.version>1.8</jdk.version>
+		<json.version>20171018</json.version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${json.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.javadocmd</groupId>
+			<artifactId>simplelatlng</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>data_preparation</finalName>
+		<plugins>
+
+			<!-- download source code in Eclipse, best practice -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>${maven.eclipse.plugin.version}</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+				</configuration>
+			</plugin>
+
+			<!-- Make this jar executable -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+
+					<execution>
+						<id>build-counter</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+							<finalName>counter</finalName>
+							<archive>
+								<manifest>
+									<!-- Jar file entry point -->
+									<mainClass>org.ciat.view.ExecNormalizer</mainClass>
+								</manifest>
+							</archive>
+						</configuration>
+					</execution>
+
+
+
+
+
+				</executions>
+
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>
