@@ -1,0 +1,34 @@
+group,datasource,vars,units,useable
+Importance,FAOSTAT,cb_production,tonnes,0
+Importance,FAOSTAT,cb_import_quantity,tonnes,0
+Importance,FAOSTAT,cb_export_quantity,tonnes,0
+Importance,FAOSTAT,cb_domestic_supply_quantity,tonnes,0
+Importance,FAOSTAT,cb_losses,tonnes,0
+Importance,FAOSTAT,cb_food_supply_quantity,tonnes,0
+Importance,FAOSTAT,cb_stock_variation,tonnes,0
+Importance,FAOSTAT,cb_feed,tonnes,0
+Importance,FAOSTAT,cb_seed,tonnes,0
+Importance,FAOSTAT,cb_other_uses,tonnes,0
+Importance,FAOSTAT,cb_processing,tonnes,0
+Importance,FAOSTAT,c_area_harvested,ha,1
+Importance,FAOSTAT,c_yield,hg/ha,0
+Importance,FAOSTAT,c_production,tonnes,1
+Importance,FAOSTAT,c_feed,tonnes,0
+Importance,FAOSTAT,clp_import_quantity,tonnes,1
+Importance,FAOSTAT,clp_import_value,1000 US$,1
+Importance,FAOSTAT,clp_export_quantity,tonnes,1
+Importance,FAOSTAT,clp_export_value,1000 US$,1
+Importance,FAOSTAT,fs_food_supply_quantity_t,tonnes,0
+Importance,FAOSTAT,fs_food_supply_quantity_g,g/capita/day,1
+Importance,FAOSTAT,fs_food_supply_quantity_kg,kg,0
+Importance,FAOSTAT,fs_food_supply_kcal,kcal/capita/day,1
+Importance,FAOSTAT,fs_protein_supply_quantity,g/capita/day,1
+Importance,FAOSTAT,fs_fat_supply_quantity,g/capita/day,1
+Importance,FAOSTAT,vap_gross_production_value_2004_2006_i,1000 Int. $,0
+Importance,FAOSTAT,vap_net_production_value_2004_2006_i,1000 Int. $,0
+Importance,FAOSTAT,vap_gross_production_value_slc,SLC,0
+Importance,FAOSTAT,vap_gross_production_value_2004_2006_slc,SLC,0
+Importance,FAOSTAT,vap_gross_production_value_us,USD,1
+Importance,FAOSTAT,vap_gross_production_value_2014_2006_us,USD,0
+Importance,CUSTOM,cu_amount_countries,Amount,1
+Supply,Genesys,ge_amount_species,Amount,1

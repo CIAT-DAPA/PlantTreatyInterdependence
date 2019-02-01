@@ -61,11 +61,11 @@ conf.import.crops = function(f){
   print(paste0("........Crops were loaded from database ",dim(process.crops)[1] ))
   
   if(dim(process.crops)[1]>0){
-    crops = crops[!which(crops$Item %in% process.crops$name),]
+    crops = crops[!which(crops$name %in% process.crops$name),]
   }
   
-  crops = crops[order(crops$Item),] 
-  crops.new = unique(data.frame(name = crops$Item))
+  crops = crops[order(crops$name),] 
+  crops.new = unique(data.frame(name = crops$name))
   
   
   if(dim(crops.new)[1]>0){
