@@ -44,7 +44,7 @@ public class OrganizationMatchAPI {
 
 		URLConnection urlc;
 		try {
-			URL url = new URL("http://api.gbif.org/v1/organization/"
+			URL url = new URL("https://api.gbif.org/v1/organization/"
 					+ URLEncoder.encode(uuid, "UTF-8") + "");
 
 			urlc = url.openConnection();

@@ -8,10 +8,10 @@ import org.ciat.control.Normalizable;
 import org.ciat.model.OrganizationMatchAPI;
 import org.ciat.model.TaxaMatchAPI;
 
-public class ExecCounter extends Executer {
+public class ExecNormalizer extends Executer {
 
 	public static void main(String[] args) {
-		Executable app = new ExecCounter();
+		Executable app = new ExecNormalizer();
 		app.run();
 	}
 
@@ -23,8 +23,8 @@ public class ExecCounter extends Executer {
 
 		// Reduce and normalize
 		log("Counting GBIF data");
-		Normalizable gbifCounter = new GBIFNormalizer();
-		gbifCounter.process(new File(Executer.prop.getProperty("data.gbif")));
+		Normalizable gbifNormalizer = new GBIFNormalizer();
+		gbifNormalizer.process(new File(Executer.prop.getProperty("data.gbif")));
 		System.gc();
 
 
@@ -44,8 +44,7 @@ public class ExecCounter extends Executer {
 		TempIO.exportUnmatched(OrganizationMatchAPI.getInstance().getUnmatchedOrganizations(),new File(Executer.prop.getProperty("file.org.unmatched")));
 		
 		
-		TaxaMatchAPI.getInstance().getUnmatchedTaxa();
-		System.gc();
+     	System.gc();
 		
 
 	}

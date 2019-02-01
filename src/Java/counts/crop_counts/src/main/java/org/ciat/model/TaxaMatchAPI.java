@@ -25,7 +25,7 @@ public class TaxaMatchAPI {
 	private Set<String> unmatched = new HashSet<String>();
 	private final String rankField = "rank";
 	private final String nameField = "scientificName";
-	private final String keyField = "nubKey";
+	private final String keyField = "usageKey";
 
 	public String fetchTaxonKey(String name) {
 
@@ -59,7 +59,6 @@ public class TaxaMatchAPI {
 
 				// get result
 				String json = br.readLine();
-
 				JSONObject object = new JSONObject(json);
 				if (object.has(rankField) && object.has(keyField)) {
 					String rank = object.get(rankField) + "";

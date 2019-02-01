@@ -54,7 +54,7 @@
 				<executions>
 
 					<execution>
-						<id>build-normalizer</id>
+						<id>build-counter</id>
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
@@ -63,11 +63,11 @@
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
-							<finalName>normalizer</finalName>
+							<finalName>counter</finalName>
 							<archive>
 								<manifest>
 									<!-- Jar file entry point -->
-									<mainClass>org.ciat.view.ExecCounter</mainClass>
+									<mainClass>org.ciat.view.ExecNormalizer</mainClass>
 								</manifest>
 							</archive>
 						</configuration>

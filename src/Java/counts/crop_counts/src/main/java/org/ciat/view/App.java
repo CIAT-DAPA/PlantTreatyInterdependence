@@ -5,7 +5,7 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Executable app1 = new ExecCounter();
+		Executable app1 = new ExecNormalizer();
 		app1.run();
 
 
