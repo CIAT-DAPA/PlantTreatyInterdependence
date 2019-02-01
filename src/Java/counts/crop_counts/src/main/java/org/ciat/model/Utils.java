@@ -68,6 +68,9 @@ public class Utils {
 	}
 
 	public static String iso3CountryCodeToIso2CountryCode(String iso3CountryCode) {
+		if(iso3CountryCode ==  null) {
+			return NO_COUNTRY2;
+		}
 		if (iso3CountryCode.equals(NO_COUNTRY3)) {
 			return NO_COUNTRY2;
 		}
@@ -79,6 +82,10 @@ public class Utils {
 	}
 
 	public static String iso2CountryCodeToIso3CountryCode(String iso2CountryCode) {
+		if(iso2CountryCode ==  null) {
+			return NO_COUNTRY3;
+		}
+		
 		if (iso2CountryCode.equals(NO_COUNTRY2)) {
 			return NO_COUNTRY3;
 		}
