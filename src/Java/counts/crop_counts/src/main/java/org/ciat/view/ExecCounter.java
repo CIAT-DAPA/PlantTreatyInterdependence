@@ -8,10 +8,10 @@ import org.ciat.control.Normalizable;
 import org.ciat.model.OrganizationMatchAPI;
 import org.ciat.model.TaxaMatchAPI;
 
-public class ExecNormalizer extends Executer {
+public class ExecCounter extends Executer {
 
 	public static void main(String[] args) {
-		Executable app = new ExecNormalizer();
+		Executable app = new ExecCounter();
 		app.run();
 	}
 
@@ -22,9 +22,9 @@ public class ExecNormalizer extends Executer {
 
 
 		// Reduce and normalize
-		log("Normalizing GBIF data");
-		Normalizable gbifNormalizer = new GBIFNormalizer();
-		gbifNormalizer.process(new File(Executer.prop.getProperty("data.gbif")));
+		log("Counting GBIF data");
+		Normalizable gbifCounter = new GBIFNormalizer();
+		gbifCounter.process(new File(Executer.prop.getProperty("data.gbif")));
 		System.gc();
 
 
@@ -40,8 +40,8 @@ public class ExecNormalizer extends Executer {
 		
 		// export organizations
 		log("Exporting organizations");
-		TempIO.exportMatched(OrganizationMatchAPI.getInstance().getMatchedOrganizations(),new File(Executer.prop.getProperty("file.organizations.matched")));
-		TempIO.exportUnmatched(OrganizationMatchAPI.getInstance().getUnmatchedOrganizations(),new File(Executer.prop.getProperty("file.organizations.unmatched")));
+		TempIO.exportMatched(OrganizationMatchAPI.getInstance().getMatchedOrganizations(),new File(Executer.prop.getProperty("file.org.matched")));
+		TempIO.exportUnmatched(OrganizationMatchAPI.getInstance().getUnmatchedOrganizations(),new File(Executer.prop.getProperty("file.org.unmatched")));
 		
 		
 		TaxaMatchAPI.getInstance().getUnmatchedTaxa();

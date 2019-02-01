@@ -101,7 +101,7 @@ public class OrganizationMatchAPI {
 
 			instance = new OrganizationMatchAPI();
 
-			File input = new File(Executer.prop.getProperty("file.organizations.matched"));
+			File input = new File(Executer.prop.getProperty("file.org.matched"));
 			if (input.exists()) {
 				try (BufferedReader reader = new BufferedReader(
 						new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
@@ -128,8 +128,6 @@ public class OrganizationMatchAPI {
 		return instance;
 	}
 
-	public void setMatchedTaxa(Map<String, String> matchedTaxa) {
-		this.matched = matchedTaxa;
-	}
+
 
 }

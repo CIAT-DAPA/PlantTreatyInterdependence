@@ -24,6 +24,8 @@ public interface Normalizable {
 	public DataSourceName getDataSourceName();
 
 	public String validate();
+	
+	public boolean isRepatriated();
 
 	public void process(File input);
 

@@ -6,7 +6,7 @@
 	<packaging>jar</packaging>
 	<version>1.0</version>
 	<name>${project.artifactId}</name>
-	<url>https://github.com/CIAT-DAPA/aichi13_data_preparation</url>
+	<url>https://github.com/CIAT-DAPA/PlantTreatyInterdependence</url>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -67,51 +67,15 @@
 							<archive>
 								<manifest>
 									<!-- Jar file entry point -->
-									<mainClass>org.ciat.view.ExecNormalizer</mainClass>
+									<mainClass>org.ciat.view.ExecCounter</mainClass>
 								</manifest>
 							</archive>
 						</configuration>
 					</execution>
 
-					<execution>
-						<id>build-nativeness</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-							<finalName>nativeness</finalName>
-							<archive>
-								<manifest>
-									<!-- Jar file entry point -->
-									<mainClass>org.ciat.view.ExecNativeness</mainClass>
-								</manifest>
-							</archive>
-						</configuration>
-					</execution>
 
-					<execution>
-						<id>build-export</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-							<finalName>maxenisizer</finalName>
-							<archive>
-								<manifest>
-									<!-- Jar file entry point -->
-									<mainClass>org.ciat.view.ExecMaxentnisizer</mainClass>
-								</manifest>
-							</archive>
-						</configuration>
-					</execution>
+
+
 
 				</executions>
 

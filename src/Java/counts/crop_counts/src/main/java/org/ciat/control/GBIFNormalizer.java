@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.ciat.model.Basis;
 import org.ciat.model.DataSourceName;
+import org.ciat.model.OrganizationMatchAPI;
 import org.ciat.model.Utils;
 
 public class GBIFNormalizer extends Normalizer {
@@ -90,4 +91,20 @@ public class GBIFNormalizer extends Normalizer {
 	public String getSpecificSeparator() {
 		return "\t";
 	}
+	
+	@Override
+	public boolean isRepatriated() {
+		String orgCountry = OrganizationMatchAPI.getInstance().fetchCountry(geyOrgUUID());
+		orgCountry = Utils.iso2CountryCodeToIso3CountryCode(orgCountry);
+		return orgCountry.equals(getCountry());
+	}
+
+
+	private String geyOrgUUID() {
+		return values[colIndex.get("publishingorgkey")];
+	}
+	
 }
+
+
+

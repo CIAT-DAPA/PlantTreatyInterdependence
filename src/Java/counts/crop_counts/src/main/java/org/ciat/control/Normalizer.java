@@ -70,7 +70,8 @@ public class Normalizer implements Normalizable {
 
 						String country = getCountry();
 						String taxonKey = getTaxonkey();
-						CountExporter.getInstance().updateCounters(taxonKey, country, false);
+						boolean repat = isRepatriated();
+						CountExporter.getInstance().updateCounters(taxonKey, country, repat);
 					}
 				}
 				/* show progress */
@@ -89,6 +90,7 @@ public class Normalizer implements Normalizable {
 		}
 
 	}
+
 
 	@Override
 	public String normalize() {
@@ -209,5 +211,12 @@ public class Normalizer implements Normalizable {
 	public String getSpecificSeparator() {
 		return null;
 	}
+	
+	@Override
+	public boolean isRepatriated() {
+		return false;
+	}
+
+
 
 }

@@ -11,7 +11,6 @@ import java.util.Map;
 
 import org.ciat.control.Normalizer;
 import org.ciat.model.MapCounter;
-import org.ciat.model.TargetTaxa;
 import org.ciat.model.TaxaMatchAPI;
 public class CountExporter {
 
