@@ -62,7 +62,9 @@ public class CountExporter {
 
 		// header of summary file
 		File outputSummary = new File(Executer.prop.getProperty("file.counts.summary"));
-		String header = "";
+		String header = "taxa" + Normalizer.getStandardSeparator();
+		header += "rank" + Normalizer.getStandardSeparator();
+		header += "country" + Normalizer.getStandardSeparator();
 
 		for (String name : columns.keySet()) {
 			header += name + Normalizer.getStandardSeparator();
@@ -71,7 +73,7 @@ public class CountExporter {
 		try (PrintWriter writerSummary = new PrintWriter(new BufferedWriter(new FileWriter(outputSummary)))) {
 
 			// print header
-			writerSummary.println("taxonkey" + Normalizer.getStandardSeparator() + header);
+			writerSummary.println(header);
 
 			// for each target taxon in the list
 			for (String taxonkey : columns.get("total").keySet()) {
@@ -95,8 +97,8 @@ public class CountExporter {
 
 	}
 
-	public void updateCounters(String taxonkey, String country, boolean repatriated) {
-		String item = taxonkey + Normalizer.getStandardSeparator() + country;
+	public void updateCounters(String taxonkey, String rank, String country, boolean repatriated) {
+		String item = taxonkey + Normalizer.getStandardSeparator() + rank + Normalizer.getStandardSeparator() + country;
 		columns.get("total").increase(item);
 
 		if (repatriated) {

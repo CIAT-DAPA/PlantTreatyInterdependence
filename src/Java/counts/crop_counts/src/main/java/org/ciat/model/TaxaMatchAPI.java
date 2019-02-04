@@ -25,8 +25,9 @@ public class TaxaMatchAPI {
 	private Set<String> speciesUnmatched = new HashSet<String>();
 	private Map<String, String> genusMatched = new HashMap<String, String>();
 	private Set<String> genusUnmatched = new HashSet<String>();
+	private Map<String, String> keyTaxon = new HashMap<String, String>();
 	private final String rankField = "rank";
-	private final String nameField = "scientificName";
+	//private final String nameField = "scientificName";
 	private final String keyField = "usageKey";
 	private final String speciesField = "species";
 
@@ -74,6 +75,10 @@ public class TaxaMatchAPI {
 						result += value;
 						// add result in the Map
 						speciesMatched.put(name, value);
+						if (object.has(speciesField)) {
+							String species = object.get(speciesField) + "";
+							keyTaxon.put(value, species);
+						}
 						return result;
 					}
 				}
@@ -155,60 +160,16 @@ public class TaxaMatchAPI {
 		return null;
 	}
 
-	public String fetchTaxonName(String name) {
-
-		String result = "";
-		// make connection
-
-		URLConnection urlc;
-		try {
-			URL url = new URL("http://api.gbif.org/v1/species/"
-					+ URLEncoder.encode(name, "UTF-8") + "");
-
-			urlc = url.openConnection();
-			// use post mode
-			urlc.setDoOutput(true);
-			urlc.setAllowUserInteraction(false);
-
-			// send query
-			try (BufferedReader br = new BufferedReader(new InputStreamReader(urlc.getInputStream()))) {
-
-				// get result
-				String json = br.readLine();
-
-				JSONObject object = new JSONObject(json);
-				if (object.has(rankField) && object.has(nameField)) {
-					String rank = object.get(rankField) + "";
-					// check if the taxon is an specie or subspecie
-					if (rank.contains("SPECIE") || rank.contains("VARIETY")) {
-						String value = object.get(keyField) + org.ciat.control.Normalizer.STANDARD_SEPARATOR
-								+ object.get(nameField) + "";
-						value = value.replaceAll("\n", "");
-						value = value.replaceAll("\r", "");
-						result += value;
-						// add result in the Map
-						return result;
-					}
-				}
-
-			} catch (IOException e) {
-				e.printStackTrace();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return null;
-	}
-	
-	
 	public String fetchTaxonNameByID(String id) {
 
+		// check first in the Map
 
+		String result = keyTaxon.get(id);
+		if (result != null) {
+			return result;
+		} 
+		System.out.println(keyTaxon);
+		System.out.println(id);
 		// make connection
 
 		URLConnection urlc;
@@ -228,9 +189,9 @@ public class TaxaMatchAPI {
 
 				JSONObject object = new JSONObject(json);
 				if (object.has(speciesField)) {
-					String name = object.get(speciesField) + "";
-					// check if the taxon is an specie or subspecie
-					return name;
+					String species = object.get(speciesField) + "";
+					keyTaxon.put(id, species);
+					return species;
 				}
 			}
 
@@ -258,6 +219,10 @@ public class TaxaMatchAPI {
 	public Set<String> getUnmatchedGenus() {
 		return genusUnmatched;
 	}
+	
+	public Map<String, String> getKeyTaxon() {
+		return keyTaxon;
+	}
 
 
 	public static TaxaMatchAPI getInstance() {
@@ -275,6 +240,7 @@ public class TaxaMatchAPI {
 						String[] values = line.split(TempIO.SEPARATOR);
 						if (values.length == 2) {
 							instance.speciesMatched.put(values[1], values[0]);
+							instance.keyTaxon.put(values[0], values[1]);
 						}
 						line = reader.readLine();
 					}

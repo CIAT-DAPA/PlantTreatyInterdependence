@@ -60,16 +60,15 @@ public class Normalizer implements Normalizable {
 				if (values.length >= colIndex.size()) {
 
 					String taxonKey = getTaxonKey();
-					String species = TaxaMatchAPI.getInstance().fetchTaxonNameByID(taxonKey);
 					String genus = getGenus();
 
 					boolean isTargetSpecies = taxonKey != null
 							&& TargetTaxa.getInstance().getSpeciesKeys().contains(taxonKey);
 					if (isTargetSpecies) {
-
+						String species = TaxaMatchAPI.getInstance().fetchTaxonNameByID(taxonKey);
 						String country = getCountry();
 						boolean repat = isRepatriated();
-						CountExporter.getInstance().updateCounters(species, country, repat);
+						CountExporter.getInstance().updateCounters(species,"SPECIES", country, repat);
 					}
 
 					boolean isTargetGenus = genus != null && TargetTaxa.getInstance().getGenera().contains(genus);
@@ -78,7 +77,7 @@ public class Normalizer implements Normalizable {
 
 						String country = getCountry();
 						boolean repat = isRepatriated();
-						CountExporter.getInstance().updateCounters(genus, country, repat);
+						CountExporter.getInstance().updateCounters(genus, "GENUS",country, repat);
 					}
 				}
 				/* show progress */
