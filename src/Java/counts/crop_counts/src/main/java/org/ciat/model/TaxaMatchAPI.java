@@ -21,21 +21,25 @@ import org.json.JSONObject;
 public class TaxaMatchAPI {
 
 	private static TaxaMatchAPI instance = null;
-	private Map<String, String> matched = new HashMap<String, String>();
-	private Set<String> unmatched = new HashSet<String>();
+	private Map<String, String> speciesMatched = new HashMap<String, String>();
+	private Set<String> speciesUnmatched = new HashSet<String>();
+	private Map<String, String> genusMatched = new HashMap<String, String>();
+	private Set<String> genusUnmatched = new HashSet<String>();
 	private final String rankField = "rank";
 	private final String nameField = "scientificName";
 	private final String keyField = "usageKey";
+	private final String speciesField = "species";
 
-	public String fetchTaxonKey(String name) {
+
+	public String fetchSpeciesKey(String name) {
 
 		// check first in the Map
 
-		String result = matched.get(name);
+		String result = speciesMatched.get(name);
 		if (result != null) {
 			return result;
 		} else {
-			if (unmatched.contains(name)) {
+			if (speciesUnmatched.contains(name)) {
 				return null;
 			} else {
 				result = "";
@@ -63,13 +67,13 @@ public class TaxaMatchAPI {
 				if (object.has(rankField) && object.has(keyField)) {
 					String rank = object.get(rankField) + "";
 					// check if the taxon is an specie or subspecie
-					if (rank.contains("SPECIE") || rank.contains("VARIETY")) {
+					if (rank.equals("SPECIE") ) {
 						String value = object.get(keyField) + "";
 						value = value.replaceAll("\n", "");
 						value = value.replaceAll("\r", "");
 						result += value;
 						// add result in the Map
-						matched.put(name, value);
+						speciesMatched.put(name, value);
 						return result;
 					}
 				}
@@ -85,7 +89,69 @@ public class TaxaMatchAPI {
 			e.printStackTrace();
 		}
 
-		unmatched.add(name);
+		speciesUnmatched.add(name);
+		return null;
+	}
+	
+	public String fetchGenusKey(String name) {
+
+		// check first in the Map
+
+		String result = genusMatched.get(name);
+		if (result != null) {
+			return result;
+		} else {
+			if (genusUnmatched.contains(name)) {
+				return null;
+			} else {
+				result = "";
+			}
+		}
+
+		// make connection
+
+		URLConnection urlc;
+		try {
+			URL url = new URL("http://api.gbif.org/v1/species/match?kingdom=Plantae&name="
+					+ URLEncoder.encode(name, "UTF-8") + "");
+
+			urlc = url.openConnection();
+			// use post mode
+			urlc.setDoOutput(true);
+			urlc.setAllowUserInteraction(false);
+
+			// send query
+			try (BufferedReader br = new BufferedReader(new InputStreamReader(urlc.getInputStream()))) {
+
+				// get result
+				String json = br.readLine();
+				JSONObject object = new JSONObject(json);
+				if (object.has(rankField) && object.has(keyField)) {
+					String rank = object.get(rankField) + "";
+					// check if the taxon is an specie or subspecie
+					if (rank.equals("GENUS") ) {
+						String value = object.get(keyField) + "";
+						value = value.replaceAll("\n", "");
+						value = value.replaceAll("\r", "");
+						result += value;
+						// add result in the Map
+						genusMatched.put(name, value);
+						return result;
+					}
+				}
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		genusUnmatched.add(name);
 		return null;
 	}
 
@@ -96,8 +162,7 @@ public class TaxaMatchAPI {
 
 		URLConnection urlc;
 		try {
-			name.replace('×', 'x');
-			URL url = new URL("http://api.gbif.org/v1/species/match?kingdom=Plantae&name="
+			URL url = new URL("http://api.gbif.org/v1/species/"
 					+ URLEncoder.encode(name, "UTF-8") + "");
 
 			urlc = url.openConnection();
@@ -139,49 +204,120 @@ public class TaxaMatchAPI {
 
 		return null;
 	}
+	
+	
+	public String fetchTaxonNameByID(String id) {
 
-	public Map<String, String> getMatchedTaxa() {
-		return matched;
+
+		// make connection
+
+		URLConnection urlc;
+		try {
+			URL url = new URL("http://api.gbif.org/v1/species/" + URLEncoder.encode(id, "UTF-8") + "");
+
+			urlc = url.openConnection();
+			// use post mode
+			urlc.setDoOutput(true);
+			urlc.setAllowUserInteraction(false);
+
+			// send query
+			try (BufferedReader br = new BufferedReader(new InputStreamReader(urlc.getInputStream()))) {
+
+				// get result
+				String json = br.readLine();
+
+				JSONObject object = new JSONObject(json);
+				if (object.has(speciesField)) {
+					String name = object.get(speciesField) + "";
+					// check if the taxon is an specie or subspecie
+					return name;
+				}
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
 	}
 
-	public Set<String> getUnmatchedTaxa() {
-		return unmatched;
+	public Map<String, String> getMatchedSpecies() {
+		return speciesMatched;
 	}
+
+	public Set<String> getUnmatchedSpecies() {
+		return speciesUnmatched;
+	}
+	
+	public Map<String, String> getMatchedGenus() {
+		return genusMatched;
+	}
+
+	public Set<String> getUnmatchedGenus() {
+		return genusUnmatched;
+	}
+
 
 	public static TaxaMatchAPI getInstance() {
 		if (instance == null) {
 
 			instance = new TaxaMatchAPI();
 
-			File input = new File(Executer.prop.getProperty("file.taxa.matched"));
-			if (input.exists()) {
+			File inputSpecies = new File(Executer.prop.getProperty("file.taxa.matched"));
+			if (inputSpecies.exists()) {
 				try (BufferedReader reader = new BufferedReader(
-						new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
+						new InputStreamReader(new FileInputStream(inputSpecies), "UTF-8"))) {
 
 					String line = reader.readLine();
 					while (line != null) {
 						String[] values = line.split(TempIO.SEPARATOR);
 						if (values.length == 2) {
-							instance.matched.put(values[1], values[0]);
+							instance.speciesMatched.put(values[1], values[0]);
 						}
 						line = reader.readLine();
 					}
 
 				} catch (FileNotFoundException e) {
-					System.out.println("File not found " + input.getAbsolutePath());
+					System.out.println("File not found " + inputSpecies.getAbsolutePath());
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
 
-			System.out.println(instance.matched.size() + " taxa imported");
+			System.out.println(instance.speciesMatched.size() + " species imported");
+			
+			
+			File inputGenus = new File(Executer.prop.getProperty("file.genus.matched"));
+			if (inputGenus.exists()) {
+				try (BufferedReader reader = new BufferedReader(
+						new InputStreamReader(new FileInputStream(inputGenus), "UTF-8"))) {
+
+					String line = reader.readLine();
+					while (line != null) {
+						String[] values = line.split(TempIO.SEPARATOR);
+						if (values.length == 2) {
+							instance.genusMatched.put(values[0], values[1]);
+						}
+						line = reader.readLine();
+					}
+
+				} catch (FileNotFoundException e) {
+					System.out.println("File not found " + inputGenus.getAbsolutePath());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+
+			System.out.println(instance.genusMatched.size() + " genera imported");
 		}
 
 		return instance;
 	}
 
 	public void setMatchedTaxa(Map<String, String> matchedTaxa) {
-		this.matched = matchedTaxa;
+		this.speciesMatched = matchedTaxa;
 	}
 
 }

@@ -71,6 +71,9 @@ public class Utils {
 		if(iso3CountryCode ==  null) {
 			return NO_COUNTRY2;
 		}
+		if(iso3CountryCode.isEmpty()) {
+			return NO_COUNTRY2;
+		}
 		if (iso3CountryCode.equals(NO_COUNTRY3)) {
 			return NO_COUNTRY2;
 		}
@@ -85,7 +88,9 @@ public class Utils {
 		if(iso2CountryCode ==  null) {
 			return NO_COUNTRY3;
 		}
-		
+		if(iso2CountryCode.isEmpty()) {
+			return NO_COUNTRY3;
+		}		
 		if (iso2CountryCode.equals(NO_COUNTRY2)) {
 			return NO_COUNTRY3;
 		}

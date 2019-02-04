@@ -47,8 +47,8 @@ public class CountExporter {
 		File output = new File(Executer.prop.getProperty("file.taxa.summary"));
 		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
 			writer.println("species.matched" + Normalizer.getStandardSeparator() + "species.unmatched");
-			writer.println(TaxaMatchAPI.getInstance().getMatchedTaxa().keySet().size()
-					+ Normalizer.getStandardSeparator() + TaxaMatchAPI.getInstance().getUnmatchedTaxa().size());
+			writer.println(TaxaMatchAPI.getInstance().getMatchedSpecies().keySet().size()
+					+ Normalizer.getStandardSeparator() + TaxaMatchAPI.getInstance().getUnmatchedSpecies().size());
 
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found " + output.getAbsolutePath());

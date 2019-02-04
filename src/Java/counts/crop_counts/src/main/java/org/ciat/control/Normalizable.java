@@ -11,7 +11,9 @@ public interface Normalizable {
 	
 	public String getYear();
 	
-	public String getTaxonkey();
+	public String getTaxonKey();
+	
+	public String getGenus();
 	
 	public String getSpecificSeparator();
 	
@@ -31,4 +33,5 @@ public interface Normalizable {
 
 	public String normalize();
 
+	
 }

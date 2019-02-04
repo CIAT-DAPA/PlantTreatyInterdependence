@@ -9,11 +9,11 @@ import java.io.InputStreamReader;
 import java.util.Calendar;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Set;
 
 import org.ciat.model.Basis;
 import org.ciat.model.DataSourceName;
 import org.ciat.model.TargetTaxa;
+import org.ciat.model.TaxaMatchAPI;
 import org.ciat.model.Utils;
 import org.ciat.view.CountExporter;
 import org.ciat.view.FileProgressBar;
@@ -39,11 +39,7 @@ public class Normalizer implements Normalizable {
 	@Override
 	public void process(File input) {
 
-		Set<String> taxonKeys = TargetTaxa.getInstance().getSpeciesKeys();
-
-		try (
-				BufferedReader reader = new BufferedReader(
-						new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
+		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
 
 			/* header */
 			String line = reader.readLine();
@@ -63,15 +59,26 @@ public class Normalizer implements Normalizable {
 				values = line.split(getSpecificSeparator());
 				if (values.length >= colIndex.size()) {
 
-					String taxonkey = getTaxonkey();
+					String taxonKey = getTaxonKey();
+					String species = TaxaMatchAPI.getInstance().fetchTaxonNameByID(taxonKey);
+					String genus = getGenus();
 
-					boolean isTargetTaxon = taxonkey != null && taxonKeys.contains(taxonkey);
-					if (isTargetTaxon) {
+					boolean isTargetSpecies = taxonKey != null
+							&& TargetTaxa.getInstance().getSpeciesKeys().contains(taxonKey);
+					if (isTargetSpecies) {
 
 						String country = getCountry();
-						String taxonKey = getTaxonkey();
 						boolean repat = isRepatriated();
-						CountExporter.getInstance().updateCounters(taxonKey, country, repat);
+						CountExporter.getInstance().updateCounters(species, country, repat);
+					}
+
+					boolean isTargetGenus = genus != null && TargetTaxa.getInstance().getGenera().contains(genus);
+
+					if (isTargetGenus) {
+
+						String country = getCountry();
+						boolean repat = isRepatriated();
+						CountExporter.getInstance().updateCounters(genus, country, repat);
 					}
 				}
 				/* show progress */
@@ -91,7 +98,6 @@ public class Normalizer implements Normalizable {
 
 	}
 
-
 	@Override
 	public String normalize() {
 		String country = getCountry();
@@ -99,7 +105,7 @@ public class Normalizer implements Normalizable {
 		String lat = getDecimalLatitude();
 		Basis basis = getBasis();
 		String source = getDataSourceName().toString();
-		String taxonKey = getTaxonkey();
+		String taxonKey = getTaxonKey();
 		String year = getYear();
 		String normal = taxonKey + STANDARD_SEPARATOR + lon + STANDARD_SEPARATOR + lat + STANDARD_SEPARATOR + country
 				+ STANDARD_SEPARATOR + year + STANDARD_SEPARATOR + basis + STANDARD_SEPARATOR + source;
@@ -108,8 +114,8 @@ public class Normalizer implements Normalizable {
 	}
 
 	/*
-	 * This method works with the premise that the record is useful until
-	 * otherwise is proved
+	 * This method works with the premise that the record is useful until otherwise
+	 * is proved
 	 */
 	@Override
 	public String validate() {
@@ -170,7 +176,12 @@ public class Normalizer implements Normalizable {
 	}
 
 	@Override
-	public String getTaxonkey() {
+	public String getTaxonKey() {
+		return null;
+	}
+
+	@Override
+	public String getGenus() {
 		return null;
 	}
 
@@ -211,12 +222,10 @@ public class Normalizer implements Normalizable {
 	public String getSpecificSeparator() {
 		return null;
 	}
-	
+
 	@Override
 	public boolean isRepatriated() {
 		return false;
 	}
-
-
 
 }

@@ -63,8 +63,13 @@ public class GBIFNormalizer extends Normalizer {
 	}
 
 	@Override
-	public String getTaxonkey() {
+	public String getTaxonKey() {
 		return values[colIndex.get("taxonkey")];
+	}
+	
+	@Override
+	public String getGenus() {
+		return values[colIndex.get("genus")];
 	}
 
 	@Override

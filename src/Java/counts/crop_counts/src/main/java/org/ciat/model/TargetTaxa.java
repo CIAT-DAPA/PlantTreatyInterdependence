@@ -16,14 +16,20 @@ public class TargetTaxa {
 
 	private static TargetTaxa instance = null;
 	private Set<String> speciesKeys = new TreeSet<String>();
+	private Set<String> genera = new TreeSet<String>();
 
 	private TargetTaxa() {
 		super();
-		this.speciesKeys = loadTargetTaxa(new File(Executer.prop.getProperty("resource.taxa")));
+		this.speciesKeys = loadTargetSpecies(new File(Executer.prop.getProperty("resource.species")));
+		this.genera = loadTargetGenera(new File(Executer.prop.getProperty("resource.genera")));
 	}
 
 	public Set<String> getSpeciesKeys() {
 		return speciesKeys;
+	}
+	
+	public Set<String> getGenera() {
+		return genera;
 	}
 
 	public static TargetTaxa getInstance() {
@@ -33,13 +39,13 @@ public class TargetTaxa {
 		return instance;
 	}
 
-	private Set<String> loadTargetTaxa(File vocabularyFile) {
+	private Set<String> loadTargetSpecies(File file) {
 		Set<String> filters = new TreeSet<String>();
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(vocabularyFile)))) {
+		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)))) {
 
 			String line = reader.readLine();
 			while (line != null) {
-				String taxonKey = TaxaMatchAPI.getInstance().fetchTaxonKey(line);
+				String taxonKey = TaxaMatchAPI.getInstance().fetchSpeciesKey(line);
 				if (taxonKey != null && !taxonKey.isEmpty() && Utils.isNumeric(taxonKey)) {
 					filters.add(taxonKey);
 				}
@@ -47,9 +53,29 @@ public class TargetTaxa {
 			}
 
 		} catch (FileNotFoundException e) {
-			System.out.println("File not found " + vocabularyFile.getAbsolutePath());
+			System.out.println("File not found " + file.getAbsolutePath());
 		} catch (IOException e) {
-			System.out.println("Cannot read " + vocabularyFile.getAbsolutePath());
+			System.out.println("Cannot read " + file.getAbsolutePath());
+		}
+		return filters;
+	}
+
+	private Set<String> loadTargetGenera(File file) {
+		Set<String> filters = new TreeSet<String>();
+		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)))) {
+
+			String line = reader.readLine();
+			while (line != null) {
+
+				filters.add(line);
+
+				line = reader.readLine();
+			}
+
+		} catch (FileNotFoundException e) {
+			System.out.println("File not found " + file.getAbsolutePath());
+		} catch (IOException e) {
+			System.out.println("Cannot read " + file.getAbsolutePath());
 		}
 		return filters;
 	}

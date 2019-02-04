@@ -35,8 +35,8 @@ public class ExecNormalizer extends Executer {
 		
 		// export taxa
 		log("Exporting taxa");
-		TempIO.exportMatched(TaxaMatchAPI.getInstance().getMatchedTaxa(),new File(Executer.prop.getProperty("file.taxa.matched")));
-		TempIO.exportUnmatched(TaxaMatchAPI.getInstance().getUnmatchedTaxa(),new File(Executer.prop.getProperty("file.taxa.unmatched")));
+		TempIO.exportMatched(TaxaMatchAPI.getInstance().getMatchedSpecies(),new File(Executer.prop.getProperty("file.taxa.matched")));
+		TempIO.exportUnmatched(TaxaMatchAPI.getInstance().getUnmatchedSpecies(),new File(Executer.prop.getProperty("file.taxa.unmatched")));
 		
 		// export organizations
 		log("Exporting organizations");
