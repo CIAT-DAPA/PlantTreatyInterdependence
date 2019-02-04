@@ -2,6 +2,7 @@ id,name
 1,Production
 2,Import Quantity
 3,Export Quantity
+4,Domestic supply quantity
 5,Losses
 6,Food supply quantity (tonnes)
 7,Stock Variation
@@ -10,6 +11,9 @@ id,name
 10,Other uses
 11,Processing
 17,Yield
+19,Feed
+30,Food supply quantity (tonnes)
+32,Food supply quantity (kg/capita/yr)
 37,Gross Production Value (constant 2004-2006 1000 I$)
 38,Net Production Value (constant 2004-2006 1000 I$)
 39,Gross Production Value (current million SLC)
