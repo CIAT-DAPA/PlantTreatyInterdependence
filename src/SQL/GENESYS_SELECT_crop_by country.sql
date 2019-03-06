@@ -1,68 +1,38 @@
 use genesys_2018;
 
-select name, country, sum(count)
-from CIAT_crop_taxa c
-left join ((
-	select t.taxonName as taxa ,  REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
-	from  taxonomy2 t
-	left join accession a on a.taxonomyId2 = t.id
-	where
-		(taxonName in (select taxa from CIAT_crop_taxa where level="taxonName" group by taxa))
-	group by taxonName, a.origCty
- ) UNION(
-	select t.taxonName as taxa , REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
-	from  taxonomy2 t
-	left join accession a on a.taxonomyId2 = t.id
-	where
-		(t.genus in (select taxa from CIAT_crop_taxa where level="genus" group by taxa)) 
-	group by t.genus,a.origCty
-) )m
-
-on c.taxa = m.taxa
-where m.count is not null
-
-group by c.name, m.country;
 
 
-
-
-select crop, country, sum(count)
-from CIAT_crop_taxa c
-left join ((
-	select t.taxonName as taxa ,  REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
-	from  taxonomy2 t
-	left join accession a on a.taxonomyId2 = t.id
-	where
-		(taxonName in ((select taxonName from CIAT_crop_taxa ct, genesys_2018.taxonomy2 t 
+-- create species relationship
+CREATE table `CIAT_crop_species_subspecies` AS select ct.crop, ct.taxon as species, t.taxonName as subspecies
+from CIAT_crop_taxon ct, genesys_2018.taxonomy2 t 
 							where ct.rank="taxonName" 
-							and t.taxonName like concat( ct.taxa,'%') 
-					   ))
-		)
-	group by taxonName, a.origCty
- )  )m
-
-on c.taxa = m.taxa
-where m.count is not null
-
-group by c.crop, m.country;
+							and t.taxonName like concat( ct.taxon,'%') 
+                            and ct.rank = "taxonName";
+-- 22 seconds
 
 
-
-select crop, country, sum(count)
-from CIAT_crop_taxa c
-left join ((
-	select t.taxonName as taxa , REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
+-- subspecies counts by country
+CREATE table `CIAT_subspecies_counts` AS (select t.taxonName as specie ,  REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
 	from  taxonomy2 t
 	left join accession a on a.taxonomyId2 = t.id
 	where
-		(t.genus in (select taxa from CIAT_crop_taxa where rank="genus" group by taxa)) 
-	group by t.genus,a.origCty
-) )m
+		(taxonName in  (select subspecies from CIAT_crop_species_subspecies group by subspecies)
+        )
+	group by taxonName, a.origCty);
+-- Query OK, 63933 rows affected (4 min 51.29 sec)
 
-on c.taxa = m.taxa
-where m.count is not null
 
-group by c.crop, m.country;
+-- genus counts by country
+CREATE table `CIAT_genus_counts` AS (select t.genus as genus ,  REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
+	from  taxonomy2 t
+	left join accession a on a.taxonomyId2 = t.id
+	where
+		(t.genus in  (select taxon from CIAT_crop_taxon where rank="genus" group by taxon)
+        )
+	group by t.genus, a.origCty);
+    
+-- Query OK, 13501 rows affected (25.30 sec)
+
 
 
 
