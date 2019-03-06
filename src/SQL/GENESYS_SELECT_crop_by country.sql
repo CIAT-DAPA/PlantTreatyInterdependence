@@ -12,7 +12,7 @@ from CIAT_crop_taxon ct, genesys_2018.taxonomy2 t
 
 
 -- subspecies counts by country
-CREATE table `CIAT_subspecies_counts` AS (select t.taxonName as specie ,  REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
+CREATE table `CIAT_subspecies_counts` AS (select t.taxonName as subspecies ,  REPLACE(REPLACE(REPLACE(IFNULL(a.origCty , ''), '31', ''), '32', ''), '33', '')  as country, count(*) count
 	from  taxonomy2 t
 	left join accession a on a.taxonomyId2 = t.id
 	where
@@ -32,6 +32,20 @@ CREATE table `CIAT_genus_counts` AS (select t.genus as genus ,  REPLACE(REPLACE(
 	group by t.genus, a.origCty);
     
 -- Query OK, 13501 rows affected (25.30 sec)
+
+select c.crop, c.species, s.country, sum(s.count) as count
+from CIAT_crop_species_subspecies c
+left join CIAT_subspecies_counts s on s.subspecies=c.subspecies
+group by crop, c.species, country;
+
+select c.crop, g.genus, g.country, sum(g.count) as count
+from CIAT_crop_taxon c
+left join CIAT_genus_counts g on g.genus=c.taxon
+where c.rank = "genus"
+group by crop, g.genus, country;
+
+
+
 
 
 
