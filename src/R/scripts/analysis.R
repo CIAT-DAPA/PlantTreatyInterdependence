@@ -11,10 +11,10 @@ library(corrplot)
 library(ade4)
 require(scales)
 library(stringr)
+source("scripts/composite_index.R")
 
 ##############################################
-####  00-GLOBAL VARIABLES
-##############################################
+####  00- GLOBAL VARIABLES
 
 setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
 #setwd("/home/hsotelo/fao/R/")
@@ -36,9 +36,14 @@ db_cnn <- dbConnect(MySQL(),user = as.character(conf.variables[which(conf.variab
                     host = as.character(conf.variables[which(conf.variables$name == "db_host"),"value"]),
                     dbname=as.character(conf.variables[which(conf.variables$name == "db_name"),"value"]))
 
+# Load variables
+data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
+
 ##############################################
-####  01-LOAD DATA
+
+
 ##############################################
+####  01- FUNCTIONS
 
 # This function transform the original data frame in a new data frame.
 # It takes the metrics column and put all values like variables for each record
@@ -97,7 +102,10 @@ analysis.add.new.variables = function(data){
   return (tmp.data)
   
 }
+##############################################
 
+##############################################
+####  02- GETTING DATA
 
 # Get all data from database
 raw.query = dbSendQuery(db_cnn,"select machine_name,crop_name,country_id,country_iso2,country_iso3,country_name,year,value from vw_domains")
@@ -113,46 +121,56 @@ data = raw
 #data = merge(x=data, y=tmp.metrics.name, by.x="metric_id", by.y="id", all.x = F, all.y = F)
 
 ## Filtering data by region
-#data = data[which(data$country_id == 269),]
-data = data[which(data$country_id %in% 1:268),]
+data = data[which(data$country_id == 269),]
+#data = data[which(data$country_id %in% 1:268),]
 ## Filter data by years
 data = data[which(data$year %in% 2010:2013),]
 
 # Add other datasources
-data = analysis.add.genesys(data)
+#data = analysis.add.genesys(data)
 
 data = analysis.built.matrix(data)
 #write.csv(data,paste0(analysis.folder,"/data.csv"), row.names = F)
-#summary(data)
 
 # add new variables
 data = analysis.add.new.variables(data)
 
-##############################################
-####  02-ANALYZE DATA
-##############################################
-
 # Raw data
 data.raw = data
-write.csv(data,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
+#write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
-source("scripts/composite_index.R")
+# Variables selected
+data.filtered = ci.variables.exclude(data.raw,data.vars)
+#write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
+##############################################
 
-# Load variables
-data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
-#data.raw[complete.cases(data.raw), ]
-data.raw[is.na(data.raw)] = 0
 
 ##############################################
-# All variables
+####  03- NORMALIZING DATA
+
+#normalize 
+
+data.n = ci.normalize(data.filtered,"range")
+#write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
+##############################################
+
+
+
+##############################################
+####  04- ANALYZING CORRELATION
+
+#data.raw[complete.cases(data.raw), ]
+#data.raw[is.na(data.raw)] = 0
+
 # Correlation analysis
 cor.data = ci.multivariate.correlation(data.raw)
 write.csv(cor.data,paste0(analysis.folder,"/cor.data.all.vars.csv"), row.names = F)
 # Correlation graphics
 ci.multivariate.correlation.draw(data.raw,paste0(analysis.folder,"/cor.data.all.vars.tiff"))
 
-# Variables selected
 data.filtered = ci.variables.exclude(data.raw,data.vars)
+#write.csv(data.filtered,paste0(analysis.folder,"/cor.data.filtered.csv"), row.names = F)
+
 # Correlation analysis
 cor.data.filtered = ci.multivariate.correlation(data.filtered)
 write.csv(cor.data.filtered,paste0(analysis.folder,"/cor.data.filtered.vars.csv"), row.names = F)
@@ -161,42 +179,31 @@ ci.multivariate.correlation.draw(data.filtered,paste0(analysis.folder,"/cor.data
 ##############################################
 
 
-# Select variables without correlation (< 0.7)
-#data.selected.cor = ci.multivariate.correlation.less.data(data.raw)
-#write.csv(data.selected,paste0(analysis.folder,"/data.selected.cor.csv"), row.names = F)
+##############################################
+####  05- CALCULATING WEIGHTS
+
 
 # Calculate weights
-data.vars.final = data.vars[data.vars$useable==1,]
-weights.group = ci.weights.group.equal(data.vars.final)
-weights.vars = ci.weights.vars.equal(data.vars.final)
+data.vars.final = data.vars[data.vars$useable == 1,]
+weights.group = ci.weights.group(data.vars.final)
+indicator.groups = ci.aggregation.group.sum(data.n, weights.group)
+#data.filtered$indicator_groups = indicator_groups
+ci.group = data.filtered
+ci.group[,names(indicator.groups)] = indicator.groups
+write.csv(ci.group,paste0(analysis.folder,"/compose_index.group.csv"), row.names = F)
 
-indicator_groups = ci.aggregation.sum(data.filtered,weights.group$weight,normalize = T)
-indicator_vars = ci.aggregation.sum(data.filtered,weights.vars$weight,normalize = T)
-data.filtered$indicator_groups = indicator_groups
-data.filtered$indicator_vars = indicator_vars
-write.csv(data.filtered,paste0(analysis.folder,"/indicators.csv"), row.names = F)
-
-
-
-
-
-#nrow(data)
-data =  data[complete.cases(data), ]
-
-#normalize 
-
-#summary(data$custom_amount_countries)
-data.n = ci.normalize(data,"range")
-#write.csv(data.n,paste0(analysis.folder,"/data_normalize.csv"), row.names = F)
-#summary(data.n)
+weights.vars = ci.weights.vars(data.vars.final)
+indicator.vars = ci.aggregation.sum(data.n, weights.vars$weight)
+ci.vars = data.filtered
+ci.vars$compose_index = indicator.vars
+write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.csv"), row.names = F)
+##############################################
 
 
-#write.csv(data.n,paste0(analysis.folder,"/indicator.csv"), row.names = F)
-
-
+##############################################
+####  06- CALCULATING INDEX
 
 data.final=data.n
-
 
 # Building indicator
 # Creating landa
@@ -215,3 +222,4 @@ data.final$indicator = rowSums(data.final.values)
 data$indicator = data.final$indicator
 #data$crop_country = data.final$crop_country
 #write.csv(data,paste0(analysis.folder,"/data_indicator.csv"), row.names = F)
+##############################################
