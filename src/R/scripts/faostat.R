@@ -193,11 +193,21 @@ process.load.measure = function(f){
     print(paste0("........Records were saved year: ",names(tmp.measure)[y],"-",as.integer(names(tmp.measure)[y])," count: ", dim(tmp.df)[1]))
   })
   
-  
-  
-  
 }
 
+
+import.files = function(path){
+  files = list.files(paste0(process.folder,"/final/"))
+  lapply(files,function(f){
+    print(paste0("Importing: ",process.folder,"/final/",f))
+    records = read.csv(paste0(process.folder,"/final/",f), header = T)
+    db_cnn = connect_db()
+    tmp = dbWriteTable(db_cnn, value = records, name = "measures", append = TRUE, row.names=F)
+    dbDisconnect(db_cnn)
+    print(tmp)
+  })
+  
+}
 
 
 

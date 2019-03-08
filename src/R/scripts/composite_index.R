@@ -18,7 +18,6 @@ require(FactoClass)
 
 #####################################################################################################################################
 # Step 2. Selecting variables
-#####################################################################################################################################
 
 # This function gets the variables, which are numerics
 # (data.frame) data: Dataset
@@ -52,11 +51,11 @@ ci.variables.exclude = function(data, vars){
   tmp.data =  data[,tmp.vars]
   return (tmp.data)
 }
+#####################################################################################################################################
 
 
 #####################################################################################################################################
 # Step 3. Multivariate analysis
-#####################################################################################################################################
 
 # This function calculates the correlation between variables
 # (data.frame) data: Dataset
@@ -149,6 +148,7 @@ ci.multivariate.cluster = function(data){
   #write.csv(data.final,paste0(analysis.folder,"/data_final.csv"), row.names = F)
   
 }
+#####################################################################################################################################
 
 #####################################################################################################################################
 # Step 4. Imputation of missing data
@@ -156,34 +156,39 @@ ci.multivariate.cluster = function(data){
 
 #####################################################################################################################################
 # Step 5. Normalisation of data
-#####################################################################################################################################
 
 # This function normalize the variables of dataset. It works only with not character variables.
 # (data.frame) data: data frame
-# (string) type: Type of normalisation
+# (string) type: Type of normalization
 ci.normalize = function(data, type = "range"){
   tmp.model = preProcess(data, method = type )
   tmp.data = predict(tmp.model, data)
   return (tmp.data)
 }
-
+#####################################################################################################################################
 
 #####################################################################################################################################
 # Step 6. Weighting and aggregation
-#####################################################################################################################################
 
 # This function creates equals weights for the groups of variables
 # (data.frame) vars: Dataframe with the list of variables
-ci.weights.group.equal = function(vars){
+# (int) group_weight: By default, it sets the weight for each group by depending of amount of the groups, 
+#                      if you want to set a default value for all groups, you can set with this parameter
+ci.weights.group = function(vars, group_weight = NA){
   
   tmp.groups = as.character(unique(vars$group))
-  tmp.groups.weight = data.frame(group = tmp.groups, weight = 1/length(tmp.groups))
+  if(is.na(group_weight)){
+    tmp.groups.weight = data.frame(group = tmp.groups, weight = 1/length(tmp.groups))  
+  }
+  else{
+    tmp.groups.weight = data.frame(group = tmp.groups, weight = group_weight)  
+  }
+  
   
   tmp.groups.weight$vars_amount = unlist(
     lapply(1:nrow(tmp.groups.weight),function(i){
-      return (sum(str_count(vars$group,tmp.groups[i])))
-    }
-    )
+      return (sum(str_count(vars$group,paste0("^",tmp.groups[i],"$"))))
+    })
   )
   
   vars$weight = unlist(lapply(1:nrow(vars),function(i){
@@ -197,12 +202,48 @@ ci.weights.group.equal = function(vars){
 
 # This function creates equals weights for the all variables
 # (data.frame) vars: Dataframe with the list of variables
-ci.weights.vars.equal = function(vars){
+ci.weights.vars = function(vars){
   
   vars$weight = 1 / nrow(vars)
   
   return (vars)
 }
+
+# This function gets the 
+# (data.frame) data: Dataset
+# (data.frame) vars: Variables
+# (bool) normalize: True if you want to normalize dataset
+# (string) type.n: weights
+ci.aggregation.group.sum = function(data, vars, normalize = F, type.n = "range"){
+  # Multiplying data x landa
+  tmp.data = ci.variables.numeric.data(data)
+  if(normalize == T){
+    tmp.data = ci.normalize(tmp.data, type.n)
+  }
+  tmp.data = as.matrix(tmp.data)
+  tmp.data.final = t(t(tmp.data)*vars$weight)
+  
+  # Setting the ranges of each group to summarize
+  df_weights = data.frame(order_ID = 1:nrow(vars),vars)
+  df_weights = droplevels(df_weights) 
+  df_weights_sp = split(df_weights,df_weights$group)
+  tmp.groups = do.call(rbind, lapply(df_weights_sp, function(w){
+                                 data.frame(group = unique(w[1,]$group),start = w[1,]$order_ID , end = w[nrow(w),]$order_ID)
+                      }))
+  row.names(tmp.groups) <- NULL
+  
+  # Calculating indicator by group
+  tmp.indicator = as.data.frame( do.call(cbind, lapply(1:nrow(tmp.groups),function(i){
+    return (rowSums(tmp.data.final[,c(tmp.groups[i,]$start,tmp.groups[i,]$end )]))
+  }) ))
+  
+  names(tmp.indicator) = paste0("gp_index_",tmp.groups$group)
+  
+  tmp.indicator$compose_index = rowSums(tmp.indicator,na.rm=TRUE)
+  
+  return (tmp.indicator)
+}
+
 
 # This function gets the value of the compose index
 # (data.frame) data: Dataset
@@ -220,6 +261,7 @@ ci.aggregation.sum = function(data, weights, normalize = F, type.n = "range"){
   
   return (tmp.indicator)
 }
+#####################################################################################################################################
 
 #####################################################################################################################################
 # Step 7. Robustness and sensitivity
