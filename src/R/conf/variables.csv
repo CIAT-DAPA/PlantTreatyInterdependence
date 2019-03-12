@@ -30,4 +30,3 @@ value_agricultural_production,FAOSTAT,vap_gross_production_value_slc,SLC,0
 value_agricultural_production,FAOSTAT,vap_gross_production_value_2004_2006_slc,SLC,0
 value_agricultural_production,FAOSTAT,vap_gross_production_value_us,USD,1
 value_agricultural_production,FAOSTAT,vap_gross_production_value_2014_2006_us,USD,0
-custom,CUSTOM,cu_amount_countries,Amount,1

@@ -214,7 +214,7 @@ ci.weights.vars = function(vars){
 # (data.frame) vars: Variables
 # (bool) normalize: True if you want to normalize dataset
 # (string) type.n: weights
-ci.aggregation.group.sum = function(data, vars, normalize = F, type.n = "range"){
+ci.aggregation.group.factor.sum = function(data, vars, normalize = F, type.n = "range"){
   # Multiplying data x landa
   tmp.data = ci.variables.numeric.data(data)
   if(normalize == T){
@@ -234,7 +234,11 @@ ci.aggregation.group.sum = function(data, vars, normalize = F, type.n = "range")
   
   # Calculating indicator by group
   tmp.indicator = as.data.frame( do.call(cbind, lapply(1:nrow(tmp.groups),function(i){
-    return (rowSums(tmp.data.final[,c(tmp.groups[i,]$start,tmp.groups[i,]$end )]))
+    cols = tmp.groups[i,]$start : tmp.groups[i,]$end
+    if(length(cols) == 1){
+      cols = c(cols,cols)
+    }
+    return (rowSums(tmp.data.final[,c(cols)]))
   }) ))
   
   names(tmp.indicator) = paste0("gp_index_",tmp.groups$group)
@@ -244,11 +248,48 @@ ci.aggregation.group.sum = function(data, vars, normalize = F, type.n = "range")
   return (tmp.indicator)
 }
 
+# This function gets the 
+# (data.frame) data: Dataset
+# (data.frame) vars: Variables
+# (bool) normalize: True if you want to normalize dataset
+# (string) type.n: weights
+ci.aggregation.group.avg = function(data, vars, normalize = F, type.n = "range"){
+  # Multiplying data x landa
+  tmp.data = ci.variables.numeric.data(data)
+  if(normalize == T){
+    tmp.data = ci.normalize(tmp.data, type.n)
+  }
+  tmp.data.final = as.matrix(tmp.data)
+  
+  # Setting the ranges of each group to summarize
+  df_weights = data.frame(order_ID = 1:nrow(vars),vars)
+  df_weights = droplevels(df_weights) 
+  df_weights_sp = split(df_weights,df_weights$group)
+  tmp.groups = do.call(rbind, lapply(df_weights_sp, function(w){
+    data.frame(group = unique(w[1,]$group),start = w[1,]$order_ID , end = w[nrow(w),]$order_ID)
+  }))
+  row.names(tmp.groups) <- NULL
+  
+  # Calculating indicator by group
+  tmp.indicator = as.data.frame( do.call(cbind, lapply(1:nrow(tmp.groups),function(i){
+    cols = tmp.groups[i,]$start : tmp.groups[i,]$end
+    if(length(cols) == 1){
+      cols = c(cols,cols)
+    }
+    return (rowMeans(tmp.data.final[,c(cols)]))
+  }) ))
+  
+  names(tmp.indicator) = paste0("gp_index_",tmp.groups$group)
+  
+  tmp.indicator$compose_index = rowMeans(tmp.indicator,na.rm=TRUE)
+  
+  return (tmp.indicator)
+}
 
 # This function gets the value of the compose index
 # (data.frame) data: Dataset
 # (vector) weights: Weights variables
-ci.aggregation.sum = function(data, weights, normalize = F, type.n = "range"){
+ci.aggregation.vars.sum = function(data, weights, normalize = F, type.n = "range"){
   # Multiplying data x landa
   tmp.data = ci.variables.numeric.data(data)
   if(normalize == T){

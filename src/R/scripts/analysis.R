@@ -133,15 +133,15 @@ data = analysis.built.matrix(data)
 #write.csv(data,paste0(analysis.folder,"/data.csv"), row.names = F)
 
 # add new variables
-data = analysis.add.new.variables(data)
+#data = analysis.add.new.variables(data)
 
 # Raw data
 data.raw = data
-#write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
+write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
 # Variables selected
 data.filtered = ci.variables.exclude(data.raw,data.vars)
-#write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
+write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
 ##############################################
 
 
@@ -151,7 +151,7 @@ data.filtered = ci.variables.exclude(data.raw,data.vars)
 #normalize 
 
 data.n = ci.normalize(data.filtered,"range")
-#write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
+write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 ##############################################
 
 
@@ -180,46 +180,26 @@ ci.multivariate.correlation.draw(data.filtered,paste0(analysis.folder,"/cor.data
 
 
 ##############################################
-####  05- CALCULATING WEIGHTS
+####  05- CALCULATING COMPOSE INDEX
 
-
-# Calculate weights
 data.vars.final = data.vars[data.vars$useable == 1,]
-weights.group = ci.weights.group(data.vars.final)
-indicator.groups = ci.aggregation.group.sum(data.n, weights.group)
-#data.filtered$indicator_groups = indicator_groups
-ci.group = data.filtered
-ci.group[,names(indicator.groups)] = indicator.groups
-write.csv(ci.group,paste0(analysis.folder,"/compose_index.group.csv"), row.names = F)
 
+# Calculating by groups
+weights.group = ci.weights.group(data.vars.final)
+indicator.groups = ci.aggregation.group.factor.sum(data.n, weights.group)
+ci.group.sum = data.filtered
+ci.group.sum[,names(indicator.groups)] = indicator.groups
+write.csv(ci.group.sum,paste0(analysis.folder,"/compose_index.group.factor.sum.csv"), row.names = F)
+
+indicator.groups = ci.aggregation.group.avg(data.n, weights.group)
+ci.group.avg = data.filtered
+ci.group.avg[,names(indicator.groups)] = indicator.groups
+write.csv(ci.group.avg,paste0(analysis.folder,"/compose_index.group.avg.csv"), row.names = F)
+
+# Calculating by vars
 weights.vars = ci.weights.vars(data.vars.final)
-indicator.vars = ci.aggregation.sum(data.n, weights.vars$weight)
+indicator.vars = ci.aggregation.vars.sum(data.n, weights.vars$weight)
 ci.vars = data.filtered
 ci.vars$compose_index = indicator.vars
-write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.csv"), row.names = F)
-##############################################
-
-
-##############################################
-####  06- CALCULATING INDEX
-
-data.final=data.n
-
-# Building indicator
-# Creating landa
-times = dim(data.final)[2]-6
-
-landa = analysis.built.landas(data.final) 
-
-# Multiplying data x landa
-data.n_mat = as.matrix(data.final[,7:dim(data.final)[2]])
-data.final.values = t(t(data.n_mat)*landa)
-
-data.final$indicator = rowSums(data.final.values)
-#data.final$crop_country = paste0(data.final$crop_name,"-",data.final$country_iso2)
-#write.csv(data.final,paste0(analysis.folder,"/data_final.csv"), row.names = F)
-
-data$indicator = data.final$indicator
-#data$crop_country = data.final$crop_country
-#write.csv(data,paste0(analysis.folder,"/data_indicator.csv"), row.names = F)
+write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.sum.csv"), row.names = F)
 ##############################################

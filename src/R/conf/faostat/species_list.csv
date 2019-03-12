@@ -4,312 +4,349 @@ id_crop,crop,faostat-food_supply,faostat-commodity_balances,faostat-crops,faosta
 3,Ackee,,,,,
 4,Adlay,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes",
 5,Adzuki bean,Beans,Beans,Beans,Beans,Beans
-6,African rice,Rice,Rice,Rice,Rice,Rice
-7,Agave,"Hard Fibres, Other","Hard Fibres, Other",Agave fibres nes,Agave fibres nes,
-8,Agropyron,,,,,
-9,Agrostis,,,,,
-10,Albardine,,,Fibre crops nes,Fibre crops nes,
-11,Alfalfa,,,,,Alfalfa
-12,Allspice,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers
-13,Almonds,Nuts,Nuts,Almonds,Almonds,Almonds
-14,Alopecurus,,,,,
-15,Amaranth,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes",
-16,Andropogon,,,,,
-17,Anise,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
-18,Apple,Apples,Apples,Apples,Apples,Apples
-19,Apricot,"Fruits, Other","Fruits, Other",Apricots,Apricots,Apricots
-20,Areca nuts,Nuts,Nuts,Areca nuts,Areca nuts,"Nuts, nes"
-21,Arracacha,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-22,Arrhenatherum,,,,,
-23,Arrowroot,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-24,Artichokes,"Vegetables, Other","Vegetables, Other",Artichokes,Artichokes,Artichokes
-25,Asian rice,Rice,Rice,Rice,Rice,Rice
-26,Asparagus,"Vegetables, Other","Vegetables, Other",Asparagus,Asparagus,Asparagus
-27,Astragalus,,,,,
-28,Atriplex,,,,,
-29,Avocado,"Fruits, Other","Fruits, Other",Avocados,Avocados,Avocados
-30,Azarole,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-31,Babaco,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-32,Badian,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
-33,Bambara bean,"Pulses, Other","Pulses, Other",Bambara beans,Bambara beans,Bambara beans
-34,Bamboo shoot,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-35,Bananas,Bananas,Bananas,Bananas,Bananas,Bananas
-36,Barley,Barley,Barley,Barley,Barley,Barley
-37,Basil,,,,,
-38,Bay leaf,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
-39,Beech nut,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-40,Beets,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes",Beets
-41,Black gram,Beans,Beans,Beans,Beans,Beans
-42,Black salsify,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-43,Blueberry,"Fruits, Other","Fruits, Other",Blueberries,Blueberries,Blueberries
-44,Brazil nut,Nuts,Nuts,Brazil nuts,Brazil nuts,Brazil nuts
-45,Breadfruit,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-46,Buckwheat,"Cereals, Other","Cereals, Other",Buckwheat,Buckwheat,Buckwheat
-47,Butter-nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
-48,Butternut squash,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
-49,Cabbages,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
-50,Cabbages and other brassicas,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
-51,Caesarweed,,,"Bastfibres, other","Bastfibres, other",
-52,Cainito,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-53,Calabash,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
-54,Canary seed,"Cereals, Other","Cereals, Other",Canary seed,Canary seed,Canary seed
-55,Candlenut,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-56,Canola,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
-57,Capers,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-58,Carambola,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-59,Carapa,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-60,Cardamoms,"Spices, Other","Spices, Other","Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms"
-61,Carneros Yucca,,,Fibre crops nes,Fibre crops nes,
-62,Caroa,,,Fibre crops nes,Fibre crops nes,
-63,Carobs,"Vegetables, Other","Vegetables, Other",Carobs,Carobs,
-64,Carrots,"Vegetables, Other","Vegetables, Other",Carrots and turnips,Carrots and turnips,Carrots and turnips
-65,Cashews,Nuts,Nuts,Cashew,Cashew,Cashew
-66,Cassava,Cassava,Cassava,Cassava,Cassava,Cassava
-67,Castor bean,"Oilcrops, Other","Oilcrops, Other",Castor bean,Castor bean,Castor bean
-68,Ceara,,,"Gums, natural","Gums, natural",
-69,Celery,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-70,Chayote,,,,,
-71,Cherimoya,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-72,Cherries,"Fruits, Other","Fruits, Other",Cherries,Cherries,Cherries
-73,Chervil,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-74,Chestnuts,Nuts,Nuts,Chestnut,Chestnut,Chestnut
-75,Chickpeas,"Pulses, Other","Pulses, Other",Chickpeas,Chickpeas,Chickpeas
-76,Chicle,,,"Gums, natural","Gums, natural",
-77,Chicory,"Vegetables, Other","Vegetables, Other",Lettuce and chicory,Lettuce and chicory,Lettuce and chicory
-78,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers
-79,Chinotto,"Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other"
-80,Chontadura,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-81,Chufa,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-82,Cinnamon,"Spices, Other","Spices, Other",Cinnamon,Cinnamon,Cinnamon
-83,Citron,"Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other"
-84,Citronella,,,,,Citronella
-85,Clovers,,,,,Clover
-86,Cloves,Cloves,Cloves,Cloves,Cloves,Cloves
-87,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa
-88,Coconuts,Coconut,Coconut,Coconut,Coconut,Coconut
-89,Coffee,Coffee,Coffee,Coffee,Coffee,Coffee
-90,Common bean,Beans,Beans,Beans,Beans,Beans
-91,Coriander,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
-92,Coronilla,,,,,
-93,Cotton,Cotton,Cotton,Cotton,Cotton,Cotton
-94,Cowpeas,"Pulses, Other","Pulses, Other",Cowpeas,Cowpeas,
-95,Cranberries,"Fruits, Other","Fruits, Other",Cranberries,Cranberries,Cranberries
-96,Cress,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-97,Cucumbers and gherkins,"Vegetables, Other","Vegetables, Other",Cucumbers and gherkins,Cucumbers and gherkins,Cucumbers and gherkins
-98,Cumin,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
-99,Currants,"Fruits, Other","Fruits, Other",Currants,Currants,Currants
-100,Dactylis,,,,,
-101,Dates,Dates,Dates,Dates,Dates,Dates
-102,Devil's cotton,,,"Bastfibres, other","Bastfibres, other",
-103,Dill,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
-104,Durian,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-105,Eggplant,"Vegetables, Other","Vegetables, Other",Eggplants,Eggplants,Eggplants
-106,Elderberry,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-107,Esparto,,,Fibre crops nes,Fibre crops nes,
-108,Ethiopian rape,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
-109,Faba beans,"Pulses, Other","Pulses, Other",Faba beans,Faba beans,Faba beans
-110,Feijoa,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-111,Fennel,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
-112,Fenugreek,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
-113,Festuca,,,,,
-114,Figs,"Fruits, Other","Fruits, Other",Figs,Figs,Figs
-115,Finger millet,Millet,Millet,Millet,Millet,Millet
-116,Fique,,,Fibre crops nes,Fibre crops nes,
-117,Flax,"Oilcrops, Other","Oilcrops, Other",Flax,Flax,Flax
-118,Fonio,"Cereals, Other","Cereals, Other",Fonio,Fonio,Fonio
-119,Foxtail millet,Millet,Millet,Millet,Millet,Millet
-120,Garlic,"Vegetables, Other","Vegetables, Other",Garlic,Garlic,Garlic
-121,Giant cabuya,,,Fibre crops nes,Fibre crops nes,
-122,Ginger,"Spices, Other","Spices, Other",Ginger,Ginger,Ginger
-123,Gooseberries,"Fruits, Other","Fruits, Other",Gooseberries,Gooseberries,Gooseberries
-124,Grapefruits,Grapefruit,Grapefruit,Grapefruit,Grapefruit,Grapefruit
-125,Grapes,Grapes,Grapes,Grapes,Grapes,Grapes
-126,Grasspea,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
-127,Groundnuts,Groundnut,Groundnut,Groundnut,Groundnut,Groundnut
-128,Guavas,"Fruits, Other","Fruits, Other","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas"
-129,Guayule,,,"Gums, natural","Gums, natural",
-130,Gutta-percha,,,"Gums, natural","Gums, natural",
-131,Hazelnuts,Nuts,Nuts,Hazelnuts,Hazelnuts,Hazelnuts
-132,Hedysarum,,,,,
-133,Hemp,"Oilcrops, Other","Oilcrops, Other",Hemp,Hemp,Hemp
-134,Hops,,,Hops,Hops,Hops
-135,Horseradish,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-136,Huckleberry,"Fruits, Other","Fruits, Other","Berries, nes","Berries, nes",
-137,Jack bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
-138,Jackfruit,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-139,Japanese millet,Millet,Millet,Millet,Millet,Millet
-140,Jelutong,,,"Gums, natural","Gums, natural",
-141,Jerusalem artichoke,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-142,Jicama,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
-143,Jojoba,"Oilcrops, Other","Oilcrops, Other",Jojoba,,
-144,Jujube,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-145,Jute,,Jute,Jute,Jute,Jute
-146,Kaniwa,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes",
-147,Kapok,"Oilcrops, Other","Oilcrops, Other",Kapok,Kapok,Kapok
-148,Karite nuts,"Oilcrops, Other","Oilcrops, Other",Karite nuts,Karite nuts,Karite nuts
-149,Kenaf,,,"Bastfibres, other","Bastfibres, other",
-150,Kiwi fruit,"Fruits, Other","Fruits, Other",Kiwi fruit,Kiwi fruit,Kiwi fruit
-151,Kiwicha,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes",
-152,Kodo millet,Millet,Millet,Millet,Millet,Millet
-153,Kola nuts,Nuts,Nuts,Kola nuts,Kola nuts,Kola nuts
-154,Kumquat,"Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other"
-155,Lablab,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
-156,Lavender,,,,,
-157,Leeks and other alliaceous vegetables,"Vegetables, Other","Vegetables, Other",Leeks and other alliaceous vegetables,Leeks and other alliaceous vegetables,Leeks and other alliaceous vegetables
-158,Lemons and limes,Lemons and limes,Lemons and limes,Lemons and limes,Lemons and limes,Lemons and limes
-159,Lentils,"Pulses, Other","Pulses, Other",Lentils,Lentils,Lentils
-160,Lespedeza,,,,,
-161,Lettuce,"Vegetables, Other","Vegetables, Other",Lettuce and chicory,Lettuce and chicory,Lettuce and chicory
-162,Licorice,,,,,
-163,Lima bean,Beans,Beans,Beans,Beans,Beans
-164,Litchi,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-165,Lolium,,,,,
-166,Longan,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-167,Loquat,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-168,Lotus,,,,,
-169,Lupins,"Pulses, Other","Pulses, Other",Lupins,Lupins,
-170,Maca,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-171,Macadamia nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
-172,Mahuwa,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-173,Maize,Maize,Maize,Maize,Maize,Maize
-174,Mamey sapote,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-175,Mammee,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-176,Mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines
-177,Mango,"Fruits, Other","Fruits, Other","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas"
-178,Mangosteen,"Fruits, Other","Fruits, Other","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas"
-179,Maple sugar,"Sweeteners, Other","Sweeteners, Other","Sugar crops, nes","Sugar crops, nes","Sugar crops, nes"
-180,Marjoram,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-181,Mashua,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-182,Mat bean,Beans,Beans,Beans,Beans,Beans
-183,Mate,Tea and mate,Tea and mate,Mate,Mate,Mate
-184,Mauka,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-185,Medlar,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-186,Melilotus,,,,,
-187,Melons,"Fruits, Other","Fruits, Other",Melons,Melons,Melons
-188,Mombin,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-189,Mulberry,"Fruits, Other","Fruits, Other","Berries, nes","Berries, nes",
-190,Mung bean,Beans,Beans,Beans,Beans,Beans
-191,Myrtle,"Fruits, Other","Fruits, Other","Berries, nes","Berries, nes",
-192,Naranjilla,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-193,New Zealand flax,,,Fibre crops nes,Fibre crops nes,
-194,New Zealand Spinach,"Vegetables, Other","Vegetables, Other",Spinach,Spinach,Spinach
-195,Noog,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-196,Nutmeg,Spices Other,Spices Other,"Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms"
-197,Oats,Oats,Oats,Oats,Oats,Oats
-198,Oca,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-199,Oil palm,Oil palm,Oil palm,Oil palm,Oil palm,Oil palm
-200,Oiticica,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-201,Okra,"Vegetables, Other","Vegetables, Other",Okra,Okra,
-202,Olives,Olive,Olive,Olive,Olive,Olive
-203,Onions,Onions,Onions,Onions,Onions,Onions
-204,Onobrychis,,,,,
-205,Orache,"Vegetables, Other","Vegetables, Other",Spinach,Spinach,Spinach
-206,Oranges,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines
-207,Oregano,,,,,
-208,Ornithopus,,,,,
-209,Papayas,"Fruits, Other","Fruits, Other",Papayas,Papayas,Papayas
-210,Parsley,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-211,Parsnip,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-212,Passionfruit,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-213,Pawpaw,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-214,Peaches and nectarines,"Fruits, Other","Fruits, Other",Peaches and nectarines,Peaches and nectarines,Peaches and nectarines
-215,Pearl millet,Millet,Millet,Millet,Millet,Millet
-216,Pears,"Fruits, Other","Fruits, Other",Pears,Pears,Pears
-217,Peas,Peas,Peas,Peas,Peas,Peas
-218,Pecan,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
-219,Pepper,Pepper,Pepper,Pepper,Pepper,Pepper
-220,Peppermint,,,Peppermint,Peppermint,Peppermint
-221,Perilla,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-222,Persimmons,"Fruits, Other","Fruits, Other",Persimmons,Persimmons,Persimmons
-223,Phalaris,,,,,
-224,Phleum,,,,,
-225,Physic nut,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-226,Pigeonpeas,"Pulses, Other","Pulses, Other",Pigeonpeas,Pigeonpeas,
-227,Pili nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
-228,Pine nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
-229,Pineapples,Pineapples,Pineapples,Pineapples,Pineapples,Pineapples
-230,Pistachios,Nuts,Nuts,Pistachios,Pistachios,Pistachios
-231,Plantains,Plantains,Plantains,Plantains,Plantains,Plantains
-232,Plums,"Fruits, Other","Fruits, Other",Plums,Plums,Plums
-233,Poa,,,,,
-234,Pomegranate,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-235,Pongamia oil,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-236,Poppies,"Oilcrops, Other","Oilcrops, Other",Poppy,Poppy,Poppy
-237,Potatoes,Potatoes,Potatoes,Potatoes,Potatoes,Potatoes
-238,Prickly pear,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-239,Proso millet,Millet,Millet,Millet,Millet,Millet
-240,Prosopis,,,,,
-241,Pueraria,,,,,
-242,Pumpkin,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
-243,Purging croton,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-244,Pyrethrum,,,Pyrethrum,Pyrethrum,Pyrethrum
-245,Quinces,"Fruits, Other","Fruits, Other",Quinces,Quinces,Quinces
-246,Quinoa,"Cereals, Other","Cereals, Other",Quinoa,Quinoa,
-247,Radish,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-248,Rambutan,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-249,Ramie,,,Ramie,Ramie,
-250,Rapeseed and Mustards,Rapeseed and Mustard,Rapeseed and Mustard,Rapeseed and Mustard,Rapeseed and Mustard,Rapeseed and Mustard
-251,Raspberries,"Fruits, Other","Fruits, Other",Raspberries,Raspberries,
-252,Rhubarb,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-253,Rice bean,Beans,Beans,Beans,Beans,Beans
-254,Roselle,,,"Bastfibres, other","Bastfibres, other",
-255,Rosemary,,,,,
-256,"Rubber, natural",,"Rubber, natural","Rubber, natural","Rubber, natural","Rubber, natural"
-257,Runner bean,Beans,Beans,Beans,Beans,Beans
-258,Rye,Rye,Rye,Rye,Rye,Rye
-259,Safflower,"Oilcrops, Other","Oilcrops, Other",Safflower,Safflower,Safflower
-260,Saffron,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
-261,Sago palm,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-262,Salsify,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-263,Salsola,,,,,
-264,Sapodilla,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
-265,Savory,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-266,Service tree,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-267,Sesame,Sesame,Sesame,Sesame,Sesame,Sesame
-268,Shala tree,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
-269,Sisal,,,Sisal,Sisal,Sisal
-270,Snake plant,,,Fibre crops nes,Fibre crops nes,
-271,Sorghum,Sorghum,Sorghum,Sorghum,Sorghum,Sorghum
-272,Sorrel,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-273,Soybeans,Soybean,Soybean,Soybean,Soybean,Soybean
-274,Spinach,"Vegetables, Other","Vegetables, Other",Spinach,Spinach,Spinach
-275,Strawberries,"Fruits, Other","Fruits, Other",Strawberries,Strawberries,Strawberries
-276,Strawberry tree,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-277,Sugar beets,Sugar beet,Sugar beet,Sugar beet,Sugar beet,Sugar beet
-278,Sugarcane,Sugarcane,Sugarcane,Sugarcane,Sugarcane,Sugarcane
-279,Sunflowers,Sunflower,Sunflower,Sunflower,Sunflower,Sunflower
-280,Sunn hemp,,,"Bastfibres, other","Bastfibres, other",
-281,Sweetpotatoes,Sweetpotato,Sweetpotato,Sweetpotato,Sweetpotato,Sweetpotato
-282,Sword bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes","Pulses, nes"
-283,Tallowtree,,,Tallow,,Tallow
-284,Tamarind,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
-285,Taro,"Roots, Other","Roots, Other",Taro,Taro,
-286,Tarragon,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-287,Tea,Tea and mate,Tea and mate,Tea,Tea,Tea
-288,Teff,Millet,Millet,Millet,Millet,Millet
-289,Tepary bean,Beans,Beans,Beans,Beans,Beans
-290,Thyme,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
-291,Tobacco,,Tobacco,Tobacco,Tobacco,Tobacco
-292,Tomatillo,,,,,
-293,Tomatoes,Tomato,Tomato,Tomato,Tomato,Tomato
-294,Tripsacum,,,,,
-295,Triticale,"Cereals, Other","Cereals, Other",Triticale,Triticale,Triticale
-296,Tung nuts,"Oilcrops, Other","Oilcrops, Other",Tung,Tung,
-297,Turmeric,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
-298,Turnips,"Vegetables, Other","Vegetables, Other",Carrots and turnips,Carrots and turnips,Turnip
-299,Ulluco,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
-300,Vanilla,"Spices, Other","Spices, Other",Vanilla,Vanilla,Vanilla
-301,Velvet bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes","Pulses, nes"
-302,Velvet leaf,,,"Bastfibres, other","Bastfibres, other",
-303,Vetch,"Pulses, Other","Pulses, Other",Vetches,Vetches,Vetches
-304,Walnuts,Nuts,Nuts,Walnuts,Walnuts,Walnuts
-305,Watercress,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
-306,Watermelons,"Fruits, Other","Fruits, Other",Watermelons,Watermelons,Watermelons
-307,Wheat,Wheat,Wheat,Wheat,Wheat,Wheat
-308,Wildrice,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes","Cereals, nes"
-309,Winged bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes","Pulses, nes"
-310,Yacon,,,,,
-311,Yams,Yams,Yams,Yams,Yams,
-312,"Yautia, cocoyam","Roots, Other","Roots, Other",Yautia cocoyam,Yautia cocoyam,
-313,Year bean,Beans,Beans,Beans,Beans,Beans
-314,Zucchini,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
+6,Aeschynomene,,,,,
+7,African eggplant,,,,,
+8,Agave,"Hard Fibres, Other","Hard Fibres, Other",Agave fibres nes,Agave fibres nes,
+9,Agropyron,,,,,
+10,Agrostis,,,,,
+11,Ahipa,,,,,
+12,Albardine,,,Fibre crops nes,Fibre crops nes,
+13,Alfalfa,,,,,Alfalfa
+14,Allspice,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers
+15,Almonds,Nuts,Nuts,Almonds,Almonds,Almonds
+16,Alopecurus,,,,,
+17,Alysicarpus,,,,,
+18,Amaranth,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes",
+19,Andropogon,,,,,
+20,Anise,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
+21,Annato,,,,,
+22,Apple,Apples,Apples,Apples,Apples,Apples
+23,Apricot,"Fruits, Other","Fruits, Other",Apricots,Apricots,Apricots
+24,Areca nuts,Nuts,Nuts,Areca nuts,Areca nuts,"Nuts, nes"
+25,Arracacha,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+26,Arrhenatherum,,,,,
+27,Arrowroot,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+28,Artichokes,"Vegetables, Other","Vegetables, Other",Artichokes,Artichokes,Artichokes
+29,Asparagus,"Vegetables, Other","Vegetables, Other",Asparagus,Asparagus,Asparagus
+30,Astragalus,,,,,
+31,Atemoya,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+32,Atriplex,,,,,
+33,Avocado,"Fruits, Other","Fruits, Other",Avocados,Avocados,Avocados
+34,Azarole,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+35,Babaco,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+36,Badian,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
+37,Bambara bean,"Pulses, Other","Pulses, Other",Bambara beans,Bambara beans,Bambara beans
+38,Bamboo shoot,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+39,Bananas,Bananas,Bananas,Bananas,Bananas,Bananas
+40,Barley,Barley,Barley,Barley,Barley,Barley
+41,Basil,,,,,
+42,Bay leaf,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
+43,Beech nut,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+44,Beets,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes",Beets
+45,Black gram,Beans,Beans,Beans,Beans,Beans
+46,Black nightshade,,,,,
+47,Black salsify,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+48,Blueberry,"Fruits, Other","Fruits, Other",Blueberries,Blueberries,Blueberries
+49,Brachiaria,,,,,
+50,Brazil nut,Nuts,Nuts,Brazil nuts,Brazil nuts,Brazil nuts
+51,Breadfruit,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+52,Buckwheat,"Cereals, Other","Cereals, Other",Buckwheat,Buckwheat,Buckwheat
+53,Butter-nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
+54,Butternut squash,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
+55,Cabbages,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
+56,Cabbages and other brassicas,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
+57,Caesarweed,,,"Bastfibres, other","Bastfibres, other",
+58,Cainito,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+59,Calabash,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
+60,Calopogonium,,,,,
+61,Canary seed,"Cereals, Other","Cereals, Other",Canary seed,Canary seed,Canary seed
+62,Candlenut,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+63,Canola,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
+64,Capers,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+65,Carambola,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+66,Carapa,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+67,Caraway,,,,,
+68,Cardamoms,"Spices, Other","Spices, Other","Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms"
+69,Carneros Yucca,,,Fibre crops nes,Fibre crops nes,
+70,Caroa,,,Fibre crops nes,Fibre crops nes,
+71,Carobs,"Vegetables, Other","Vegetables, Other",Carobs,Carobs,
+72,Carrots,"Vegetables, Other","Vegetables, Other",Carrots and turnips,Carrots and turnips,Carrots and turnips
+73,Cashews,Nuts,Nuts,Cashew,Cashew,Cashew
+74,Cassava,Cassava,Cassava,Cassava,Cassava,Cassava
+75,Castor bean,"Oilcrops, Other","Oilcrops, Other",Castor bean,Castor bean,Castor bean
+76,Ceara,,,"Gums, natural","Gums, natural",
+77,Celery,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+78,Centrosema,,,,,
+79,Ceylon-spinach,,,,,
+80,Chayote,,,,,
+81,Cherimoya,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+82,Cherries,"Fruits, Other","Fruits, Other",Cherries,Cherries,Cherries
+83,Chervil,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+84,Chestnuts,Nuts,Nuts,Chestnut,Chestnut,Chestnut
+85,Chickpeas,"Pulses, Other","Pulses, Other",Chickpeas,Chickpeas,Chickpeas
+86,Chicle,,,"Gums, natural","Gums, natural",
+87,Chicory,"Vegetables, Other","Vegetables, Other",Lettuce and chicory,Lettuce and chicory,Lettuce and chicory
+88,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers,Chillies and peppers
+89,Chinotto,"Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other"
+90,Chontadura,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+91,Chufa,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+92,Cinnamon,"Spices, Other","Spices, Other",Cinnamon,Cinnamon,Cinnamon
+93,Citron,"Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other"
+94,Citronella,,,,,Citronella
+95,Clovers,,,,,Clover
+96,Cloves,Cloves,Cloves,Cloves,Cloves,Cloves
+97,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa,Cocoa
+98,Coconuts,Coconut,Coconut,Coconut,Coconut,Coconut
+99,Coffee,Coffee,Coffee,Coffee,Coffee,Coffee
+100,Common bean,Beans,Beans,Beans,Beans,Beans
+101,Coriander,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
+102,Coronilla,,,,,
+103,Cotton,Cotton,Cotton,Cotton,Cotton,Cotton
+104,Cowpeas,"Pulses, Other","Pulses, Other",Cowpeas,Cowpeas,
+105,Crambe,,,,,
+106,Cranberries,"Fruits, Other","Fruits, Other",Cranberries,Cranberries,Cranberries
+107,Cress,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+108,Cucumbers and gherkins,"Vegetables, Other","Vegetables, Other",Cucumbers and gherkins,Cucumbers and gherkins,Cucumbers and gherkins
+109,Cumin,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
+110,Currants,"Fruits, Other","Fruits, Other",Currants,Currants,Currants
+111,Cushaw,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
+112,Custard apple,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+113,Dactylis,,,,,
+114,Dates,Dates,Dates,Dates,Dates,Dates
+115,Desmodium,,,,,
+116,Devil's cotton,,,"Bastfibres, other","Bastfibres, other",
+117,Dill,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
+118,Durian,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+119,Eggplant,"Vegetables, Other","Vegetables, Other",Eggplants,Eggplants,Eggplants
+120,Elderberry,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+121,Esparto,,,Fibre crops nes,Fibre crops nes,
+122,Ethiopian rape,"Vegetables, Other","Vegetables, Other",Cabbages and other brassicas,Cabbages and other brassicas,Cabbages and other brassicas
+123,Faba beans,"Pulses, Other","Pulses, Other",Faba beans,Faba beans,Faba beans
+124,Feijoa,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+125,Fennel,"Spices, Other","Spices, Other","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander","Anise, badian, fennel, coriander"
+126,Fenugreek,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
+127,Festuca,,,,,
+128,Fig leaf gourd,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
+129,Figs,"Fruits, Other","Fruits, Other",Figs,Figs,Figs
+130,Finger millet,Millet,Millet,Millet,Millet,Millet
+131,Fique,,,Fibre crops nes,Fibre crops nes,
+132,Flax,"Oilcrops, Other","Oilcrops, Other",Flax,Flax,Flax
+133,Fonio,"Cereals, Other","Cereals, Other",Fonio,Fonio,Fonio
+134,Foxtail millet,Millet,Millet,Millet,Millet,Millet
+135,Galactia,,,,,
+136,Garlic,"Vegetables, Other","Vegetables, Other",Garlic,Garlic,Garlic
+137,Giant cabuya,,,Fibre crops nes,Fibre crops nes,
+138,Ginger,"Spices, Other","Spices, Other",Ginger,Ginger,Ginger
+139,Gooseberries,"Fruits, Other","Fruits, Other",Gooseberries,Gooseberries,Gooseberries
+140,Grapefruits,Grapefruit,Grapefruit,Grapefruit,Grapefruit,Grapefruit
+141,Grapes,Grapes,Grapes,Grapes,Grapes,Grapes
+142,Grasspea,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
+143,Groundnuts,Groundnut,Groundnut,Groundnut,Groundnut,Groundnut
+144,Guavas,"Fruits, Other","Fruits, Other","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas"
+145,Guayule,,,"Gums, natural","Gums, natural",
+146,Gutta-percha,,,"Gums, natural","Gums, natural",
+147,Hazelnuts,Nuts,Nuts,Hazelnuts,Hazelnuts,Hazelnuts
+148,Hedysarum,,,,,
+149,Hemp,"Oilcrops, Other","Oilcrops, Other",Hemp,Hemp,Hemp
+150,Hops,,,Hops,Hops,Hops
+151,Horseradish,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+152,Huckleberry,"Fruits, Other","Fruits, Other","Berries, nes","Berries, nes",
+153,Indigofera,,,,,
+154,Jack bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
+155,Jackfruit,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+156,Japanese millet,Millet,Millet,Millet,Millet,Millet
+157,Jelutong,,,"Gums, natural","Gums, natural",
+158,Jerusalem artichoke,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+159,Jicama,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
+160,Jojoba,"Oilcrops, Other","Oilcrops, Other",Jojoba,,
+161,Jujube,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+162,Jute,,Jute,Jute,Jute,Jute
+163,Kaniwa,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes",
+164,Kapok,"Oilcrops, Other","Oilcrops, Other",Kapok,Kapok,Kapok
+165,Karite nuts,"Oilcrops, Other","Oilcrops, Other",Karite nuts,Karite nuts,Karite nuts
+166,Kenaf,,,"Bastfibres, other","Bastfibres, other",
+167,Kiwi fruit,"Fruits, Other","Fruits, Other",Kiwi fruit,Kiwi fruit,Kiwi fruit
+168,Kiwicha,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes",
+169,Kodo millet,Millet,Millet,Millet,Millet,Millet
+170,Kola nuts,Nuts,Nuts,Kola nuts,Kola nuts,Kola nuts
+171,Kumquat,"Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other","Citrus, Other"
+172,Lablab,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes",
+173,Lavender,,,,,
+174,Leeks and other alliaceous vegetables,"Vegetables, Other","Vegetables, Other",Leeks and other alliaceous vegetables,Leeks and other alliaceous vegetables,Leeks and other alliaceous vegetables
+175,Lemons and limes,Lemons and limes,Lemons and limes,Lemons and limes,Lemons and limes,Lemons and limes
+176,Lentils,"Pulses, Other","Pulses, Other",Lentils,Lentils,Lentils
+177,Lespedeza,,,,,
+178,Lettuce,"Vegetables, Other","Vegetables, Other",Lettuce and chicory,Lettuce and chicory,Lettuce and chicory
+179,Leucaena,,,,,
+180,Licorice,,,,,
+181,Lima bean,Beans,Beans,Beans,Beans,Beans
+182,Litchi,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+183,Lolium,,,,,
+184,Longan,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+185,Loquat,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+186,Lotus,,,,,
+187,Lupins,"Pulses, Other","Pulses, Other",Lupins,Lupins,
+188,Maca,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+189,Macadamia nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
+190,Macroptilium,,,,,
+191,Mahuwa,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+192,Maize,Maize,Maize,Maize,Maize,Maize
+193,Malabar spinach,,,,,
+194,Mamey sapote,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+195,Mammee,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+196,Mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines
+197,Mango,"Fruits, Other","Fruits, Other","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas"
+198,Mangosteen,"Fruits, Other","Fruits, Other","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas"
+199,Maple sugar,"Sweeteners, Other","Sweeteners, Other","Sugar crops, nes","Sugar crops, nes","Sugar crops, nes"
+200,Marjoram,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+201,Mashua,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+202,Mat bean,Beans,Beans,Beans,Beans,Beans
+203,Mate,Tea and mate,Tea and mate,Mate,Mate,Mate
+204,Mauka,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+205,Medlar,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+206,Melilotus,,,,,
+207,Melons,"Fruits, Other","Fruits, Other",Melons,Melons,Melons
+208,Mombin,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+209,Mulberry,"Fruits, Other","Fruits, Other","Berries, nes","Berries, nes",
+210,Mung bean,Beans,Beans,Beans,Beans,Beans
+211,Myrtle,"Fruits, Other","Fruits, Other","Berries, nes","Berries, nes",
+212,Naranjilla,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+213,Neonotonia,,,,,
+214,New Zealand flax,,,Fibre crops nes,Fibre crops nes,
+215,New Zealand Spinach,"Vegetables, Other","Vegetables, Other",Spinach,Spinach,Spinach
+216,Noog,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+217,Nutmeg,Spices Other,Spices Other,"Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms"
+218,Oats,Oats,Oats,Oats,Oats,Oats
+219,Oca,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+220,Oil palm,Oil palm,Oil palm,Oil palm,Oil palm,Oil palm
+221,Oiticica,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+222,Okra,"Vegetables, Other","Vegetables, Other",Okra,Okra,
+223,Olives,Olive,Olive,Olive,Olive,Olive
+224,Onions,Onions,Onions,Onions,Onions,Onions
+225,Onobrychis,,,,,
+226,Orache,"Vegetables, Other","Vegetables, Other",Spinach,Spinach,Spinach
+227,Oranges,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines,Oranges and mandarines
+228,Oregano,,,,,
+229,Ornithopus,,,,,
+230,Papayas,"Fruits, Other","Fruits, Other",Papayas,Papayas,Papayas
+231,Parsley,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+232,Parsnip,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+233,Passionfruit,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+234,Pawpaw,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+235,Peaches and nectarines,"Fruits, Other","Fruits, Other",Peaches and nectarines,Peaches and nectarines,Peaches and nectarines
+236,Pearl millet,Millet,Millet,Millet,Millet,Millet
+237,Pears,"Fruits, Other","Fruits, Other",Pears,Pears,Pears
+238,Peas,Peas,Peas,Peas,Peas,Peas
+239,Pecan,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
+240,Pepino,,,,,
+241,Pepper,Pepper,Pepper,Pepper,Pepper,Pepper
+242,Peppermint,,,Peppermint,Peppermint,Peppermint
+243,Perilla,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+244,Persimmons,"Fruits, Other","Fruits, Other",Persimmons,Persimmons,Persimmons
+245,Phalaris,,,,,
+246,Phleum,,,,,
+247,Physic nut,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+248,Pigeonpeas,"Pulses, Other","Pulses, Other",Pigeonpeas,Pigeonpeas,
+249,Pili nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
+250,Pine nut,Nuts,Nuts,"Nuts, nes","Nuts, nes","Nuts, nes"
+251,Pineapples,Pineapples,Pineapples,Pineapples,Pineapples,Pineapples
+252,Pistachios,Nuts,Nuts,Pistachios,Pistachios,Pistachios
+253,Plantains,Plantains,Plantains,Plantains,Plantains,Plantains
+254,Plums,"Fruits, Other","Fruits, Other",Plums,Plums,Plums
+255,Poa,,,,,
+256,Pomegranate,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+257,Pongamia oil,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+258,Poppies,"Oilcrops, Other","Oilcrops, Other",Poppy,Poppy,Poppy
+259,Potatoes,Potatoes,Potatoes,Potatoes,Potatoes,Potatoes
+260,Prickly pear,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+261,Proso millet,Millet,Millet,Millet,Millet,Millet
+262,Prosopis,,,,,
+263,Pueraria,,,,,
+264,Pumpkin,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
+265,Purging croton,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+266,Pyrethrum,,,Pyrethrum,Pyrethrum,Pyrethrum
+267,Quinces,"Fruits, Other","Fruits, Other",Quinces,Quinces,Quinces
+268,Quinoa,"Cereals, Other","Cereals, Other",Quinoa,Quinoa,
+269,Radish,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+270,Rambutan,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+271,Ramie,,,Ramie,Ramie,
+272,Rapeseed and Mustards,Rapeseed and Mustard,Rapeseed and Mustard,Rapeseed and Mustard,Rapeseed and Mustard,Rapeseed and Mustard
+273,Raspberries,"Fruits, Other","Fruits, Other",Raspberries,Raspberries,
+274,Rhubarb,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+275,Rhynchosia,,,,,
+276,Rice (African),Rice,Rice,Rice,Rice,Rice
+277,Rice (Asian),Rice,Rice,Rice,Rice,Rice
+278,Rice bean,Beans,Beans,Beans,Beans,Beans
+279,Roselle,,,"Bastfibres, other","Bastfibres, other",
+280,Rosemary,,,,,
+281,"Rubber, natural",,"Rubber, natural","Rubber, natural","Rubber, natural","Rubber, natural"
+282,Runner bean,Beans,Beans,Beans,Beans,Beans
+283,Rye,Rye,Rye,Rye,Rye,Rye
+284,Safflower,"Oilcrops, Other","Oilcrops, Other",Safflower,Safflower,Safflower
+285,Saffron,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
+286,Sago palm,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+287,Salsify,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+288,Salsola,,,,,
+289,Sapodilla,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+290,Savory,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+291,Service tree,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+292,Sesame,Sesame,Sesame,Sesame,Sesame,Sesame
+293,Sesbania,,,,,
+294,Shala tree,"Oilcrops, Other","Oilcrops, Other",Oilseeds nes,Oilseeds nes,Oilseeds nes
+295,Sisal,,,Sisal,Sisal,Sisal
+296,Slippery cabbage,,,,,
+297,Snake gourd,,,,,
+298,Snake plant,,,Fibre crops nes,Fibre crops nes,
+299,Sorghum,Sorghum,Sorghum,Sorghum,Sorghum,Sorghum
+300,Sorrel,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+301,Soursop,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+302,Soybeans,Soybean,Soybean,Soybean,Soybean,Soybean
+303,Spider plant,,,,,
+304,Spinach,"Vegetables, Other","Vegetables, Other",Spinach,Spinach,Spinach
+305,Strawberries,"Fruits, Other","Fruits, Other",Strawberries,Strawberries,Strawberries
+306,Strawberry tree,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+307,Stylosanthes,,,,,
+308,Sugar apple,"Fruits, Other","Fruits, Other","Fruit, tropical fresh nes","Fruit, tropical fresh nes","Fruit, tropical fresh nes"
+309,Sugar beets,Sugar beet,Sugar beet,Sugar beet,Sugar beet,Sugar beet
+310,Sugarcane,Sugarcane,Sugarcane,Sugarcane,Sugarcane,Sugarcane
+311,Sunflowers,Sunflower,Sunflower,Sunflower,Sunflower,Sunflower
+312,Sunn hemp,,,"Bastfibres, other","Bastfibres, other",
+313,Sweetpotatoes,Sweetpotato,Sweetpotato,Sweetpotato,Sweetpotato,Sweetpotato
+314,Sword bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes","Pulses, nes"
+315,Tallowtree,,,Tallow,,Tallow
+316,Tamarind,"Fruits, Other","Fruits, Other","Fruit, fresh nes","Fruit, fresh nes","Fruit, fresh nes"
+317,Taro,"Roots, Other","Roots, Other",Taro,Taro,
+318,Tarragon,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+319,Tea,Tea and mate,Tea and mate,Tea,Tea,Tea
+320,Teff,Millet,Millet,Millet,Millet,Millet
+321,Tepary bean,Beans,Beans,Beans,Beans,Beans
+322,Thyme,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
+323,Tobacco,,Tobacco,Tobacco,Tobacco,Tobacco
+324,Tomatillo,,,,,
+325,Tomatoes,Tomato,Tomato,Tomato,Tomato,Tomato
+326,Tree tomato,,,,,
+327,Tripsacum,,,,,
+328,Triticale,"Cereals, Other","Cereals, Other",Triticale,Triticale,Triticale
+329,Tung nuts,"Oilcrops, Other","Oilcrops, Other",Tung,Tung,
+330,Turmeric,"Spices, Other","Spices, Other","Spices, nes","Spices, nes","Spices, nes"
+331,Turnips,"Vegetables, Other","Vegetables, Other",Carrots and turnips,Carrots and turnips,Turnip
+332,Ulluco,"Roots, Other","Roots, Other","Roots and tubers, nes","Roots and tubers, nes","Roots and tubers, nes"
+333,Vanilla,"Spices, Other","Spices, Other",Vanilla,Vanilla,Vanilla
+334,Velvet bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes","Pulses, nes"
+335,Velvet leaf,,,"Bastfibres, other","Bastfibres, other",
+336,Vetch,"Pulses, Other","Pulses, Other",Vetches,Vetches,Vetches
+337,Walnuts,Nuts,Nuts,Walnuts,Walnuts,Walnuts
+338,Water dropwort,,,,,
+339,Watercress,"Vegetables, Other","Vegetables, Other","Vegetables, fresh nes","Vegetables, fresh nes","Vegetables, fresh nes"
+340,Watermelons,"Fruits, Other","Fruits, Other",Watermelons,Watermelons,Watermelons
+341,Wax gourd,,,,,
+342,West Indian Gherkin,,,,,
+343,Wheat,Wheat,Wheat,Wheat,Wheat,Wheat
+344,Wildrice,"Cereals, Other","Cereals, Other","Cereals, nes","Cereals, nes","Cereals, nes"
+345,Winged bean,"Pulses, Other","Pulses, Other","Pulses, nes","Pulses, nes","Pulses, nes"
+346,Yacon,,,,,
+347,Yams,Yams,Yams,Yams,Yams,
+348,"Yautia, cocoyam","Roots, Other","Roots, Other",Yautia cocoyam,Yautia cocoyam,
+349,Year bean,Beans,Beans,Beans,Beans,Beans
+350,Zornia,,,,,
+351,Zucchini,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
