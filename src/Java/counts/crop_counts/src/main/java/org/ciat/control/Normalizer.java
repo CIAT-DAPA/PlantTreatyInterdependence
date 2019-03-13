@@ -45,7 +45,7 @@ public class Normalizer implements Normalizable {
 	@Override
 	public void process(Properties prop) {
 
-		File input = new File("data."+getDataSourceName().toString().toLowerCase());
+		File input = new File(prop.getProperty("data."+getDataSourceName().toString().toLowerCase()));
 		File fileGGenusOcc = new File(prop.getProperty("file.g.occurrences.as.genus"));
 		File fileGSpeciesOcc = new File(prop.getProperty("file.g.occurrences.as.species"));
 		
