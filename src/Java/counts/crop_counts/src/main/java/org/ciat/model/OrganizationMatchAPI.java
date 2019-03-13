@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import org.ciat.control.Normalizer;
 import org.ciat.view.Executer;
 import org.ciat.view.TempIO;
 import org.json.JSONObject;
@@ -24,6 +25,7 @@ public class OrganizationMatchAPI {
 	private Map<String, String> matched = new HashMap<String, String>();
 	private Set<String> unmatched = new HashSet<String>();
 	private final String countryField = "country";
+	private final String nameField = "title";
 
 	public String fetchCountry(String uuid) {
 
@@ -44,8 +46,7 @@ public class OrganizationMatchAPI {
 
 		URLConnection urlc;
 		try {
-			URL url = new URL("https://api.gbif.org/v1/organization/"
-					+ URLEncoder.encode(uuid, "UTF-8") + "");
+			URL url = new URL("https://api.gbif.org/v1/organization/" + URLEncoder.encode(uuid, "UTF-8") + "");
 
 			urlc = url.openConnection();
 			// use post mode
@@ -59,17 +60,25 @@ public class OrganizationMatchAPI {
 				String json = br.readLine();
 
 				JSONObject object = new JSONObject(json);
-				if (object.has(countryField) ) {
+				String name = "";
+				String country = Utils.NO_COUNTRY3;
 
-						String value = object.get(countryField) + "";
-						value = value.replaceAll("\n", "");
-						value = value.replaceAll("\r", "");
-						result += value;
-						// add result in the Map
-						matched.put(uuid, value);
-						return result;
-					
+				if (object.has(nameField)) {
+
+					name = object.get(nameField) + "";
 				}
+				if (object.has(countryField)) {
+
+					country = Utils.iso2CountryCodeToIso3CountryCode(object.get(countryField) + "");
+				}
+
+				String value = name + Normalizer.STANDARD_SEPARATOR + country;
+				value = value.replaceAll("\n", "");
+				value = value.replaceAll("\r", "");
+				result += value;
+				// add result in the Map
+				matched.put(uuid, value);
+				return result;
 
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -85,8 +94,6 @@ public class OrganizationMatchAPI {
 		unmatched.add(uuid);
 		return null;
 	}
-
-
 
 	public Map<String, String> getMatchedOrganizations() {
 		return matched;
@@ -127,7 +134,5 @@ public class OrganizationMatchAPI {
 
 		return instance;
 	}
-
-
 
 }
