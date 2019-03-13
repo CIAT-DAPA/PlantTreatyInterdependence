@@ -16,6 +16,7 @@ import java.util.Properties;
 
 import org.ciat.model.Basis;
 import org.ciat.model.DataSourceName;
+import org.ciat.model.OrganizationMatchAPI;
 import org.ciat.model.TargetTaxa;
 import org.ciat.model.TaxaMatchAPI;
 import org.ciat.model.Utils;
@@ -48,6 +49,11 @@ public class Normalizer implements Normalizable {
 		File input = new File(prop.getProperty("data."+getDataSourceName().toString().toLowerCase()));
 		File fileGGenusOcc = new File(prop.getProperty("file.g.occurrences.as.genus"));
 		File fileGSpeciesOcc = new File(prop.getProperty("file.g.occurrences.as.species"));
+		
+		
+		TargetTaxa.getInstance();
+		TaxaMatchAPI.getInstance();
+		OrganizationMatchAPI.getInstance();
 		
 		
 		try (PrintWriter writerGGenusOcc = new PrintWriter(new BufferedWriter(new FileWriter(fileGGenusOcc)), true);

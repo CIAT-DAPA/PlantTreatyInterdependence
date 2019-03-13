@@ -128,7 +128,7 @@ public class OrganizationMatchAPI {
 				}
 			}
 
-			System.out.println(instance.matched.size() + " taxa imported");
+			System.out.println(instance.matched.size() + " orgs imported");
 		}
 
 		return instance;

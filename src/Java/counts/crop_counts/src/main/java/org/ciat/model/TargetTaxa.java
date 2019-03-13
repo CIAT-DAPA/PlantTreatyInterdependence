@@ -27,7 +27,7 @@ public class TargetTaxa {
 	public Set<String> getSpecies() {
 		return species;
 	}
-	
+
 	public Set<String> getGenera() {
 		return genera;
 	}
@@ -45,10 +45,7 @@ public class TargetTaxa {
 
 			String line = reader.readLine();
 			while (line != null) {
-				String taxonKey = TaxaMatchAPI.getInstance().fetchSpeciesKey(line);
-				if (taxonKey != null && !taxonKey.isEmpty() && Utils.isNumeric(taxonKey)) {
-					filters.add(taxonKey);
-				}
+				filters.add(line);
 				line = reader.readLine();
 			}
 
@@ -57,6 +54,7 @@ public class TargetTaxa {
 		} catch (IOException e) {
 			System.out.println("Cannot read " + file.getAbsolutePath());
 		}
+		System.out.println(filters.size() + " target species");
 		return filters;
 	}
 
@@ -66,9 +64,7 @@ public class TargetTaxa {
 
 			String line = reader.readLine();
 			while (line != null) {
-
 				filters.add(line);
-
 				line = reader.readLine();
 			}
 
@@ -77,6 +73,8 @@ public class TargetTaxa {
 		} catch (IOException e) {
 			System.out.println("Cannot read " + file.getAbsolutePath());
 		}
+
+		System.out.println(filters.size() + " target genus");
 		return filters;
 	}
 
