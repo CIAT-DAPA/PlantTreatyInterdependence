@@ -68,7 +68,7 @@ public class TaxaMatchAPI {
 				if (object.has(rankField) && object.has(keyField)) {
 					String rank = object.get(rankField) + "";
 					// check if the taxon is an specie or subspecie
-					if (rank.equals("SPECIE") ) {
+					if (rank.equals("SPECIE")) {
 						String value = object.get(keyField) + "";
 						value = value.replaceAll("\n", "");
 						value = value.replaceAll("\r", "");

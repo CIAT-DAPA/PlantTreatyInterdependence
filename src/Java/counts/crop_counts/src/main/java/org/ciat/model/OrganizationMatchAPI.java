@@ -14,7 +14,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.ciat.control.Normalizer;
 import org.ciat.view.Executer;
 import org.ciat.view.TempIO;
 import org.json.JSONObject;
@@ -72,7 +71,7 @@ public class OrganizationMatchAPI {
 					country = Utils.iso2CountryCodeToIso3CountryCode(object.get(countryField) + "");
 				}
 
-				String value = name + Normalizer.STANDARD_SEPARATOR + country;
+				String value = name + TempIO.SEPARATOR + country;
 				value = value.replaceAll("\n", "");
 				value = value.replaceAll("\r", "");
 				result += value;

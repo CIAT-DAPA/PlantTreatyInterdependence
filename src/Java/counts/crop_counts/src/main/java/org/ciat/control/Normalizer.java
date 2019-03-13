@@ -86,11 +86,12 @@ public class Normalizer implements Normalizable {
 
 					if (basis.equals(Basis.G)) {
 						
-						String taxonKey = getTaxonKey();
-						boolean isTargetSpecies = taxonKey != null
-								&& TargetTaxa.getInstance().getSpeciesKeys().contains(taxonKey);
+						String species = getSpecies();
+						boolean isTargetSpecies = species != null
+								&& TargetTaxa.getInstance().getSpecies().contains(species);
+						
+						
 						if (isTargetSpecies) {
-							String species = TaxaMatchAPI.getInstance().fetchTaxonNameByID(taxonKey);
 							String country = getCountry();
 							boolean repat = isRepatriated();
 							CountExporter.getInstance().updateCounters(species, "SPECIES", country, repat);

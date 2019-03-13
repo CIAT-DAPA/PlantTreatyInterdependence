@@ -15,17 +15,17 @@ import org.ciat.view.Executer;
 public class TargetTaxa {
 
 	private static TargetTaxa instance = null;
-	private Set<String> speciesKeys = new TreeSet<String>();
+	private Set<String> species = new TreeSet<String>();
 	private Set<String> genera = new TreeSet<String>();
 
 	private TargetTaxa() {
 		super();
-		this.speciesKeys = loadTargetSpecies(new File(Executer.prop.getProperty("resource.species")));
+		this.species = loadTargetSpecies(new File(Executer.prop.getProperty("resource.species")));
 		this.genera = loadTargetGenera(new File(Executer.prop.getProperty("resource.genera")));
 	}
 
-	public Set<String> getSpeciesKeys() {
-		return speciesKeys;
+	public Set<String> getSpecies() {
+		return species;
 	}
 	
 	public Set<String> getGenera() {
