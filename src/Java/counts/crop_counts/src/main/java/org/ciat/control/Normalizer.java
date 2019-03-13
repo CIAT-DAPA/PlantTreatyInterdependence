@@ -45,9 +45,9 @@ public class Normalizer implements Normalizable {
 	@Override
 	public void process(Properties prop) {
 
-		File input = new File(prop.getProperty("inputs/"+getDataSourceName().toString()+".csv"));
-		File fileGGenusOcc = new File(prop.getProperty("outputs/g.genus.occurrences.csv"));
-		File fileGSpeciesOcc = new File(prop.getProperty("outputs/g.species.occurrences.csv"));
+		File input = new File("data."+getDataSourceName().toString().toLowerCase());
+		File fileGGenusOcc = new File(prop.getProperty("file.g.occurrences.as.genus="));
+		File fileGSpeciesOcc = new File(prop.getProperty("file.g.occurrences.as.species"));
 		
 		
 		try (PrintWriter writerGGenusOcc = new PrintWriter(new BufferedWriter(new FileWriter(fileGGenusOcc)), true);
