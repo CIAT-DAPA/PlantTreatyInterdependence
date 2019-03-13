@@ -1,14 +1,18 @@
 package org.ciat.control;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.Calendar;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import org.ciat.model.Basis;
 import org.ciat.model.DataSourceName;
@@ -17,6 +21,7 @@ import org.ciat.model.TaxaMatchAPI;
 import org.ciat.model.Utils;
 import org.ciat.view.CountExporter;
 import org.ciat.view.FileProgressBar;
+
 
 public class Normalizer implements Normalizable {
 
@@ -30,16 +35,32 @@ public class Normalizer implements Normalizable {
 	protected String[] values;
 
 	// target columns
-	protected static String[] colTarget = { "taxonkey", "decimallongitude", "decimallatitude", "countrycode", "year",
-			"basis", "source" };
+	protected static String[] colTarget = { "accessionNumber", "taxonkey", "genus", "species", "decimallongitude",
+			"decimallatitude", "countrycode", "year",
+			"basis", "source"};
 
 	// index of columns
 	protected Map<String, Integer> colIndex = new LinkedHashMap<String, Integer>();
 
 	@Override
-	public void process(File input) {
+	public void process(Properties prop) {
 
-		try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
+		File input = new File(prop.getProperty("inputs/"+getDataSourceName().toString()+".csv"));
+		File fileGGenusOcc = new File(prop.getProperty("outputs/g.genus.occurrences.csv"));
+		File fileGSpeciesOcc = new File(prop.getProperty("outputs/g.species.occurrences.csv"));
+		
+		
+		try (PrintWriter writerGGenusOcc = new PrintWriter(new BufferedWriter(new FileWriter(fileGGenusOcc)), true);
+				PrintWriter writerGSpeciesOcc = new PrintWriter(new BufferedWriter(new FileWriter(fileGSpeciesOcc)), true);
+				BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
+			
+			if(!fileGGenusOcc.exists()) {
+				writerGGenusOcc.println(getHeader());
+			}
+			if(!fileGSpeciesOcc.exists()) {
+				writerGGenusOcc.println(getHeader());
+			}
+			
 
 			/* header */
 			String line = reader.readLine();
@@ -58,6 +79,8 @@ public class Normalizer implements Normalizable {
 				values = null;
 				values = line.split(getSpecificSeparator());
 				if (values.length >= colIndex.size()) {
+					
+					String normal = normalize();
 
 					Basis basis = getBasis();
 
@@ -71,6 +94,7 @@ public class Normalizer implements Normalizable {
 							String country = getCountry();
 							boolean repat = isRepatriated();
 							CountExporter.getInstance().updateCounters(species, "SPECIES", country, repat);
+							writerGSpeciesOcc.println(normal);
 						}
 
 						String genus = getGenus();
@@ -81,6 +105,7 @@ public class Normalizer implements Normalizable {
 							String country = getCountry();
 							boolean repat = isRepatriated();
 							CountExporter.getInstance().updateCounters(genus, "GENUS", country, repat);
+							writerGGenusOcc.println(normal);
 						}
 					}
 				}
@@ -110,11 +135,15 @@ public class Normalizer implements Normalizable {
 		String source = getDataSourceName().toString();
 		String taxonKey = getTaxonKey();
 		String year = getYear();
-		String normal = taxonKey + STANDARD_SEPARATOR + lon + STANDARD_SEPARATOR + lat + STANDARD_SEPARATOR + country
+		String accessionNumber = getAccessionNumber();
+		String genus = getGenus();
+		String species = getSpecies();
+		String normal = accessionNumber + STANDARD_SEPARATOR + taxonKey +  STANDARD_SEPARATOR + genus +  STANDARD_SEPARATOR + species +  STANDARD_SEPARATOR + lon + STANDARD_SEPARATOR + lat + STANDARD_SEPARATOR + country
 				+ STANDARD_SEPARATOR + year + STANDARD_SEPARATOR + basis + STANDARD_SEPARATOR + source;
 		return normal;
 
 	}
+
 
 	/*
 	 * This method works with the premise that the record is useful until otherwise
@@ -187,6 +216,11 @@ public class Normalizer implements Normalizable {
 	public String getGenus() {
 		return null;
 	}
+	
+	@Override
+	public String getSpecies() {
+		return null;
+	}
 
 	@Override
 	public DataSourceName getDataSourceName() {
@@ -205,7 +239,7 @@ public class Normalizer implements Normalizable {
 
 	@Override
 	public String getCountry() {
-		return Utils.NO_COUNTRY2;
+		return Utils.NO_COUNTRY3;
 	}
 
 	public static String getStandardSeparator() {
@@ -229,6 +263,10 @@ public class Normalizer implements Normalizable {
 	@Override
 	public boolean isRepatriated() {
 		return false;
+	}
+
+	public String getAccessionNumber() {
+		return null;
 	}
 
 }

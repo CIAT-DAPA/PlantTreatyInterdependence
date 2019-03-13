@@ -24,7 +24,7 @@ public class ExecNormalizer extends Executer {
 		// Reduce and normalize
 		log("Counting GBIF data");
 		Normalizable gbifNormalizer = new GBIFNormalizer();
-		gbifNormalizer.process(new File(Executer.prop.getProperty("data.gbif")));
+		gbifNormalizer.process(Executer.prop);
 		System.gc();
 
 

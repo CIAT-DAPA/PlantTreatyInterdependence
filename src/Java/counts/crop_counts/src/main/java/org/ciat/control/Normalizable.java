@@ -1,6 +1,7 @@
 package org.ciat.control;
 
-import java.io.File;
+
+import java.util.Properties;
 
 import org.ciat.model.Basis;
 import org.ciat.model.DataSourceName;
@@ -15,11 +16,15 @@ public interface Normalizable {
 	
 	public String getGenus();
 	
+	public String getSpecies();
+	
 	public String getSpecificSeparator();
 	
 	public String getDecimalLatitude();
 	
 	public String getDecimalLongitude();
+	
+	public String getAccessionNumber();
 
 	public String getCountry();
 	
@@ -29,9 +34,8 @@ public interface Normalizable {
 	
 	public boolean isRepatriated();
 
-	public void process(File input);
+	public void process(Properties prop);
 
 	public String normalize();
 
-	
 }

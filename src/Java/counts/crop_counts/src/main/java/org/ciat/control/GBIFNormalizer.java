@@ -71,6 +71,11 @@ public class GBIFNormalizer extends Normalizer {
 	public String getGenus() {
 		return values[colIndex.get("genus")];
 	}
+	
+	@Override
+	public String getSpecies() {
+		return values[colIndex.get("species")];
+	}
 
 	@Override
 	public String getDecimalLatitude() {
@@ -80,6 +85,11 @@ public class GBIFNormalizer extends Normalizer {
 	@Override
 	public String getDecimalLongitude() {
 		return values[colIndex.get("decimallongitude")];
+	}
+	
+	@Override
+	public String getAccessionNumber() {
+		return values[colIndex.get("recordnumber")];
 	}
 
 	@Override
