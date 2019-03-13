@@ -59,25 +59,29 @@ public class Normalizer implements Normalizable {
 				values = line.split(getSpecificSeparator());
 				if (values.length >= colIndex.size()) {
 
-					String taxonKey = getTaxonKey();
-					String genus = getGenus();
+					Basis basis = getBasis();
 
-					boolean isTargetSpecies = taxonKey != null
-							&& TargetTaxa.getInstance().getSpeciesKeys().contains(taxonKey);
-					if (isTargetSpecies) {
-						String species = TaxaMatchAPI.getInstance().fetchTaxonNameByID(taxonKey);
-						String country = getCountry();
-						boolean repat = isRepatriated();
-						CountExporter.getInstance().updateCounters(species,"SPECIES", country, repat);
-					}
+					if (basis.equals(Basis.G)) {
+						
+						String taxonKey = getTaxonKey();
+						boolean isTargetSpecies = taxonKey != null
+								&& TargetTaxa.getInstance().getSpeciesKeys().contains(taxonKey);
+						if (isTargetSpecies) {
+							String species = TaxaMatchAPI.getInstance().fetchTaxonNameByID(taxonKey);
+							String country = getCountry();
+							boolean repat = isRepatriated();
+							CountExporter.getInstance().updateCounters(species, "SPECIES", country, repat);
+						}
 
-					boolean isTargetGenus = genus != null && TargetTaxa.getInstance().getGenera().contains(genus);
+						String genus = getGenus();
+						boolean isTargetGenus = genus != null && TargetTaxa.getInstance().getGenera().contains(genus);
 
-					if (isTargetGenus) {
+						if (isTargetGenus) {
 
-						String country = getCountry();
-						boolean repat = isRepatriated();
-						CountExporter.getInstance().updateCounters(genus, "GENUS",country, repat);
+							String country = getCountry();
+							boolean repat = isRepatriated();
+							CountExporter.getInstance().updateCounters(genus, "GENUS", country, repat);
+						}
 					}
 				}
 				/* show progress */

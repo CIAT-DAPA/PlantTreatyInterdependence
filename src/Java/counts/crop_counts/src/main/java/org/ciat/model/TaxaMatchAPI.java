@@ -230,7 +230,7 @@ public class TaxaMatchAPI {
 
 			instance = new TaxaMatchAPI();
 
-			File inputSpecies = new File(Executer.prop.getProperty("file.taxa.matched"));
+			File inputSpecies = new File(Executer.prop.getProperty("file.species.matched"));
 			if (inputSpecies.exists()) {
 				try (BufferedReader reader = new BufferedReader(
 						new InputStreamReader(new FileInputStream(inputSpecies), "UTF-8"))) {
@@ -239,8 +239,10 @@ public class TaxaMatchAPI {
 					while (line != null) {
 						String[] values = line.split(TempIO.SEPARATOR);
 						if (values.length == 2) {
-							instance.speciesMatched.put(values[1], values[0]);
-							instance.keyTaxon.put(values[0], values[1]);
+							String key = values[0];
+							String name = values[1].replace('×', 'x');
+							instance.speciesMatched.put(name, key);
+							instance.keyTaxon.put(key, name);
 						}
 						line = reader.readLine();
 					}
@@ -264,7 +266,9 @@ public class TaxaMatchAPI {
 					while (line != null) {
 						String[] values = line.split(TempIO.SEPARATOR);
 						if (values.length == 2) {
-							instance.genusMatched.put(values[0], values[1]);
+							String key = values[0];
+							String name = values[1].replace('×', 'x');
+							instance.genusMatched.put(name, key);
 						}
 						line = reader.readLine();
 					}
