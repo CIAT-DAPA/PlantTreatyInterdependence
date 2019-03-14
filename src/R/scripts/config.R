@@ -1,29 +1,6 @@
 library(RMySQL)
 
 ##############################################
-####  00-GLOBAL VARIABLES
-##############################################
-
-setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
-
-# Global variables
-conf.folder = "conf"
-conf.file = "conf_test.csv"
-inputs.folder = "inputs"
-process.folder = "process"
-
-conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
-
-
-# Database connection
-db_cnn <- dbConnect(MySQL(),user = as.character(conf.variables[which(conf.variables$name == "db_user"),"value"]),
-                    password = as.character(conf.variables[which(conf.variables$name == "db_password"),"value"]),
-                    host = as.character(conf.variables[which(conf.variables$name == "db_host"),"value"]),
-                    dbname=as.character(conf.variables[which(conf.variables$name == "db_name"),"value"]))
-
-#dbDisconnect(db_cnn)
-
-##############################################
 ####  00-IMPORT GLOBAL PARAMETERS
 ##############################################
 
@@ -74,13 +51,3 @@ conf.import.crops = function(f){
   
   print(paste0("........Records were saved ", dim(crops)[1]))
 }
-
-##############################################
-####  01-PROCESS
-##############################################
-
-conf.import.countries("countries.csv")
-
-conf.import.crops("crops.csv")
-
-

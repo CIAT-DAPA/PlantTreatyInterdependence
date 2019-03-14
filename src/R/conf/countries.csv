@@ -1,13 +1,9 @@
 name,iso2,iso3,region
-Åland Islands,,ALA,0
 Afghanistan,AF,AFG,0
 Albania,AL,ALB,0
 Algeria,DZ,DZA,0
 American Samoa,AS,ASM,0
-Andorra,AD,AND,0
 Angola,AO,AGO,0
-Anguilla,AI,AIA,0
-Antarctica,AQ,ATA,0
 Antigua and Barbuda,AG,ATG,0
 Argentina,AR,ARG,0
 Armenia,AM,ARM,0
@@ -29,15 +25,12 @@ Bhutan,BT,BTN,0
 Bolivia (Plurinational State of),BO,BOL,0
 Bosnia and Herzegovina,BA,BIH,0
 Botswana,BW,BWA,0
-Bouvet Island,BV,BVT,0
 Brazil,BR,BRA,0
-British Indian Ocean Territory,IO,IOT,0
 British Virgin Islands,VG,VGB,0
 Brunei Darussalam,BN,BRN,0
 Bulgaria,BG,BGR,0
 Burkina Faso,BF,BFA,0
 Burundi,BI,BDI,0
-Côte d'Ivoire,CI,CIV,0
 Cabo Verde,CV,CPV,0
 Cambodia,KH,KHM,0
 Cameroon,CM,CMR,0
@@ -45,23 +38,20 @@ Canada,CA,CAN,0
 Cayman Islands,KY,CYM,0
 Central African Republic,CF,CAF,0
 Chad,TD,TCD,0
-Channel Islands,,CHA,0
 Chile,CL,CHL,0
 China,,CPR,0
 "China, Hong Kong SAR",HK,HKG,0
 "China, Macao SAR",MO,MAC,0
 "China, mainland",CN,CHN,0
 "China, Taiwan Province of",TW,TWN,0
-Christmas Island,CX,CXR,0
-Cocos (Keeling) Islands,CC,CCK,0
 Colombia,CO,COL,0
 Comoros,KM,COM,0
 Congo,CG,COG,0
 Cook Islands,CK,COK,0
 Costa Rica,CR,CRI,0
+C�te d'Ivoire,CI,CIV,0
 Croatia,HR,HRV,0
 Cuba,CU,CUB,0
-Curaçao,,CUW,0
 Cyprus,CY,CYP,0
 Czechia,CZ,CZE,0
 Czechoslovakia,,,0
@@ -87,15 +77,11 @@ Finland,FI,FIN,0
 France,FR,FRA,0
 French Guiana,GF,GUF,0
 French Polynesia,PF,PYF,0
-French Southern and Antarctic Territories,TF,ATF,0
 Gabon,GA,GAB,0
 Gambia,GM,GMB,0
 Georgia,GE,GEO,0
 Germany,DE,DEU,0
-Germany Fr,,,0
-Germany Nl,,,0
 Ghana,GH,GHA,0
-Gibraltar,GI,GIB,0
 Greece,GR,GRC,0
 Greenland,GL,GRL,0
 Grenada,GD,GRD,0
@@ -106,8 +92,6 @@ Guinea,GN,GIN,0
 Guinea-Bissau,GW,GNB,0
 Guyana,GY,GUY,0
 Haiti,HT,HTI,0
-Heard and McDonald Islands,HM,HMD,0
-Holy See,VA,VAT,0
 Honduras,HN,HND,0
 Hungary,HU,HUN,0
 Iceland,IS,ISL,0
@@ -116,17 +100,14 @@ Indonesia,ID,IDN,0
 Iran (Islamic Republic of),IR,IRN,0
 Iraq,IQ,IRQ,0
 Ireland,IE,IRL,0
-Isle of Man,IM,IMN,0
 Israel,IL,ISR,0
 Italy,IT,ITA,0
 Jamaica,JM,JAM,0
 Japan,JP,JPN,0
-Jersey,,JEY,0
 Jordan,JO,JOR,0
 Kazakhstan,KZ,KAZ,0
 Kenya,KE,KEN,0
 Kiribati,KI,KIR,0
-Kosovo,,,0
 Kuwait,KW,KWT,0
 Kyrgyzstan,KG,KGZ,0
 Lao People's Democratic Republic,LA,LAO,0
@@ -148,11 +129,8 @@ Marshall Islands,MH,MHL,0
 Martinique,MQ,MTQ,0
 Mauritania,MR,MRT,0
 Mauritius,MU,MUS,0
-Mayotte,YT,MYT,0
 Mexico,MX,MEX,0
 Micronesia (Federated States of),FM,FSM,0
-Midway Island,MI,MID,0
-Monaco,MC,MCO,0
 Mongolia,MN,MNG,0
 Montenegro,ME,MNE,0
 Montserrat,MS,MSR,0
@@ -171,26 +149,23 @@ Niger,NE,NER,0
 Nigeria,NG,NGA,0
 Niue,NU,NIU,0
 Norfolk Island,NF,NFK,0
-Northern Mariana Islands,MP,MNP,0
 Norway,NO,NOR,0
 Occupied Palestinian Territory,,PSE,0
 Oman,OM,OMN,0
-Pacific Islands Trust Territory,,164,0
+Pacific Islands Trust Territory,,,0
 Pakistan,PK,PAK,0
-Palau,PW,PLW,0
 Panama,PA,PAN,0
 Papua New Guinea,PG,PNG,0
 Paraguay,PY,PRY,0
 Peru,PE,PER,0
 Philippines,PH,PHL,0
-Pitcairn Islands,PN,PCN,0
 Poland,PL,POL,0
 Portugal,PT,PRT,0
 Puerto Rico,PR,PRI,0
 Qatar,QA,QAT,0
-Réunion,RE,REU,0
 Republic of Korea,KR,KOR,0
 Republic of Moldova,MD,MDA,0
+R�union,RE,REU,0
 Romania,RO,ROU,0
 Russian Federation,RU,RUS,0
 Rwanda,RW,RWA,0
@@ -199,33 +174,26 @@ Saint Kitts and Nevis,KN,KNA,0
 Saint Lucia,LC,LCA,0
 Saint Pierre and Miquelon,PM,SPM,0
 Saint Vincent and the Grenadines,VC,VCT,0
-Saint-Martin (French Part),,MAF,0
 Samoa,WS,WSM,0
-San Marino,SM,SMR,0
 Sao Tome and Principe,ST,STP,0
 Saudi Arabia,SA,SAU,0
 Senegal,SN,SEN,0
 Serbia,RS,SRB,0
-Serbia (exc Kosovo),,,0
 Serbia and Montenegro,CS,SCG,0
 Seychelles,SC,SYC,0
 Sierra Leone,SL,SLE,0
 Singapore,SG,SGP,0
-Sint Maarten (Dutch Part),,SXM,0
 Slovakia,SK,SVK,0
 Slovenia,SI,SVN,0
 Solomon Islands,SB,SLB,0
 Somalia,SO,SOM,0
 South Africa,ZA,ZAF,0
-South Georgia and the South Sandwich Islands,GS,SGS,0
 South Sudan,SS,SSD,0
 Spain,ES,ESP,0
 Sri Lanka,LK,LKA,0
 Sudan,SD,SDN,0
 Sudan (former),SD,,0
-Sudan (former),SD,SDN,0
 Suriname,SR,SUR,0
-Svalbard and Jan Mayen Islands,SJ,SJM,0
 Swaziland,SZ,SWZ,0
 Sweden,SE,SWE,0
 Switzerland,CH,CHE,0
@@ -241,68 +209,62 @@ Trinidad and Tobago,TT,TTO,0
 Tunisia,TN,TUN,0
 Turkey,TR,TUR,0
 Turkmenistan,TM,TKM,0
-Turks and Caicos Islands,TC,TCA,0
 Tuvalu,TV,TUV,0
 Uganda,UG,UGA,0
 Ukraine,UA,UKR,0
 United Arab Emirates,AE,ARE,0
 United Kingdom,GB,GBR,0
 United Republic of Tanzania,TZ,TZA,0
-"United Republic of Tanzania, Zanzibar",,,0
 United States of America,US,USA,0
 United States Virgin Islands,VI,VIR,0
 Uruguay,UY,URY,0
-US Minor Is.,UM,UMI,0
 USSR,,,0
 Uzbekistan,UZ,UZB,0
 Vanuatu,VU,VUT,0
 Venezuela (Bolivarian Republic of),VE,VEN,0
 Viet Nam,VN,VNM,0
-Wake Island,WK,WAK,0
 Wallis and Futuna Islands,WF,WLF,0
 Western Sahara,EH,ESH,0
 Yemen,YE,YEM,0
-Yemen Ar Rp,,,0
-Yemen Dem,,,0
 Yugoslav SFR,,,0
 Zambia,ZM,ZMB,0
 Zimbabwe,ZW,ZWE,0
-World,,,1
 Africa,,,1
-Eastern Africa,,,1
-Middle Africa,,,1
-Northern Africa,,,1
-Southern Africa,,,1
-Western Africa,,,1
 Americas,,,1
-Northern America,,,1
-Central America,,,1
-Caribbean,,,1
-South America,,,1
 Asia,,,1
-Central Asia,,,1
-Eastern Asia,,,1
-Southern Asia,,,1
-South-Eastern Asia,,,1
-Western Asia,,,1
-Europe,,,1
-Eastern Europe,,,1
-Northern Europe,,,1
-Southern Europe,,,1
-Western Europe,,,1
-Oceania,,,1
 Australia & New Zealand,,,1
-Melanesia,,,1
-Micronesia,,,1
-Polynesia,,,1
-European Union,,,1
-Least Developed Countries,,,1
-Land Locked Developing Countries,,,1
-Small Island Developing States,,,1
-Low Income Food Deficit Countries,,,1
-Net Food Importing Developing Countries,,,1
-European Union (exc intra-trade),,,1
+Caribbean,,,1
+Central America,,,1
+Central Asia,,,1
+Eastern Africa,,,1
+Eastern Asia,,,1
+Eastern Europe,,,1
 EU(12)ex.int,,,1
 EU(15)ex.int,,,1
 EU(25)ex.int,,,1
 EU(27)ex.int,,,1
+Europe,,,1
+European Union,,,1
+European Union (exc intra-trade),,,1
+Land Locked Developing Countries,,,1
+Least Developed Countries,,,1
+Low Income Food Deficit Countries,,,1
+Melanesia,,,1
+Micronesia,,,1
+Middle Africa,,,1
+Net Food Importing Developing Countries,,,1
+Northern Africa,,,1
+Northern America,,,1
+Northern Europe,,,1
+Oceania,,,1
+Polynesia,,,1
+Small Island Developing States,,,1
+South America,,,1
+South-Eastern Asia,,,1
+Southern Africa,,,1
+Southern Asia,,,1
+Southern Europe,,,1
+Western Africa,,,1
+Western Asia,,,1
+Western Europe,,,1
+World,,,1

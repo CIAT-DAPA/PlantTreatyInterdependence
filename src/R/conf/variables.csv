@@ -1,15 +1,4 @@
 group,datasource,vars,units,useable
-commodity_balances,FAOSTAT,cb_production,tonnes,0
-commodity_balances,FAOSTAT,cb_import_quantity,tonnes,0
-commodity_balances,FAOSTAT,cb_export_quantity,tonnes,0
-commodity_balances,FAOSTAT,cb_domestic_supply_quantity,tonnes,0
-commodity_balances,FAOSTAT,cb_losses,tonnes,0
-commodity_balances,FAOSTAT,cb_food_supply_quantity,tonnes,0
-commodity_balances,FAOSTAT,cb_stock_variation,tonnes,0
-commodity_balances,FAOSTAT,cb_feed,tonnes,0
-commodity_balances,FAOSTAT,cb_seed,tonnes,0
-commodity_balances,FAOSTAT,cb_other_uses,tonnes,0
-commodity_balances,FAOSTAT,cb_processing,tonnes,0
 crops,FAOSTAT,c_area_harvested,ha,1
 crops,FAOSTAT,c_yield,hg/ha,0
 crops,FAOSTAT,c_production,tonnes,1

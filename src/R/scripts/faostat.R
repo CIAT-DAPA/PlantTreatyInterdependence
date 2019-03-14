@@ -4,33 +4,6 @@ library(ggplot2)
 library(RMySQL)
 
 ##############################################
-####  00-GLOBAL VARIABLES
-##############################################
-
-#setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
-setwd("/home/hsotelo/fao/R/")
-#/home/hsotelo/fao/R
-# Global variables
-conf.folder = "conf"
-conf.file = "conf_test.csv"
-inputs.folder = "inputs"
-process.folder = "process"
-
-conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
-
-
-# Database connection
-
-connect_db = function(){
-  db_cnn <- dbConnect(MySQL(),user = as.character(conf.variables[which(conf.variables$name == "db_user"),"value"]),
-                      password = as.character(conf.variables[which(conf.variables$name == "db_password"),"value"]),
-                      host = as.character(conf.variables[which(conf.variables$name == "db_host"),"value"]),
-                      dbname=as.character(conf.variables[which(conf.variables$name == "db_name"),"value"]))
-  return(db_cnn)
-}
-
-#dbDisconnect(db_cnn)
-##############################################
 ####  01-DOWNLOAD DATA AND SAVE FILES
 ##############################################
 
@@ -64,15 +37,15 @@ inputs.download = function(i){
 # This function save the countries names in a files from faostat file
 # (string) f: File path
 process.load.countries = function(f){
-  tmp.source.domain = gsub(".csv","",unlist(strsplit(f, "-")))
-  tmp.domain = inputs.domain[inputs.domain$name == as.character(tmp.source.domain[2]),]
+  tmp.source.group = gsub(".csv","",unlist(strsplit(f, "-")))
+  #tmp.group = inputs.group[inputs.group$name == as.character(tmp.source.group[2]),]
   tmp.measure = read.csv(paste0(inputs.folder,"/",f ), header = T)
   print(paste0("........Measures were loaded"))
   
   tmp.countries = tmp.measure[,c("Area.Code","Area")]
   tmp.countries = unique(tmp.countries)
-  write.csv(tmp.countries, paste0(tmp.source.domain[1],"-",tmp.source.domain[2],"-countries.csv"), row.names = F )
-  
+  write.csv(tmp.countries, paste0(inputs.folder,"/",tmp.source.group[1],"-",tmp.source.group[2],"-countries.csv"), row.names = F )
+  print(paste0("........Countries saved"))
 }
 
 ##############################################
@@ -82,13 +55,13 @@ process.load.countries = function(f){
 # This function saves the new records of metrics from file
 # (string) f: File name
 process.load.metrics = function(f){
-  tmp.source.domain = gsub(".csv","",unlist(strsplit(f, "-")))
-  tmp.domain = inputs.domain[inputs.domain$name == as.character(tmp.source.domain[2]),]
+  tmp.source.group = gsub(".csv","",unlist(strsplit(f, "-")))
+  tmp.group = inputs.group[inputs.group$name == as.character(tmp.source.group[2]),]
   tmp.measure = read.csv(paste0(inputs.folder,"/",f ), header = T)
   print(paste0("........Parameters were loaded"))
   
-  # Get list of domains metrics by domain
-  process.metrics.query = dbSendQuery(db_cnn,paste0("select id,id_domain,name,units from metrics where id_domain = ",as.character(tmp.domain$id[1])))
+  # Get list of groups metrics by group
+  process.metrics.query = dbSendQuery(db_cnn,paste0("select id,id_group,name,units from metrics where id_group = ",as.character(tmp.group$id[1])))
   process.metrics = fetch(process.metrics.query, n=-1)
   print(paste0("........Metrics were loaded"))
   
@@ -97,8 +70,8 @@ process.load.metrics = function(f){
   tmp.new.values = subset(tmp.values,!(Element %in% process.metrics$name))
   
   if(dim(tmp.new.values)[1] > 0){
-    tmp.new.values$id_domain = tmp.domain$id
-    names(tmp.new.values)=c("name","units","id_domain")
+    tmp.new.values$id_group = tmp.group$id
+    names(tmp.new.values)=c("name","units","id_group")
     print(paste0("........The data was cleaned"))
     
     dbWriteTable(db_cnn, value = tmp.new.values, name = "metrics", append = TRUE, row.names=F)
@@ -114,8 +87,8 @@ process.load.metrics = function(f){
 # (string) f: File name
 process.load.measure = function(f){
   db_cnn = connect_db()
-  tmp.source.domain = gsub(".csv","",unlist(strsplit(f, "-")))
-  tmp.domain = inputs.domain[inputs.domain$name == as.character(tmp.source.domain[2]),]
+  tmp.source.group = gsub(".csv","",unlist(strsplit(f, "-")))
+  tmp.group = inputs.group[inputs.group$name == as.character(tmp.source.group[2]),]
   tmp.measure = read.csv(paste0(inputs.folder,"/",f ), header = T)
   # Fixing some fields
   tmp.measure$Area = as.character(tmp.measure$Area)
@@ -123,7 +96,7 @@ process.load.measure = function(f){
   print(paste0("........Measures were loaded ",dim(tmp.measure)[1]))
   
   # Getting the dictionary of countries
-  tmp.countries = read.csv(paste0(conf.folder,"/",tmp.source.domain[1],"/countries.csv" ), header = T)
+  tmp.countries = read.csv(paste0(conf.folder,"/",tmp.source.group[1],"/countries.csv" ), header = T)
   tmp.countries$name = as.character(tmp.countries$name)
   print(paste0("........Countries were loaded ",dim(tmp.countries)[1]))
   # Getting the records which don't match with countries
@@ -135,15 +108,17 @@ process.load.measure = function(f){
   write.csv(tmp.measure, paste0(process.folder, "/",gsub(".csv","",f),"-countries-good.csv"), row.names = F)
   print(paste0("........Countries were merged ",dim(tmp.measure)[1]))
   
-  # Get the dictionary of crops
-  tmp.crops.domains = read.csv(paste0(conf.folder,"/",tmp.source.domain[1],"/crops_domains.csv" ), header = T)
-  tmp.crops.domains = tmp.crops.domains[which(tmp.crops.domains$Metric == paste0(tmp.source.domain[1],"-",tmp.source.domain[2])),]
-  tmp.crops.domains = tmp.crops.domains[which(tmp.crops.domains$Useable == "Y"),c("Item","Item_cleaned")]
-  tmp.measure = merge(x=tmp.measure, y=tmp.crops.domains, by.x="Item", by.y="Item", all.x = F, all.y = F)
-  print(paste0("........Crops were merged with crops domain"))
   
-  tmp.species = read.csv(paste0(conf.folder,"/",tmp.source.domain[1],"/species_list.csv" ), header = T)
-  tmp.column = paste0(tmp.source.domain[1],".",tmp.source.domain[2])
+  # Get the dictionary of crops
+  tmp.crops.groups = read.csv(paste0(conf.folder,"/",tmp.source.group[1],"/crops_groups.csv" ), header = T)
+  tmp.crops.groups = tmp.crops.groups[which(tmp.crops.groups$Metric == paste0(tmp.source.group[1],"-",tmp.source.group[2])),]
+  #tmp.crops.groups = tmp.crops.groups[which(tmp.crops.groups$Useable == "Y"),c("Item","Item_cleaned")]
+  tmp.measure = merge(x=tmp.measure, y=tmp.crops.groups, by.x="Item", by.y="Item", all.x = F, all.y = F)
+  print(paste0("........Crops were merged with crops group ", nrow(tmp.measure)))
+  
+  # Get the species list
+  tmp.species = read.csv(paste0(conf.folder,"/",tmp.source.group[1],"/species_list.csv" ), header = T)
+  tmp.column = paste0(tmp.source.group[1],".",tmp.source.group[2])
   tmp.species = tmp.species[,c("id_crop","crop",tmp.column)]
   #tmp.species = tmp.species[complete.cases(tmp.species),]
   tmp.measure = merge(x=tmp.measure, y=tmp.species, by.x="Item_cleaned", by.y=tmp.column, all.x = F, all.y = F)
@@ -156,8 +131,8 @@ process.load.measure = function(f){
   write.csv(tmp.measure, paste0(process.folder, "/",gsub(".csv","",f),"-crops-good.csv"), row.names = F)
   print(paste0("........Crops were merged ",dim(tmp.measure)[1]))
   
-  # Get list of domains metrics by domain
-  tmp.metrics.query = dbSendQuery(db_cnn,paste0("select id as id_metric,name from metrics where id_domain = ",as.character(tmp.domain$id[1])))
+  # Get list of groups metrics by group
+  tmp.metrics.query = dbSendQuery(db_cnn,paste0("select id as id_metric,name from metrics where id_group = ",as.character(tmp.group$id[1])))
   tmp.metrics = fetch(tmp.metrics.query, n=-1)
   print(paste0("........Metrics were loaded "))
   # Merge with metrics
@@ -184,7 +159,7 @@ process.load.measure = function(f){
     tmp.df =  tmp.df[complete.cases(tmp.df), ]
     # Sum values where they have the same metric, country, crop and year 
     # It is because when we transform the original crops to master crops, they could be the same
-    tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarize,value=sum(value))
+    tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarize,value=sum(value, na.rm =T))
     
     write.csv(tmp.df, paste0(process.folder, "/final/",gsub(".csv","",f),y,".csv"), row.names = F)
     db_cnn = connect_db()
@@ -196,22 +171,6 @@ process.load.measure = function(f){
 }
 
 
-import.files = function(path){
-  files = list.files(paste0(process.folder,"/final/"))
-  lapply(files,function(f){
-    print(paste0("Importing: ",process.folder,"/final/",f))
-    records = read.csv(paste0(process.folder,"/final/",f), header = T)
-    db_cnn = connect_db()
-    tmp = dbWriteTable(db_cnn, value = records, name = "measures", append = TRUE, row.names=F)
-    dbDisconnect(db_cnn)
-    print(tmp)
-  })
-  
-}
-
-
-
-
 # This function saves all data into database
 # (string) f: Name of file
 process.load = function(f){
@@ -221,22 +180,4 @@ process.load = function(f){
   print(paste0("....Measures ", f))
   process.load.measure(f)
 }
-
-##############################################
-####  03-PROCESS
-##############################################
-db_cnn = connect_db()
-inputs.domains.query = dbSendQuery(db_cnn,"select id,name,source,url from domains")
-# Get list of domains available
-inputs.domain = fetch(inputs.domains.query, n=-1)
-dbDisconnect(db_cnn)
-
-# Download data
-lapply(1:nrow(inputs.raw),inputs.download)
-
-p = list.files(inputs.folder)
-p = grep(glob2rx("faostat*.csv"),p, value = TRUE)
-
-lapply(p,process.load)
-
 
