@@ -6,7 +6,7 @@ id_crop,crop,faostat-food_supply,faostat-commodity_balances,faostat-crops,faosta
 5,Adzuki bean,Beans,Beans,Beans,Beans,Beans
 6,Aeschynomene,,,,,
 7,African eggplant,,,,,
-8,Agave,"Hard Fibres, Other","Hard Fibres, Other",Agave fibres nes,Agave fibres nes,
+8,Agave,,"Hard Fibres, Other",Agave fibres nes,Agave fibres nes,
 9,Agropyron,,,,,
 10,Agrostis,,,,,
 11,Ahipa,,,,,
@@ -350,3 +350,4 @@ id_crop,crop,faostat-food_supply,faostat-commodity_balances,faostat-crops,faosta
 349,Year bean,Beans,Beans,Beans,Beans,Beans
 350,Zornia,,,,,
 351,Zucchini,"Vegetables, Other","Vegetables, Other","Pumpkins, squash and gourds","Pumpkins, squash and gourds","Pumpkins, squash and gourds"
+,,,,,,
