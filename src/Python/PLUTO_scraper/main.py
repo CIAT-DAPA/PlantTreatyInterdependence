@@ -61,13 +61,14 @@ def getSpecies(desc):
         response_2 = s.post(url_2, data=values_2)
 
         values_3 = {
-            'qz': 'N4IgLgngDgpiBcICuUD2A3EAaEAbAhgiDAHbYgCOAlkQAwC0A7ACYBCAygEYDOA1uuyQBFAExIKjRgAlOASQCiATWYUATo1ncAGgCsA7gBlGegMwBVeVQAetWQA5UAcwC8IAL5AA',
+            'qz': 'N4IgLgngDgpiBcICuUD2A3EAaEAbAhgiDAHbYgCOAlkQAwC0AikmANIBOVtA7BQPQARABYAVKgIBsEsADl06CQGMqAKwBGjAJoBWAOLcqrAEoBJEwAkAzgA4AjAFtdAVQC8IAL5A',
         }
 
         response_3 = s.post(url_3, data=values_3)
 
-        soup_3 = BeautifulSoup(response_3.text, "lxml")
 
+
+        print(response_3.text)
         file.write(response_3.text)
 
 
