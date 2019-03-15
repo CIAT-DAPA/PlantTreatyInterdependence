@@ -1,7 +1,7 @@
 use genesys_2018;
 
 select * from accession order by rand() limit 100;
-select * from taxonomy2 order by rand() limit 100;
+select * from taxonomy2 order by rand() limit 10;
 select * from WIEWS order by rand() limit 100;
 select * from sgsv order by rand() limit 100;
 
@@ -12,7 +12,7 @@ create table GMERGE as (select 	a.acceNumb as original_id,
                                         instCode as institution,
                                         origCty as country,
                                         t.genus as genus,
-										t.taxonName as species
+                                        SUBSTRING_INDEX(t.taxonName ,' ',2) as species
                                         from accession a
                                         left join taxonomy2 t on a.taxonomyId2 = t.id
                                         )
@@ -23,7 +23,7 @@ create table GMERGE as (select 	a.acceNumb as original_id,
                                         `Holding institute code` as institution,
                                         `Country of origin` as country,
                                         SUBSTRING_INDEX(`Taxon`,' ',1) as genus,
-                                        REPLACE(SUBSTRING_INDEX(`Taxon`,' ',2), ' sp.', '')  as species
+                                        SUBSTRING_INDEX(`Taxon`,' ',2) as species
                                         from WIEWS
                                         where `Source of information` != "'GENESYS (https://www.genesys-pgr.org)'"
                                         and `Source of information` != "'EURISCO (http://eurisco.ipk-gatersleben.de)'"
@@ -46,6 +46,7 @@ from GMERGE;
 
 -- # total, uniques
 -- '9576633', '4818718'
+-- 9649133, 5494164 con genus
 
 
 
@@ -53,10 +54,14 @@ select *
 from GMERGE
 where id="19567";
 
+select *
+from GMERGE
+where species like "%.%";
+
 create table GMERGE_duplicates as select * from (
-	select id, count(*)  total
+	select id, genus, count(*)  total
 	from GMERGE
-    group by id
+    group by id, genus
 )j
 where total > 1;
 
