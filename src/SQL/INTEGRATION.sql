@@ -38,13 +38,13 @@ create table GMERGE as (select 	a.acceNumb as original_id,
 										"SGSV" as source,
                                         institute_code as institution,
                                         country_of_collection_or_source as country,
-                                        genus as genus,
+                                        REPLACE(genus,' ','') as genus,
                                         SUBSTRING_INDEX(species,' ',2) as species
                                         from SGSV);
 
 UPDATE GMERGE
 SET genus= "Zea" , species = "Zea mays"
-WHERE genus = "Zea.mays";
+WHERE genus = "Zea.mays" or genus ="Zea mays.";
 
 UPDATE GMERGE
 SET species = "Zea mays"
@@ -57,6 +57,25 @@ WHERE genus="O." and species like "O.%";
 UPDATE GMERGE
 SET species = REPLACE(species, "S.", "Solanum"), genus= "Solanum"
 WHERE genus="S." and species like "S.%";
+
+
+
+
+UPDATE GMERGE
+SET species = REPLACE(species, "Tr. ", "Tritucum "), genus= "Tritucum"
+WHERE species like "Tr. %";
+
+UPDATE GMERGE
+SET species = REPLACE(species, "Tr.. ", "Tritucum "), genus= "Tritucum"
+WHERE species like "Tr..%";
+
+UPDATE GMERGE
+SET species = REPLACE(species, "Tr.", "Tritucum "), genus= "Tritucum"
+WHERE species like "Tr.%";
+
+UPDATE GMERGE
+SET species = REPLACE(species, "T.", "Tritucum "), genus= "Tritucum"
+WHERE species like "T.%";
 
 
 
@@ -107,6 +126,20 @@ select genus, species, count(*)
 from GMERGE
 where species like "%S.%"
 group by genus, species;
+
+select genus, species, count(*)
+from GMERGE
+where species like "%T.%"
+group by genus, species;
+
+select genus, species, source, count(*)
+from GMERGE
+where species not like "%sp." and species not like "%spp." and species not like "%hybr." 
+and species like "%.%"
+and species not like "%Z.%"
+and species not like "%O.%"
+and species not like "%S.%"
+group by genus, species, source;
 
 
 
