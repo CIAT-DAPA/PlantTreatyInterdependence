@@ -78,6 +78,30 @@ SET species = REPLACE(species, "T.", "Tritucum "), genus= "Tritucum"
 WHERE species like "T.%";
 
 
+UPDATE GMERGE
+SET species = REPLACE(species, "G. ", "Gossypium "), genus= "Gossypium"
+WHERE species like "G. %";
+
+
+UPDATE GMERGE
+SET species = REPLACE(species, "G.", "Gossypium "), genus= "Gossypium"
+WHERE species like "G.%";
+
+UPDATE GMERGE
+SET species = "Gossypium hirsutum", genus= "Gossypium"
+WHERE species like "2(g.%";
+
+UPDATE GMERGE
+SET species = "Gossypium hirsutum", genus= "Gossypium"
+WHERE species like "2(g.%";
+
+
+
+UPDATE GMERGE
+SET species = SUBSTRING_INDEX(species,' ',2) ;
+
+
+
 
 -- ############# control queries
 
@@ -132,6 +156,17 @@ from GMERGE
 where species like "%T.%"
 group by genus, species;
 
+select genus, species, count(*)
+from GMERGE
+where species like "%G.%"
+group by genus, species;
+
+
+select genus, species, source, count(*)
+from GMERGE
+where species like "%x(p.%"
+group by genus, species, source;
+
 select genus, species, source, count(*)
 from GMERGE
 where species not like "%sp." and species not like "%spp." and species not like "%hybr." 
@@ -139,7 +174,13 @@ and species like "%.%"
 and species not like "%Z.%"
 and species not like "%O.%"
 and species not like "%S.%"
+and species not like "%T.%"
+and species not like "%Tr.%"
+and species not like "%G.%"
+and species not like "%x(p.%"
 group by genus, species, source;
+
+
 
 
 
