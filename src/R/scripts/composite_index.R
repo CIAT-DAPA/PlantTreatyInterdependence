@@ -23,7 +23,7 @@ require(FactoClass)
 # (data.frame) data: Dataset
 ci.variables.char.vars = function(data){
   tmp.types = unlist(lapply(data, class),use.names=FALSE)
-  tmp.types.index = tmp.types == "character" 
+  tmp.types.index = tmp.types == "character" | tmp.types == "factor"
   return (tmp.types.index)
 }
 
@@ -31,7 +31,7 @@ ci.variables.char.vars = function(data){
 # (data.frame) data: Dataset
 ci.variables.numeric.vars = function(data){
   tmp.types = unlist(lapply(data, class),use.names=FALSE)
-  tmp.types.index = tmp.types != "character" 
+  tmp.types.index = tmp.types != "character"  & tmp.types != "factor"
   return (tmp.types.index)
 }
 

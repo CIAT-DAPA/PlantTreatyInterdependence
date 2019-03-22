@@ -41,21 +41,13 @@ analysis.add.new.variables = function(data){
   
 }
 
-analysis.get.matrix = function(global=F,years=2010:2013){
-  
+
+analysis.get.matrix = function(global=F,years="2010,2011,2012,2013"){
+  print("Loading data")
   # Get all data from database
-  raw.query = dbSendQuery(db_cnn,"select machine_name,crop_name,country_id,country_iso2,country_iso3,country_name,year,value from vw_domains")
-  raw = fetch(raw.query, n=-1)
-  
-  # Transforming data
-  # Filtering with metrics. The metrics which are not going to be used
-  #tmp.metrics.exclude = read.csv(paste0(conf.folder,"/metrics-exclude.csv" ), header = T)
-  #data = raw[!(raw$metric_id %in%  tmp.metrics.exclude$id),]
-  data = raw
-  # Fixing the variables name
-  #tmp.metrics.name = read.csv(paste0(conf.folder,"/metrics-name.csv" ), header = T)
-  #data = merge(x=data, y=tmp.metrics.name, by.x="metric_id", by.y="id", all.x = F, all.y = F)
-  
+  raw.query = dbSendQuery(db_cnn,paste0("select machine_name,crop_name,country_id,country_iso2,country_iso3,country_name,year,value from vw_domains where year in (",years,")"))
+  data = fetch(raw.query, n=-1)
+  print("Filtering data")
   ## Filtering data by region
   if(global == T){
     data = data[which(data$country_id == 269),]  
@@ -64,12 +56,8 @@ analysis.get.matrix = function(global=F,years=2010:2013){
     data = data[which(data$country_id %in% 1:230),]  
   }
   
-  ## Filter data by years
-  data = data[which(data$year %in% years),]
-  
   data = analysis.built.matrix(data)
-  #write.csv(data,paste0(analysis.folder,"/data.csv"), row.names = F)
-  
+
   # Raw data
   return(data)
 }
