@@ -79,14 +79,22 @@ lapply(p,process.load)
 ####  03-NEW FIELDS
 source("scripts/tools.R")
 source("scripts/analysis.R")
+source("scripts/composite_index.R")
 db_cnn = connect_db()
-data.raw = analysis.get.matrix(global=T)
+data.raw = analysis.get.matrix(global=F)
 dbDisconnect(db_cnn)
 
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
-data.countries.count = tools.countries.count(data.raw)
-tmp = merge(x=data.raw,y=data.countries.count, c("crop_name","year"))
+data.filtered = ci.variables.exclude(data.raw,data.vars)
+
+data.countries.count = analysis.countries.count(data.filtered)
+write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)
+
+data.countries.index = analysis.crop.index.country(data.filtered)
+write.csv(data.countries.index,paste0(analysis.folder,"/data.countries.index.csv"), row.names = F)
+
+#tmp = merge(x=data.raw,y=data.countries.count, c("crop_name","year"))
 ##############################################
 
 ##############################################

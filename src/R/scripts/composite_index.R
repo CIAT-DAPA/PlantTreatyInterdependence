@@ -276,7 +276,7 @@ ci.aggregation.group.avg = function(data, vars, normalize = F, type.n = "range")
     if(length(cols) == 1){
       cols = c(cols,cols)
     }
-    return (rowMeans(tmp.data.final[,c(cols)]))
+    return (rowMeans(tmp.data.final[,c(cols)], na.rm = T))
   }) ))
   
   names(tmp.indicator) = paste0("gp_index_",tmp.groups$group)

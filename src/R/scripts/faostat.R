@@ -177,6 +177,8 @@ process.load.measure = function(f){
                            value=tmp.values)
     # Remove NA
     tmp.df =  tmp.df[complete.cases(tmp.df), ]
+    # Remove 0's
+    tmp.df =  tmp.df[which(tmp.df$value > 0), ]
     # Sum values where they have the same metric, country, crop and year 
     # It is because when we transform the original crops to master crops, they could be the same
     tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarise,value=sum(value))

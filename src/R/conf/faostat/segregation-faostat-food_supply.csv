@@ -2,22 +2,60 @@ group,crop,percentage
 "Cereals, Other",Buckwheat,0.215753425
 "Cereals, Other",Canary seed,0.119863014
 "Cereals, Other",Adlay,0.339041096
+"Cereals, Other",Amaranth,0.339041096
+"Cereals, Other",Kaniwa,0.339041096
+"Cereals, Other",Kiwicha,0.339041096
+"Cereals, Other",Wildrice,0.339041096
 "Cereals, Other",Fonio,0.061643836
 "Cereals, Other",Quinoa,0.04109589
 "Cereals, Other",Triticale,0.22260274
 "Fruits, Other",Apricot,0.043811144
 "Fruits, Other",Avocado,0.044661846
 "Fruits, Other",Huckleberry,0.042109741
+"Fruits, Other",Mulberry,0.042109741
+"Fruits, Other",Myrtle,0.042109741
 "Fruits, Other",Blueberry,0.022543598
 "Fruits, Other",Cherries,0.066780094
 "Fruits, Other",Cranberries,0.014461931
 "Fruits, Other",Currants,0.026371757
 "Fruits, Other",Figs,0.035304126
 "Fruits, Other",Azarole,0.091450447
+"Fruits, Other",Babaco,0.091450447
+"Fruits, Other",Elderberry,0.091450447
+"Fruits, Other",Jujube,0.091450447
+"Fruits, Other",Litchi,0.091450447
+"Fruits, Other",Loquat,0.091450447
+"Fruits, Other",Medlar,0.091450447
+"Fruits, Other",Pawpaw,0.091450447
+"Fruits, Other",Pomegranate,0.091450447
+"Fruits, Other",Prickly pear,0.091450447
+"Fruits, Other",Service tree,0.091450447
+"Fruits, Other",Strawberry tree,0.091450447
+"Fruits, Other",Tamarind,0.091450447
 "Fruits, Other",Atemoya,0.04636325
+"Fruits, Other",Breadfruit,0.04636325
+"Fruits, Other",Cainito,0.04636325
+"Fruits, Other",Carambola,0.04636325
+"Fruits, Other",Cherimoya,0.04636325
+"Fruits, Other",Custard apple,0.04636325
+"Fruits, Other",Durian,0.04636325
+"Fruits, Other",Feijoa,0.04636325
+"Fruits, Other",Jackfruit,0.04636325
+"Fruits, Other",Longan,0.04636325
+"Fruits, Other",Mamey sapote,0.04636325
+"Fruits, Other",Mammee,0.04636325
+"Fruits, Other",Mombin,0.04636325
+"Fruits, Other",Naranjilla,0.04636325
+"Fruits, Other",Passionfruit,0.04636325
+"Fruits, Other",Rambutan,0.04636325
+"Fruits, Other",Sapodilla,0.04636325
+"Fruits, Other",Soursop,0.04636325
+"Fruits, Other",Sugar apple,0.04636325
 "Fruits, Other",Gooseberries,0.015737984
 "Fruits, Other",Kiwi fruit,0.019566142
 "Fruits, Other",Guavas,0.059974479
+"Fruits, Other",Mango,0.059974479
+"Fruits, Other",Mangosteen,0.059974479
 "Fruits, Other",Melons,0.079540621
 "Fruits, Other",Papayas,0.040408337
 "Fruits, Other",Peaches and nectarines,0.048490004
@@ -28,16 +66,20 @@ group,crop,percentage
 "Fruits, Other",Raspberries,0.031901319
 "Fruits, Other",Strawberries,0.046788601
 "Fruits, Other",Watermelons,0.067205444
+Nuts,Almonds,0.067205444
 Nuts,Areca nuts,0.043859649
 Nuts,Brazil nut,0.029824561
-Nuts,Cashews,0.122807018
-Nuts,Chestnuts,0.103508772
-Nuts,Hazelnuts,0.098245614
-Nuts,Kola nuts,0.026315789
-Nuts,Butter-nut,0.192982456
-Nuts,Pistachios,0.084210526
-Nuts,Walnuts,0.157894737
-Nuts,Almonds,0.140350877
+Nuts,Cashews,0.140350877
+Nuts,Chestnuts,0.140350877
+Nuts,Hazelnuts,0.140350877
+Nuts,Kola nuts,0.140350877
+Nuts,Butter-nut,0.140350877
+Nuts,Macadamia nut,0.140350877
+Nuts,Pecan,0.140350877
+Nuts,Pili nut,0.140350877
+Nuts,Pine nut,0.140350877
+Nuts,Pistachios,0.140350877
+Nuts,Walnuts,0.140350877
 "Oilcrops, Other",Castor bean,0.137870855
 "Oilcrops, Other",Flax,0.27574171
 "Oilcrops, Other",Hemp,0.15008726
@@ -45,6 +87,17 @@ Nuts,Almonds,0.140350877
 "Oilcrops, Other",Kapok,0.02617801
 "Oilcrops, Other",Karite nuts,0.031413613
 "Oilcrops, Other",Beech nut,0.184991274
+"Oilcrops, Other",Candlenut,0.184991274
+"Oilcrops, Other",Carapa,0.184991274
+"Oilcrops, Other",Chontadura,0.184991274
+"Oilcrops, Other",Mahuwa,0.184991274
+"Oilcrops, Other",Noog,0.184991274
+"Oilcrops, Other",Oiticica,0.184991274
+"Oilcrops, Other",Perilla,0.184991274
+"Oilcrops, Other",Physic nut,0.184991274
+"Oilcrops, Other",Pongamia oil,0.184991274
+"Oilcrops, Other",Purging croton,0.184991274
+"Oilcrops, Other",Shala tree,0.184991274
 "Oilcrops, Other",Poppies,0.057591623
 "Oilcrops, Other",Safflower,0.089005236
 "Oilcrops, Other",Tung nuts,0.040139616
@@ -56,29 +109,84 @@ Nuts,Almonds,0.140350877
 "Pulses, Other",Lupins,0.071117562
 "Pulses, Other",Pigeonpeas,0.056603774
 "Pulses, Other",Grasspea,0.23222061
+"Pulses, Other",Jack bean,0.23222061
+"Pulses, Other",Jicama,0.23222061
+"Pulses, Other",Lablab,0.23222061
+"Pulses, Other",Sword bean,0.23222061
+"Pulses, Other",Velvet bean,0.23222061
+"Pulses, Other",Winged bean,0.23222061
 "Pulses, Other",Vetch,0.098693759
 "Roots, Other",Arracacha,0.533632287
+"Roots, Other",Arrowroot,0.533632287
+"Roots, Other",Chufa,0.533632287
+"Roots, Other",Jerusalem artichoke,0.533632287
+"Roots, Other",Maca,0.533632287
+"Roots, Other",Mashua,0.533632287
+"Roots, Other",Mauka,0.533632287
+"Roots, Other",Oca,0.533632287
+"Roots, Other",Sago palm,0.533632287
+"Roots, Other",Ulluco,0.533632287
 "Roots, Other",Taro,0.349775785
 "Roots, Other","Yautia, cocoyam",0.116591928
 "Spices, Other",Anise,0.208913649
+"Spices, Other",Badian,0.208913649
+"Spices, Other",Coriander,0.208913649
+"Spices, Other",Cumin,0.208913649
+"Spices, Other",Fennel,0.208913649
 "Spices, Other",Cinnamon,0.077994429
 "Spices, Other",Ginger,0.175487465
 "Spices, Other",Cardamoms,0.111420613
+"Spices, Other",Nutmeg,0.111420613
 "Spices, Other",Bay leaf,0.306406685
+"Spices, Other",Dill,0.306406685
+"Spices, Other",Fenugreek,0.306406685
+"Spices, Other",Saffron,0.306406685
+"Spices, Other",Thyme,0.306406685
+"Spices, Other",Turmeric,0.306406685
 "Spices, Other",Vanilla,0.119777159
+"Sweeteners, Other",Maple sugar,0.119777159
 Tea and mate,Mate,0.172043011
 Tea and mate,Tea,0.827956989
 "Vegetables, Other",Artichokes,0.03008669
 "Vegetables, Other",Asparagus,0.039265681
 "Vegetables, Other",Cabbages,0.167261601
+"Vegetables, Other",Cabbages and other brassicas,0.167261601
+"Vegetables, Other",Canola,0.167261601
+"Vegetables, Other",Ethiopian rape,0.167261601
 "Vegetables, Other",Carobs,0.014788373
 "Vegetables, Other",Carrots,0.087710352
+"Vegetables, Other",Turnips,0.087710352
 "Vegetables, Other",Cucumbers and gherkins,0.091789903
 "Vegetables, Other",Eggplant,0.067312596
 "Vegetables, Other",Garlic,0.069352371
 "Vegetables, Other",Leeks and other alliaceous vegetables,0.046404895
 "Vegetables, Other",Chicory,0.09535951
+"Vegetables, Other",Lettuce,0.09535951
 "Vegetables, Other",Okra,0.036715961
 "Vegetables, Other",Butternut squash,0.079551249
+"Vegetables, Other",Calabash,0.079551249
+"Vegetables, Other",Cushaw,0.079551249
+"Vegetables, Other",Fig leaf gourd,0.079551249
+"Vegetables, Other",Pumpkin,0.079551249
+"Vegetables, Other",Zucchini,0.079551249
 "Vegetables, Other",New Zealand Spinach,0.048954615
+"Vegetables, Other",Orache,0.048954615
+"Vegetables, Other",Spinach,0.048954615
 "Vegetables, Other",Bamboo shoot,0.125446201
+"Vegetables, Other",Beets,0.125446201
+"Vegetables, Other",Black salsify,0.125446201
+"Vegetables, Other",Capers,0.125446201
+"Vegetables, Other",Celery,0.125446201
+"Vegetables, Other",Chervil,0.125446201
+"Vegetables, Other",Cress,0.125446201
+"Vegetables, Other",Horseradish,0.125446201
+"Vegetables, Other",Marjoram,0.125446201
+"Vegetables, Other",Parsley,0.125446201
+"Vegetables, Other",Parsnip,0.125446201
+"Vegetables, Other",Radish,0.125446201
+"Vegetables, Other",Rhubarb,0.125446201
+"Vegetables, Other",Salsify,0.125446201
+"Vegetables, Other",Savory,0.125446201
+"Vegetables, Other",Sorrel,0.125446201
+"Vegetables, Other",Tarragon,0.125446201
+"Vegetables, Other",Watercress,0.125446201

@@ -1,5 +1,5 @@
 ##############################################
-####  01- FUNCTIONS
+####  01- BUILDING MATRIX
 
 # This function transform the original data frame in a new data frame.
 # It takes the metrics column and put all values like variables for each record
@@ -26,22 +26,6 @@ analysis.built.matrix = function(data){
   return (tmp.data)
 }
 
-# This function addes new variables to dataset
-# (data.frame) data: Dataframe which are going to add new variables
-analysis.add.new.variables = function(data){
-  # add amount of countries
-  #tmp.count = ddply(data,~crop_id + year, summarise, count=length(crop_id))
-  tmp.count = count(data,crop_name, year)
-  tmp.data = merge(x=data, y=tmp.count, by = c("crop_name", "year"))
-  names(tmp.data)[ncol(tmp.data)] = "cu_amount_countries"
-  #tmp.data[is.na(tmp.data)] = 0
-  
-  
-  return (tmp.data)
-  
-}
-
-
 analysis.get.matrix = function(global=F,years="2010,2011,2012,2013"){
   print("Loading data")
   # Get all data from database
@@ -63,3 +47,44 @@ analysis.get.matrix = function(global=F,years="2010,2011,2012,2013"){
 }
 ##############################################
 
+##############################################
+####  02- New VARIABLES
+
+# This function calculate the country for crop and year, it depends of the variables
+# (data.frame) data: Dataframe
+analysis.countries.count = function(data){
+  
+  tmp.data = data.frame(crop_name = data$crop_name,year = data$year)
+  tmp.data = unique(tmp.data)
+  tmp.vars = names(data)
+  tmp.vars = tmp.vars[5:length(tmp.vars)]
+  
+  tmp.values = do.call(cbind,lapply(tmp.vars,function(v){
+    #tmp.count = ddply(data,~crop_id + year, summarise, count=length(crop_id))
+    tmp.dataset = data[,c("crop_name","year",v)]
+    tmp.dataset = tmp.dataset[complete.cases(tmp.dataset), ]
+    tmp.count = count(tmp.dataset,crop_name, year)
+    tmp.final = merge(x=tmp.data,y=tmp.count,by.x=c("crop_name","year"),by.y=c("crop_name","year"),all.x = T,all.y = F)
+    return (tmp.final$n)
+  }))
+  
+  tmp.values = as.data.frame(tmp.values)
+  names(tmp.values) = paste0(tmp.vars,"_country_amount")
+  tmp.final = data.frame(tmp.data,tmp.values)
+  return(tmp.final)
+}
+
+
+# This function calculate the global index for crop in each variable
+# mean # countries across the years with  >0 value  amount/ total # of countries in FAOSTAT
+# (data.frame) data: Dataframe
+# (int) countries: # of countries into database
+analysis.crop.index.country = function(data,countries = 230){
+  
+  tmp.data = analysis.countries.count(data)
+  names(tmp.data) = gsub("_country_amount", "_country_index", names(tmp.data))
+  tmp.cols = sapply(tmp.data, is.numeric)
+  tmp.data[, tmp.cols] <- tmp.data[, tmp.cols] / countries
+  return(tmp.data)
+}
+##############################################
