@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.util.Properties;
 
 
-import org.ciat.model.TaxaMatchAPI;
+
 import org.ciat.view.Executable;
 import org.ciat.view.Executer;
 import org.ciat.view.FileProgressBar;

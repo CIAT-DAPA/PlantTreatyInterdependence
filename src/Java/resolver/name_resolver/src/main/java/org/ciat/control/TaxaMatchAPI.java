@@ -1,4 +1,4 @@
-package org.ciat.model;
+package org.ciat.control;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import org.ciat.model.NameUsage;
 import org.ciat.view.Executer;
 import org.ciat.view.TempIO;
 import org.json.JSONObject;
@@ -71,7 +72,8 @@ public class TaxaMatchAPI {
 				if (object.has(rankField) && object.has(usageKeyField)) {
 					String rank = object.get(rankField) + "";
 					// check if the taxon is an specie or subspecie
-					if (rank.equals("SPECIE") || rank.equals("SUBSPECIE")) {
+					System.out.println(object);
+					if (rank.equals("SPECIES") || rank.equals("SUBSPECIES")) {
 						String usageKey = object.has(usageKeyField) ? object.get(usageKeyField) + "" : "";
 						String status = object.has(statusField) ? object.get(statusField) + "" : "";
 						String genusName = object.has(genusField) ? object.get(genusField) + "" : "";
