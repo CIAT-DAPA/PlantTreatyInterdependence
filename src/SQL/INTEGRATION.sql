@@ -15,6 +15,8 @@ create table GMERGE as (select 	a.acceNumb as original_id,
 										"GENESYS" as source,
                                         instCode as institution,
                                         origCty as country,
+                                        t.genus as genus_raw,
+                                        t.taxonName as species_raw,
                                         REPLACE(t.genus,' ','') as genus,
                                         SUBSTRING_INDEX(t.taxonName ,' ',2) as species
                                         from accession a
@@ -26,6 +28,8 @@ create table GMERGE as (select 	a.acceNumb as original_id,
 										"WIEWS" as source,
                                         `Holding institute code` as institution,
                                         `Country of origin` as country,
+                                        SUBSTRING_INDEX(`Taxon`,' ',1) as genus_raw,
+                                        SUBSTRING_INDEX(`Taxon`,' ',2) as species_raw,
                                         SUBSTRING_INDEX(`Taxon`,' ',1) as genus,
                                         SUBSTRING_INDEX(`Taxon`,' ',2) as species
                                         from WIEWS
@@ -38,9 +42,20 @@ create table GMERGE as (select 	a.acceNumb as original_id,
 										"SGSV" as source,
                                         institute_code as institution,
                                         country_of_collection_or_source as country,
+                                        genus as genus_raw,
+                                        species as species_raw,
                                         REPLACE(genus,' ','') as genus,
                                         SUBSTRING_INDEX(species,' ',2) as species
                                         from SGSV);
+
+
+-- remove line break character
+UPDATE GMERGE
+SET species = REPLACE(species,UNHEX('C2A0'),'');
+
+-- remove line break character
+UPDATE GMERGE
+SET species = SUBSTRING_INDEX(species,'(',1);
 
 
 -- updating as Zea and Zea mays
@@ -100,6 +115,18 @@ WHERE species like "2(g.%";
 UPDATE GMERGE
 SET species = "Gossypium hirsutum", genus= "Gossypium"
 WHERE species like "2(g.%";
+
+-- updating as Fagopyrum
+
+UPDATE GMERGE
+SET species = REPLACE(species, "Fagopyrum f.", "Fagopyrum "), genus= "Fagopyrum"
+WHERE species like "Fagopyrum f.%";
+
+UPDATE GMERGE
+SET species = "Hordeum vulgare"
+WHERE species like "Hordeum v.%"
+or species like "Hordeum. v%"
+or species like "Hordeum.v%";
 
 
 -- Reformating to two words after replacements
