@@ -23,7 +23,7 @@ require(FactoClass)
 # (data.frame) data: Dataset
 ci.variables.char.vars = function(data){
   tmp.types = unlist(lapply(data, class),use.names=FALSE)
-  tmp.types.index = tmp.types == "character" 
+  tmp.types.index = tmp.types == "character" | tmp.types == "factor"
   return (tmp.types.index)
 }
 
@@ -31,7 +31,7 @@ ci.variables.char.vars = function(data){
 # (data.frame) data: Dataset
 ci.variables.numeric.vars = function(data){
   tmp.types = unlist(lapply(data, class),use.names=FALSE)
-  tmp.types.index = tmp.types != "character" 
+  tmp.types.index = tmp.types != "character"  & tmp.types != "factor"
   return (tmp.types.index)
 }
 
@@ -276,7 +276,7 @@ ci.aggregation.group.avg = function(data, vars, normalize = F, type.n = "range")
     if(length(cols) == 1){
       cols = c(cols,cols)
     }
-    return (rowMeans(tmp.data.final[,c(cols)]))
+    return (rowMeans(tmp.data.final[,c(cols)], na.rm = T))
   }) ))
   
   names(tmp.indicator) = paste0("gp_index_",tmp.groups$group)

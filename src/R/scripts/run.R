@@ -18,8 +18,8 @@ library(stringr)
 ##############################################
 ####  00- GLOBAL VARIABLES
 
-setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
-#setwd("/home/hsotelo/fao/R/")
+#setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
+setwd("/home/hsotelo/fao/R/")
 
 # Global variables
 conf.folder = "conf"
@@ -63,13 +63,13 @@ inputs.group = fetch(inputs.groups.query, n=-1)
 dbDisconnect(db_cnn)
 
 # Download data
-lapply(1:nrow(inputs.raw),inputs.download)
+#lapply(1:nrow(inputs.raw),inputs.download)
 
 p = list.files(inputs.folder)
 p = grep(glob2rx("faostat*.csv"),p, value = TRUE)
 
-#lapply(p,process.load)
-process.load(p[1])
+lapply(p,process.load)
+#process.load(p[3])
 
 #process.load.measure(p[1])
 #lapply(p,process.load.countries)
@@ -78,23 +78,36 @@ process.load(p[1])
 ##############################################
 ####  03-NEW FIELDS
 source("scripts/tools.R")
-
-##############################################
-
-##############################################
-####  04-ANALYSIS
-
 source("scripts/analysis.R")
+source("scripts/composite_index.R")
 db_cnn = connect_db()
-
-####  02- GETTING DATA
-data.raw = analysis.get.matrix()
-
+data.raw = analysis.get.matrix(global=F)
 dbDisconnect(db_cnn)
 
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
+data.filtered = ci.variables.exclude(data.raw,data.vars)
+
+data.countries.count = analysis.countries.count(data.filtered)
+write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)
+
+data.countries.index = analysis.crop.index.country(data.filtered)
+write.csv(data.countries.index,paste0(analysis.folder,"/data.countries.index.csv"), row.names = F)
+
+#tmp = merge(x=data.raw,y=data.countries.count, c("crop_name","year"))
+##############################################
+
+##############################################
+####  04-ANALYSIS
+source("scripts/composite_index.R")
+source("scripts/analysis.R")
+
+#data.raw = read.csv(paste0(analysis.folder,"/data.raw.csv" ), header = T)
+
+data.raw[, 1:4] = sapply(data.raw[, 1:4], as.character)
+data.raw[, 5:ncol(data.raw)] = sapply(data.raw[, 5:ncol(data.raw)], as.numeric)
 # Variables selected
+
 data.filtered = ci.variables.exclude(data.raw,data.vars)
 write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
 
@@ -133,19 +146,19 @@ data.vars.final = data.vars[data.vars$useable == 1,]
 # Calculating by groups
 weights.group = ci.weights.group(data.vars.final)
 indicator.groups = ci.aggregation.group.factor.sum(data.n, weights.group)
-ci.group.sum = data.filtered
+ci.group.sum = data.n
 ci.group.sum[,names(indicator.groups)] = indicator.groups
 write.csv(ci.group.sum,paste0(analysis.folder,"/compose_index.group.factor.sum.csv"), row.names = F)
 
 indicator.groups = ci.aggregation.group.avg(data.n, weights.group)
-ci.group.avg = data.filtered
+ci.group.avg = data.n
 ci.group.avg[,names(indicator.groups)] = indicator.groups
 write.csv(ci.group.avg,paste0(analysis.folder,"/compose_index.group.avg.csv"), row.names = F)
 
 # Calculating by vars
 weights.vars = ci.weights.vars(data.vars.final)
 indicator.vars = ci.aggregation.vars.sum(data.n, weights.vars$weight)
-ci.vars = data.filtered
+ci.vars = data.n
 ci.vars$compose_index = indicator.vars
 write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.sum.csv"), row.names = F)
 ##############################################

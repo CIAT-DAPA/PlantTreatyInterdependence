@@ -8,31 +8,6 @@ connect_db = function(){
   return(db_cnn)
 }
 
-# This function calculate the country for crop and year, it depends of the variables
-# (data.frame) data: Dataframe
-# (vector) vars: Vector with 
-tools.countries.count = function(data, vars){
-  
-  tmp.data = data.frame(crop_name)
-  
-  tmp.data = do.call(cbind,lapply(vars,function(v){
-    #tmp.count = ddply(data,~crop_id + year, summarise, count=length(crop_id))
-    tmp.dataset = data[,c(crop_name,year,v)]
-    
-    tmp.count = count(tmp.dataset,crop_name, year)
-    
-    return (tmp.count)
-    #tmp.data = merge(x=tmp.dataset, y=tmp.count, by = c("crop_name", "year"))
-    #names(tmp.data)[ncol(tmp.data)] = "cu_amount_countries"
-    #tmp.data[is.na(tmp.data)] = 0  
-  }))
-  
-  
-  
-  return (tmp.data)
-  
-}
-
 # This function saved files with measures into the database
 # (string) path: Name file
 tools.import.files = function(path){

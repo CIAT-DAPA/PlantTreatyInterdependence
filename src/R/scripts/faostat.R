@@ -5,8 +5,6 @@ library(RMySQL)
 
 ##############################################
 ####  01-DOWNLOAD DATA AND SAVE FILES
-##############################################
-
 
 # This function download data from url.
 # This creates a folder per source, then extract the contents files into csv files
@@ -47,10 +45,10 @@ process.load.countries = function(f){
   write.csv(tmp.countries, paste0(inputs.folder,"/",tmp.source.group[1],"-",tmp.source.group[2],"-countries.csv"), row.names = F )
   print(paste0("........Countries saved"))
 }
+##############################################
 
 ##############################################
 ####  02-SET UP THE MAIN ENTITIES
-##############################################
 
 # This function saves the new records of metrics from file
 # (string) f: File name
@@ -81,6 +79,10 @@ process.load.metrics = function(f){
   
 }
 
+##############################################
+
+##############################################
+####  03-IMPORT MEASURES
 
 
 # This function saves the records of measure from file
@@ -112,17 +114,15 @@ process.load.measure = function(f){
   # Get the dictionary of crops
   tmp.crops.groups = read.csv(paste0(conf.folder,"/",tmp.source.group[1],"/crops_groups.csv" ), header = T)
   tmp.crops.groups = tmp.crops.groups[which(tmp.crops.groups$Metric == paste0(tmp.source.group[1],"-",tmp.source.group[2])),]
-  #tmp.crops.groups = tmp.crops.groups[which(tmp.crops.groups$Useable == "Y"),c("Item","Item_cleaned")]
   tmp.measure = merge(x=tmp.measure, y=tmp.crops.groups, by.x="Item", by.y="Item", all.x = F, all.y = F)
+  write.csv(tmp.measure, paste0(process.folder, "/",gsub(".csv","",f),"-crops-groups-fixed.csv"), row.names = F)
   print(paste0("........Crops were merged with crops group ", nrow(tmp.measure)))
   
   # Get the species list
   tmp.species = read.csv(paste0(conf.folder,"/",tmp.source.group[1],"/species_list.csv" ), header = T)
   tmp.column = paste0(tmp.source.group[1],".",tmp.source.group[2])
   tmp.species = tmp.species[,c("id_crop","crop",tmp.column)]
-  #tmp.species = tmp.species[complete.cases(tmp.species),]
   tmp.measure = merge(x=tmp.measure, y=tmp.species, by.x="Item_cleaned", by.y=tmp.column, all.x = F, all.y = F)
-  
   # Getting the records which don't match with crops
   tmp.measure.fail = tmp.measure[!(tmp.measure$id_crop %in% tmp.species$id_crop),]
   write.csv(tmp.measure.fail, paste0(process.folder, "/",gsub(".csv","",f),"-crops-fail.csv"), row.names = F)
@@ -130,6 +130,14 @@ process.load.measure = function(f){
   # Merging with crops
   write.csv(tmp.measure, paste0(process.folder, "/",gsub(".csv","",f),"-crops-good.csv"), row.names = F)
   print(paste0("........Crops were merged ",dim(tmp.measure)[1]))
+  
+  # Weight Segregation
+  tmp.segregation.file = paste0(conf.folder,"/",tmp.source.group[1],"/segregation-",tmp.source.group[1],"-",tmp.source.group[2],".csv")
+  if(file.exists(tmp.segregation.file)){
+    tmp.segregation = read.csv(tmp.segregation.file, header = T)
+    tmp.measure = merge(x=tmp.measure, y=tmp.segregation, by.x=c("Item_cleaned","crop"), by.y=c("group","crop"), all.x = T, all.y = F)
+    tmp.measure[["percentage"]][is.na(tmp.measure[["percentage"]])] = 1
+  }
   
   # Get list of groups metrics by group
   tmp.metrics.query = dbSendQuery(db_cnn,paste0("select id as id_metric,name from metrics where id_group = ",as.character(tmp.group$id[1])))
@@ -145,11 +153,23 @@ process.load.measure = function(f){
   tmp.measure = select(tmp.measure, -starts_with("name"))
   names(tmp.measure) = gsub("Y","",names(tmp.measure))
   
-  tmp.years = dim(tmp.measure)[2]-6
+  if("percentage" %in% names(tmp.measure)){
+    tmp.years.end = dim(tmp.measure)[2]-7
+    
+  }else{
+    tmp.years.end = dim(tmp.measure)[2]-6
+  }
+  tmp.years.start = tmp.years.end - 6
   dbDisconnect(db_cnn)
   # Create records by every year
-  lapply(6:tmp.years,function(y){
+  lapply(tmp.years.start:tmp.years.end,function(y){
     tmp.values = tmp.measure[,y]
+    
+    # Only for segregation
+    if("percentage" %in% names(tmp.measure)){
+      tmp.values = tmp.values * tmp.measure$percentage
+    }
+    
     tmp.df = data.frame(id_metric=tmp.measure$id_metric,
                            id_country=tmp.measure$id_country,
                            id_crop=tmp.measure$id_crop,
@@ -157,9 +177,11 @@ process.load.measure = function(f){
                            value=tmp.values)
     # Remove NA
     tmp.df =  tmp.df[complete.cases(tmp.df), ]
+    # Remove 0's
+    tmp.df =  tmp.df[which(tmp.df$value > 0), ]
     # Sum values where they have the same metric, country, crop and year 
     # It is because when we transform the original crops to master crops, they could be the same
-    tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarize,value=sum(value, na.rm =T))
+    tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarise,value=sum(value))
     
     write.csv(tmp.df, paste0(process.folder, "/final/",gsub(".csv","",f),y,".csv"), row.names = F)
     db_cnn = connect_db()
@@ -170,13 +192,13 @@ process.load.measure = function(f){
   
 }
 
+##############################################
+
 
 # This function saves all data into database
 # (string) f: Name of file
 process.load = function(f){
   print(paste0("Star ", f))
-  #print(paste0("....Metrics ", f))
-  #process.load.metrics(f)
   print(paste0("....Measures ", f))
   process.load.measure(f)
 }
