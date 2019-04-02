@@ -1,0 +1,1001 @@
+crop,region_crop
+Abaca,SEA
+Acerola,SAM-Tro
+Acerola,CAM
+Achira,SAM-Tro
+Achira,CAR
+Achira,NAM
+Achira,CAM
+Ackee,WAF
+Adlay,SEA
+Adzuki bean,EAS
+Adzuki bean,SAS
+Aeschynomene,SAM-A
+Aeschynomene,SAM-Tem
+Aeschynomene,CAR
+Aeschynomene,NAM
+Aeschynomene,CAM
+African eggplant,SAS
+Agave,CAM
+Agropyron,EAS
+Agropyron,CAS
+Agropyron,EEU-N
+Agropyron,EEU-S
+Agropyron,WEU-S
+Agropyron,SEM
+Agropyron,WAS
+Agrostis,EAS
+Agrostis,SAS
+Agrostis,CAS
+Agrostis,EEU-N
+Agrostis,EEU-S
+Agrostis,WEU-N
+Agrostis,WEU-S
+Agrostis,SEM
+Agrostis,WAS
+Ahipa,SAM-A
+Albardine,SEM
+Alfalfa,CAS
+Alfalfa,WAS
+Allspice,CAR
+Allspice,CAM
+Almonds,CAS
+Almonds,WAS
+Alopecurus,EAS
+Alopecurus,CAS
+Alopecurus,EEU-N
+Alopecurus,EEU-S
+Alopecurus,WEU-N
+Alopecurus,WEU-S
+Alopecurus,WAS
+Alysicarpus,SEA
+Alysicarpus,EAS
+Alysicarpus,CAF
+Alysicarpus,EAF
+Alysicarpus,WAS
+Alysicarpus,IOI
+Alysicarpus,SAF
+Alysicarpus,WAF
+Amaranth,SAM-A
+Amaranth,CAM
+Andropogon,EAF
+Andropogon,SAF
+Andropogon,WAF
+Anise,SEM
+Anise,WAS
+Annato,SAM-Tro
+Annato,CAM
+Apple,EAS
+Apple,CAS
+Apple,EEU-N
+Apple,EEU-S
+Apple,WEU-N
+Apple,WEU-S
+Apricot,EAS
+Apricot,CAS
+Areca nuts,SEA
+Areca nuts,SAS
+Arracacha,SAM-A
+Arrhenatherum,EEU-N
+Arrhenatherum,EEU-S
+Arrhenatherum,WEU-N
+Arrhenatherum,WEU-S
+Arrhenatherum,SEM
+Arrhenatherum,WAS
+Arrowroot,SAM-Tro
+Arrowroot,CAR
+Arrowroot,CAM
+Artichokes,EEU-S
+Artichokes,WEU-S
+Artichokes,SEM
+Asparagus,CAS
+Asparagus,EEU-N
+Asparagus,EEU-S
+Asparagus,WEU-N
+Asparagus,WEU-S
+Asparagus,SEM
+Asparagus,WAS
+Astragalus,EAS
+Astragalus,EEU-N
+Astragalus,EEU-S
+Astragalus,WEU-N
+Astragalus,WEU-S
+Atemoya,SAM-Tro
+Atemoya,CAM
+Atriplex,EEU-S
+Atriplex,PAC-ANZ
+Atriplex,WEU-S
+Atriplex,SEM
+Atriplex,EAF
+Atriplex,IOI
+Atriplex,SAF
+Avocado,CAM
+Azarole,EEU-S
+Azarole,WEU-S
+Azarole,SEM
+Babaco,SAM-A
+Badian,SEA
+Badian,EAS
+Bambara bean,EAF
+Bambara bean,SAF
+Bamboo shoot,SEA
+Bamboo shoot,EAS
+Bananas,SEA
+Bananas,PAC-T
+Barley,CAS
+Barley,SEM
+Barley,WAS
+Basil,SEA
+Basil,SAS
+Basil,EEU-S
+Basil,WEU-S
+Basil,SEM
+Basil,EAF
+Basil,WAS
+Bay leaf,EEU-S
+Bay leaf,WEU-S
+Bay leaf,SEM
+Beech nut,EEU-N
+Beech nut,EEU-S
+Beech nut,WEU-N
+Beech nut,WEU-S
+Beets,EEU-N
+Beets,EEU-S
+Beets,WEU-N
+Beets,WEU-S
+Beets,SEM
+Black gram,SAS
+Black nightshade,SEA
+Black nightshade,SAM-Tro
+Black nightshade,CAM
+Black salsify,EEU-S
+Black salsify,WEU-S
+Black salsify,SEM
+Blueberry,NAM
+Brachiaria,EAF
+Brachiaria,SAF
+Brachiaria,WAF
+Brazil nut,SAM-Tro
+Breadfruit,SEA
+Breadfruit,PAC-T
+Buckwheat,EAS
+Butter-nut,SAM-Tro
+Butter-nut,CAM
+Butternut squash,SAM-Tro
+Butternut squash,NAM
+Butternut squash,CAM
+Cabbages,EAS
+Cabbages,EEU-S
+Cabbages,WEU-S
+Cabbages,SEM
+Cabbages and other brassicas,EAS
+Cabbages and other brassicas,EEU-S
+Cabbages and other brassicas,WEU-S
+Cabbages and other brassicas,SEM
+Caesarweed,SEA
+Caesarweed,EAS
+Caesarweed,SAM-Tro
+Caesarweed,CAM
+Caesarweed,PAC-T
+Cainito,CAR
+Calabash,SAF
+Calopogonium,SAM-Tro
+Calopogonium,SAM-Tem
+Calopogonium,CAR
+Calopogonium,CAM
+Canary seed,EEU-S
+Canary seed,WEU-S
+Canary seed,SEM
+Candlenut,SEA
+Canola,EEU-S
+Canola,WEU-S
+Canola,SEM
+Canola,WAS
+Capers,EEU-S
+Capers,WEU-S
+Capers,SEM
+Carambola,SEA
+Carambola,SAS
+Carapa,SAM-Tro
+Caraway,EEU-S
+Caraway,WEU-S
+Caraway,SEM
+Caraway,WAS
+Cardamoms,SEA
+Cardamoms,SAS
+Carneros Yucca,CAM
+Caroa,SAM-Tro
+Carobs,EEU-S
+Carobs,WEU-S
+Carobs,SEM
+Carrots,CAS
+Carrots,EEU-S
+Carrots,WEU-S
+Carrots,SEM
+Carrots,WAS
+Cashews,SAM-Tro
+Cassava,SAM-Tro
+Cassava,CAM
+Castor bean,SAS
+Castor bean,SEM
+Castor bean,EAF
+Castor bean,WAS
+Ceara,SAM-Tro
+Celery,EEU-S
+Celery,WEU-S
+Celery,SEM
+Centrosema,SAM-Tro
+Centrosema,CAM
+Ceylon-spinach,SAM-Tro
+Ceylon-spinach,CAR
+Ceylon-spinach,CAM
+Ceylon-spinach,WAF
+Chayote,CAM
+Cherimoya,SAM-Tro
+Cherries,CAS
+Cherries,EEU-S
+Cherries,WAS
+Chervil,CAS
+Chervil,EEU-N
+Chervil,EEU-S
+Chervil,WEU-S
+Chestnuts,CAS
+Chestnuts,EEU-S
+Chestnuts,SEM
+Chestnuts,WAS
+Chickpeas,SAS
+Chickpeas,SEM
+Chickpeas,WAS
+Chicle,CAM
+Chicory,SAS
+Chicory,CAS
+Chicory,EEU-N
+Chicory,EEU-S
+Chicory,WEU-N
+Chicory,WEU-S
+Chicory,SEM
+Chicory,WAS
+Chillies and peppers,SAM-Tro
+Chillies and peppers,CAR
+Chillies and peppers,CAM
+Chinotto,EEU-S
+Chinotto,WEU-S
+Chinotto,SEM
+Chontadura,SAM-Tro
+Chontadura,CAM
+Chufa,EEU-S
+Chufa,WEU-S
+Chufa,SEM
+Cinnamon,SEA
+Cinnamon,EAS
+Cinnamon,SAS
+Citron,SAS
+Citronella,SEA
+Citronella,SAS
+Clovers,SAS
+Clovers,CAS
+Clovers,EEU-N
+Clovers,EEU-S
+Clovers,WEU-N
+Clovers,WEU-S
+Clovers,SEM
+Clovers,WAS
+Cloves,SEA
+Cocoa,SAM-Tro
+Cocoa,CAM
+Coconuts,SEA
+Coconuts,SAS
+Coconuts,PAC-T
+Coffee,CAF
+Coffee,EAF
+Coffee,WAF
+Common bean,SAM-A
+Common bean,CAM
+Coriander,EEU-S
+Coriander,SEM
+Coriander,WAS
+Coronilla,CAS
+Coronilla,EEU-N
+Coronilla,EEU-S
+Coronilla,WEU-N
+Coronilla,WEU-S
+Coronilla,WAS
+Cotton,SAM-Tro
+Cotton,CAR
+Cotton,CAM
+Cotton,EAF
+Cotton,SAF
+Cowpeas,CAF
+Cowpeas,EAF
+Cowpeas,SAF
+Cowpeas,WAF
+Crambe,EEU-N
+Cranberries,NAM
+Cress,SEM
+Cress,EAF
+Cress,WAS
+Cucumbers and gherkins,SEA
+Cucumbers and gherkins,EAS
+Cucumbers and gherkins,SAS
+Cumin,SAS
+Cumin,WAS
+Currants,CAS
+Currants,EEU-N
+Currants,EEU-S
+Currants,WEU-N
+Currants,WEU-S
+Cushaw,CAM
+Custard apple,CAR
+Custard apple,CAM
+Dactylis,SAS
+Dactylis,CAS
+Dactylis,EEU-N
+Dactylis,EEU-S
+Dactylis,WEU-N
+Dactylis,WEU-S
+Dactylis,SEM
+Dactylis,WAS
+Dates,SAS
+Dates,SEM
+Dates,WAS
+Desmodium,SAM-Tro
+Desmodium,SAM-Tem
+Desmodium,CAR
+Desmodium,CAM
+Devil's cotton,SEA
+Devil's cotton,EAS
+Dill,CAS
+Dill,EEU-N
+Dill,EEU-S
+Dill,WEU-N
+Dill,WEU-S
+Dill,SEM
+Durian,SEA
+Eggplant,SEA
+Eggplant,EAS
+Eggplant,SAS
+Elderberry,EEU-N
+Elderberry,EEU-S
+Elderberry,WEU-N
+Elderberry,WEU-S
+Elderberry,NAM
+Esparto,WEU-S
+Esparto,SEM
+Ethiopian rape,EAF
+Faba beans,WAS
+Feijoa,SAM-Tro
+Fennel,EEU-S
+Fennel,WEU-S
+Fennel,SEM
+Fennel,WAS
+Fenugreek,WAS
+Fescue,SAS
+Fescue,CAS
+Fescue,EEU-N
+Fescue,EEU-S
+Fescue,WEU-N
+Fescue,WEU-S
+Fescue,SEM
+Fescue,WAS
+Fig leaf gourd,SAM-Tro
+Fig leaf gourd,SAM-A
+Fig leaf gourd,CAM
+Figs,SAS
+Figs,CAS
+Figs,WEU-S
+Figs,SEM
+Figs,WAS
+Finger millet,EAF
+Finger millet,SAF
+Fique,SAM-Tro
+Fique,CAR
+Fique,CAM
+Flax,CAS
+Flax,EEU-N
+Flax,EEU-S
+Flax,WEU-N
+Flax,WEU-S
+Flax,SEM
+Flax,WAS
+Fonio,WAF
+Foxtail millet,EAS
+Foxtail millet,SAS
+Galactia,SAM-Tro
+Galactia,SAM-Tem
+Galactia,CAR
+Galactia,NAM
+Galactia,CAM
+Garlic,CAS
+Giant cabuya,SAM-Tro
+Giant cabuya,CAR
+Ginger,SAS
+Gooseberries,CAS
+Gooseberries,EEU-N
+Gooseberries,EEU-S
+Gooseberries,WEU-N
+Gooseberries,WEU-S
+Gooseberries,SEM
+Gooseberries,WAS
+Grapefruits,SEA
+Grapefruits,EAS
+Grapes,EAS
+Grapes,NAM
+Grapes,SEM
+Grapes,WAS
+Grasspea,WAS
+Groundnuts,SAM-Tro
+Guavas,SAM-Tro
+Guavas,CAM
+Guayule,NAM
+Guayule,CAM
+Gutta-percha,SEA
+Hazelnuts,CAS
+Hazelnuts,EEU-N
+Hazelnuts,EEU-S
+Hazelnuts,WEU-N
+Hazelnuts,WEU-S
+Hazelnuts,WAS
+Hedysarum,EEU-S
+Hedysarum,WEU-S
+Hedysarum,SEM
+Hemp,SAS
+Hemp,CAS
+Hemp,WAS
+Hops,EAS
+Hops,CAS
+Hops,EEU-N
+Hops,EEU-S
+Hops,WEU-N
+Hops,WEU-S
+Hops,SEM
+Hops,WAS
+Horseradish,EEU-S
+Horseradish,WAS
+Huckleberry,NAM
+Indigofera,SEA
+Indigofera,EAS
+Indigofera,SAS
+Indigofera,SAM-Tro
+Indigofera,SAM-A
+Indigofera,SAM-Tem
+Indigofera,CAR
+Indigofera,NAM
+Indigofera,CAM
+Indigofera,CAF
+Indigofera,EAF
+Indigofera,IOI
+Indigofera,SAF
+Indigofera,PAC-T
+Indigofera,WAF
+Jack bean,CAM
+Jackfruit,SAS
+Japanese millet,EAS
+Japanese millet,SAS
+Jelutong,SEA
+Jerusalem artichoke,NAM
+Jicama,CAM
+Jojoba,NAM
+Jojoba,CAM
+Jujube,EAS
+Jute,SAS
+Kaniwa,SAM-A
+Kapok,SAM-Tro
+Kapok,CAR
+Kapok,CAM
+Kapok,WAF
+Karite nuts,CAF
+Karite nuts,EAF
+Karite nuts,WAF
+Kenaf,SAS
+Kiwi fruit,EAS
+Kiwicha,SAM-A
+Kodo millet,SEA
+Kodo millet,SAS
+Kodo millet,WAF
+Kola nuts,CAF
+Kola nuts,WAF
+Kumquat,SEA
+Kumquat,EAS
+Kumquat,SAS
+Lablab,EAF
+Lablab,IOI
+Lablab,SAF
+Lablab,WAF
+Lavender,EEU-S
+Lavender,WEU-S
+Lavender,SEM
+Leeks and other alliaceous vegetables,CAS
+Leeks and other alliaceous vegetables,EEU-S
+Leeks and other alliaceous vegetables,WEU-S
+Leeks and other alliaceous vegetables,SEM
+Leeks and other alliaceous vegetables,WAS
+Lemons and limes,EAS
+Lemons and limes,SAS
+Lentils,SAS
+Lentils,SEM
+Lentils,WAS
+Lespedeza,SEA
+Lespedeza,EAS
+Lespedeza,SAS
+Lespedeza,PAC-ANZ
+Lettuce,CAS
+Lettuce,EEU-N
+Lettuce,EEU-S
+Lettuce,WEU-N
+Lettuce,WEU-S
+Lettuce,SEM
+Lettuce,WAS
+Leucaena,CAM
+Licorice,SAS
+Licorice,EEU-S
+Licorice,WEU-S
+Licorice,SEM
+Licorice,WAS
+Lima bean,SAM-A
+Lima bean,CAM
+Litchi,EAS
+Little millet,SEA
+Little millet,EAS
+Little millet,SAS
+Lolium,SAS
+Lolium,CAS
+Lolium,EEU-N
+Lolium,EEU-S
+Lolium,WEU-N
+Lolium,WEU-S
+Lolium,SEM
+Lolium,WAS
+Longan,SAS
+Loquat,EAS
+Lotus,EAS
+Lotus,SAS
+Lotus,CAS
+Lotus,EEU-N
+Lotus,EEU-S
+Lotus,WEU-N
+Lotus,WEU-S
+Lotus,SEM
+Lotus,WAS
+Lupins,SAM-A
+Lupins,EEU-S
+Lupins,WEU-S
+Lupins,SEM
+Maca,SAM-A
+Macadamia nut,PAC-ANZ
+Macroptilium,SAM-Tro
+Macroptilium,CAR
+Macroptilium,NAM
+Macroptilium,CAM
+Mahuwa,SAS
+Maize,SAM-A
+Maize,CAM
+Malabar spinach,SEA
+Malabar spinach,SAS
+Mamey sapote,CAR
+Mamey sapote,CAM
+Mammee,SAM-Tro
+Mandarines,EAS
+Mango,SEA
+Mango,SAS
+Mangosteen,SEA
+Maple sugar,NAM
+Marjoram,EEU-S
+Marjoram,SEM
+Mashua,SAM-A
+Mat bean,SAS
+Mate,SAM-Tro
+Mate,SAM-Tem
+Mauka,SAM-A
+Medlar,EEU-S
+Medlar,WAS
+Melilotus,SEA
+Melilotus,SAS
+Melilotus,CAS
+Melilotus,EEU-N
+Melilotus,EEU-S
+Melilotus,WEU-S
+Melilotus,SEM
+Melilotus,WAS
+Melons,SEA
+Melons,EAS
+Melons,SAS
+Melons,EAF
+Melons,WAS
+Melons,SAF
+Melons,PAC-T
+Melons,WAF
+Mombin,SAM-Tro
+Mombin,CAR
+Mombin,CAM
+Mulberry,WAS
+Mung bean,SEA
+Mung bean,EAS
+Mung bean,SAS
+Myrtle,SAS
+Myrtle,EEU-S
+Myrtle,SEM
+Myrtle,WAS
+Naranjilla,SAM-A
+Neonotonia,SEA
+Neonotonia,SAS
+Neonotonia,EAF
+Neonotonia,WAS
+Neonotonia,SAF
+Neonotonia,WAF
+New Zealand flax,PAC-ANZ
+New Zealand Spinach,EAS
+New Zealand Spinach,PAC-ANZ
+Noog,EAF
+Nutmeg,SEA
+Nutmeg,SAS
+Oats,EEU-N
+Oats,WEU-N
+Oca,SAM-A
+Oil palm,WAF
+Oiticica,SAM-Tro
+Oiticica,CAR
+Okra,SEA
+Okra,SAS
+Olives,EEU-S
+Olives,WEU-S
+Olives,SEM
+Olives,EAF
+Olives,WAS
+Onions,CAS
+Onions,WAS
+Onobrychis,EEU-S
+Onobrychis,WEU-S
+Orache,EAS
+Orache,EEU-S
+Orache,WEU-S
+Orache,SEM
+Orache,WAS
+Oranges,EAS
+Oregano,EEU-S
+Oregano,WEU-S
+Oregano,SEM
+Oregano,WAS
+Ornithopus,WEU-S
+Ornithopus,SEM
+Papayas,SAM-Tro
+Papayas,CAM
+Parsley,EEU-S
+Parsley,WEU-S
+Parsley,SEM
+Parsnip,EEU-S
+Parsnip,WEU-S
+Parsnip,SEM
+Parsnip,WAS
+Passionfruit,SAM-Tro
+Passionfruit,CAM
+Pawpaw,NAM
+Peaches and nectarines,EAS
+Pearl millet,SAS
+Pearl millet,WAF
+Pears,SEA
+Pears,EAS
+Pears,EEU-S
+Pears,WAS
+Peas,EEU-S
+Peas,WEU-S
+Peas,SEM
+Peas,EAF
+Peas,WAS
+Pecan,NAM
+Pepino,SAM-A
+Pepper,SAS
+Peppermint,CAS
+Peppermint,EEU-N
+Peppermint,EEU-S
+Peppermint,WEU-N
+Peppermint,WEU-S
+Peppermint,SEM
+Peppermint,EAF
+Peppermint,WAS
+Peppermint,SAF
+Perilla,SEA
+Perilla,SAS
+Persimmons,EAS
+Phalaris,EAS
+Phalaris,CAS
+Phalaris,EEU-N
+Phalaris,EEU-S
+Phalaris,WEU-N
+Phalaris,WEU-S
+Phalaris,NAM
+Phalaris,SEM
+Phalaris,WAS
+Phleum,EAS
+Phleum,SAS
+Phleum,CAS
+Phleum,EEU-N
+Phleum,EEU-S
+Phleum,WEU-N
+Phleum,WEU-S
+Phleum,SEM
+Phleum,WAS
+Physic nut,CAM
+Pigeonpeas,SAS
+Pili nut,SEA
+Pili nut,PAC-T
+Pine nut,EEU-S
+Pine nut,SEM
+Pineapples,SAM-Tro
+Pistachios,CAS
+Pistachios,WAS
+Plantains,SEA
+Plantains,PAC-T
+Plums,SEA
+Plums,EAS
+Plums,EEU-S
+Plums,WAS
+Poa,EAS
+Poa,SAS
+Poa,CAS
+Poa,EEU-N
+Poa,EEU-S
+Poa,WEU-N
+Poa,WEU-S
+Poa,NAM
+Poa,CAM
+Poa,SEM
+Poa,WAS
+Pomegranate,SAS
+Pomegranate,WAS
+Pongamia oil,SEA
+Pongamia oil,SAS
+Pongamia oil,PAC-T
+Poppies,EEU-S
+Poppies,WEU-S
+Poppies,SEM
+Potatoes,SAM-A
+Prickly pear,CAM
+Proso millet,EAS
+Proso millet,SAS
+Proso millet,EEU-N
+Prosopis,SAM-A
+Prosopis,SAM-Tem
+Prosopis,NAM
+Prosopis,CAM
+Pueraria,SEA
+Pueraria,EAS
+Pueraria,SAS
+Pumpkin,SAM-Tro
+Purging croton,SEA
+Purging croton,EAS
+Purging croton,SAS
+Pyrethrum,EEU-S
+Quinces,CAS
+Quinces,WAS
+Quinoa,SAM-A
+Quinoa,SAM-Tem
+Radish,EEU-S
+Radish,WEU-S
+Radish,SEM
+Rambutan,SEA
+Ramie,SEA
+Rapeseed and Mustards,EEU-S
+Rapeseed and Mustards,WEU-S
+Rapeseed and Mustards,SEM
+Raspberries,EAS
+Raspberries,CAS
+Raspberries,EEU-N
+Raspberries,EEU-S
+Raspberries,WEU-N
+Raspberries,WEU-S
+Raspberries,NAM
+Raspberries,SEM
+Raspberries,WAS
+Rhubarb,EAS
+Rhynchosia,SEA
+Rhynchosia,EAS
+Rhynchosia,SAS
+Rhynchosia,CAS
+Rhynchosia,SAM-Tro
+Rhynchosia,SAM-A
+Rhynchosia,SAM-Tem
+Rhynchosia,CAR
+Rhynchosia,PAC-ANZ
+Rhynchosia,NAM
+Rhynchosia,CAM
+Rhynchosia,EAF
+Rhynchosia,WAS
+Rhynchosia,IOI
+Rhynchosia,SAF
+Rhynchosia,WAF
+Rice (African),WAF
+Rice (Asian),SEA
+Rice (Asian),EAS
+Rice (Asian),SAS
+Rice bean,SEA
+Rice bean,SAS
+Roselle,WAF
+Rosemary,EEU-S
+Rosemary,WEU-S
+Rosemary,SEM
+Rosemary,WAS
+"Rubber, natural",SAM-Tro
+Runner bean,CAM
+Rye,WAS
+Safflower,CAS
+Safflower,EEU-S
+Safflower,WAS
+Saffron,EEU-S
+Saffron,SEM
+Sago palm,SEA
+Salsify,EEU-S
+Salsify,WEU-S
+Salsola,EEU-S
+Salsola,WEU-S
+Salsola,SEM
+Salsola,WAS
+Sapodilla,CAR
+Sapodilla,CAM
+Savory,EEU-S
+Savory,WEU-S
+Savory,SEM
+Service tree,EEU-N
+Service tree,EEU-S
+Service tree,WEU-N
+Service tree,WEU-S
+Sesame,SAS
+Sesame,EAF
+Sesame,WAS
+Sesbania,SEA
+Sesbania,EAS
+Sesbania,SAS
+Sesbania,PAC-ANZ
+Sesbania,SEM
+Sesbania,EAF
+Sesbania,WAS
+Sesbania,SAF
+Sesbania,WAF
+Shala tree,SAS
+Sisal,CAM
+Slippery cabbage,SEA
+Slippery cabbage,EAS
+Slippery cabbage,SAS
+Snake gourd,SEA
+Snake gourd,EAS
+Snake gourd,SAS
+Snake plant,WAF
+Sorghum,CAF
+Sorghum,EAF
+Sorghum,SAF
+Sorghum,WAF
+Sorrel,EEU-N
+Sorrel,EEU-S
+Sorrel,WEU-N
+Sorrel,WEU-S
+Sorrel,SEM
+Soursop,CAR
+Soursop,CAM
+Soybeans,EAS
+Spider plant,SEA
+Spider plant,EAS
+Spider plant,SAS
+Spider plant,CAF
+Spider plant,EAF
+Spider plant,SAF
+Spider plant,WAF
+Spinach,CAS
+Spinach,WAS
+Strawberries,SAM-Tem
+Strawberries,NAM
+Strawberry tree,WEU-N
+Strawberry tree,WEU-S
+Strawberry tree,SEM
+Stylosanthes,SAM-Tro
+Stylosanthes,CAR
+Stylosanthes,NAM
+Stylosanthes,CAM
+Sugar apple,CAR
+Sugar apple,CAM
+Sugar beets,EEU-N
+Sugar beets,EEU-S
+Sugar beets,WEU-N
+Sugar beets,WEU-S
+Sugar beets,SEM
+Sugarcane,SEA
+Sugarcane,SAS
+Sunflowers,NAM
+Sunn hemp,SAS
+Sweetpotatoes,SAM-Tro
+Sweetpotatoes,CAM
+Sword bean,EAS
+Tallowtree,SEA
+Tallowtree,EAS
+Tallowtree,SAS
+Tamarind,EAF
+Tamarind,IOI
+Tamarind,SAF
+Tamarind,WAF
+Taro,SEA
+Taro,SAS
+Taro,PAC-T
+Tarragon,EAS
+Tarragon,SAS
+Tarragon,CAS
+Tarragon,EEU-N
+Tarragon,WEU-N
+Tarragon,NAM
+Tarragon,WAS
+Tea,SEA
+Tea,EAS
+Tea,SAS
+Teff,EAF
+Tepary bean,CAM
+Thyme,EEU-S
+Thyme,WEU-S
+Tobacco,CAR
+Tobacco,CAM
+Tomatillo,CAM
+Tomatoes,SAM-A
+Tomatoes,CAM
+Tree tomato,SAM-A
+Tripsacum,NAM
+Tripsacum,CAM
+Triticale,CAS
+Triticale,SEM
+Triticale,WAS
+Tung nuts,SEA
+Tung nuts,EAS
+Turmeric,SEA
+Turmeric,SAS
+Turnips,CAS
+Turnips,EEU-S
+Turnips,WEU-S
+Turnips,SEM
+Turnips,WAS
+Ulluco,SAM-A
+Vanilla,SAM-Tro
+Vanilla,CAR
+Vanilla,CAM
+Velvet bean,SEA
+Velvet bean,SAS
+Velvet bean,CAF
+Velvet bean,EAF
+Velvet bean,IOI
+Velvet bean,SAF
+Velvet bean,WAF
+Velvet leaf,EAS
+Vetch,EEU-S
+Vetch,WEU-S
+Vetch,SEM
+Vetch,WAS
+Walnuts,SAS
+Walnuts,CAS
+Walnuts,EEU-S
+Walnuts,WAS
+Water dropwort,EAS
+Watercress,EEU-N
+Watercress,EEU-S
+Watercress,WEU-N
+Watercress,WEU-S
+Watercress,SEM
+Watercress,WAS
+Watermelons,WAF
+Wax gourd,SEA
+Wax gourd,SAS
+West Indian Gherkin,CAF
+West Indian Gherkin,EAF
+West Indian Gherkin,SAF
+Wheat,CAS
+Wheat,SEM
+Wheat,WAS
+Wildrice,NAM
+Winged bean,SEA
+Winged bean,PAC-T
+Yacon,SAM-A
+Yams,SEA
+Yams,SAS
+Yams,SAM-Tro
+Yams,WAF
+"Yautia, cocoyam",SAM-Tro
+"Yautia, cocoyam",CAR
+"Yautia, cocoyam",CAM
+Year bean,CAM
+Zornia,SAM-Tro
+Zornia,SAM-A
+Zornia,SAM-Tem
+Zucchini,CAM

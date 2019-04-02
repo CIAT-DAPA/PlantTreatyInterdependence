@@ -43,6 +43,7 @@ src/R/conf/*test.xlsx
 src/R/process/*.csv
 src/R/inputs/*.csv
 src/R/analysis/
+src/R/interdependence/
 .metadata
 /src/Java/counts/crop_counts/*.classpath
 /src/Java/counts/crop_counts/*.project

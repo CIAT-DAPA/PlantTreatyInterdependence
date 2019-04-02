@@ -9,7 +9,7 @@ library(RMySQL)
 library(tidyr)
 library(corrplot)
 library(Hmisc)
-library(caret)
+#library(caret)
 library(corrplot)
 library(ade4)
 require(scales)
@@ -27,6 +27,7 @@ conf.file = "conf_test.csv"
 inputs.folder = "inputs"
 process.folder = "process"
 analysis.folder = "analysis"
+interdependence.folder = "interdependence"
 
 conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
 
@@ -87,6 +88,7 @@ dbDisconnect(db_cnn)
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
 data.filtered = ci.variables.exclude(data.raw,data.vars)
+
 
 data.countries.count = analysis.countries.count(data.filtered)
 write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)

@@ -238,7 +238,7 @@ ci.aggregation.group.factor.sum = function(data, vars, normalize = F, type.n = "
     if(length(cols) == 1){
       cols = c(cols,cols)
     }
-    return (rowSums(tmp.data.final[,c(cols)]))
+    return (rowSums(tmp.data.final[,c(cols)], na.rm = T))
   }) ))
   
   names(tmp.indicator) = paste0("gp_index_",tmp.groups$group)

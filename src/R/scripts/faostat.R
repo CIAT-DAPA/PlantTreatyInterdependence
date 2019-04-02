@@ -157,7 +157,7 @@ process.load.measure = function(f){
     tmp.years.end = dim(tmp.measure)[2]-7
     
   }else{
-    tmp.years.end = dim(tmp.measure)[2]-6
+    tmp.years.end = dim(tmp.measure)[2]-7
   }
   tmp.years.start = tmp.years.end - 6
   dbDisconnect(db_cnn)
