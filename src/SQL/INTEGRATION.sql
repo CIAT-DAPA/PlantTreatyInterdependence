@@ -14,25 +14,29 @@ create table GMERGE as (select 	a.acceNumb as original_id,
 										LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(acceNumb, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
 										"GENESYS" as source,
                                         instCode as institution,
-                                        origCty as country,
+                                        origCty as country_raw,
+                                        c.iso3 as country,
                                         t.genus as genus_raw,
                                         t.taxonName as species_raw,
                                         REPLACE(t.genus,' ','') as genus,
                                         SUBSTRING_INDEX(t.taxonName ,' ',2) as species
                                         from accession a
                                         left join taxonomy2 t on a.taxonomyId2 = t.id
+                                        left join COUNTRIES_SOLVER c on origCty = c.original
                                         )
 								union
 								(select `Accession number` as original_id, 
 										LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(`Accession number`, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
 										"WIEWS" as source,
                                         `Holding institute code` as institution,
-                                        `Country of origin` as country,
+                                        `Country of origin` as country_raw,
+                                        c.iso3 as country,
                                         SUBSTRING_INDEX(`Taxon`,' ',1) as genus_raw,
                                         SUBSTRING_INDEX(`Taxon`,' ',2) as species_raw,
                                         SUBSTRING_INDEX(`Taxon`,' ',1) as genus,
                                         SUBSTRING_INDEX(`Taxon`,' ',2) as species
                                         from WIEWS
+                                        left join COUNTRIES_SOLVER c on `Country of origin` = c.original
                                         where `Source of information` like "%GENESYS%"
                                         and `Source of information` like "%EURISCO%"
                                         )
@@ -41,17 +45,24 @@ create table GMERGE as (select 	a.acceNumb as original_id,
 										LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(accession_number, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
 										"SGSV" as source,
                                         institute_code as institution,
-                                        country_of_collection_or_source as country,
+                                        country_of_collection_or_source as country_raw,
+                                        c.iso3 as country,
                                         genus as genus_raw,
                                         species as species_raw,
                                         REPLACE(genus,' ','') as genus,
                                         SUBSTRING_INDEX(species,' ',2) as species
-                                        from SGSV);
+                                        from SGSV
+                                        left join COUNTRIES_SOLVER c on country_of_collection_or_source = c.original
+                                        );
 
 
 -- remove line break character
 UPDATE GMERGE
 SET species = REPLACE(species,UNHEX('C2A0'),'');
+
+-- remove line break character
+UPDATE GMERGE
+SET species = REPLACE(species,'?','');
 
 -- remove line break character
 UPDATE GMERGE
@@ -133,6 +144,25 @@ or species like "Hordeum.v%";
 
 UPDATE GMERGE
 SET species = SUBSTRING_INDEX(species,' ',2) ;
+
+
+-- duplicates
+create table GMERGE_duplicates as select * from (
+	select id, genus, count(*)  total
+	from GMERGE
+    group by id, genus
+)j
+where total > 1;
+
+-- uniques
+create table GMERGE_uniques as select * from (
+	select id, genus, species, country
+	from GMERGE
+    group by id, genus, country
+)j;
+
+
+
 
 
 

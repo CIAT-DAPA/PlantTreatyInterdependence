@@ -194,25 +194,162 @@ where lenght>1;
 
 
 
+SELECT species from GMERGE
+group by species;
+
+SELECT genus from GMERGE
+group by genus;
 
 
-
-
-
-
-
-
-
-create table GMERGE_duplicates as select * from (
-	select id, genus, count(*)  total
-	from GMERGE
-    group by id, genus
-)j
-where total > 1;
+-- duplicates
 
 select * from GMERGE_duplicates
-order by total desc
-limit 10000;
+order by total desc;
 
 
 select count(*) from GMERGE_duplicates;
+
+
+-- uniques
+
+select * from GMERGE_uniques limit 10;
+
+Select country, source from GMERGE
+where LENGTH(country) >3
+group by country;
+
+
+select g.country, c.name, c.iso3, count(*) count
+from genesys_2018.GMERGE g
+left join  planttreaty.countries c
+on (g.country = c.name || g.country = c.iso3)
+group by g.country, c.name, c.iso3;
+
+select c.iso3
+from genesys_2018.GMERGE g
+left join  planttreaty.countries c
+on (g.country = c.name || g.country = c.iso3)
+where g.country ="Colombia" limit 1;
+
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "DDR"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "%YUGOSLAVIA (YUG)%"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "CSK"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "SUN"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "UNK"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "SCG"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "GER"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country like "KO-"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "PAL"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "Korea"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "AME"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "AMERICA"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "MOR"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "JAN"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "IB."
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "Africa"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "YU"
+group by country, institution, source;
+
+select  country, institution, source, count(*)
+from genesys_2018.GMERGE g
+where g.country = "ZAR"
+group by country, institution, source;
+
+
+select country
+from GMERGE
+group by COUNTRY;
+
+-- update country codes
+UPDATE GMERGE as g
+inner join  COUNTRIES_SOLVER c
+	on (g.country_raw = c.original) 
+SET country = c.iso3
+where country = "";
+
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

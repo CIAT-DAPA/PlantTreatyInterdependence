@@ -72,7 +72,6 @@ public class TaxaMatchAPI {
 				if (object.has(rankField) && object.has(usageKeyField)) {
 					String rank = object.get(rankField) + "";
 					// check if the taxon is an specie or subspecie
-					System.out.println(object);
 					if (rank.equals("SPECIES") || rank.equals("SUBSPECIES")) {
 						String usageKey = object.has(usageKeyField) ? object.get(usageKeyField) + "" : "";
 						String status = object.has(statusField) ? object.get(statusField) + "" : "";
@@ -255,7 +254,7 @@ public class TaxaMatchAPI {
 					String line = reader.readLine();
 					while (line != null) {
 						String[] values = line.split(TempIO.SEPARATOR);
-						if (values.length < 6) {
+						if (values.length == 7) {
 							NameUsage usage = new NameUsage(values[1], values[2], values[3], values[4], values[5],
 									values[6]);
 							instance.speciesMatched.put(values[0], usage);
@@ -281,7 +280,7 @@ public class TaxaMatchAPI {
 					String line = reader.readLine();
 					while (line != null) {
 						String[] values = line.split(TempIO.SEPARATOR);
-						if (values.length < 6) {
+						if (values.length == 7) {
 							NameUsage usage = new NameUsage(values[1], values[2], values[3], values[4], values[5],
 									values[6]);
 							instance.genusMatched.put(values[0], usage);
