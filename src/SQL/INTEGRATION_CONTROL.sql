@@ -327,12 +327,10 @@ select country
 from GMERGE
 group by COUNTRY;
 
--- update country codes
-UPDATE GMERGE as g
-inner join  COUNTRIES_SOLVER c
-	on (g.country_raw = c.original) 
-SET country = c.iso3
-where country = "";
+
+
+
+
 
 
 

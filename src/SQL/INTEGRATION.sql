@@ -155,11 +155,34 @@ create table GMERGE_duplicates as select * from (
 where total > 1;
 
 -- uniques
-create table GMERGE_uniques as select * from (
-	select id, genus, species, country
+create table GMERGE_UNI as select * from (
+	select * 
 	from GMERGE
-    group by id, genus, country
+    group by id, genus
 )j;
+
+
+create table CROP_genus_counts as 
+(select c.crop, g.genus, g.country, count(*)
+FROM GMERGE_UNI g
+left join CIAT_crop_taxon c on (g.genus=c.taxon)
+where c.rank="genus"
+group by c.crop, g.genus, g.country);
+
+create table CROP_species_counts as 
+(select c.crop, g.species, g.country, count(*)
+FROM GMERGE_UNI g
+left join CIAT_crop_taxon c on (g.species=c.taxon)
+where c.rank="taxonName"
+group by c.crop, g.genus, g.country);
+
+
+
+select * from CROP_genus_counts;
+
+select * from CROP_species_counts;
+
+
 
 
 
