@@ -1,6 +1,6 @@
 # This method calculate the indicator for interdependence A = quantity from origin region
 # (data.frame) data: Dataset
-interdependence.region = function(data){
+interdependence.region.sum = function(data){
   # Loading configurations files
   tmp.countries = read.csv(paste0(conf.folder,"/regions-countries.csv"), header = T)
   tmp.crops = read.csv(paste0(conf.folder,"/regions-crops.csv"), header = T)
@@ -65,8 +65,6 @@ interdependence.region = function(data){
     write.csv(tmp.final,paste0(interdependence.folder,"/",v,".csv"), row.names = F)
   })
 }
-
-interdependence.region(data.filtered)
 
 
 

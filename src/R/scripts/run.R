@@ -165,3 +165,10 @@ ci.vars$compose_index = indicator.vars
 write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.sum.csv"), row.names = F)
 ##############################################
 
+
+##############################################
+####  05 - INTERDEPENDENCE
+source("scripts/interdependence.R")
+
+interdependence.region.sum(data.filtered)
+##############################################
