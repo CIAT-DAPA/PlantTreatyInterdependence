@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Calendar;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -19,7 +18,6 @@ import org.ciat.model.Basis;
 import org.ciat.model.DataSourceName;
 import org.ciat.model.OrganizationMatchAPI;
 import org.ciat.model.TargetTaxa;
-import org.ciat.model.TaxaMatchAPI;
 import org.ciat.model.Utils;
 import org.ciat.view.CountExporter;
 import org.ciat.view.FileProgressBar;
@@ -37,7 +35,7 @@ public class Normalizer implements Normalizable {
 
 	// target columns
 	protected static String[] colTarget = { "accessionNumber", "taxonkey", "genus", "species", "decimallongitude",
-			"decimallatitude", "countrycode", "year", "basis", "source" };
+			"decimallatitude", "countrycode", "year", "institution", "institution_country", "basis", "source" };
 
 	// index of columns
 	protected Map<String, Integer> colIndex = new LinkedHashMap<String, Integer>();
@@ -46,24 +44,17 @@ public class Normalizer implements Normalizable {
 	public void process(Properties prop) {
 
 		File input = new File(prop.getProperty("data." + getDataSourceName().toString().toLowerCase()));
-		File fileGGenusOcc = new File(prop.getProperty("file.g.occurrences.as.genus"));
-		File fileGSpeciesOcc = new File(prop.getProperty("file.g.occurrences.as.species"));
+		File fileGGenusOcc = new File(prop.getProperty("file.g.occurrences"));
 
 		TargetTaxa.getInstance();
-		TaxaMatchAPI.getInstance();
 		OrganizationMatchAPI.getInstance();
 
-		try (PrintWriter writerGGenusOcc = new PrintWriter(new BufferedWriter(new FileWriter(fileGGenusOcc)), true);
-				PrintWriter writerGSpeciesOcc = new PrintWriter(new BufferedWriter(new FileWriter(fileGSpeciesOcc)),
-						true);
+		try (PrintWriter writerGOccurrences = new PrintWriter(new BufferedWriter(new FileWriter(fileGGenusOcc)), true);
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(new FileInputStream(input), "UTF-8"))) {
 
 			if (!fileGGenusOcc.exists()) {
-				writerGGenusOcc.println(getHeader());
-			}
-			if (!fileGSpeciesOcc.exists()) {
-				writerGGenusOcc.println(getHeader());
+				writerGOccurrences.println(getHeader());
 			}
 
 			/* header */
@@ -83,6 +74,7 @@ public class Normalizer implements Normalizable {
 				values = null;
 				values = line.split(getSpecificSeparator());
 				if (values.length >= colIndex.size()) {
+					boolean matched = false;
 
 					String normal = normalize();
 
@@ -98,18 +90,20 @@ public class Normalizer implements Normalizable {
 							String country = getCountry();
 							boolean repat = isRepatriated();
 							CountExporter.getInstance().updateCounters(species, "SPECIES", country, repat);
-							writerGSpeciesOcc.println(normal);
+							writerGOccurrences.println(normal);
+							matched = true;
+
 						}
 
 						String genus = getGenus();
 						boolean isTargetGenus = genus != null && TargetTaxa.getInstance().getGenera().contains(genus);
 
-						if (isTargetGenus) {
+						if (!matched && isTargetGenus) {
 
 							String country = getCountry();
 							boolean repat = isRepatriated();
 							CountExporter.getInstance().updateCounters(genus, "GENUS", country, repat);
-							writerGGenusOcc.println(normal);
+							writerGOccurrences.println(normal);
 						}
 					}
 				}
@@ -132,20 +126,19 @@ public class Normalizer implements Normalizable {
 
 	@Override
 	public String normalize() {
-		String country = getCountry();
-		String lon = getDecimalLongitude();
-		String lat = getDecimalLatitude();
+		String originCountry = getCountry();
+		String organizationCountry = getOrganizationCountry();
 		Basis basis = getBasis();
-		String source = getDataSourceName().toString();
 		String taxonKey = getTaxonKey();
-		String year = getYear();
 		String accessionNumber = getAccessionNumber();
 		String genus = getGenus();
 		String species = getSpecies();
+		String institution = getInstitution();
+		String institutionCountry = getInstitutionCountry();
 		String normal = accessionNumber + STANDARD_SEPARATOR + taxonKey + STANDARD_SEPARATOR + genus
-				+ STANDARD_SEPARATOR + species + STANDARD_SEPARATOR + lon + STANDARD_SEPARATOR + lat
-				+ STANDARD_SEPARATOR + country + STANDARD_SEPARATOR + year + STANDARD_SEPARATOR + basis
-				+ STANDARD_SEPARATOR + source;
+				+ STANDARD_SEPARATOR + species + STANDARD_SEPARATOR + originCountry + STANDARD_SEPARATOR + institution
+				+ STANDARD_SEPARATOR + institutionCountry + STANDARD_SEPARATOR + organizationCountry + STANDARD_SEPARATOR
+				+ basis;
 		return normal;
 
 	}
@@ -246,6 +239,16 @@ public class Normalizer implements Normalizable {
 	public String getCountry() {
 		return Utils.NO_COUNTRY3;
 	}
+	
+	@Override
+	public String getInstitution() {
+		return null;
+	}
+	
+	@Override
+	public String getInstitutionCountry() {
+		return Utils.NO_COUNTRY3;
+	}
 
 	public static String getStandardSeparator() {
 		return STANDARD_SEPARATOR;
@@ -262,6 +265,11 @@ public class Normalizer implements Normalizable {
 
 	@Override
 	public String getSpecificSeparator() {
+		return null;
+	}
+
+	@Override
+	public String getOrganizationCountry() {
 		return null;
 	}
 

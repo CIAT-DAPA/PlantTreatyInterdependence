@@ -28,9 +28,15 @@ public interface Normalizable {
 
 	public String getCountry();
 	
+	public String getInstitution();
+	
+	public String getInstitutionCountry();
+	
 	public DataSourceName getDataSourceName();
 
 	public String validate();
+	
+	public String getOrganizationCountry();
 	
 	public boolean isRepatriated();
 

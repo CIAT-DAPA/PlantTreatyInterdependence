@@ -11,7 +11,6 @@ import java.util.Map;
 
 import org.ciat.control.Normalizer;
 import org.ciat.model.MapCounter;
-import org.ciat.model.TaxaMatchAPI;
 public class CountExporter {
 
 	private static CountExporter instance = null;
@@ -40,23 +39,9 @@ public class CountExporter {
 
 	public void process() {
 		exportSpeciesCounters();
-		exportDatasetCounters();
 	}
 
-	private void exportDatasetCounters() {
-		File output = new File(Executer.prop.getProperty("file.taxa.summary"));
-		try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(output)))) {
-			writer.println("species.matched" + Normalizer.getStandardSeparator() + "species.unmatched");
-			writer.println(TaxaMatchAPI.getInstance().getMatchedSpecies().keySet().size()
-					+ Normalizer.getStandardSeparator() + TaxaMatchAPI.getInstance().getUnmatchedSpecies().size());
 
-		} catch (FileNotFoundException e) {
-			System.out.println("File not found " + output.getAbsolutePath());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
 
 	private void exportSpeciesCounters() {
 

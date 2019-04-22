@@ -96,6 +96,17 @@ public class GBIFNormalizer extends Normalizer {
 	public String getCountry() {
 		return Utils.iso2CountryCodeToIso3CountryCode(values[colIndex.get("countrycode")]);
 	}
+	
+	@Override
+	public String getInstitution() {
+		return values[colIndex.get("publishingorgkey")];
+	}
+	
+	@Override
+	public String getInstitutionCountry() {
+		String country = OrganizationMatchAPI.getInstance().fetchCountry(getInstitution());
+		return Utils.iso2CountryCodeToIso3CountryCode(country);
+	}
 
 	@Override
 	public DataSourceName getDataSourceName() {
@@ -105,6 +116,13 @@ public class GBIFNormalizer extends Normalizer {
 	@Override
 	public String getSpecificSeparator() {
 		return "\t";
+	}
+	
+	@Override
+	public String getOrganizationCountry() {
+		String orgCountry = OrganizationMatchAPI.getInstance().fetchCountry(geyOrgUUID());
+		orgCountry = Utils.iso2CountryCodeToIso3CountryCode(orgCountry);
+		return orgCountry;
 	}
 	
 	@Override

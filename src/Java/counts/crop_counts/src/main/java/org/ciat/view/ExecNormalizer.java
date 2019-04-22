@@ -6,7 +6,6 @@ import java.io.File;
 import org.ciat.control.GBIFNormalizer;
 import org.ciat.control.Normalizable;
 import org.ciat.model.OrganizationMatchAPI;
-import org.ciat.model.TaxaMatchAPI;
 
 public class ExecNormalizer extends Executer {
 
@@ -32,16 +31,6 @@ public class ExecNormalizer extends Executer {
 		log("Exporting counters");
 		CountExporter.getInstance().process();
 		System.gc();
-		
-		// export taxa
-		log("Exporting taxa");
-		TempIO.exportMatched(TaxaMatchAPI.getInstance().getMatchedSpecies(),new File(Executer.prop.getProperty("file.species.matched")));
-		TempIO.exportUnmatched(TaxaMatchAPI.getInstance().getUnmatchedSpecies(),new File(Executer.prop.getProperty("file.species.unmatched")));
-		
-		// export taxa
-		log("Exporting taxa");
-		TempIO.exportMatched(TaxaMatchAPI.getInstance().getMatchedGenus(),new File(Executer.prop.getProperty("file.genus.matched")));
-		TempIO.exportUnmatched(TaxaMatchAPI.getInstance().getUnmatchedGenus(),new File(Executer.prop.getProperty("file.genus.unmatched")));
 		
 		// export organizations
 		log("Exporting organizations");
