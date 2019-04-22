@@ -171,4 +171,5 @@ write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.sum.csv"), row.nam
 source("scripts/interdependence.R")
 
 interdependence.region.sum(data.filtered)
+interdependence.region.weight_segregation(data.filtered)
 ##############################################
