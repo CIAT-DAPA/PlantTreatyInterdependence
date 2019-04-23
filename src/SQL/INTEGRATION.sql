@@ -6,16 +6,15 @@ select * from WIEWS order by rand() limit 100;
 select * from SGSV order by rand() limit 100;
 
 
--- Tr. Triticum  
--- S. Solanum
--- O. Oryza
 
-create table GMERGE as (select 	a.acceNumb as original_id, 
-										LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(acceNumb, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
-										"GENESYS" as source,
+
+create table GMERGE as (select     a.acceNumb as original_id, 
+                                        LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(acceNumb, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
+                                        "GENESYS" as source,
                                         instCode as institution,
-                                        origCty as country_raw,
-                                        c.iso3 as country,
+                                        SUBSTR(trim(instCode), 1, 3) as institution_country,
+                                        origCty as orig_country_raw,
+                                        c.iso3 as orig_country,
                                         t.genus as genus_raw,
                                         t.taxonName as species_raw,
                                         REPLACE(t.genus,' ','') as genus,
@@ -24,29 +23,45 @@ create table GMERGE as (select 	a.acceNumb as original_id,
                                         left join taxonomy2 t on a.taxonomyId2 = t.id
                                         left join COUNTRIES_SOLVER c on origCty = c.original
                                         )
-								union
-								(select `Accession number` as original_id, 
-										LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(`Accession number`, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
-										"WIEWS" as source,
+                                union
+                                (select `Accession number` as original_id, 
+                                        LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(`Accession number`, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
+                                        "WIEWS" as source,
                                         `Holding institute code` as institution,
-                                        `Country of origin` as country_raw,
-                                        c.iso3 as country,
+                                        SUBSTR(trim(`Holding institute code`), 1, 3) as institution_country,
+                                        `Country of origin` as orig_country_raw,
+                                        c.iso3 as orig_country,
                                         SUBSTRING_INDEX(`Taxon`,' ',1) as genus_raw,
                                         SUBSTRING_INDEX(`Taxon`,' ',2) as species_raw,
                                         SUBSTRING_INDEX(`Taxon`,' ',1) as genus,
                                         SUBSTRING_INDEX(`Taxon`,' ',2) as species
                                         from WIEWS
                                         left join COUNTRIES_SOLVER c on `Country of origin` = c.original
-                                        where `Source of information` like "%GENESYS%"
-                                        and `Source of information` like "%EURISCO%"
+                                        where `Source of information` not like "%GENESYS%"
+                                        and `Source of information` not like "%EURISCO%"
                                         )
-								union
-								(select accession_number as original_id, 
-										LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(accession_number, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
-										"SGSV" as source,
+                                union
+                                (select accessionNumber as original_id, 
+                                        LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(accessionNumber, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
+                                        "GBIF" as source,
+                                        institution as institution,
+                                        institution_country as institution_country,
+                                        countrycode as orig_country_raw,
+                                        countrycode  as orig_country,
+                                        genus as genus_raw,
+                                        species as species_raw,
+                                        genus as genus,
+                                        species as species
+                                        from GBIF_G
+                                )
+                                union
+                                (select accession_number as original_id, 
+                                        LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(accession_number, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
+                                        "SGSV" as source,
                                         institute_code as institution,
-                                        country_of_collection_or_source as country_raw,
-                                        c.iso3 as country,
+                                        SUBSTR(trim(institute_code), 1, 3) as institution_country,
+                                        country_of_collection_or_source as orig_country_raw,
+                                        c.iso3 as orig_country,
                                         genus as genus_raw,
                                         species as species_raw,
                                         REPLACE(genus,' ','') as genus,
@@ -54,6 +69,12 @@ create table GMERGE as (select 	a.acceNumb as original_id,
                                         from SGSV
                                         left join COUNTRIES_SOLVER c on country_of_collection_or_source = c.original
                                         );
+                                        
+                                        
+-- Query OK, 7094107 rows affected (21 min 29.63 sec)
+-- Query OK, 7124030 rows affected (21 min 43.54 sec)
+
+
 
 
 -- remove line break character
@@ -145,6 +166,26 @@ or species like "Hordeum.v%";
 UPDATE GMERGE
 SET species = SUBSTRING_INDEX(species,' ',2) ;
 
+UPDATE GMERGE
+SET institution_country = ""
+WHERE institution_country = "ZZZ";
+
+UPDATE GMERGE
+SET institution_country = ""
+WHERE institution_country is null;
+
+UPDATE GMERGE
+SET orig_country = ""
+WHERE orig_country = "ZZZ";
+
+UPDATE GMERGE
+SET orig_country = ""
+WHERE orig_country is null;
+
+
+
+
+
 
 -- duplicates
 create table GMERGE_duplicates as select * from (
@@ -155,7 +196,7 @@ create table GMERGE_duplicates as select * from (
 where total > 1;
 
 -- uniques
-create table GMERGE_UNI as select * from (
+create table GMERGE_uniques as select * from (
 	select * 
 	from GMERGE
     group by id, genus
@@ -163,18 +204,18 @@ create table GMERGE_UNI as select * from (
 
 
 create table CROP_genus_counts as 
-(select c.crop, g.genus, g.country, count(*)
-FROM GMERGE_UNI g
+(select c.crop, g.genus, g.country, count(*) count
+FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.genus=c.taxon)
 where c.rank="genus"
 group by c.crop, g.genus, g.country);
 
 create table CROP_species_counts as 
-(select c.crop, g.species, g.country, count(*)
-FROM GMERGE_UNI g
+(select c.crop, g.species, g.country, count(*) count
+FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.species=c.taxon)
 where c.rank="taxonName"
-group by c.crop, g.genus, g.country);
+group by c.crop, g.species, g.country);
 
 
 

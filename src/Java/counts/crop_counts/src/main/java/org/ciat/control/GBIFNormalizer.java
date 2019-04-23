@@ -119,13 +119,6 @@ public class GBIFNormalizer extends Normalizer {
 	}
 	
 	@Override
-	public String getOrganizationCountry() {
-		String orgCountry = OrganizationMatchAPI.getInstance().fetchCountry(geyOrgUUID());
-		orgCountry = Utils.iso2CountryCodeToIso3CountryCode(orgCountry);
-		return orgCountry;
-	}
-	
-	@Override
 	public boolean isRepatriated() {
 		String orgCountry = OrganizationMatchAPI.getInstance().fetchCountry(geyOrgUUID());
 		orgCountry = Utils.iso2CountryCodeToIso3CountryCode(orgCountry);

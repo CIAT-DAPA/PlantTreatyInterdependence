@@ -34,8 +34,8 @@ public class Normalizer implements Normalizable {
 	protected String[] values;
 
 	// target columns
-	protected static String[] colTarget = { "accessionNumber", "taxonkey", "genus", "species", "decimallongitude",
-			"decimallatitude", "countrycode", "year", "institution", "institution_country", "basis", "source" };
+	protected static String[] colTarget = { "accessionNumber", "taxonkey", "genus", "species", "countrycode",
+			"institution", "institution_country", "basis" };
 
 	// index of columns
 	protected Map<String, Integer> colIndex = new LinkedHashMap<String, Integer>();
@@ -127,7 +127,6 @@ public class Normalizer implements Normalizable {
 	@Override
 	public String normalize() {
 		String originCountry = getCountry();
-		String organizationCountry = getOrganizationCountry();
 		Basis basis = getBasis();
 		String taxonKey = getTaxonKey();
 		String accessionNumber = getAccessionNumber();
@@ -137,8 +136,7 @@ public class Normalizer implements Normalizable {
 		String institutionCountry = getInstitutionCountry();
 		String normal = accessionNumber + STANDARD_SEPARATOR + taxonKey + STANDARD_SEPARATOR + genus
 				+ STANDARD_SEPARATOR + species + STANDARD_SEPARATOR + originCountry + STANDARD_SEPARATOR + institution
-				+ STANDARD_SEPARATOR + institutionCountry + STANDARD_SEPARATOR + organizationCountry + STANDARD_SEPARATOR
-				+ basis;
+				+ STANDARD_SEPARATOR + institutionCountry + STANDARD_SEPARATOR + basis;
 		return normal;
 
 	}
@@ -239,12 +237,12 @@ public class Normalizer implements Normalizable {
 	public String getCountry() {
 		return Utils.NO_COUNTRY3;
 	}
-	
+
 	@Override
 	public String getInstitution() {
 		return null;
 	}
-	
+
 	@Override
 	public String getInstitutionCountry() {
 		return Utils.NO_COUNTRY3;
@@ -265,11 +263,6 @@ public class Normalizer implements Normalizable {
 
 	@Override
 	public String getSpecificSeparator() {
-		return null;
-	}
-
-	@Override
-	public String getOrganizationCountry() {
 		return null;
 	}
 

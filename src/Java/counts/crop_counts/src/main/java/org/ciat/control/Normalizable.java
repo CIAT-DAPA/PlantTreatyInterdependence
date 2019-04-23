@@ -36,8 +36,6 @@ public interface Normalizable {
 
 	public String validate();
 	
-	public String getOrganizationCountry();
-	
 	public boolean isRepatriated();
 
 	public void process(Properties prop);
