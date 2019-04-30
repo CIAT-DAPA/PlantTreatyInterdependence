@@ -165,6 +165,41 @@ ci.normalize = function(data, type = "range"){
   tmp.data = predict(tmp.model, data)
   return (tmp.data)
 }
+
+# This function normalize the variables of dataset. It works only with not character variables.
+# This method will normalize data by each year that it would find
+# (data.frame) data: data frame
+# (string) type: Type of normalization
+ci.normalize.year = function(data, type = "range"){
+  years = unique(data$year)
+  tmp.final = do.call(rbind, lapply(years, function(y){
+    tmp.data.year = data[which(data$year == y),]
+    tmp = ci.normalize(tmp.data.year, type)  
+    return (tmp)
+  }))
+  return(tmp.final)
+}
+
+# This function normalize the variables of dataset. It works only with not character variables.
+# This method will normalize data by each year that it would find. 
+# (data.frame) data: data frame
+# (string) type: Type of normalization
+# (bool) global: You can decide wheter to apply global normalization (False) or national normalization (True)
+ci.normalize.full = function(data, type = "range", global = F){
+  if(global == T){
+    tmp.final = ci.normalize.year(data, type)
+  } else{
+    countries = unique(data$country_name)
+    tmp.final = do.call(rbind, lapply(countries, function(c){
+      tmp.data = data[which(data$country_name == c),]
+      tmp = ci.normalize.year(tmp.data)
+      return (tmp)
+    }))
+  }
+  return (tmp.final)
+}
+
+
 #####################################################################################################################################
 
 #####################################################################################################################################
@@ -212,14 +247,9 @@ ci.weights.vars = function(vars){
 # This function gets the 
 # (data.frame) data: Dataset
 # (data.frame) vars: Variables
-# (bool) normalize: True if you want to normalize dataset
-# (string) type.n: weights
-ci.aggregation.group.factor.sum = function(data, vars, normalize = F, type.n = "range"){
+ci.aggregation.group.factor.sum = function(data, vars){
   # Multiplying data x landa
   tmp.data = ci.variables.numeric.data(data)
-  if(normalize == T){
-    tmp.data = ci.normalize(tmp.data, type.n)
-  }
   tmp.data = as.matrix(tmp.data)
   tmp.data.final = t(t(tmp.data)*vars$weight)
   
@@ -251,14 +281,9 @@ ci.aggregation.group.factor.sum = function(data, vars, normalize = F, type.n = "
 # This function gets the 
 # (data.frame) data: Dataset
 # (data.frame) vars: Variables
-# (bool) normalize: True if you want to normalize dataset
-# (string) type.n: weights
-ci.aggregation.group.avg = function(data, vars, normalize = F, type.n = "range"){
+ci.aggregation.group.avg = function(data, vars){
   # Multiplying data x landa
   tmp.data = ci.variables.numeric.data(data)
-  if(normalize == T){
-    tmp.data = ci.normalize(tmp.data, type.n)
-  }
   tmp.data.final = as.matrix(tmp.data)
   
   # Setting the ranges of each group to summarize
@@ -289,12 +314,9 @@ ci.aggregation.group.avg = function(data, vars, normalize = F, type.n = "range")
 # This function gets the value of the compose index
 # (data.frame) data: Dataset
 # (vector) weights: Weights variables
-ci.aggregation.vars.sum = function(data, weights, normalize = F, type.n = "range"){
+ci.aggregation.vars.sum = function(data, weights){
   # Multiplying data x landa
   tmp.data = ci.variables.numeric.data(data)
-  if(normalize == T){
-    tmp.data = ci.normalize(tmp.data, type.n)
-  }
   tmp.data = as.matrix(tmp.data)
   tmp.data.final = t(t(tmp.data)*weights)
   

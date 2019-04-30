@@ -58,9 +58,10 @@ interdependence.region.sum = function(data){
       tmp.crop_rows$global[is.na(tmp.crop_rows$global)] = 0
       tmp.crop_rows$global_outside_origin = tmp.crop_rows$outside / tmp.crop_rows$origin
       tmp.crop_rows$global_outside_origin[is.na(tmp.crop_rows$global_outside_origin)] = 0
+      tmp.crop_rows$global_outside_origin[is.infinite(tmp.crop_rows$global_outside_origin)] = 0
       
       
-      return(tmp.crop_rows[,c("crop_name","year","origin","outside","world","global")])
+      return(tmp.crop_rows[,c("crop_name","year","origin","outside","world","global","global_outside_origin")])
     }))
     
     tmp.final = merge(x=tmp.values, y=tmp.indicators, by=c("crop_name","year"), all.x =T, all.y=T)
@@ -132,10 +133,11 @@ interdependence.region.weight_segregation = function(data){
       tmp.crop_rows$global[is.na(tmp.crop_rows$global)] = 0
       tmp.crop_rows$global_outside_origin = tmp.crop_rows$outside / tmp.crop_rows$origin
       tmp.crop_rows$global_outside_origin[is.na(tmp.crop_rows$global_outside_origin)] = 0
+      tmp.crop_rows$global_outside_origin[is.infinite(tmp.crop_rows$global_outside_origin)] = 0
       
       
       
-      return(tmp.crop_rows[,c("crop_name","year","origin","outside","world","global")])
+      return(tmp.crop_rows[,c("crop_name","year","origin","outside","world","global","global_outside_origin")])
     }))
     
     tmp.final = merge(x=tmp.values, y=tmp.indicators, by=c("crop_name","year"), all.x =T, all.y=T)

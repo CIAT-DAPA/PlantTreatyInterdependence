@@ -28,6 +28,7 @@ inputs.folder = "inputs"
 process.folder = "process"
 analysis.folder = "analysis"
 interdependence.folder = "interdependence"
+conf.global = F
 
 conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
 
@@ -82,7 +83,7 @@ source("scripts/tools.R")
 source("scripts/analysis.R")
 source("scripts/composite_index.R")
 db_cnn = connect_db()
-data.raw = analysis.get.matrix(global=F)
+data.raw = analysis.get.matrix(global=conf.global)
 dbDisconnect(db_cnn)
 
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
@@ -117,7 +118,7 @@ write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names 
 
 #normalize 
 
-data.n = ci.normalize(data.filtered,"range")
+data.n = ci.normalize.full(data.filtered,"range", global =conf.global)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
 ####  04- ANALYZING CORRELATION
