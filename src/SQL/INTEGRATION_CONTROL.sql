@@ -331,6 +331,11 @@ group by COUNTRY;
 
 
 
+select * from GMERGE where institution = "COL003"
+
+
+
+
 
 
 

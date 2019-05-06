@@ -95,6 +95,10 @@ where c.rank = "genus"
 group by crop, g.genus, country;
 
 
+select instCode from accession
+group by instCodeaccession
+
+
 
 
 
