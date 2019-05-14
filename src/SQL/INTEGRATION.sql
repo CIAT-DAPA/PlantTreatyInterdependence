@@ -257,47 +257,6 @@ create table GMERGE_uniques as select * from (
 
 -- Query OK, 5477240 rows affected (5 min 59.24 sec)
 
--- summary
-
-create table CROP_ORIGIN_GENUS as 
-(select c.crop, g.genus, g.orig_country, count(*) count
-FROM GMERGE_uniques g
-left join CIAT_crop_taxon c on (g.genus=c.taxon)
-where c.rank="genus"
-group by c.crop, g.genus, g.orig_country);
-
--- Query OK, 21455 rows affected (6 min 28.80 sec)
-
-create table CROP_ORIGIN_GENUS as 
-(select c.crop, g.species, g.orig_country, count(*) count
-FROM GMERGE_uniques g
-left join CIAT_crop_taxon c on (g.species=c.taxon)
-where c.rank="species"
-group by c.crop, g.species, g.orig_country);
-
-
--- Query OK, 15884 rows affected (9 min 39.23 sec)
-
-
-create table CROP_INSTITUTION_GENUS as 
-(select c.crop, g.genus, g.institution_country, count(*) count
-FROM GMERGE_uniques g
-left join CIAT_crop_taxon c on (g.genus=c.taxon)
-where c.rank="genus"
-group by c.crop, g.genus, g.institution_country);
-
--- Query OK, 10793 rows affected (6 min 20.10 sec)
-
-
-create table CROP_INSTITUTION_SPECIES as 
-(select c.crop, g.species, g.institution_country, count(*) count
-FROM GMERGE_uniques g
-left join CIAT_crop_taxon c on (g.species=c.taxon)
-where c.rank="species"
-group by c.crop, g.species, g.institution_country);
-
--- Query OK, 8896 rows affected (9 min 41.17 sec)
-
 
 -- summary lite
 
@@ -337,10 +296,69 @@ group by c.crop, g.institution_country);
 
 
 
+-- crop summary
+
+
+create table CROP_GENUS as 
+(select c.crop,  count(*) count
+FROM GMERGE_uniques g
+left join CIAT_crop_taxon c on (g.genus=c.taxon)
+where c.rank="genus"
+group by c.crop);
+
+create table CROP_SPECIES as 
+(select c.crop,  count(*) count
+FROM GMERGE_uniques g
+left join CIAT_crop_taxon c on (g.species=c.taxon)
+where c.rank="species"
+group by c.crop);
 
 
 
+-- summary full
 
+create table CROP_ORIGIN_GENUS_FULL as 
+(select c.crop, g.genus, g.orig_country, count(*) count
+FROM GMERGE_uniques g
+left join CIAT_crop_taxon c on (g.genus=c.taxon)
+where c.rank="genus"
+group by c.crop, g.genus, g.orig_country);
+
+-- Query OK, 21455 rows affected (6 min 28.80 sec)
+
+create table CROP_ORIGIN_GENUS_FULL as 
+(select c.crop, g.species, g.orig_country, count(*) count
+FROM GMERGE_uniques g
+left join CIAT_crop_taxon c on (g.species=c.taxon)
+where c.rank="species"
+group by c.crop, g.species, g.orig_country);
+
+
+-- Query OK, 15884 rows affected (9 min 39.23 sec)
+
+
+create table CROP_INSTITUTION_GENUS_FULL as 
+(select c.crop, g.genus, g.institution_country, count(*) count
+FROM GMERGE_uniques g
+left join CIAT_crop_taxon c on (g.genus=c.taxon)
+where c.rank="genus"
+group by c.crop, g.genus, g.institution_country);
+
+-- Query OK, 10793 rows affected (6 min 20.10 sec)
+
+
+create table CROP_INSTITUTION_SPECIES_FULL as 
+(select c.crop, g.species, g.institution_country, count(*) count
+FROM GMERGE_uniques g
+left join CIAT_crop_taxon c on (g.species=c.taxon)
+where c.rank="species"
+group by c.crop, g.species, g.institution_country);
+
+-- Query OK, 8896 rows affected (9 min 41.17 sec)
+
+
+
+-- Counts per source
 
 create table CROP_SOURCE_GENUS as 
 select total.crop, gbif.count as gbif,  sgsv.count as sgsv,  genesys.count as genesys, wiews.count as wiews 
