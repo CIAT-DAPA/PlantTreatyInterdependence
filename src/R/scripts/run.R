@@ -1,7 +1,7 @@
 ##############################################
 ####  00 - GLOBAL PARAMETERS
 
-#install.packages(c("plyr","dplyr","ggplot2","RMySQL","tidyr","corrplot","Hmisc","caret","corrplot","ade4","scales","stringr"))
+#install.packages(c("plyr","dplyr","ggplot2","RMySQL","tidyr","corrplot","Hmisc","caret","corrplot","ade4","scales","stringr","stringdist"))
 library(plyr)
 library(dplyr)
 library(ggplot2)
@@ -14,6 +14,7 @@ library(corrplot)
 library(ade4)
 require(scales)
 library(stringr)
+library(stringdist)
 
 ##############################################
 ####  00- GLOBAL VARIABLES
@@ -28,7 +29,8 @@ inputs.folder = "inputs"
 process.folder = "process"
 analysis.folder = "analysis"
 interdependence.folder = "interdependence"
-conf.global = F
+demand.folder = "demand"
+conf.global = T
 
 conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
 
@@ -171,6 +173,6 @@ write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.sum.csv"), row.nam
 ####  05 - INTERDEPENDENCE
 source("scripts/interdependence.R")
 
-interdependence.region.sum(data.filtered)
-interdependence.region.weight_segregation(data.filtered)
+interdependence.region(data.filtered, "sum", T)
+interdependence.region(data.filtered, "segregation", T)
 ##############################################

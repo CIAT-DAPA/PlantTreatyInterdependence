@@ -161,9 +161,30 @@ ci.multivariate.cluster = function(data){
 # (data.frame) data: data frame
 # (string) type: Type of normalization
 ci.normalize = function(data, type = "range"){
-  tmp.model = preProcess(data, method = type )
-  tmp.data = predict(tmp.model, data)
-  return (tmp.data)
+  if(nrow(data) > 1){
+    d = tryCatch({
+      tmp.model = preProcess(data, method = type )
+      tmp.data = predict(tmp.model, data)  
+      return(tmp.data)
+    }, warning = function(w) {
+      #print(paste0("Warning ",nrow(data)))
+      tmp.data = data
+      #tmp.data[,ci.variables.numeric.vars(data)] = 1
+      numCols = which(sapply(tmp.data,is.numeric))
+      numData = tmp.data[,numCols]
+      numData[!is.na(numData)] = 1
+      tmp.data[,numCols] = numData  
+      return(tmp.data)
+    })
+  } else {
+    tmp.data = data
+    numCols = which(sapply(tmp.data,is.numeric))
+    numData = tmp.data[,numCols]
+    numData[!is.na(numData)] = 1
+    tmp.data[,numCols] = numData  
+    d = tmp.data
+  }
+  return (d)
 }
 
 # This function normalize the variables of dataset. It works only with not character variables.
