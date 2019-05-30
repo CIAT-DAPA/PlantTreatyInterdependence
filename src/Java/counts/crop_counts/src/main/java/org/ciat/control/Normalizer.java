@@ -58,7 +58,7 @@ public class Normalizer implements Normalizable {
 			}
 
 			/* header */
-			String line = reader.readLine();
+			String line = reader.readLine().toLowerCase();
 			colIndex = Utils.getColumnsIndex(line, getSpecificSeparator());
 			/* */
 
@@ -80,7 +80,7 @@ public class Normalizer implements Normalizable {
 
 					Basis basis = getBasis();
 
-					if (basis.equals(Basis.G)) {
+
 
 						String species = getSpecies();
 						boolean isTargetSpecies = species != null
@@ -105,7 +105,7 @@ public class Normalizer implements Normalizable {
 							CountExporter.getInstance().updateCounters(genus, "GENUS", country, repat);
 							writerGOccurrences.println(normal);
 						}
-					}
+					
 				}
 				/* show progress */
 				bar.update(line.length());
