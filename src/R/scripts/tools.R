@@ -50,3 +50,58 @@ tools.fuzzy_match = function(data, dictionary, fields, method = "jw"){
   names(tmp.final) = c(fields[1],fields[2],"dist")
   return(tmp.final)
 }
+
+## This method save into database metrics
+tools.save.database = function(file){
+  
+  # Setting global variables
+  tmp.data = read.csv(file, header = T)
+  tmp.cols = colnames(tmp.data)
+  tmp.vars = tmp.cols[which(tmp.cols %nin% c("year","crop","country"))]
+  db_cnn = connect_db()
+  
+  # Mergin with countries
+  tmp.countries = dbSendQuery(db_cnn,"select id as id_country,name as country_name from countries")
+  tmp.countries$country_name = as.character(tmp.countries$country_name)
+  tmp.data.fail = tmp.data[!(tmp.data$country %in% tmp.countries$country_name),]
+  tmp.data = merge(x=tmp.data, y=tmp.countries, by.x="country", by.y="country_name", all.x = F, all.y = F)
+  write.csv(tmp.data.fail, paste0(process.folder, "/",gsub(".csv","",file),"-countries-fail.csv"), row.names = F)
+  
+  # Mergin with crops
+  tmp.crops = dbSendQuery(db_cnn,"select id as id_crop,name as crop_name from crops")
+  tmp.crops$crop_name = as.character(tmp.crops$crop_name)
+  tmp.data.fail = tmp.data[!(tmp.data$crop %in% tmp.crops$crop_name),]
+  tmp.data = merge(x=tmp.data, y=tmp.countries, by.x="crop", by.y="crop_name", all.x = F, all.y = F)
+  write.csv(tmp.data.fail, paste0(process.folder, "/",gsub(".csv","",file),"-crops-fail.csv"), row.names = F)
+  
+  # Getting the names and ids of variables from database
+  tmp.metrics.query = dbSendQuery(db_cnn,"select id as id_metric,name from metrics")
+  tmp.metrics = fetch(tmp.metrics.query, n=-1)
+  tmp.metrics = tmp.metrics[which(tmp.metrics$name %in% tmp.vars),]
+  
+  dbDisconnect(db_cnn)
+  # Cycle for each variable
+  lapply(1:nrow(tmp.metrics),function(i){
+    # getting values only for i metric
+    tmp.values = tmp.data[,c("id_country","id_crop","year",tmp.metrics$name[i])]
+    colnames(tmp.values)[4] = "value"
+    tmp.values["id_metric"] = tmp.metrics$id_metric[i]
+    
+    # Remove NA
+    tmp.values =  tmp.values[complete.cases(tmp.values), ]
+    
+    # Sum values where they have the same metric, country, crop and year 
+    # It is because when we transform the original crops to master crops, they could be the same
+    tmp.values = ddply(tmp.values,.(id_metric,id_country,id_crop,year),summarise,value=sum(value))
+    
+    
+    
+    
+    write.csv(tmp.df, paste0(process.folder, "/final/",gsub(".csv","",file),".csv"), row.names = F)
+    db_cnn = connect_db()
+    dbWriteTable(db_cnn, value = tmp.df, name = "measures", append = TRUE, row.names=F)
+    dbDisconnect(db_cnn)
+    print(paste0("........Records were saved year: ",names(tmp.measure)[y],"-",as.integer(names(tmp.measure)[y])," count: ", dim(tmp.df)[1]))
+    
+  })
+}

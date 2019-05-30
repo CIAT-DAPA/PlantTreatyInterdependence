@@ -30,7 +30,7 @@ process.folder = "process"
 analysis.folder = "analysis"
 interdependence.folder = "interdependence"
 demand.folder = "demand"
-conf.global = T
+conf.global = F
 
 conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
 
@@ -173,6 +173,6 @@ write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.sum.csv"), row.nam
 ####  05 - INTERDEPENDENCE
 source("scripts/interdependence.R")
 
-interdependence.region(data.filtered, "sum", T)
-interdependence.region(data.filtered, "segregation", T)
+interdependence.region(data.filtered, "sum", F)
+interdependence.region(data.filtered, "segregation", F)
 ##############################################
