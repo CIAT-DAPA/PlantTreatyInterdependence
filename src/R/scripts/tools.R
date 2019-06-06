@@ -51,17 +51,34 @@ tools.fuzzy_match = function(data, dictionary, fields, method = "jw"){
   return(tmp.final)
 }
 
+
+
+
 ## This method save into database metrics
-tools.save.database = function(file){
+tools.save.data = function(file,iso=NA){
+  # Getting groups configuration
+  tmp.group.configuration = gsub(".csv","",unlist(strsplit(file, "-")))
+  tmp.domain = tmp.group.configuration[1]
+  tmp.component = tmp.group.configuration[2]
+  tmp.group = tmp.group.configuration[3]
   
   # Setting global variables
-  tmp.data = read.csv(file, header = T)
+  tmp.data = read.csv(paste0(data.folder,"/",file), header = T)
   tmp.cols = colnames(tmp.data)
   tmp.vars = tmp.cols[which(tmp.cols %nin% c("year","crop","country"))]
+  
+  # Connecting with database
   db_cnn = connect_db()
   
   # Mergin with countries
-  tmp.countries = dbSendQuery(db_cnn,"select id as id_country,name as country_name from countries")
+  if(is.na(iso)){
+    tmp.countries = dbSendQuery(db_cnn,"select id as id_country,name as country_name from countries")
+  } else if(iso == 2){
+    tmp.countries = dbSendQuery(db_cnn,"select id as id_country,iso2 as country_name from countries")
+  } else if(iso == 3){
+    tmp.countries = dbSendQuery(db_cnn,"select id as id_country,iso3 as country_name from countries")
+  }
+  tmp.countries = fetch(tmp.countries, n=-1)
   tmp.countries$country_name = as.character(tmp.countries$country_name)
   tmp.data.fail = tmp.data[!(tmp.data$country %in% tmp.countries$country_name),]
   tmp.data = merge(x=tmp.data, y=tmp.countries, by.x="country", by.y="country_name", all.x = F, all.y = F)
@@ -69,23 +86,26 @@ tools.save.database = function(file){
   
   # Mergin with crops
   tmp.crops = dbSendQuery(db_cnn,"select id as id_crop,name as crop_name from crops")
+  tmp.crops = fetch(tmp.crops, n=-1)
   tmp.crops$crop_name = as.character(tmp.crops$crop_name)
   tmp.data.fail = tmp.data[!(tmp.data$crop %in% tmp.crops$crop_name),]
-  tmp.data = merge(x=tmp.data, y=tmp.countries, by.x="crop", by.y="crop_name", all.x = F, all.y = F)
+  tmp.data = merge(x=tmp.data, y=tmp.crops, by.x="crop", by.y="crop_name", all.x = F, all.y = F)
   write.csv(tmp.data.fail, paste0(process.folder, "/",gsub(".csv","",file),"-crops-fail.csv"), row.names = F)
   
-  # Getting the names and ids of variables from database
-  tmp.metrics.query = dbSendQuery(db_cnn,"select id as id_metric,name from metrics")
+  # Mergin with metric
+  tmp.metrics.query = dbSendQuery(db_cnn,paste0("select m.id,m.name from domain as d inner join component as c on c.domain = d.id inner join `group` as g on g.component = c.id inner join metric as m on m.group = g.id where d.name = '",tmp.domain,"' and c.name = '",tmp.component,"' and g.name='",tmp.group,"'"))
   tmp.metrics = fetch(tmp.metrics.query, n=-1)
   tmp.metrics = tmp.metrics[which(tmp.metrics$name %in% tmp.vars),]
   
+  # Disconnecting with database
   dbDisconnect(db_cnn)
+  
   # Cycle for each variable
   lapply(1:nrow(tmp.metrics),function(i){
     # getting values only for i metric
     tmp.values = tmp.data[,c("id_country","id_crop","year",tmp.metrics$name[i])]
     colnames(tmp.values)[4] = "value"
-    tmp.values["id_metric"] = tmp.metrics$id_metric[i]
+    tmp.values["id_metric"] = tmp.metrics$id[i]
     
     # Remove NA
     tmp.values =  tmp.values[complete.cases(tmp.values), ]
@@ -94,14 +114,11 @@ tools.save.database = function(file){
     # It is because when we transform the original crops to master crops, they could be the same
     tmp.values = ddply(tmp.values,.(id_metric,id_country,id_crop,year),summarise,value=sum(value))
     
-    
-    
-    
-    write.csv(tmp.df, paste0(process.folder, "/final/",gsub(".csv","",file),".csv"), row.names = F)
+    write.csv(tmp.values, paste0(process.folder, "/",gsub(".csv","",file),tmp.metrics$name[i],".csv"), row.names = F)
     db_cnn = connect_db()
-    dbWriteTable(db_cnn, value = tmp.df, name = "measures", append = TRUE, row.names=F)
+    dbWriteTable(db_cnn, value = tmp.values, name = "measures", append = TRUE, row.names=F)
     dbDisconnect(db_cnn)
-    print(paste0("........Records were saved year: ",names(tmp.measure)[y],"-",as.integer(names(tmp.measure)[y])," count: ", dim(tmp.df)[1]))
+    print(paste0("........Records were saved year: ",tmp.metrics$name[i]," count: ", dim(tmp.values)[1]))
     
   })
 }

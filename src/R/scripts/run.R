@@ -26,6 +26,7 @@ setwd("/home/hsotelo/fao/R/")
 conf.folder = "conf"
 conf.file = "conf_test.csv"
 inputs.folder = "inputs"
+data.folder = paste0(inputs.folder,"/data")
 process.folder = "process"
 analysis.folder = "analysis"
 interdependence.folder = "interdependence"
@@ -47,13 +48,13 @@ source("scripts/tools.R")
 source("scripts/config.R")
 
 # Database connection
-db_cnn = connect_db()
-
 conf.import.countries("countries.csv")
 
 conf.import.crops("crops.csv")
 
-dbDisconnect(db_cnn)
+conf.import.metrics("metrics.csv")
+
+
 ##############################################
 
 ##############################################
@@ -77,6 +78,16 @@ lapply(p,process.load)
 
 #process.load.measure(p[1])
 #lapply(p,process.load.countries)
+##############################################
+
+##############################################
+####  02-IMPORT DATA
+
+p = list.files(data.folder)
+
+#tools.save.data(p[1])
+lapply(p,tools.save.data)
+
 ##############################################
 
 ##############################################
