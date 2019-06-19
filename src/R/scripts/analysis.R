@@ -5,39 +5,40 @@
 # It takes the metrics column and put all values like variables for each record
 # (data.frame) data: data frame 
 analysis.built.matrix = function(data){
-  tmp.data = data_frame(metric = data$machine_name,
-                        #crop_id = data$crop_id, 
-                        crop_name = data$crop_name,
-                        #country_id = data$country_id,
-                        country_iso2 = data$country_iso2,
-                        #country_iso3 = data$country_iso3,
-                        country_name = data$country_name,
+  tmp.data = data_frame(crop = data$crop,
+                        country = data$country,
                         year = data$year,
+                        metric = paste0(data$domain,"-",data$component,"-",data$group,"-",data$metric),
                         value = data$value) 
   tmp.data = tmp.data %>%  spread(metric, value, fill = NA)
   #tmp.data$id = seq.int(nrow(tmp.data))
   #tmp.data$crop_id = as.character(tmp.data$crop_id)
-  tmp.data$crop_name = as.character(tmp.data$crop_name)
+  tmp.data$crop = as.character(tmp.data$crop)
   #tmp.data$country_id = as.character(tmp.data$country_id)
-  tmp.data$country_iso2 = as.character(tmp.data$country_iso2)
-  tmp.data$country_name = as.character(tmp.data$country_name)
+  tmp.data$country = as.character(tmp.data$country)
+  #tmp.data$country_name = as.character(tmp.data$country_name)
   tmp.data$year = as.character(tmp.data$year)
   
   return (tmp.data)
 }
 
-analysis.get.matrix = function(global=F,years="2010,2011,2012,2013"){
+analysis.get.matrix = function(global=F,years=NA){
   print("Loading data")
   # Get all data from database
-  raw.query = dbSendQuery(db_cnn,paste0("select machine_name,crop_name,country_id,country_iso2,country_iso3,country_name,year,value from vw_domains where year in (",years,")"))
+  if(is.na(years)){
+    raw.query = dbSendQuery(db_cnn,paste0("select domain,component,`group`,metric,crop,country,year,value from vw_data"))
+  }else{
+    raw.query = dbSendQuery(db_cnn,paste0("select domain,component,`group`,metric,crop,country,year,value from vw_data where year in (",years,")"))  
+  }
+  
   data = fetch(raw.query, n=-1)
   print("Filtering data")
   ## Filtering data by region
   if(global == T){
-    data = data[which(data$country_id == 269),]  
+    data = data[which(data$country == "World"),]  
   }
   else{
-    data = data[which(data$country_id %in% 1:230),]  
+    data = data[which(data$country != "World"),]  
   }
   
   data = analysis.built.matrix(data)

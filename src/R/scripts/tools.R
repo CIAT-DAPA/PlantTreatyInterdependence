@@ -1,10 +1,18 @@
 # Database connection
 
-connect_db = function(){
-  db_cnn <- dbConnect(MySQL(),user = as.character(conf.variables[which(conf.variables$name == "db_user"),"value"]),
-                      password = as.character(conf.variables[which(conf.variables$name == "db_password"),"value"]),
-                      host = as.character(conf.variables[which(conf.variables$name == "db_host"),"value"]),
-                      dbname=as.character(conf.variables[which(conf.variables$name == "db_name"),"value"]))
+connect_db = function(type){
+  if(type == "fao"){
+    db_cnn <- dbConnect(MySQL(),user = as.character(conf.variables[which(conf.variables$name == "fao_db_user"),"value"]),
+                        password = as.character(conf.variables[which(conf.variables$name == "fao_db_password"),"value"]),
+                        host = as.character(conf.variables[which(conf.variables$name == "fao_db_host"),"value"]),
+                        dbname=as.character(conf.variables[which(conf.variables$name == "fao_db_name"),"value"]))  
+  } else {
+    db_cnn <- dbConnect(MySQL(),user = as.character(conf.variables[which(conf.variables$name == "indicator_db_user"),"value"]),
+                        password = as.character(conf.variables[which(conf.variables$name == "indicator_db_password"),"value"]),
+                        host = as.character(conf.variables[which(conf.variables$name == "indicator_db_host"),"value"]),
+                        dbname=as.character(conf.variables[which(conf.variables$name == "indicator_db_name"),"value"]))  
+  }
+  
   return(db_cnn)
 }
 

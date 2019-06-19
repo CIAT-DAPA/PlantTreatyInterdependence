@@ -47,7 +47,14 @@ ci.variables.numeric.data = function(data){
 # (vector) vars: List of variables which will be removed
 ci.variables.exclude = function(data, vars){
   tmp.vars = names(data)[ci.variables.char.vars(data)]
-  tmp.vars = append(tmp.vars, as.character(vars[which(vars$useable == 1), ]$vars))
+  tmp.useables = as.character(vars[which(vars$useable == 1), ]$vars)
+  # Filtering current variables
+  tmp.vars.numeric = names(data)[ci.variables.numeric.vars(data)]
+  tmp.vars.numeric = tmp.useables[which(tmp.useables %in% tmp.vars.numeric)]
+  
+  tmp.vars = append(tmp.vars, tmp.vars.numeric)
+  
+  
   tmp.data =  data[,tmp.vars]
   return (tmp.data)
 }
@@ -228,39 +235,59 @@ ci.normalize.full = function(data, type = "range", global = F){
 
 # This function creates equals weights for the groups of variables
 # (data.frame) vars: Dataframe with the list of variables
-# (int) group_weight: By default, it sets the weight for each group by depending of amount of the groups, 
-#                      if you want to set a default value for all groups, you can set with this parameter
-ci.weights.group = function(vars, group_weight = NA){
+ci.weights.hierarchy = function(vars){
   
-  tmp.groups = as.character(unique(vars$group))
-  if(is.na(group_weight)){
-    tmp.groups.weight = data.frame(group = tmp.groups, weight = 1/length(tmp.groups))  
-  }
-  else{
-    tmp.groups.weight = data.frame(group = tmp.groups, weight = group_weight)  
-  }
+  tmp.domains = as.character(unique(vars$domain_name))
+  tmp.domains.weight = data.frame(domain = tmp.domains, domain_weight = 1/length(tmp.domains))
   
-  
-  tmp.groups.weight$vars_amount = unlist(
-    lapply(1:nrow(tmp.groups.weight),function(i){
-      return (sum(str_count(vars$group,paste0("^",tmp.groups[i],"$"))))
+  # Component
+  tmp.domains.weight$component_amount = unlist(
+    lapply(1:nrow(tmp.domains.weight),function(i){
+      tmp = unique(vars[,c("domain_name","component")])
+      return (sum(str_count(tmp$domain_name,paste0("^",tmp.domains[i],"$"))))
     })
   )
+  tmp.domains.weight$component_weight = tmp.domains.weight$domain_weight / tmp.domains.weight$component_amount
   
-  vars$weight = unlist(lapply(1:nrow(vars),function(i){
-                  tmp.weight = tmp.groups.weight[which(as.character(vars[i,]$group) == as.character(tmp.groups.weight$group)),]
-                  tmp.var.weight = tmp.weight$weight / tmp.weight$vars_amount
-                  return (tmp.var.weight)
-                }))
+  # Set component weights
+  tmp.vars = merge(x=vars,y=tmp.domains.weight,by.x ="domain_name",by.y = "domain", all.x = F, all.y = F )
   
-  return (vars)
+  # Group
+  tmp.groups = unique(vars[,c("domain_name","component")])
+  tmp.groups$name = paste0(tmp.groups$domain_name,"-",tmp.groups$component)
+  
+  tmp.groups$group_amount = unlist(
+    lapply(1:nrow(tmp.groups),function(i){
+      tmp = unique(vars[,c("domain_name","component","group")])
+      tmp$name = paste0(tmp$domain_name,"-",tmp$component)
+      return (sum(str_count(tmp$name,paste0("^",tmp.groups$name[i],"$"))))
+    })
+  )
+  tmp.vars = merge(x=tmp.vars,y=tmp.groups,by.x =c("domain_name","component"),by.y = c("domain_name","component"), all.x = F, all.y = F )
+  tmp.vars$group_weight = tmp.vars$component_weight / tmp.vars$group_amount
+  
+  # Metrics
+  tmp.metrics = unique(vars[,c("domain_name","component","group")])
+  tmp.metrics$name = paste0(tmp.metrics$domain_name,"-",tmp.metrics$component, "-",tmp.metrics$group)
+  
+  tmp.metrics$metrics_amount = unlist(
+    lapply(1:nrow(tmp.metrics),function(i){
+      tmp = unique(vars[,c("domain_name","component","group","metric")])
+      tmp$name = paste0(tmp$domain_name,"-",tmp$component,"-",tmp$group)
+      return (sum(str_count(tmp$name,paste0("^",tmp.metrics$name[i],"$"))))
+    })
+  )
+  tmp.vars = merge(x=tmp.vars,y=tmp.metrics,by.x =c("domain_name","component","group"),by.y = c("domain_name","component","group"), all.x = F, all.y = F )
+  tmp.vars$metric_weight = tmp.vars$group_weight / tmp.vars$metrics_amount
+  
+  return (tmp.vars[ , !(names(tmp.vars) %in% c("name.x","name.y"))])
 }
 
 # This function creates equals weights for the all variables
 # (data.frame) vars: Dataframe with the list of variables
 ci.weights.vars = function(vars){
   
-  vars$weight = 1 / nrow(vars)
+  vars$metric_weight = 1 / nrow(vars)
   
   return (vars)
 }
@@ -272,7 +299,7 @@ ci.aggregation.group.factor.sum = function(data, vars){
   # Multiplying data x landa
   tmp.data = ci.variables.numeric.data(data)
   tmp.data = as.matrix(tmp.data)
-  tmp.data.final = t(t(tmp.data)*vars$weight)
+  tmp.data.final = t(t(tmp.data)*vars$metric_weight)
   
   # Setting the ranges of each group to summarize
   df_weights = data.frame(order_ID = 1:nrow(vars),vars)

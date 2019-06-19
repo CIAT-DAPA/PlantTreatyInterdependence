@@ -31,14 +31,15 @@ process.folder = "process"
 analysis.folder = "analysis"
 interdependence.folder = "interdependence"
 demand.folder = "demand"
-conf.global = F
+conf.global = T
 
 conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
 
 point = format_format(big.mark = ".", decimal.mark = ",", scientific = FALSE)
 
 # Load variables
-data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
+data.vars = read.csv(paste0(conf.folder,"/metrics.csv"), header = T)
+data.vars$vars = paste0(data.vars$domain_name,"-",data.vars$component,"-",data.vars$group,"-",data.vars$metric)
 source("scripts/tools.R")
 ##############################################
 
@@ -53,8 +54,6 @@ conf.import.countries("countries.csv")
 conf.import.crops("crops.csv")
 
 conf.import.metrics("metrics.csv")
-
-
 ##############################################
 
 ##############################################
@@ -95,7 +94,7 @@ lapply(p,tools.save.data)
 source("scripts/tools.R")
 source("scripts/analysis.R")
 source("scripts/composite_index.R")
-db_cnn = connect_db()
+db_cnn = connect_db("indicator")
 data.raw = analysis.get.matrix(global=conf.global)
 dbDisconnect(db_cnn)
 
@@ -160,7 +159,10 @@ ci.multivariate.correlation.draw(data.filtered,paste0(analysis.folder,"/cor.data
 data.vars.final = data.vars[data.vars$useable == 1,]
 
 # Calculating by groups
-weights.group = ci.weights.group(data.vars.final)
+#weights.group = ci.weights.group(data.vars.final)
+weights.group = ci.weights.hierarchy(data.vars.final)
+
+
 indicator.groups = ci.aggregation.group.factor.sum(data.n, weights.group)
 ci.group.sum = data.n
 ci.group.sum[,names(indicator.groups)] = indicator.groups
