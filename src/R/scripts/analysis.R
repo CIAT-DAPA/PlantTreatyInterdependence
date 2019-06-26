@@ -4,12 +4,17 @@
 # This function transform the original data frame in a new data frame.
 # It takes the metrics column and put all values like variables for each record
 # (data.frame) data: data frame 
-analysis.built.matrix = function(data){
+analysis.built.matrix = function(data, type = "indicator"){
   tmp.data = data_frame(crop = data$crop,
                         country = data$country,
                         year = data$year,
-                        metric = paste0(data$domain,"-",data$component,"-",data$group,"-",data$metric),
-                        value = data$value) 
+                        value = data$value)
+  if(type == "indicator"){
+    tmp.data$metric = paste0(data$domain,"-",data$component,"-",data$group,"-",data$metric)
+  } else{
+    tmp.data$metric = data$metric
+  }
+  
   tmp.data = tmp.data %>%  spread(metric, value, fill = NA)
   #tmp.data$id = seq.int(nrow(tmp.data))
   #tmp.data$crop_id = as.character(tmp.data$crop_id)
@@ -22,26 +27,34 @@ analysis.built.matrix = function(data){
   return (tmp.data)
 }
 
-analysis.get.matrix = function(global=F,years=NA){
+analysis.get.matrix = function(global=F,years=NA, type="indicator"){
   print("Loading data")
   # Get all data from database
-  if(is.na(years)){
-    raw.query = dbSendQuery(db_cnn,paste0("select domain,component,`group`,metric,crop,country,year,value from vw_data"))
-  }else{
-    raw.query = dbSendQuery(db_cnn,paste0("select domain,component,`group`,metric,crop,country,year,value from vw_data where year in (",years,")"))  
+  if(type == "indicator"){
+    if(is.na(years)){
+      raw.query = dbSendQuery(db_cnn,"select domain,component,`group`,metric,crop,country,year,value from vw_data")
+    }else{
+      raw.query = dbSendQuery(db_cnn,paste0("select domain,component,`group`,metric,crop,country,year,value from vw_data where year in (",years,")"))  
+    }  
+  } else {
+    if(is.na(years)){
+      raw.query = dbSendQuery(db_cnn,"select machine_name as metric,crop_name as crop,country_name as country,year,value from vw_domains")
+    }else{
+      raw.query = dbSendQuery(db_cnn,paste0("select machine_name as metric,crop_name as crop,country_name as country,year,value from vw_domains where year in (",years,")"))
+    } 
   }
+  
   
   data = fetch(raw.query, n=-1)
   print("Filtering data")
   ## Filtering data by region
   if(global == T){
     data = data[which(data$country == "World"),]  
-  }
-  else{
+  } else{
     data = data[which(data$country != "World"),]  
   }
   
-  data = analysis.built.matrix(data)
+  data = analysis.built.matrix(data, type)
 
   # Raw data
   return(data)

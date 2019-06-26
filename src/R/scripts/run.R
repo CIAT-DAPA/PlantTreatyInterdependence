@@ -184,8 +184,23 @@ write.csv(ci.vars,paste0(analysis.folder,"/compose_index.vars.sum.csv"), row.nam
 
 ##############################################
 ####  05 - INTERDEPENDENCE
+source("scripts/tools.R")
+source("scripts/analysis.R")
 source("scripts/interdependence.R")
+source("scripts/composite_index.R")
 
-interdependence.region(data.filtered, "sum", F)
-interdependence.region(data.filtered, "segregation", F)
+data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
+#data.vars$vars = paste0(data.vars$domain_name,"-",data.vars$component,"-",data.vars$group,"-",data.vars$metric)
+
+db_cnn = connect_db("fao")
+data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
+dbDisconnect(db_cnn)
+
+write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
+
+data.filtered = ci.variables.exclude(data.raw,data.vars)
+
+
+interdependence.region(data=data.filtered, method="sum", normalize = F)
+interdependence.region(data=data.filtered, method="segregation", normalize = F)
 ##############################################
