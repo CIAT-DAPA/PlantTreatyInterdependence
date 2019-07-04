@@ -217,9 +217,9 @@ ci.normalize.full = function(data, type = "range", global = F){
   if(global == T){
     tmp.final = ci.normalize.year(data, type)
   } else{
-    countries = unique(data$country_name)
+    countries = unique(data$country)
     tmp.final = do.call(rbind, lapply(countries, function(c){
-      tmp.data = data[which(data$country_name == c),]
+      tmp.data = data[which(data$country == c),]
       tmp = ci.normalize.year(tmp.data)
       return (tmp)
     }))

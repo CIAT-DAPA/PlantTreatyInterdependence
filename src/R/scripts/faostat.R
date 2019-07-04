@@ -88,7 +88,7 @@ process.load.metrics = function(f){
 # This function saves the records of measure from file
 # (string) f: File name
 process.load.measure = function(f){
-  db_cnn = connect_db()
+  db_cnn = connect_db("fao")
   tmp.source.group = gsub(".csv","",unlist(strsplit(f, "-")))
   tmp.group = inputs.group[inputs.group$name == as.character(tmp.source.group[2]),]
   tmp.measure = read.csv(paste0(inputs.folder,"/",f ), header = T)
@@ -183,8 +183,8 @@ process.load.measure = function(f){
     # It is because when we transform the original crops to master crops, they could be the same
     tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarise,value=sum(value))
     
-    write.csv(tmp.df, paste0(process.folder, "/final/",gsub(".csv","",f),y,".csv"), row.names = F)
-    db_cnn = connect_db()
+    write.csv(tmp.df, paste0(process.folder, "/final/",gsub(".csv","",f),as.character(names(tmp.measure)[y]),".csv"), row.names = F)
+    db_cnn = connect_db("fao")
     dbWriteTable(db_cnn, value = tmp.df, name = "measures", append = TRUE, row.names=F)
     dbDisconnect(db_cnn)
     print(paste0("........Records were saved year: ",names(tmp.measure)[y],"-",as.integer(names(tmp.measure)[y])," count: ", dim(tmp.df)[1]))

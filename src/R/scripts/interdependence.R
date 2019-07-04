@@ -8,9 +8,9 @@ interdependence.region = function(data, method, normalize = F){
     tmp.countries = read.csv(paste0(conf.folder,"/regions-countries.csv"), header = T)  
   } else if(method == "segregation") {
     tmp.population = read.csv(paste0(conf.folder,"/regions-population-countries.csv"), header = T)
-    tmp.population.global = read.csv(paste0(conf.folder,"/regions-population.csv"), header = T)
   }
   
+  tmp.population.global = read.csv(paste0(conf.folder,"/regions-population.csv"), header = T)
   tmp.crops = read.csv(paste0(conf.folder,"/regions-crops.csv"), header = T)
   tmp.regions = read.csv(paste0(conf.folder,"/regions.csv"), header = T)
   tmp.regions = as.character(tmp.regions$regions)
@@ -74,15 +74,15 @@ interdependence.region = function(data, method, normalize = F){
       tmp.others = names(tmp.crop_rows)
       tmp.others = tmp.others[which(tmp.others %nin% c("crop","year",tmp.crop_region) )]
       
+      # Calculating population for segregation method
+      origin = sum(tmp.population.global[which(tmp.population.global$region %in% tmp.crop_region),c("population")])
+      outside.cols = sapply(tmp.crop_rows,function(x){sum(is.na(x))!=length(x)})
+      outside.cols = names(tmp.crop_rows[,outside.cols])
+      outside.cols = outside.cols [! outside.cols %in% c("crop","year",tmp.crop_region)]
+      outside = sum(tmp.population.global[which(tmp.population.global$region %in% outside.cols),c("population")])
+      world.population = origin + outside
+      
       if(method == "segregation") {
-        origin = sum(tmp.population.global[which(tmp.population.global$region %in% tmp.crop_region),c("population")])
-        
-        outside.cols = sapply(tmp.crop_rows,function(x){sum(is.na(x))!=length(x)})
-        outside.cols = names(tmp.crop_rows[,outside.cols])
-        outside.cols = outside.cols [! outside.cols %in% c("crop","year",tmp.crop_region)]
-        
-        outside = sum(tmp.population.global[which(tmp.population.global$region %in% outside.cols),c("population")])
-        
         # Segregation for each region
         for(re in as.character(tmp.population.global$region)){
           if(sum(which(tmp.crop_region %in% re)) > 0){
@@ -95,7 +95,11 @@ interdependence.region = function(data, method, normalize = F){
       # Calculating indicators
       tmp.crop_rows$origin = rowSums(as.data.frame(tmp.crop_rows[,c(tmp.crop_region)]), na.rm = T)
       tmp.crop_rows$outside = rowSums(as.data.frame(tmp.crop_rows[,c(tmp.others)]), na.rm = T)
-      tmp.crop_rows$world = tmp.crop_rows$origin + tmp.crop_rows$outside
+      if(method == "segregation") {
+        tmp.crop_rows$world = (tmp.crop_rows$origin * (origin/world.population)) + (tmp.crop_rows$outside * (outside/world.population))
+      } else {
+        tmp.crop_rows$world = tmp.crop_rows$origin + tmp.crop_rows$outside 
+      }
       tmp.crop_rows$global = tmp.crop_rows$outside / tmp.crop_rows$world
       tmp.crop_rows$global[is.na(tmp.crop_rows$global)] = 0
       #tmp.crop_rows$global_outside_origin = tmp.crop_rows$outside / tmp.crop_rows$origin

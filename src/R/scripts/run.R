@@ -60,7 +60,7 @@ conf.import.metrics("metrics.csv")
 ####  02-FAOSTAT
 
 source("scripts/faostat.R")
-db_cnn = connect_db()
+db_cnn = connect_db("fao")
 inputs.groups.query = dbSendQuery(db_cnn,"select id,name,source,url from groups")
 # Get list of groups available
 inputs.group = fetch(inputs.groups.query, n=-1)
@@ -72,8 +72,11 @@ dbDisconnect(db_cnn)
 p = list.files(inputs.folder)
 p = grep(glob2rx("faostat*.csv"),p, value = TRUE)
 
-lapply(p,process.load)
-#process.load(p[3])
+#lapply(p,process.load)
+process.load.measure(p[1])
+process.load.measure(p[2])
+process.load.measure(p[3])
+process.load.measure(p[4])
 
 #process.load.measure(p[1])
 #lapply(p,process.load.countries)
@@ -87,6 +90,38 @@ p = list.files(data.folder)
 #tools.save.data(p[1])
 lapply(p,tools.save.data)
 
+##############################################
+
+##############################################
+####  03-FAO ANALYSIS
+source("scripts/tools.R")
+source("scripts/analysis.R")
+source("scripts/composite_index.R")
+db_cnn = connect_db("fao")
+data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
+dbDisconnect(db_cnn)
+
+write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
+
+data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
+data.filtered = ci.variables.exclude(data.raw,data.vars)
+write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
+
+####  03- NORMALIZING DATA
+
+#normalize 
+
+data.n = ci.normalize.full(data.filtered,"range", global =F)
+write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
+
+
+data.countries.count = analysis.countries.count(data.filtered)
+write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)
+
+data.countries.index = analysis.crop.index.country(data.filtered)
+write.csv(data.countries.index,paste0(analysis.folder,"/data.countries.index.csv"), row.names = F)
+
+#tmp = merge(x=data.raw,y=data.countries.count, c("crop_name","year"))
 ##############################################
 
 ##############################################
