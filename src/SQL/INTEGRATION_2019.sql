@@ -43,7 +43,7 @@ create table GMERGE as (select     a.acceNumb as original_id,
                                 (select recordNumber as original_id, 
                                         LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(recordNumber, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
                                         "GBIF" as source,
-                                        o.name  as institution,
+                                        g.publishingOrgKey  as institution,
                                         o.country as institution_country,
                                         ct.iso3 as orig_country_raw,
                                         ct.iso3  as orig_country,
@@ -264,7 +264,7 @@ group by c.crop);
 
 -- summary full
 
-create table CROP_ORIGIN_GENUS_TAXA as 
+create table CROP_ORIGIN_GENUS_FULL as 
 (select c.crop, g.genus, g.orig_country, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.genus=c.taxon)
@@ -273,7 +273,7 @@ group by c.crop, g.genus, g.orig_country);
 
 -- Query OK, 21455 rows affected (6 min 28.80 sec)
 
-create table CROP_ORIGIN_GENUS_TAXA as 
+create table CROP_ORIGIN_GENUS_FULL as 
 (select c.crop, g.species, g.orig_country, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.species=c.taxon)
@@ -284,7 +284,7 @@ group by c.crop, g.species, g.orig_country);
 -- Query OK, 15884 rows affected (9 min 39.23 sec)
 
 
-create table CROP_INSTITUTION_GENUS_TAXA as 
+create table CROP_INSTITUTION_GENUS_FULL as 
 (select c.crop, g.genus, g.institution_country, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.genus=c.taxon)
@@ -294,7 +294,7 @@ group by c.crop, g.genus, g.institution_country);
 -- Query OK, 10793 rows affected (6 min 20.10 sec)
 
 
-create table CROP_INSTITUTION_SPECIES_TAXA as 
+create table CROP_INSTITUTION_SPECIES_FULL as 
 (select c.crop, g.species, g.institution_country, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.species=c.taxon)
