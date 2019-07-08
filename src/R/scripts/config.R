@@ -58,9 +58,9 @@ conf.import.crops = function(f){
 
 
 # Method which saves into database the configuration for domains, components, groups and metrics
-conf.import.metrics = function(file){
+conf.import.metrics = function(file, cnn){
   # Connecting to database
-  db_cnn = connect_db()
+  db_cnn = connect_db(cnn)
   
   # Getting data
   tmp.data = read.csv(paste0(conf.folder, "/",file), header = T)
@@ -76,16 +76,14 @@ conf.import.metrics = function(file){
   # Working component
   component = unique(tmp.data[,c("domain","component")])
   colnames(component) = c("domain","name")
+  row.names(component) <- NULL
   dbWriteTable(db_cnn, value = component, name = "component", append = TRUE, row.names=F)
   
-  # Working component
-  component = unique(tmp.data[,c("domain","component")])
-  colnames(component) = c("domain","name")
-  dbWriteTable(db_cnn, value = component, name = "component", append = TRUE, row.names=F)
   
   # Working groups
   group = unique(tmp.data[,c("domain","component","group")])
   colnames(group) = c("domain","component","name")
+  row.names(group) <- NULL
   tmp.component.query = dbSendQuery(db_cnn,paste0("select d.id as domain,c.id as id,c.name as component from domain as d inner join component as c on c.domain = d.id"))
   tmp.component = fetch(tmp.component.query, n=-1)
   group = merge(x=group, y=tmp.component, by.x=c("domain","component"), by.y=c("domain","component"), all.x = F, all.y = F)
@@ -96,6 +94,7 @@ conf.import.metrics = function(file){
   # Working metrics
   metrics = unique(tmp.data[,c("domain","component","group","metric","units","useable","global_level","country_level")])
   colnames(metrics) = c("domain","component","group","name","units","useable","global","country")
+  row.names(metrics) <- NULL
   tmp.group.query = dbSendQuery(db_cnn,paste0("select d.id as domain,c.name as component,g.id, g.name as `group` from domain as d inner join component as c on c.domain = d.id inner join `group` as g on g.component = c.id"))
   tmp.group = fetch(tmp.group.query, n=-1)
   metrics = merge(x=metrics, y=tmp.group, by.x=c("domain","component","group"), by.y=c("domain","component", "group"), all.x = F, all.y = F)
