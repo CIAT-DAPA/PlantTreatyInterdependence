@@ -51,7 +51,8 @@ analysis.get.matrix = function(global=F,years=NA, type="indicator"){
   if(global == T){
     data = data[which(data$country == "World"),]  
   } else{
-    data = data[which(data$country != "World"),]  
+    other.countries = c('Africa','Americas','Asia','Australia & New Zealand','Caribbean','Central America','Central Asia','Eastern Africa','Eastern Asia','Eastern Europe','EU(12)ex.int','EU(15)ex.int','EU(25)ex.int','EU(27)ex.int','Europe','European Union','European Union (exc intra-trade)','Land Locked Developing Countries',	'Least Developed Countries',	'Low Income Food Deficit Countries',	'Melanesia',	'Micronesia',	'Middle Africa',	'Net Food Importing Developing Countries',	'Northern Africa',	'Northern America',	'Northern Europe',	'Oceania',	'Polynesia',	'Small Island Developing States',	'South America',	'South-Eastern Asia',	'Southern Africa',	'Southern Asia',	'Southern Europe',	'Western Africa',	'Western Asia',	'Western Europe',	'World')
+    data = data[which(data$country %nin% other.countries),]  
   }
   
   data = analysis.built.matrix(data, type)
@@ -68,17 +69,17 @@ analysis.get.matrix = function(global=F,years=NA, type="indicator"){
 # (data.frame) data: Dataframe
 analysis.countries.count = function(data){
   
-  tmp.data = data.frame(crop_name = data$crop_name,year = data$year)
+  tmp.data = data.frame(crop = data$crop,year = data$year)
   tmp.data = unique(tmp.data)
   tmp.vars = names(data)
   tmp.vars = tmp.vars[5:length(tmp.vars)]
   
   tmp.values = do.call(cbind,lapply(tmp.vars,function(v){
     #tmp.count = ddply(data,~crop_id + year, summarise, count=length(crop_id))
-    tmp.dataset = data[,c("crop_name","year",v)]
+    tmp.dataset = data[,c("crop","year",v)]
     tmp.dataset = tmp.dataset[complete.cases(tmp.dataset), ]
-    tmp.count = count(tmp.dataset,crop_name, year)
-    tmp.final = merge(x=tmp.data,y=tmp.count,by.x=c("crop_name","year"),by.y=c("crop_name","year"),all.x = T,all.y = F)
+    tmp.count = count(tmp.dataset,crop, year)
+    tmp.final = merge(x=tmp.data,y=tmp.count,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = F)
     return (tmp.final$n)
   }))
   

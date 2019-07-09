@@ -63,12 +63,13 @@ tools.fuzzy_match = function(data, dictionary, fields, method = "jw"){
 
 
 ## This method save into database metrics
-tools.save.data = function(file,iso=NA){
+tools.save.data = function(file){
   # Getting groups configuration
   tmp.group.configuration = gsub(".csv","",unlist(strsplit(file, "-")))
   tmp.domain = tmp.group.configuration[1]
   tmp.component = tmp.group.configuration[2]
   tmp.group = tmp.group.configuration[3]
+  iso = tmp.group.configuration[4]
   
   # Setting global variables
   tmp.data = read.csv(paste0(data.folder,"/",file), header = T)
@@ -76,7 +77,7 @@ tools.save.data = function(file,iso=NA){
   tmp.vars = tmp.cols[which(tmp.cols %nin% c("year","crop","country"))]
   
   # Connecting with database
-  db_cnn = connect_db()
+  db_cnn = connect_db("indicator")
   
   # Mergin with countries
   if(is.na(iso)){
@@ -123,7 +124,7 @@ tools.save.data = function(file,iso=NA){
     tmp.values = ddply(tmp.values,.(id_metric,id_country,id_crop,year),summarise,value=sum(value))
     
     write.csv(tmp.values, paste0(process.folder, "/",gsub(".csv","",file),tmp.metrics$name[i],".csv"), row.names = F)
-    db_cnn = connect_db()
+    db_cnn = connect_db("indicator")
     dbWriteTable(db_cnn, value = tmp.values, name = "measures", append = TRUE, row.names=F)
     dbDisconnect(db_cnn)
     print(paste0("........Records were saved year: ",tmp.metrics$name[i]," count: ", dim(tmp.values)[1]))
