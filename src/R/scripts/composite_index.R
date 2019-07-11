@@ -209,6 +209,20 @@ ci.normalize.year = function(data, type = "range"){
 }
 
 # This function normalize the variables of dataset. It works only with not character variables.
+# This method will normalize data by each year that it would find
+# (data.frame) data: data frame
+# (string) type: Type of normalization
+ci.normalize.field = function(data, field, type = "range"){
+  tmp.field = unique(data[,field])
+  tmp.final = do.call(rbind, lapply(tmp.field, function(f){
+    tmp.data.field = data[which(data[,field] == f),]
+    tmp = ci.normalize(tmp.data.field, type)  
+    return (tmp)
+  }))
+  return(tmp.final)
+}
+
+# This function normalize the variables of dataset. It works only with not character variables.
 # This method will normalize data by each year that it would find. 
 # (data.frame) data: data frame
 # (string) type: Type of normalization
@@ -324,6 +338,70 @@ ci.aggregation.group.factor.sum = function(data, vars){
   tmp.indicator$compose_index = rowSums(tmp.indicator,na.rm=TRUE)
   
   return (tmp.indicator)
+}
+
+# This function gets the 
+# (data.frame) data: Dataset
+# (data.frame) vars: Variables
+ci.aggregation.avg = function(data){
+  tmp.data = data %>%
+    group_by(crop,country) %>%
+    summarise_at(vars(-year), funs(mean(., na.rm=TRUE)))
+  return (tmp.data)
+}
+
+# This function gets the 
+# (data.frame) data: Dataset
+# (data.frame) vars: Variables
+ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
+  tmp.full = data
+  var_names = names(data)
+  tmp.domain = as.character(unique(vars$domain_name))
+  for( d in tmp.domain){
+    tmp.component = as.character(unique(vars[vars$domain_name == d,"component"]))
+    for(c in tmp.component){
+      tmp.group = as.character(unique(vars[which(vars$domain_name == d & vars$component == c),"group"]))
+      for(g in tmp.group){
+        gp_names = var_names[grepl(paste0("^",d,"-",c,"-",g), var_names)]
+        if(method == "mean"){
+          if(length (gp_names)>1){
+            tmp.full[paste0("idx_g-",d,"-",c,"-",g)] = rowMeans(data[,gp_names], na.rm = T)  
+          } else {
+            tmp.full[paste0("idx_g-",d,"-",c,"-",g)] = data[,gp_names]
+          }
+          
+        }
+      }
+      cp_names = names(tmp.full)
+      cp_names = cp_names[grepl(paste0("^idx_g-",d,"-",c,"-"), cp_names)]
+      if(method == "mean"){
+        if(length (cp_names)>1){
+          tmp.full[paste0("idx_c-",d,"-",c)] = rowMeans(tmp.full[,cp_names], na.rm = T)
+        } else {
+          tmp.full[paste0("idx_c-",d,"-",c)] = tmp.full[,cp_names]
+        }
+      }
+    } 
+    do_names = names(tmp.full)
+    do_names = do_names[grepl(paste0("^idx_c-",d), do_names)]
+    if(method == "mean"){
+      if(length (do_names)>1){
+        tmp.full[paste0("idx_d-",d)] = rowMeans(tmp.full[,do_names], na.rm = T)
+      } else {
+        tmp.full[paste0("idx_d-",d)] = tmp.full[,do_names]
+      }
+    }
+    fi_names = names(tmp.full)
+    fi_names = fi_names[grepl(paste0("^idx_d-"), fi_names)]
+    if(method == "mean"){
+      if(length (fi_names)>1){
+        tmp.full[paste0("idx_final")] = rowMeans(tmp.full[,fi_names], na.rm = T)  
+      } else {
+        tmp.full[paste0("idx_final")] = tmp.full[,fi_names]
+      }
+    }
+  }
+  return(tmp.full)
 }
 
 # This function gets the 
