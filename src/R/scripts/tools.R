@@ -64,6 +64,7 @@ tools.fuzzy_match = function(data, dictionary, fields, method = "jw"){
 
 ## This method save into database metrics
 tools.save.data = function(file){
+  print(paste0("Working in ",file))
   # Getting groups configuration
   tmp.group.configuration = gsub(".csv","",unlist(strsplit(file, "-")))
   tmp.domain = tmp.group.configuration[1]

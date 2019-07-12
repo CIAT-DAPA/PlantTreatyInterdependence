@@ -72,7 +72,7 @@ analysis.countries.count = function(data){
   tmp.data = data.frame(crop = data$crop,year = data$year)
   tmp.data = unique(tmp.data)
   tmp.vars = names(data)
-  tmp.vars = tmp.vars[5:length(tmp.vars)]
+  tmp.vars = tmp.vars[4:length(tmp.vars)]
   
   tmp.values = do.call(cbind,lapply(tmp.vars,function(v){
     #tmp.count = ddply(data,~crop_id + year, summarise, count=length(crop_id))

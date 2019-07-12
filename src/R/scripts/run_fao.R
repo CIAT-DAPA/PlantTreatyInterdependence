@@ -1,7 +1,7 @@
 ##############################################
 ####  00 - GLOBAL PARAMETERS
 
-#install.packages(c("plyr","dplyr","ggplot2","RMySQL","tidyr","corrplot","Hmisc","caret","corrplot","ade4","scales","stringr","stringdist"))
+#install.packages(c("plyr","dplyr","ggplot2","RMySQL","tidyr","corrplot","Hmisc","caret","corrplot","ade4","scales","stringr","stringdist","ineq"))
 library(plyr)
 library(dplyr)
 library(ggplot2)
@@ -15,7 +15,7 @@ library(ade4)
 require(scales)
 library(stringr)
 library(stringdist)
-
+library(ineq)
 ##############################################
 ####  00- GLOBAL VARIABLES
 
@@ -31,7 +31,7 @@ process.folder = "process"
 analysis.folder = "analysis"
 interdependence.folder = "interdependence"
 demand.folder = "demand"
-conf.global = T
+conf.global = F
 conf.db = "fao"
 
 conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
@@ -88,7 +88,7 @@ source("scripts/tools.R")
 source("scripts/analysis.R")
 source("scripts/composite_index.R")
 db_cnn = connect_db("fao")
-data.raw = analysis.get.matrix(global=T, years="2010,2011,2012,2013", type=conf.db)
+data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type=conf.db)
 dbDisconnect(db_cnn)
 
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
@@ -135,4 +135,33 @@ data.filtered = ci.variables.exclude(data.raw,data.vars)
 
 interdependence.region(data=data.filtered, method="sum", normalize = F)
 interdependence.region(data=data.filtered, method="segregation", normalize = F)
+##############################################
+
+
+##############################################
+####  06 - GINI
+source("scripts/tools.R")
+source("scripts/analysis.R")
+source("scripts/gini.R")
+source("scripts/composite_index.R")
+
+data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
+
+
+db_cnn = connect_db(conf.db)
+data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
+dbDisconnect(db_cnn)
+
+write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
+
+data.filtered = ci.variables.exclude(data.raw,data.vars)
+
+# aggregation
+data.agg = ci.aggregation.avg(data.filtered)
+write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+
+# gini
+
+
+
 ##############################################
