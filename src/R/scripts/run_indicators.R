@@ -1,7 +1,7 @@
 ##############################################
 ####  00 - GLOBAL PARAMETERS
 
-#install.packages(c("plyr","dplyr","ggplot2","RMySQL","tidyr","corrplot","Hmisc","caret","corrplot","ade4","scales","stringr","stringdist"))
+#install.packages(c("plyr","dplyr","ggplot2","RMySQL","tidyr","corrplot","Hmisc","caret","corrplot","ade4","scales","stringr","stringdist","ineq"))
 library(plyr)
 library(dplyr)
 library(ggplot2)
@@ -15,7 +15,7 @@ library(ade4)
 require(scales)
 library(stringr)
 library(stringdist)
-
+library(ineq)
 ##############################################
 ####  00- GLOBAL VARIABLES
 
