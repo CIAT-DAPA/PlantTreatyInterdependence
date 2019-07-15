@@ -81,12 +81,12 @@ tools.save.data = function(file){
   db_cnn = connect_db("indicator")
   
   # Mergin with countries
-  if(is.na(iso)){
-    tmp.countries = dbSendQuery(db_cnn,"select id as id_country,name as country_name from countries")
-  } else if(iso == 2){
+  if(!is.na(iso) && iso == 2){
     tmp.countries = dbSendQuery(db_cnn,"select id as id_country,iso2 as country_name from countries")
-  } else if(iso == 3){
+  } else if(!is.na(iso) && iso == 3){
     tmp.countries = dbSendQuery(db_cnn,"select id as id_country,iso3 as country_name from countries")
+  } else {
+    tmp.countries = dbSendQuery(db_cnn,"select id as id_country,name as country_name from countries")
   }
   tmp.countries = fetch(tmp.countries, n=-1)
   tmp.countries$country_name = as.character(tmp.countries$country_name)

@@ -164,7 +164,13 @@ write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
 
 # gini
 gini.indicator = gini.crop(data.agg)
-#gini.indicator[]
+
+for(c in names(gini.indicator)){
+  if(nrow(gini.indicator[gini.indicator[,c]==1.0,])>0){
+    gini.indicator[gini.indicator[,c]==1,c] = NA
+  }
+}
+
 write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.csv"), row.names = F)
 
 ##############################################
