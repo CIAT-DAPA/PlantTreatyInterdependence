@@ -50,7 +50,7 @@ interdependence.region = function(data, method, normalize = F){
       
       names(tmp.var_region) = c("crop","year", "value")
       tmp.var_region = ddply(tmp.var_region,.(crop,year),summarise,value=sum(value, na.rm = T))
-      tmp.var_region[tmp.var_region$value == 0,c("value")] = NA
+      #tmp.var_region[tmp.var_region$value == 0,c("value")] = NA
       #write.csv(tmp.var_region,paste0(interdependence.folder,"/tmp.var_region.csv"), row.names = F)
       tmp.values = merge(x=tmp.values, y=tmp.var_region, by=c("crop","year"), all.x=T, all.y=F)
       
@@ -61,6 +61,8 @@ interdependence.region = function(data, method, normalize = F){
     }
 
     tmp.crop_name = as.character(unique(tmp.values$crop))
+    
+    tmp.values[is.na(tmp.values)] = 0
     
     # Calculating origin indicator
     tmp.indicators = do.call(rbind,lapply(tmp.crop_name,function(cn){

@@ -365,40 +365,45 @@ ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
         gp_names = var_names[grepl(paste0("^",d,"-",c,"-",g), var_names)]
         if(method == "mean"){
           if(length (gp_names)>1){
-            tmp.full[paste0("idx_g-",d,"-",c,"-",g)] = rowMeans(data[,gp_names], na.rm = T)  
+            tmp.full[paste0(d,"-",c,"-",g,"-idx_g")] = rowMeans(data[,gp_names], na.rm = T)  
           } else {
-            tmp.full[paste0("idx_g-",d,"-",c,"-",g)] = data[,gp_names]
+            tmp.full[paste0(d,"-",c,"-",g,"-idx_g")] = data[,gp_names]
           }
           
         }
       }
       cp_names = names(tmp.full)
-      cp_names = cp_names[grepl(paste0("^idx_g-",d,"-",c,"-"), cp_names)]
+      cp_names = cp_names[grepl(paste0("^",d,"-",c,"-(\\w)*-idx_g"), cp_names)]
       if(method == "mean"){
         if(length (cp_names)>1){
-          tmp.full[paste0("idx_c-",d,"-",c)] = rowMeans(tmp.full[,cp_names], na.rm = T)
+          tmp.full[paste0(d,"-",c,"-idx_c")] = rowMeans(tmp.full[,cp_names], na.rm = T)
         } else {
-          tmp.full[paste0("idx_c-",d,"-",c)] = tmp.full[,cp_names]
+          tmp.full[paste0(d,"-",c,"-idx_c")] = tmp.full[,cp_names]
         }
       }
     } 
     do_names = names(tmp.full)
-    do_names = do_names[grepl(paste0("^idx_c-",d), do_names)]
+    do_names = do_names[grepl(paste0("^",d,"-(\\w)*-idx_c"), do_names)]
     if(method == "mean"){
       if(length (do_names)>1){
-        tmp.full[paste0("idx_d-",d)] = rowMeans(tmp.full[,do_names], na.rm = T)
+        tmp.full[paste0(d,"-idx_d")] = rowMeans(tmp.full[,do_names], na.rm = T)
       } else {
-        tmp.full[paste0("idx_d-",d)] = tmp.full[,do_names]
+        tmp.full[paste0(d,"-idx_d")] = tmp.full[,do_names]
       }
     }
-    fi_names = names(tmp.full)
-    fi_names = fi_names[grepl(paste0("^idx_d-"), fi_names)]
-    if(method == "mean"){
-      if(length (fi_names)>1){
-        tmp.full[paste0("idx_final")] = rowMeans(tmp.full[,fi_names], na.rm = T)  
-      } else {
-        tmp.full[paste0("idx_final")] = tmp.full[,fi_names]
-      }
+    idx_names = names(tmp.full)
+    idx_names = idx_names[grepl(paste0("^",d,"-"), idx_names)]
+    idx_names = c("crop","country",idx_names)
+    idx_data = tmp.full[,idx_names]
+    write.csv(idx_data,paste0(analysis.folder,"/idx_data-",d,".csv"), row.names = F)
+  }
+  fi_names = names(tmp.full)
+  fi_names = fi_names[grepl(paste0("^(\\w)*-idx_d"), fi_names)]
+  if(method == "mean"){
+    if(length (fi_names)>1){
+      tmp.full[paste0("idx_final")] = rowMeans(tmp.full[,fi_names], na.rm = T)  
+    } else {
+      tmp.full[paste0("idx_final")] = tmp.full[,fi_names]
     }
   }
   return(tmp.full)

@@ -34,6 +34,7 @@ gini.crop = function(data){
                     group_by(crop) %>%
                     summarise(gini = ineq(value,type="Gini"))
     names(tmp.data.n) = c("crop",v)
+    tmp.data.n[,v]=1-tmp.data.n[,v]
     tmp.final = merge(x=tmp.final, y=tmp.data.n, by.x="crop", by.y="crop", all.x = T, all.y = F)
     
   }

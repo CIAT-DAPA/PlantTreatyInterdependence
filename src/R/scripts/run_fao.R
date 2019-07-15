@@ -127,6 +127,7 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 db_cnn = connect_db(conf.db)
 data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
 dbDisconnect(db_cnn)
+data.raw[is.na(data.raw)] = 0
 
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
@@ -151,6 +152,7 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 db_cnn = connect_db(conf.db)
 data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
 dbDisconnect(db_cnn)
+data.raw[is.na(data.raw)] = 0
 
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
@@ -161,7 +163,8 @@ data.agg = ci.aggregation.avg(data.filtered)
 write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
 
 # gini
-
-
+gini.indicator = gini.crop(data.agg)
+#gini.indicator[]
+write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.csv"), row.names = F)
 
 ##############################################
