@@ -61,6 +61,7 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 data.agg = read.csv(file=file.exported, header = T)
 write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
 
+
 # gini
 gini.indicator = gini.crop(data.agg)
 #gini.indicator[]
@@ -70,14 +71,6 @@ gini.indicator = gini.indicator %>%
     genus_count_gini_origin = genus_count_origin_supply,
     species_count_gini_institution = species_count_institution_supply,
     species_count_gini_origin = species_count_origin_supply,
-    
-
-    #unamed_gini = species_count_mls_supply_accessions,
-    #unamed_gini = genus_count_mls_supply_institutions,
-    #unamed_gini = species_count_mls_supply_institutions,
-    #unamed_gini = genus_accessions_sgsv,
-    #unamed_gini = species_accessions_sgsv,
-    
     gini_upov_genus = upov_genus_varietal_release  ,
     gini_upov_species = upov_species_varietal_release
 
@@ -89,6 +82,7 @@ gini.indicator = gini.indicator %>%
                gini_upov_genus,
                gini_upov_species
           )
+
 
 write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.csv"), row.names = F)
 
