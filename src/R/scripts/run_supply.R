@@ -60,11 +60,14 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 # aggregation
 #data.agg = ci.aggregation.avg(data.filtered)
 data.countries = read.csv(file=file.countries, header = T)
-#write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+write.csv(data.countries,paste0(analysis.folder,"/data.countries.csv"), row.names = F)
+#data.agg = ci.aggregation.avg(data.filtered)
+data.countries = read.csv(file=file.countries, header = T)
+write.csv(data.world,paste0(analysis.folder,"/data.world.csv"), row.names = F)
 
 
 # gini
-gini.indicator = gini.crop(data.agg)
+gini.indicator = gini.crop(data.world)
 #gini.indicator[]
 gini.indicator = gini.indicator %>% 
   rename(
