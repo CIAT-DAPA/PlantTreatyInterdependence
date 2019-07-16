@@ -74,7 +74,7 @@ lapply(p,tools.save.data)
 
 
 ##############################################
-####  04-ANALYSIS
+####  04-INDICATORS
 source("scripts/tools.R")
 source("scripts/analysis.R")
 source("scripts/composite_index.R")
@@ -96,12 +96,66 @@ data.n = ci.normalize(data.agg,"range")
 data.n = as.data.frame(data.n)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
-##############################################
-####  05 - INDICATORS
-
 data.vars.final = data.vars[data.vars$useable == 1,]
 data.vars.final = data.vars.final[which(data.vars.final$vars %in% names(data.n)),]
 row.names(data.vars.final) = NULL
+
+# Calculating indicator
+indicator = ci.aggregation.hierarchy.indicator(data.n, data.vars.final)
+write.csv(indicator,paste0(analysis.folder,"/indicator.csv"), row.names = F)
+
+
+indicator.names = names (indicator)
+indicator.tableau = do.call(rbind,
+                       lapply(indicator.names[3:length(indicator.names)],function(v){
+                          hierarchy = unlist(strsplit(v, "-"))
+                          
+                          level = "metric"
+                          domain = ""
+                          component = ""
+                          group = ""
+                          metric = ""
+                          
+                          if(!is.na(hierarchy[4]) && grepl(hierarchy[4], "idx_g")){
+                            level = "group"
+                            domain = hierarchy[1]
+                            component = hierarchy[2]
+                            group = hierarchy[3]
+                            metric = hierarchy[4]
+                          } else if(!is.na(hierarchy[3]) && grepl(hierarchy[3], "idx_c")){
+                            level = "component"
+                            domain = hierarchy[1]
+                            component = hierarchy[2]
+                            metric = hierarchy[3]
+                          } else if(!is.na(hierarchy[2]) && grepl(hierarchy[2], "idx_d")){
+                            level = "domain"
+                            domain = hierarchy[1]
+                            metric = hierarchy[2]
+                          } else if(!is.na(hierarchy[1]) && grepl(hierarchy[1], "idx_final")){
+                            level = "final"
+                            metric = hierarchy[1]
+                          } else {
+                            domain = hierarchy[1]
+                            component = hierarchy[2]
+                            group = hierarchy[3]
+                            metric = hierarchy[4]
+                          }
+                          
+                          tmp.df = data.frame(crop = indicator$crop,
+                                              country = indicator$country,
+                                              level = level,
+                                              domain = domain,
+                                              component = component,
+                                              group = group,
+                                              metric = metric,
+                                              value=indicator[,v])
+                          return(tmp.df)
+                          
+                        })
+
+)
+write.csv(indicator.tableau,paste0(analysis.folder,"/indicator.tableau.csv"), row.names = F)
+
 
 
 
@@ -109,8 +163,6 @@ row.names(data.vars.final) = NULL
 #weights.group = ci.weights.group(data.vars.final)
 weights.group = ci.weights.hierarchy(data.vars.final)
 
-indicator = ci.aggregation.hierarchy.indicator(data.n, data.vars.final)
-write.csv(indicator,paste0(analysis.folder,"/indicator.csv"), row.names = F)
 
 #indicator.groups = ci.aggregation.group.factor.sum(data.n, weights.group)
 #ci.group.sum = data.n
