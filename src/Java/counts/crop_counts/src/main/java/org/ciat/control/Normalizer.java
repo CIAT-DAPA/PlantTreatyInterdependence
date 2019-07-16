@@ -76,11 +76,6 @@ public class Normalizer implements Normalizable {
 				if (values.length >= colIndex.size()) {
 					boolean matched = false;
 
-					String normal = normalize();
-
-					Basis basis = getBasis();
-
-
 
 						String species = getSpecies();
 						boolean isTargetSpecies = species != null
@@ -90,7 +85,7 @@ public class Normalizer implements Normalizable {
 							String country = getCountry();
 							boolean repat = isRepatriated();
 							CountExporter.getInstance().updateCounters(species, "SPECIES", country, repat);
-							writerGOccurrences.println(normal);
+							writerGOccurrences.println(line);
 							matched = true;
 
 						}
@@ -103,7 +98,7 @@ public class Normalizer implements Normalizable {
 							String country = getCountry();
 							boolean repat = isRepatriated();
 							CountExporter.getInstance().updateCounters(genus, "GENUS", country, repat);
-							writerGOccurrences.println(normal);
+							writerGOccurrences.println(line);
 						}
 					
 				}
@@ -134,9 +129,12 @@ public class Normalizer implements Normalizable {
 		String species = getSpecies();
 		String institution = getInstitution();
 		String institutionCountry = getInstitutionCountry();
+		String latitude = getDecimalLatitude();
+		String longitude = getDecimalLongitude();
 		String normal = accessionNumber + STANDARD_SEPARATOR + taxonKey + STANDARD_SEPARATOR + genus
 				+ STANDARD_SEPARATOR + species + STANDARD_SEPARATOR + originCountry + STANDARD_SEPARATOR + institution
-				+ STANDARD_SEPARATOR + institutionCountry + STANDARD_SEPARATOR + basis;
+				+ STANDARD_SEPARATOR + institutionCountry + STANDARD_SEPARATOR + basis 
+				+ STANDARD_SEPARATOR + latitude + STANDARD_SEPARATOR + longitude;
 		return normal;
 
 	}

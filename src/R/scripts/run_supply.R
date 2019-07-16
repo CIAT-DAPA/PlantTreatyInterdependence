@@ -20,7 +20,10 @@ library(ineq)
 ####  00- GLOBAL VARIABLES
 
 #setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
-setwd("/home/hsotelo/fao/R/")
+#setwd("/home/hsotelo/fao/R/")
+setwd("D:/ToBackup/code/planttreaty/PlantTreatyInterdependence/src/R/")
+file.contries= "D:/planttreaty/EXPORT_FINAL_COUNTRIES.csv"
+file.world= "D:/planttreaty/EXPORT_FINAL_WORLD.csv"
 
 # Global variables
 conf.folder = "conf"
@@ -43,101 +46,6 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 source("scripts/tools.R")
 ##############################################
 
-##############################################
-####  01-CONFIG
-
-source("scripts/config.R")
-
-# Database connection
-conf.import.countries("countries.csv",conf.db)
-
-conf.import.crops("crops.csv",conf.db)
-
-conf.import.metrics("variables.csv",conf.db)
-##############################################
-
-##############################################
-####  02-FAOSTAT
-
-source("scripts/faostat.R")
-db_cnn = connect_db("fao")
-inputs.groups.query = dbSendQuery(db_cnn,"select id,name,source,url from groups")
-# Get list of groups available
-inputs.group = fetch(inputs.groups.query, n=-1)
-dbDisconnect(db_cnn)
-
-# Download data
-#lapply(1:nrow(inputs.raw),inputs.download)
-
-p = list.files(inputs.folder)
-p = grep(glob2rx("faostat*.csv"),p, value = TRUE)
-
-#lapply(p,process.load)
-process.load.measure(p[1])
-process.load.measure(p[2])
-process.load.measure(p[4])
-process.load.measure(p[3])
-
-#process.load.measure(p[1])
-#lapply(p,process.load.countries)
-##############################################
-
-##############################################
-####  03-FAO ANALYSIS
-source("scripts/tools.R")
-source("scripts/analysis.R")
-source("scripts/composite_index.R")
-db_cnn = connect_db("fao")
-data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type=conf.db)
-dbDisconnect(db_cnn)
-
-write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
-
-data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
-data.filtered = ci.variables.exclude(data.raw,data.vars)
-write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
-
-####  03- NORMALIZING DATA
-
-#normalize 
-
-data.n = ci.normalize.full(data.filtered,"range", global =F)
-write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
-
-
-data.countries.count = analysis.countries.count(data.filtered)
-write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)
-
-data.countries.index = analysis.crop.index.country(data.filtered)
-write.csv(data.countries.index,paste0(analysis.folder,"/data.countries.index.csv"), row.names = F)
-
-#tmp = merge(x=data.raw,y=data.countries.count, c("crop_name","year"))
-##############################################
-
-##############################################
-####  05 - INTERDEPENDENCE
-source("scripts/tools.R")
-source("scripts/analysis.R")
-source("scripts/interdependence.R")
-source("scripts/composite_index.R")
-
-data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
-#data.vars$vars = paste0(data.vars$domain_name,"-",data.vars$component,"-",data.vars$group,"-",data.vars$metric)
-
-db_cnn = connect_db(conf.db)
-data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
-dbDisconnect(db_cnn)
-data.raw[is.na(data.raw)] = 0
-
-write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
-
-data.filtered = ci.variables.exclude(data.raw,data.vars)
-
-
-interdependence.region(data=data.filtered, method="sum", normalize = F)
-interdependence.region(data=data.filtered, method="segregation", normalize = F)
-##############################################
-
 
 ##############################################
 ####  06 - GINI
@@ -149,22 +57,38 @@ source("scripts/composite_index.R")
 data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 
 
-db_cnn = connect_db(conf.db)
-data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
-dbDisconnect(db_cnn)
-data.raw[is.na(data.raw)] = 0
-
-write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
-
-data.filtered = ci.variables.exclude(data.raw,data.vars)
-
 # aggregation
-data.agg = ci.aggregation.avg(data.filtered)
-write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+#data.agg = ci.aggregation.avg(data.filtered)
+data.countries = read.csv(file=file.countries, header = T)
+write.csv(data.countries,paste0(analysis.folder,"/data.countries.csv"), row.names = F)
+#data.agg = ci.aggregation.avg(data.filtered)
+data.countries = read.csv(file=file.countries, header = T)
+write.csv(data.world,paste0(analysis.folder,"/data.world.csv"), row.names = F)
+
 
 # gini
-gini.indicator = gini.crop(data.agg)
+gini.indicator = gini.crop(data.world)
 #gini.indicator[]
+gini.indicator = gini.indicator %>% 
+  rename(
+    genus_count_gini_institution = genus_count_institution_supply,
+    genus_count_gini_origin = genus_count_origin_supply,
+    species_count_gini_institution = species_count_institution_supply,
+    species_count_gini_origin = species_count_origin_supply,
+    gini_upov_genus = upov_genus_varietal_release  ,
+    gini_upov_species = upov_species_varietal_release
+
+  ) %>% select(crop,  
+               genus_count_gini_institution,
+               genus_count_gini_origin,
+               species_count_gini_institution,
+               species_count_gini_origin,
+               gini_upov_genus,
+               gini_upov_species
+          )
+
+
 write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.csv"), row.names = F)
 
-##############################################
+  ##############################################
+
