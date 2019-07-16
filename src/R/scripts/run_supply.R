@@ -22,7 +22,8 @@ library(ineq)
 #setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
 #setwd("/home/hsotelo/fao/R/")
 setwd("D:/ToBackup/code/planttreaty/PlantTreatyInterdependence/src/R/")
-file.exported= "D:/planttreaty/EXPORT_FINAL_FULL.csv"
+file.contries= "D:/planttreaty/EXPORT_FINAL_COUNTRIES.csv"
+file.world= "D:/planttreaty/EXPORT_FINAL_WORLD.csv"
 
 # Global variables
 conf.folder = "conf"
@@ -58,8 +59,8 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 
 # aggregation
 #data.agg = ci.aggregation.avg(data.filtered)
-data.agg = read.csv(file=file.exported, header = T)
-write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+data.countries = read.csv(file=file.countries, header = T)
+#write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
 
 
 # gini

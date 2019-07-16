@@ -15,12 +15,6 @@ cig.count as genus_count_institution_supply,
 cis.count as species_count_institution_supply,
 cog.count as genus_count_origin_supply,
 cos.count as species_count_origin_supply,
-cig_mls1.count / NULLIF(cig_mls1_not.count, 0)  as genus_count_mls_supply_accessions,
-cis_mls1.count / NULLIF(cis_mls1_not.count, 0)  as species_count_mls_supply_accessions,
-cig_mls2.count / NULLIF(cig_mls2_not.count, 0)  as genus_count_mls_supply_institutions,
-cis_mls2.count / NULLIF(cis_mls2_not.count, 0)  as species_count_mls_supply_institutions,
-cig_sgsv.count as genus_accessions_sgsv,
-cis_sgsv.count as species_accessions_sgsv,
 cpg.count as upov_genus_varietal_release,
 cps.count as upov_species_varietal_release
 from CROP_COUNTRIES c
@@ -35,8 +29,6 @@ where
 	cis.count is null and 
 	cog.count is null and 
 	cos.count is null and 
-	cig_sgsv.count is null and 
-    cis_sgsv.count is null and
 	cpg.count is null and 
 	cps.count is null  
 )
