@@ -1,11 +1,22 @@
 use genesys_2018;
 
 
+
+
+    
+    
+    
 create table CROP_COUNTRIES as(
 select  distinct c.crop as crop, p.iso3 as country
 	from CIAT_crop_taxon c,
-	planttreaty.countries p
-	order by crop, country);
+	(select iso3 from COUNTRIES_SOLVER union select "" ) p
+	order by crop, country
+    
+    
+    );
+    
+
+    
 
 create table EXPORT_FINAL_COUNTRIES as (
 
@@ -37,6 +48,105 @@ order by c.crop
 );
 
 
+create table EXPORT_GROUP1_FINAL_WORLD_ as (
+
+select c.crop as crop, 
+"World" as country,
+"2019" as year,
+sum(genus_count_institution_supply) as genus_count_institution_supply,
+sum(species_count_institution_supply) as species_count_institution_supply,
+sum(genus_count_origin_supply) as genus_count_origin_supply,
+sum(species_count_origin_supply) as species_count_origin_supply,
+sum(upov_genus_varietal_release) as upov_genus_varietal_release,
+sum(upov_species_varietal_release) as upov_species_varietal_release
+from EXPORT_FINAL_COUNTRIES c
+group by c.crop
+order by c.crop
+
+);
+
+
+
+
+
+
+
+
+create table DENORMALIZED_GROUP2_COUNTRIES as (
+
+select c.crop as crop,
+c.country as country,
+cig.count as genus_count_institution_supply,
+cis.count as species_count_institution_supply,
+
+cig_mls1.count  as genus_count_mls_supply_accessions,
+cig_mls1_not.count  as genus_count_mls_supply_accessions_not,
+cig_mls1_not2.count as genus_count_mls_supply_accessions_not2,
+cis_mls1.count  as species_count_mls_supply_accessions,
+cis_mls1_not.count  as species_count_mls_supply_accessions_not,
+cis_mls1_not2.count as species_count_mls_supply_accessions_not2,
+
+cig_mls2.count  as genus_count_mls_supply_institutions,
+cig_mls2_not.count  as genus_count_mls_supply_institutions_not,
+cis_mls2.count  as species_count_mls_supply_institutions,
+cis_mls2_not.count  as species_count_mls_supply_institutions_not,
+
+
+cig_sgsv.count as genus_accessions_sgsv,
+cis_sgsv.count  as species_accessions_sgsv
+
+from CROP_COUNTRIES c
+left join CROP_INSTITUTION_GENUS_LITE cig on (c.crop = cig.crop and c.country = cig.institution_country )
+left join CROP_INSTITUTION_SPECIES_LITE cis on (c.crop = cis.crop  and c.country = cis.institution_country)
+
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_GENUS_MLS_metric1 where MLS_Status="Included" group by crop, institution_country) 
+cig_mls1 on (c.crop = cig_mls1.crop and c.country = cig_mls1.institution_country )
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_GENUS_MLS_metric1 where MLS_Status="Not included"  group by crop, institution_country) 
+cig_mls1_not on (c.crop = cig_mls1_not.crop and c.country = cig_mls1_not.institution_country )
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_GENUS_MLS_metric1 where MLS_Status=""  group by crop, institution_country) 
+ cig_mls1_not2 on (c.crop = cig_mls1_not2.crop and c.country = cig_mls1_not2.institution_country)
+ 
+ left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_SPECIES_MLS_metric1 where MLS_Status="Included" group by crop, institution_country) 
+cis_mls1 on (c.crop = cis_mls1.crop and c.country = cis_mls1.institution_country )
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_SPECIES_MLS_metric1 where MLS_Status="Not included"  group by crop, institution_country) 
+cis_mls1_not on (c.crop = cis_mls1_not.crop and c.country = cis_mls1_not.institution_country )
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_SPECIES_MLS_metric1 where MLS_Status=""  group by crop, institution_country) 
+cis_mls1_not2 on (c.crop = cis_mls1_not2.crop and c.country = cis_mls1_not2.institution_country)
+
+
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_GENUS_MLS_metric2 where MLS_status="Y" group by crop, institution_country) 
+cig_mls2 on (c.crop = cig_mls2.crop and c.country = cig_mls2.institution_country )
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_GENUS_MLS_metric2 where MLS_status="N"  group by crop, institution_country) 
+cig_mls2_not on (c.crop = cig_mls2_not.crop and c.country = cig_mls2_not.institution_country )
+ 
+ left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_SPECIES_MLS_metric2 where MLS_Status="Y" group by crop, institution_country) 
+cis_mls2 on (c.crop = cis_mls2.crop and c.country = cis_mls2.institution_country )
+left join (select crop, institution_country, sum(count) as count from CROP_INSTITUTION_SPECIES_MLS_metric2 where MLS_Status="N"  group by crop, institution_country) 
+cis_mls2_not on (c.crop = cis_mls2_not.crop and c.country = cis_mls2_not.institution_country )
+
+
+
+left join CROP_INSTITUTION_GENUS_SGSV cig_sgsv on (c.crop = cig_sgsv.crop and c.country = cig_sgsv.institution_country )
+left join CROP_INSTITUTION_SPECIES_SGSV cis_sgsv on (c.crop = cis_sgsv.crop  and c.country = cis_sgsv.institution_country)
+
+where 
+	not (cig.count is null and 
+	cis.count is null and 
+	cig_sgsv.count is null and 
+    cis_sgsv.count is null 
+
+)
+order by c.crop
+
+);
+
+
+
+
+
+
+
+
 
 
 create table EXPORT_FINAL_WORLD as (
@@ -47,8 +157,8 @@ sum(cig.count) as genus_count_institution_supply,
 sum(cis.count) as species_count_institution_supply,
 sum(cog.count) as genus_count_origin_supply,
 sum(cos.count) as species_count_origin_supply,
-sum(cig_mls1.count) / NULLIF(sum(cig_mls1_not.count)+sum(cig_mls1.count), 0)  as genus_count_mls_supply_accessions,
-sum(cis_mls1.count) / NULLIF(sum(cis_mls1_not.count)+sum(cis_mls1.count) , 0)  as species_count_mls_supply_accessions,
+sum(cig_mls1.count) / NULLIF(sum(cig_mls1_not.count)+sum(cig_mls1_not2.count)+sum(cig_mls1.count), 0)  as genus_count_mls_supply_accessions,
+sum(cis_mls1.count) / NULLIF(sum(cis_mls1_not.count)+sum(cis_mls1_not2.count)+sum(cis_mls1.count), 0)  as species_count_mls_supply_accessions,
 sum(cig_mls2.count) / NULLIF(sum(cig_mls2_not.count)+sum(cig_mls2.count), 0)  as genus_count_mls_supply_institutions,
 sum(cis_mls2.count) / NULLIF(sum(cis_mls2_not.count)+sum(cis_mls2.count), 0)  as species_count_mls_supply_institutions,
 sum(cig_sgsv.count) / NULLIF(sum(cig.count)+sum(cig_sgsv.count), 0) as genus_accessions_sgsv,
@@ -64,8 +174,10 @@ left join CROP_INSTITUTION_GENUS_MLS_metric1 cig_mls1 on (c.crop = cig_mls1.crop
 left join CROP_INSTITUTION_SPECIES_MLS_metric1 cis_mls1 on (c.crop = cis_mls1.crop  and c.country = cis_mls1.institution_country and cis_mls1.MLS_Status="Included")
 left join CROP_INSTITUTION_GENUS_MLS_metric2 cig_mls2 on (c.crop = cig_mls2.crop and c.country = cig_mls2.institution_country and cig_mls2.MLS_status="Y")
 left join CROP_INSTITUTION_SPECIES_MLS_metric2 cis_mls2 on (c.crop = cis_mls2.crop  and c.country = cis_mls2.institution_country and cis_mls2.MLS_status="Y")
-left join CROP_INSTITUTION_GENUS_MLS_metric1 cig_mls1_not on (c.crop = cig_mls1_not.crop and c.country = cig_mls1_not.institution_country and (cig_mls1_not.MLS_Status="Not included" or cig_mls1_not.MLS_Status=""))
-left join CROP_INSTITUTION_SPECIES_MLS_metric1 cis_mls1_not on (c.crop = cis_mls1_not.crop  and c.country = cis_mls1_not.institution_country and (cis_mls1_not.MLS_Status="Not included" or cis_mls1_not.MLS_Status=""))
+left join CROP_INSTITUTION_GENUS_MLS_metric1 cig_mls1_not on (c.crop = cig_mls1_not.crop and c.country = cig_mls1_not.institution_country and cig_mls1_not.MLS_Status="Not included")
+left join CROP_INSTITUTION_SPECIES_MLS_metric1 cis_mls1_not on (c.crop = cis_mls1_not.crop  and c.country = cis_mls1_not.institution_country and cis_mls1_not.MLS_Status="Not included")
+left join CROP_INSTITUTION_GENUS_MLS_metric1 cig_mls1_not2 on (c.crop = cig_mls1_not2.crop and c.country = cig_mls1_not2.institution_country and cig_mls1_not2.MLS_Status="")
+left join CROP_INSTITUTION_SPECIES_MLS_metric1 cis_mls1_not2 on (c.crop = cis_mls1_not2.crop  and c.country = cis_mls1_not2.institution_country and cis_mls1_not2.MLS_Status="")
 left join CROP_INSTITUTION_GENUS_MLS_metric2 cig_mls2_not on (c.crop = cig_mls2_not.crop and c.country = cig_mls2_not.institution_country and cig_mls2_not.MLS_status="N")
 left join CROP_INSTITUTION_SPECIES_MLS_metric2 cis_mls2_not on (c.crop = cis_mls2_not.crop  and c.country = cis_mls2_not.institution_country and cis_mls2_not.MLS_status="N")
 left join CROP_INSTITUTION_GENUS_SGSV cig_sgsv on (c.crop = cig_sgsv.crop and c.country = cig_sgsv.institution_country )
@@ -82,7 +194,6 @@ where
 	cpg.count is null and 
 	cps.count is null  
 )
-group by c.crop
 order by c.crop
 
 );

@@ -4,7 +4,7 @@ use genesys_2018;
                                
                                 
 
--- GMERGE without SGSV and MLS_Status
+-- GMERGE 
 create table GMERGE as (select     a.acceNumb as original_id, 
                                         LOWER(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(acceNumb, ';', ''), '_', ''), '\'', ''), '\"', ''), '@', ''), ':', ''), '.', ''), '-', ''), ' ', ''))  as id,
                                         "GENESYS" as source,
@@ -164,6 +164,23 @@ UPDATE GMERGE
 SET orig_country = ""
 WHERE orig_country is null;
 
+
+UPDATE GMERGE
+SET institution_country = "ROU"
+WHERE institution_country = "ROM";
+
+UPDATE GMERGE
+SET institution_country = "MKD"
+WHERE institution_country = "YUG";
+
+UPDATE GMERGE
+SET orig_country = "ROU"
+WHERE orig_country = "ROM";
+
+UPDATE GMERGE
+SET orig_country = "MKD"
+WHERE orig_country = "YUG";
+
 UPDATE GMERGE
 SET institution_country = SUBSTR(trim(institution), 1, 3)
 WHERE institution_country = "" and source !="GBIF";
@@ -242,181 +259,57 @@ where c.rank="species"
 group by c.crop, g.institution_country);
 
 
+-- MLS metric 1 
 
--- crop summary
-
-
-create table CROP_GENUS as 
-(select c.crop,  count(*) count
+create table CROP_INSTITUTION_GENUS_MLS_metric1 as 
+(select c.crop, g.institution_country, MLS_Status, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.genus=c.taxon)
 where c.rank="genus"
-group by c.crop);
+group by c.crop, g.institution_country, MLS_Status);
 
-create table CROP_SPECIES as 
-(select c.crop,  count(*) count
+
+create table CROP_INSTITUTION_SPECIES_MLS_metric1 as 
+(select c.crop,  g.institution_country, MLS_Status, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.species=c.taxon)
 where c.rank="species"
-group by c.crop);
+group by c.crop, g.institution_country, MLS_Status);
 
 
+-- MLS metric 2
 
--- summary full
-
-create table CROP_ORIGIN_GENUS_FULL as 
-(select c.crop, g.genus, g.orig_country, count(*) count
+create table CROP_INSTITUTION_GENUS_MLS_metric2 as 
+(select c.crop, g.institution_country, g.institution, 'N' as MLS_status, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.genus=c.taxon)
 where c.rank="genus"
-group by c.crop, g.genus, g.orig_country);
+group by c.crop, g.institution_country, g.institution);
 
--- Query OK, 21455 rows affected (6 min 28.80 sec)
+-- Query OK, 17130 rows affected (6 min 24.18 sec)
 
-create table CROP_ORIGIN_GENUS_FULL as 
-(select c.crop, g.species, g.orig_country, count(*) count
+update CROP_INSTITUTION_GENUS_MLS_metric2 m
+set MLS_status ='Y'
+where m.crop in (select cl.Common_name_standard from CROP_MLS cl where cl.`MLS Annex 1`='Y' ) 
+and m.institution in (select inst.instcode from INSTITUTION_MLS inst  where inst.MLS=1 ) ;
+
+-- Query OK, 4999 rows affected (4.74 sec)
+
+
+create table CROP_INSTITUTION_SPECIES_MLS_metric2 as 
+(select c.crop, g.institution_country, g.institution, 'N' as MLS_status, count(*) count
 FROM GMERGE_uniques g
 left join CIAT_crop_taxon c on (g.species=c.taxon)
 where c.rank="species"
-group by c.crop, g.species, g.orig_country);
+group by c.crop, g.institution_country, g.institution);
 
 
--- Query OK, 15884 rows affected (9 min 39.23 sec)
+update CROP_INSTITUTION_SPECIES_MLS_metric2 m
+set MLS_status ='Y'
+where m.crop in (select cl.Common_name_standard from CROP_MLS cl where cl.`MLS Annex 1`='Y' ) 
+and m.institution in (select inst.instcode from INSTITUTION_MLS inst  where inst.MLS=1 ) ;
 
 
-create table CROP_INSTITUTION_GENUS_FULL as 
-(select c.crop, g.genus, g.institution_country, count(*) count
-FROM GMERGE_uniques g
-left join CIAT_crop_taxon c on (g.genus=c.taxon)
-where c.rank="genus"
-group by c.crop, g.genus, g.institution_country);
-
--- Query OK, 10793 rows affected (6 min 20.10 sec)
-
-
-create table CROP_INSTITUTION_SPECIES_FULL as 
-(select c.crop, g.species, g.institution_country, count(*) count
-FROM GMERGE_uniques g
-left join CIAT_crop_taxon c on (g.species=c.taxon)
-where c.rank="species"
-group by c.crop, g.species, g.institution_country);
-
--- Query OK, 8896 rows affected (9 min 41.17 sec)
-
-
-
--- Counts per source
-
-create table CROP_SOURCE_GENUS as 
-select total.crop, gbif.count as gbif,  sgsv.count as sgsv,  genesys.count as genesys, wiews.count as wiews 
-from (select c.crop
-FROM GMERGE g
-left join CIAT_crop_taxon c on (g.genus=c.taxon)
-where c.rank="genus"
-group by c.crop) total
-
-
-left join (
-    select c.crop, count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.genus=c.taxon)
-    where c.rank="genus"
-    and g.source="GBIF"
-    group by c.crop
-) gbif
-
-on total.crop = gbif.crop 
-
-left join (
-    select c.crop, count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.genus=c.taxon)
-    where c.rank="genus"
-    and g.source="SGSV"
-    group by c.crop
-) sgsv
-
-on total.crop = sgsv.crop 
-
-
-left join (
-    select c.crop,  count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.genus=c.taxon)
-    where c.rank="genus"
-    and g.source="GENESYS"
-    group by c.crop
-) genesys
-
-on total.crop = genesys.crop 
-
-left join (
-    select c.crop, count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.genus=c.taxon)
-    where c.rank="genus"
-    and g.source="WIEWS"
-    group by c.crop
-) wiews
-
-on total.crop = wiews.crop ;
-
-
-
-
-create table CROP_SOURCE_SPECIES as 
-select total.crop, gbif.count as gbif,  sgsv.count as sgsv,  genesys.count as genesys, wiews.count as wiews 
-from (select c.crop
-FROM GMERGE g
-left join CIAT_crop_taxon c on (g.species=c.taxon)
-where c.rank="species"
-group by c.crop) total
-
-
-left join (
-    select c.crop, count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.species=c.taxon)
-    where c.rank="species"
-    and g.source="GBIF"
-    group by c.crop
-) gbif
-
-on total.crop = gbif.crop 
-
-left join (
-    select c.crop, count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.species=c.taxon)
-    where c.rank="species"
-    and g.source="SGSV"
-    group by c.crop
-) sgsv
-
-on total.crop = sgsv.crop 
-
-
-left join (
-    select c.crop,  count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.species=c.taxon)
-    where c.rank="species"
-    and g.source="GENESYS"
-    group by c.crop
-) genesys
-
-on total.crop = genesys.crop 
-
-left join (
-    select c.crop, count(*) count
-    FROM GMERGE g
-    left join CIAT_crop_taxon c on (g.species=c.taxon)
-    where c.rank="species"
-    and g.source="WIEWS"
-    group by c.crop
-) wiews
-
-on total.crop = wiews.crop ;
 
 
 
