@@ -2,10 +2,14 @@
 # (data.frame) data: Dataset
 # (string) method: Name of method that want to implement: sum or segregation
 # (bool) normalize: If you want or not to normalized the results
-interdependence.region = function(data, method, normalize = F){
+interdependence.region = function(data, method, normalize = F, type_countries = NA){
   # Loading configurations files
   if(method == "sum"){
-    tmp.countries = read.csv(paste0(conf.folder,"/regions-countries.csv"), header = T)  
+    if(is.na(type_countries)){
+      tmp.countries = read.csv(paste0(conf.folder,"/regions-countries.csv"), header = T)    
+    } else{
+      tmp.countries = read.csv(paste0(conf.folder,"/regions-countries-",type_countries,".csv"), header = T)    
+    }
   } else if(method == "segregation") {
     tmp.population = read.csv(paste0(conf.folder,"/regions-population-countries.csv"), header = T)
   }
