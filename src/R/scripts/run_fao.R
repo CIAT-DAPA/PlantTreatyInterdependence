@@ -162,11 +162,28 @@ data.filtered = ci.variables.exclude(data.raw,data.vars)
 data.agg = ci.aggregation.avg(data.filtered)
 write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
 
+# Filling countries
+countries.amount = data.agg %>%
+                          group_by(crop) %>%
+                          tally()
+
+df.fill = do.call(rbind,lapply(1:nrow(countries.amount),function(c){
+  times = 230 - countries.amount$n[c]
+  fields = names(data.agg)
+  df = as.data.frame(matrix(rep(c(0), times = 230*length(fields)), ncol  = length(fields)))
+  names(df) = fields
+  df$crop = countries.amount$crop[c]
+  df$country = ""
+  return (df)
+}))
+
+data.agg = rbind.data.frame(data.agg,df.fill)
+
 # gini
 gini.indicator = gini.crop(data.agg)
 
 for(c in names(gini.indicator)){
-  if(nrow(gini.indicator[gini.indicator[,c]==1.0,])>0){
+  if(nrow(gini.indicator[gini.indicator[,c]==1,])>0){
     gini.indicator[gini.indicator[,c]==1,c] = NA
   }
 }
