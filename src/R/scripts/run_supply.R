@@ -22,7 +22,7 @@ library(ineq)
 #setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
 #setwd("/home/hsotelo/fao/R/")
 setwd("D:/ToBackup/code/planttreaty/PlantTreatyInterdependence/src/R/")
-file.contries= "D:/planttreaty/EXPORT_FINAL_COUNTRIES.csv"
+file.countries= "D:/planttreaty/EXPORT_FINAL_COUNTRIES.csv"
 file.world= "D:/planttreaty/EXPORT_FINAL_WORLD.csv"
 
 # Global variables
@@ -61,13 +61,11 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 #data.agg = ci.aggregation.avg(data.filtered)
 data.countries = read.csv(file=file.countries, header = T)
 write.csv(data.countries,paste0(analysis.folder,"/data.countries.csv"), row.names = F)
-#data.agg = ci.aggregation.avg(data.filtered)
-data.countries = read.csv(file=file.countries, header = T)
-write.csv(data.world,paste0(analysis.folder,"/data.world.csv"), row.names = F)
+
 
 
 # gini
-gini.indicator = gini.crop(data.world)
+gini.indicator = gini.crop(data.countries)
 #gini.indicator[]
 gini.indicator = gini.indicator %>% 
   rename(
@@ -90,5 +88,30 @@ gini.indicator = gini.indicator %>%
 
 write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.csv"), row.names = F)
 
-  ##############################################
+##############################################
+
+####  05 - INTERDEPENDENCE
+source("scripts/tools.R")
+source("scripts/analysis.R")
+source("scripts/interdependence.R")
+source("scripts/composite_index.R")
+
+data.regions= data.countries %>% select(crop, 
+                          country,
+                          "2019"=year
+                          species_count_origin_supply
+                  ) %>%  rename(year = "2019")
+
+
+
+
+data.regions$crop = as.character(data.regions$crop)
+data.regions$country = as.character(data.regions$country)
+data.regions$genus_count_origin_supply = as.numeric(data.regions$genus_count_origin_supply)
+data.regions$species_count_origin_supply = as.numeric(data.regions$species_count_origin_supply)
+
+
+
+
+interdependence.region(data=data.regions, method="sum", normalize = F, type_countries= "iso3")
 
