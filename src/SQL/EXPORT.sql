@@ -24,6 +24,8 @@ select c.crop as crop,
 c.country as country,
 cig.count as genus_count_institution_supply,
 cis.count as species_count_institution_supply,
+gig.count as genus_count_gbif_research_supply,
+gis.count as species_count_gbif_research_supply,
 cog.count as genus_count_origin_supply,
 cos.count as species_count_origin_supply,
 cpg.count as upov_genus_varietal_release,
@@ -31,6 +33,8 @@ cps.count as upov_species_varietal_release
 from CROP_COUNTRIES c
 left join CROP_INSTITUTION_GENUS_LITE cig on (c.crop = cig.crop and c.country = cig.institution_country )
 left join CROP_INSTITUTION_SPECIES_LITE cis on (c.crop = cis.crop  and c.country = cis.institution_country)
+left join GBIF_INSTITUTION_GENUS_LITE gig on (c.crop = gig.crop and c.country = gig.institution_country )
+left join GBIF_INSTITUTION_SPECIES_LITE gis on (c.crop = gis.crop  and c.country = gis.institution_country)
 left join CROP_ORIGIN_GENUS_LITE cog on (c.crop = cog.crop  and c.country = cog.orig_country )
 left join CROP_ORIGIN_SPECIES_LITE cos on (c.crop = cos.crop  and c.country = cos.orig_country)
 left join CROP_PLUTO_GENUS_LITE cpg on (c.crop = cpg.crop and c.country = cpg.country )
@@ -38,6 +42,8 @@ left join CROP_PLUTO_SPECIES_LITE cps on (c.crop = cps.crop  and c.country = cps
 where 
 	not (cig.count is null and 
 	cis.count is null and 
+    gig.count is null and 
+	gis.count is null and 
 	cog.count is null and 
 	cos.count is null and 
 	cpg.count is null and 
@@ -55,6 +61,8 @@ select c.crop as crop,
 "2019" as year,
 sum(genus_count_institution_supply) as genus_count_institution_supply,
 sum(species_count_institution_supply) as species_count_institution_supply,
+sum(genus_count_gbif_research_supply) as genus_count_gbif_research_supply,
+sum(species_count_gbif_research_supply) as species_count_gbif_research_supply,
 sum(genus_count_origin_supply) as genus_count_origin_supply,
 sum(species_count_origin_supply) as species_count_origin_supply,
 sum(upov_genus_varietal_release) as upov_genus_varietal_release,
