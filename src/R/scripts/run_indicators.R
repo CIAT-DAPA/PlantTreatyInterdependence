@@ -105,6 +105,7 @@ indicator = ci.aggregation.hierarchy.indicator(data.n, data.vars.final)
 write.csv(indicator,paste0(analysis.folder,"/indicator.csv"), row.names = F)
 
 
+# Fixing indicator for tableau
 indicator.names = names (indicator)
 indicator.tableau = do.call(rbind,
                        lapply(indicator.names[3:length(indicator.names)],function(v){
