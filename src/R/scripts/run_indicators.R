@@ -65,10 +65,10 @@ source("scripts/tools.R")
 
 p = list.files(data.folder)
 
-#tools.save.data(p[1])
+tools.save.data(p[34])
 #tools.save.data(p[5])
 #tools.save.data(p[6])
-lapply(p,tools.save.data)
+#lapply(p,tools.save.data)
 
 ##############################################
 
@@ -100,72 +100,27 @@ data.vars.final = data.vars[data.vars$useable == 1,]
 data.vars.final = data.vars.final[which(data.vars.final$vars %in% names(data.n)),]
 row.names(data.vars.final) = NULL
 
-# Calculating indicator
-indicator = ci.aggregation.hierarchy.indicator(data.n, data.vars.final)
-write.csv(indicator,paste0(analysis.folder,"/indicator.csv"), row.names = F)
-
-
+# Calculating indicator by mean
+indicator.mean = ci.aggregation.hierarchy.indicator(data.n, data.vars.final,"mean")
+write.csv(indicator.mean,paste0(analysis.folder,"/indicator.mean.csv"), row.names = F)
 # Fixing indicator for tableau
-indicator.names = names (indicator)
-indicator.tableau = do.call(rbind,
-                       lapply(indicator.names[3:length(indicator.names)],function(v){
-                          hierarchy = unlist(strsplit(v, "-"))
-                          
-                          level = "metric"
-                          domain = ""
-                          component = ""
-                          group = ""
-                          metric = ""
-                          
-                          if(!is.na(hierarchy[4]) && grepl(hierarchy[4], "idx_g")){
-                            level = "group"
-                            domain = hierarchy[1]
-                            component = hierarchy[2]
-                            group = hierarchy[3]
-                            metric = hierarchy[4]
-                          } else if(!is.na(hierarchy[3]) && grepl(hierarchy[3], "idx_c")){
-                            level = "component"
-                            domain = hierarchy[1]
-                            component = hierarchy[2]
-                            metric = hierarchy[3]
-                          } else if(!is.na(hierarchy[2]) && grepl(hierarchy[2], "idx_d")){
-                            level = "domain"
-                            domain = hierarchy[1]
-                            metric = hierarchy[2]
-                          } else if(!is.na(hierarchy[1]) && grepl(hierarchy[1], "idx_final")){
-                            level = "final"
-                            metric = hierarchy[1]
-                          } else {
-                            domain = hierarchy[1]
-                            component = hierarchy[2]
-                            group = hierarchy[3]
-                            metric = hierarchy[4]
-                          }
-                          
-                          tmp.df = data.frame(crop = indicator$crop,
-                                              country = indicator$country,
-                                              level = level,
-                                              domain = domain,
-                                              component = component,
-                                              group = group,
-                                              metric = metric,
-                                              value=indicator[,v])
-                          return(tmp.df)
-                          
-                        })
+indicator.tableau.mean = ci.aggregation.matrix.table(indicator.mean)
+write.csv(indicator.tableau.mean,paste0(analysis.folder,"/indicator.tableau.mean.csv"), row.names = F)
 
-)
-write.csv(indicator.tableau,paste0(analysis.folder,"/indicator.tableau.csv"), row.names = F)
-
-
-
-
-# Calculating by groups
-#weights.group = ci.weights.group(data.vars.final)
+# Calculating indicator by weights
 weights.group = ci.weights.hierarchy(data.vars.final)
 
+indicator.weight = ci.aggregation.hierarchy.indicator(data.n, weights.group,"weight")
+write.csv(indicator.weight,paste0(analysis.folder,"/indicator.weight.csv"), row.names = F)
+# Fixing indicator for tableau
+indicator.tableau.weight = ci.aggregation.matrix.table(indicator.weight)
+write.csv(indicator.tableau.weight,paste0(analysis.folder,"/indicator.tableau.weight.csv"), row.names = F)
 
-#indicator.groups = ci.aggregation.group.factor.sum(data.n, weights.group)
+
+
+
+
+
 #ci.group.sum = data.n
 #ci.group.sum[,names(indicator.groups)] = indicator.groups
 #write.csv(ci.group.sum,paste0(analysis.folder,"/compose_index.group.factor.sum.csv"), row.names = F)

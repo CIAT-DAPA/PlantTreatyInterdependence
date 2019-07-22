@@ -357,10 +357,13 @@ ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
   tmp.full = data
   var_names = names(data)
   tmp.domain = as.character(unique(vars$domain_name))
+  # Loop for calculating indicator for each domain
   for( d in tmp.domain){
     tmp.component = as.character(unique(vars[vars$domain_name == d,"component"]))
+    # Loop for calculating indicator for each component
     for(c in tmp.component){
       tmp.group = as.character(unique(vars[which(vars$domain_name == d & vars$component == c),"group"]))
+      # Loop for calculating indicator for each group
       for(g in tmp.group){
         gp_names = var_names[grepl(paste0("^",d,"-",c,"-",g), var_names)]
         if(method == "mean"){
@@ -369,9 +372,18 @@ ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
           } else {
             tmp.full[paste0(d,"-",c,"-",g,"-idx_g")] = data[,gp_names]
           }
+        } else if(method == "weight"){
+          tmp.weight = vars[which(vars$vars %in% gp_names),]
+          
+          if(length (gp_names)>1){
+            tmp.full[paste0(d,"-",c,"-",g,"-idx_g")] = rowSums(data[,gp_names]*tmp.weight$metric_weight, na.rm = T)
+          } else {
+            tmp.full[paste0(d,"-",c,"-",g,"-idx_g")] = data[,gp_names]*tmp.weight$metric_weight
+          }
           
         }
       }
+      # Calculating indicator for component
       cp_names = names(tmp.full)
       cp_names = cp_names[grepl(paste0("^",d,"-",c,"-(\\w)*-idx_g"), cp_names)]
       if(method == "mean"){
@@ -380,8 +392,16 @@ ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
         } else {
           tmp.full[paste0(d,"-",c,"-idx_c")] = tmp.full[,cp_names]
         }
+      } else if(method == "weight"){
+        if(length (cp_names)>1){
+          tmp.full[paste0(d,"-",c,"-idx_c")] = rowSums(tmp.full[,cp_names], na.rm = T) 
+        } else {
+          tmp.full[paste0(d,"-",c,"-idx_c")] = tmp.full[,cp_names]
+        }
+        
       }
     } 
+    # Calculating indicator for domain
     do_names = names(tmp.full)
     do_names = do_names[grepl(paste0("^",d,"-(\\w)*-idx_c"), do_names)]
     if(method == "mean"){
@@ -390,13 +410,22 @@ ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
       } else {
         tmp.full[paste0(d,"-idx_d")] = tmp.full[,do_names]
       }
+    } else if(method == "weight"){
+      if(length (do_names)>1){
+        tmp.full[paste0(d,"-idx_d")] = rowSums(tmp.full[,do_names], na.rm = T)
+      } else {
+        tmp.full[paste0(d,"-idx_d")] = tmp.full[,do_names]
+      }
+      
     }
+    
     idx_names = names(tmp.full)
     idx_names = idx_names[grepl(paste0("^",d,"-"), idx_names)]
     idx_names = c("crop","country",idx_names)
     idx_data = tmp.full[,idx_names]
-    write.csv(idx_data,paste0(analysis.folder,"/idx_data-",d,".csv"), row.names = F)
+    write.csv(idx_data,paste0(analysis.folder,"/idx_data-",d,"-",method,".csv"), row.names = F)
   }
+  # Calculating final indicator
   fi_names = names(tmp.full)
   fi_names = fi_names[grepl(paste0("^(\\w)*-idx_d"), fi_names)]
   if(method == "mean"){
@@ -405,6 +434,9 @@ ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
     } else {
       tmp.full[paste0("idx_final")] = tmp.full[,fi_names]
     }
+  }
+  else if(method == "weight"){
+    tmp.full[paste0("idx_final")] = rowSums(tmp.full[,fi_names], na.rm = T)  
   }
   return(tmp.full)
 }
@@ -440,6 +472,61 @@ ci.aggregation.group.avg = function(data, vars){
   tmp.indicator$compose_index = rowMeans(tmp.indicator,na.rm=TRUE)
   
   return (tmp.indicator)
+}
+
+# This function transform the original indicator matrix in a simple way
+# (data.frame) data: Dataset
+ci.aggregation.matrix.table = function(indicator){
+  indicator.names = names (indicator)
+  indicator.tableau = do.call(rbind,
+                              lapply(indicator.names[3:length(indicator.names)],function(v){
+                                hierarchy = unlist(strsplit(v, "-"))
+                                
+                                level = "metric"
+                                domain = ""
+                                component = ""
+                                group = ""
+                                metric = ""
+                                
+                                if(!is.na(hierarchy[4]) && grepl(hierarchy[4], "idx_g")){
+                                  level = "group"
+                                  domain = hierarchy[1]
+                                  component = hierarchy[2]
+                                  group = hierarchy[3]
+                                  metric = hierarchy[4]
+                                } else if(!is.na(hierarchy[3]) && grepl(hierarchy[3], "idx_c")){
+                                  level = "component"
+                                  domain = hierarchy[1]
+                                  component = hierarchy[2]
+                                  metric = hierarchy[3]
+                                } else if(!is.na(hierarchy[2]) && grepl(hierarchy[2], "idx_d")){
+                                  level = "domain"
+                                  domain = hierarchy[1]
+                                  metric = hierarchy[2]
+                                } else if(!is.na(hierarchy[1]) && grepl(hierarchy[1], "idx_final")){
+                                  level = "final"
+                                  metric = hierarchy[1]
+                                } else {
+                                  domain = hierarchy[1]
+                                  component = hierarchy[2]
+                                  group = hierarchy[3]
+                                  metric = hierarchy[4]
+                                }
+                                
+                                tmp.df = data.frame(crop = indicator$crop,
+                                                    country = indicator$country,
+                                                    level = level,
+                                                    domain = domain,
+                                                    component = component,
+                                                    group = group,
+                                                    metric = metric,
+                                                    value=indicator[,v])
+                                return(tmp.df)
+                                
+                              })
+                              
+  )
+  return (indicator.tableau)
 }
 
 # This function gets the value of the compose index

@@ -51,3 +51,7 @@ src/R/demand/
 /src/Java/counts/crop_counts/*.classpath
 /src/Java/counts/crop_counts/*.project
 .settings
+
+
+src/Python/Spider/.ipynb_checkpoints/
+src/Python/Spider/outputs/
