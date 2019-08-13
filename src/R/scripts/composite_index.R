@@ -252,7 +252,8 @@ ci.normalize.full = function(data, type = "range", global = F){
 ci.weights.hierarchy = function(vars){
   
   tmp.domains = as.character(unique(vars$domain_name))
-  tmp.domains.weight = data.frame(domain = tmp.domains, domain_weight = 1/length(tmp.domains))
+  #tmp.domains.weight = data.frame(domain = tmp.domains, domain_weight = 1/length(tmp.domains))
+  tmp.domains.weight = data.frame(domain = tmp.domains, domain_weight = 1)
   
   # Component
   tmp.domains.weight$component_amount = unlist(
@@ -426,18 +427,19 @@ ci.aggregation.hierarchy.indicator = function(data, vars, method = "mean"){
     write.csv(idx_data,paste0(analysis.folder,"/idx_data-",d,"-",method,".csv"), row.names = F)
   }
   # Calculating final indicator
-  fi_names = names(tmp.full)
-  fi_names = fi_names[grepl(paste0("^(\\w)*-idx_d"), fi_names)]
-  if(method == "mean"){
-    if(length (fi_names)>1){
-      tmp.full[paste0("idx_final")] = rowMeans(tmp.full[,fi_names], na.rm = T)  
-    } else {
-      tmp.full[paste0("idx_final")] = tmp.full[,fi_names]
-    }
-  }
-  else if(method == "weight"){
-    tmp.full[paste0("idx_final")] = rowSums(tmp.full[,fi_names], na.rm = T)  
-  }
+  #fi_names = names(tmp.full)
+  #fi_names = fi_names[grepl(paste0("^(\\w)*-idx_d"), fi_names)]
+  
+  #if(method == "mean"){
+  #  if(length (fi_names)>1){
+  #    tmp.full[paste0("idx_final")] = rowMeans(tmp.full[,fi_names], na.rm = T)  
+  #  } else {
+  #    tmp.full[paste0("idx_final")] = tmp.full[,fi_names]
+  #  }
+  #}
+  #else if(method == "weight"){
+  #  tmp.full[paste0("idx_final")] = rowSums(tmp.full[,fi_names], na.rm = T)  
+  #}
   return(tmp.full)
 }
 

@@ -36,7 +36,7 @@ tools.import.files = function(path){
 # (data.frame) dictionary: List of values that you want to merge
 # (vector) fields: Array with two values which are the names of fields to merge both datasets, the first value is for data and second one is for dictionary
 tools.fuzzy_match = function(data, dictionary, fields, method = "jw"){
-  d <- expand.grid(data[,fields[1]],tmp.crops[,fields[2]])
+  d <- expand.grid(data[,fields[1]],dictionary[,fields[2]])
   names(d) = fields
   d$dist = stringdist(d[,fields[1]],d[,fields[2]], method=method) 
   

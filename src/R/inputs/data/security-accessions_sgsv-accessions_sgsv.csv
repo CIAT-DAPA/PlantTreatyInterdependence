@@ -1,289 +1,355 @@
 crop,country,year,genus_accessions_sgsv,species_accessions_sgsv
-Abaca,World,2019,,
-Acerola,World,2019,,
-Achira,World,2019,,
-Adlay,World,2019,0.2143,0.2206
-Adzuki bean,World,2019,0.2424,0.86
-Aeschynomene,World,2019,0.3872,0.6184
-African eggplant,World,2019,0.1762,0.9421
-African rice,World,2019,0.2602,0.9427
-Agave,World,2019,,
-Agropyron,World,2019,0.0391,0.0611
-Agrostis,World,2019,0.2291,0.309
-Ahipa,World,2019,0.1891,0.8013
-Alfalfa,World,2019,0.2911,0.4736
-Almonds,World,2019,,
-Alopecurus,World,2019,0.1968,0.2714
-Alysicarpus,World,2019,0.2046,0.2848
-Amaranth,World,2019,0.2209,0.2899
-Andropogon,World,2019,0.0782,0.3376
-Anise,World,2019,0.2139,0.3458
-Apple,World,2019,,
-Apricot,World,2019,,
-Arracacha,World,2019,,
-Arrhenatherum,World,2019,0.1475,0.1503
-Arrowroot,World,2019,,
-Artichokes,World,2019,0.2619,0.3143
-Asian rice,World,2019,0.2602,0.2691
-Asparagus,World,2019,0.0447,0.0857
-Astragalus,World,2019,0.1372,0.6704
-Atriplex,World,2019,0.0888,0.22
-Avocado,World,2019,,
-Azarole,World,2019,0.0294,0.5
-Bambara bean,World,2019,0.2424,0.8851
-Bamboo shoot,World,2019,,
-Bananas,World,2019,,
-Barley,World,2019,0.209,0.2348
-Basil,World,2019,0.2871,0.4051
-Bay leaf,World,2019,,
-Beech nut,World,2019,,
-Beets,World,2019,0.0994,0.1238
-Black gram,World,2019,0.2424,0.8335
-Black nightshade,World,2019,0.1762,0.9938
-Black salsify,World,2019,0.3636,0.3951
-Blueberry,World,2019,0.0345,0.1353
-Brachiaria,World,2019,0.1676,0.2873
-Breadfruit,World,2019,,
-Buckwheat,World,2019,0.325,0.3287
-Butternut squash,World,2019,0.0884,0.2573
-Cabbages,World,2019,0.1558,0.4
-Cabbages and other brassicas,World,2019,0.1558,0.1747
-Caesarweed,World,2019,0.0714,0.0714
-Cainito,World,2019,,
-Calabash,World,2019,0.1133,0.1193
-Calopogonium,World,2019,0.4169,0.4386
-Canary seed,World,2019,0.1203,0.6957
-Canola,World,2019,0.1558,0.474
-Capers,World,2019,,
-Carambola,World,2019,,
-Caraway,World,2019,0.2553,0.2604
-Cardamoms,World,2019,,
-Carneros Yucca,World,2019,,
-Carobs,World,2019,0.2222,0.25
-Carrots,World,2019,0.1429,0.1529
-Cashews,World,2019,,
-Cassava,World,2019,,
-Castor bean,World,2019,0.0382,0.0383
-Ceara,World,2019,,
-Celery,World,2019,0.164,0.1659
-Centrosema,World,2019,0.4308,0.9153
-Ceylon-spinach,World,2019,0.129,0.6667
-Cherries,World,2019,,
-Chervil,World,2019,0.2658,0.42
-Chestnuts,World,2019,,
-Chickpeas,World,2019,0.2201,0.2245
-Chicory,World,2019,0.2836,0.2996
-Chillies and peppers,World,2019,0.119,0.1446
-Chinotto,World,2019,,
-Chufa,World,2019,0.0222,0.1111
-Citron,World,2019,,
-Citronella,World,2019,0.0777,0.6667
-Clovers,World,2019,0.0763,0.0793
-Cloves,World,2019,,
-Common bean,World,2019,0.2161,0.2387
-Coriander,World,2019,0.2174,0.2883
-Coronilla,World,2019,0.1049,0.2131
-Cotton,World,2019,0.0311,0.0458
-Cowpeas,World,2019,0.2424,0.3877
-Crambe,World,2019,0.175,0.236
-Cranberries,World,2019,0.0345,0.3195
-Cress,World,2019,0.3093,0.6699
-Cucumbers and gherkins,World,2019,0.1788,0.3362
-Cumin,World,2019,0.0208,0.0211
-Currants,World,2019,0.0212,0.0648
-Cushaw,World,2019,0.0884,0.711
-Dactylis,World,2019,0.1278,0.13
-Dates,World,2019,,
-Desmodium,World,2019,0.3629,0.9169
-Dill,World,2019,0.2132,0.2135
-Eggplant,World,2019,0.1489,0.6049
-Elderberry,World,2019,0.008,0.0082
-Esparto,World,2019,0.0621,0.9048
-Ethiopian rape,World,2019,0.1558,0.8633
-Faba beans,World,2019,0.0609,0.1172
-Fennel,World,2019,0.2429,0.2729
-Fenugreek,World,2019,0.1745,0.2851
-Festuca,World,2019,0.1311,0.1512
-Fig leaf gourd,World,2019,0.0884,0.786
-Figs,World,2019,,
-Finger millet,World,2019,0.1973,0.2049
-Flax,World,2019,0.2104,0.2217
-Fonio,World,2019,0.0739,0.2033
-Foxtail millet,World,2019,0.4268,0.477
-Galactia,World,2019,0.3943,0.5422
-Garlic,World,2019,0.0526,0.2484
-Gooseberries,World,2019,0.0212,0.0736
-Grapefruits,World,2019,,
-Grapes,World,2019,,
-Grasspea,World,2019,0.1144,0.173
-Groundnuts,World,2019,0.3549,0.371
-Guavas,World,2019,0.0092,0.0135
-Hazelnuts,World,2019,,
-Hedysarum,World,2019,0.0363,0.0591
-Hemp,World,2019,0.1332,0.1358
-Hops,World,2019,0.0095,0.0096
-Horseradish,World,2019,,
-Indigofera,World,2019,0.1874,0.4471
-Jack bean,World,2019,0.2416,0.4848
-Jackfruit,World,2019,,
-Japanese millet,World,2019,0.4012,0.6252
-Jerusalem artichoke,World,2019,0.155,0.8624
-Jicama,World,2019,0.1891,0.3235
-Jojoba,World,2019,0.0909,0.0909
-Jujube,World,2019,0.1111,0.4167
-Jute,World,2019,0.1582,0.2282
-Kaniwa,World,2019,0.2115,0.9507
-Kenaf,World,2019,0.0688,0.1694
-Kiwi fruit,World,2019,0.007,0.0142
-Kiwicha,World,2019,0.2209,0.681
-Kodo millet,World,2019,0.2197,0.4433
-Kola nuts,World,2019,,
-Kumquat,World,2019,,
-Lablab,World,2019,0.2493,0.2562
-Lavender,World,2019,0.2169,0.3103
-Leeks and other alliaceous vegetables,World,2019,0.0526,0.4752
-Lemons and limes,World,2019,,
-Lentils,World,2019,0.1887,0.1957
-Lespedeza,World,2019,0.0312,0.0447
-Lettuce,World,2019,0.2402,0.2893
-Leucaena,World,2019,0.178,0.2923
-Licorice,World,2019,0.0602,0.122
-Lima bean,World,2019,0.2161,0.8433
-Little millet,World,2019,0.3474,0.7924
-Lolium,World,2019,0.1572,0.1688
-Loquat,World,2019,,
-Lotus,World,2019,0.0648,0.1204
-Lupins,World,2019,0.0518,0.0686
-Maca,World,2019,0.3093,0.7779
-Macroptilium,World,2019,0.3597,0.5527
-Maize,World,2019,0.1698,0.1739
-Malabar spinach,World,2019,0.2121,0.2132
-Mandarines,World,2019,,
-Maple sugar,World,2019,,
-Marjoram,World,2019,0.1662,0.7564
-Mashua,World,2019,0.0226,0.0243
-Mat bean,World,2019,0.2424,0.9449
-Mate,World,2019,,
-Mauka,World,2019,0.4063,0.7647
-Medlar,World,2019,0.0588,0.0588
-Melilotus,World,2019,0.1193,0.1834
-Melons,World,2019,0.1788,0.3561
-Mombin,World,2019,,
-Mulberry,World,2019,,
-Mung bean,World,2019,0.2424,0.5934
-Naranjilla,World,2019,0.1762,0.9949
-Neonotonia,World,2019,0.285,0.2862
-New Zealand spinach,World,2019,0.1385,0.2045
-Noog,World,2019,0.0764,0.0887
-Oats,World,2019,0.1344,0.2017
-Oca,World,2019,,
-Okra,World,2019,0.1159,0.1459
-Olives,World,2019,0.1429,0.25
-Onions,World,2019,0.0526,0.1228
-Onobrychis,World,2019,0.0744,0.1943
-Orache,World,2019,0.1044,0.5622
-Oranges,World,2019,,
-Oregano,World,2019,0.1662,0.1873
-Ornithopus,World,2019,0.03,0.1568
-Papayas,World,2019,,
-Parsley,World,2019,0.1846,0.1861
-Parsnip,World,2019,0.2026,0.2101
-Passionfruit,World,2019,0.0021,0.0139
-Pawpaw,World,2019,,
-Peaches and nectarines,World,2019,,
-Pearl millet,World,2019,0.2707,0.1995
-Pears,World,2019,0.0013,0.0015
-Peas,World,2019,0.1305,0.1372
-Pecan,World,2019,,
-Pepino,World,2019,0.1762,0.9996
-Pepper,World,2019,,
-Peppermint,World,2019,0.0362,0.3956
-Perilla,World,2019,0.6288,0.64
-Persimmons,World,2019,0.037,
-Phalaris,World,2019,0.1053,0.14
-Phleum,World,2019,0.2037,0.2213
-Physic nut,World,2019,0.3333,0.3333
-Pigeonpeas,World,2019,0.3147,0.321
-Pine nut,World,2019,0.5429,
-Pineapples,World,2019,,
-Plantains,World,2019,,
-Plums,World,2019,,
-Poa,World,2019,0.1511,0.194
-Pomegranate,World,2019,,
-Pongamia oil,World,2019,0.0476,
-Poppies,World,2019,0.1403,0.1778
-Potatoes,World,2019,0.1489,0.446
-Prickly pear,World,2019,,
-Proso millet,World,2019,0.3474,0.5298
-Prosopis,World,2019,0.0164,0.2197
-Pueraria,World,2019,0.2527,0.2842
-Pumpkin,World,2019,0.0884,0.3054
-Purging croton,World,2019,0.25,
-Pyrethrum,World,2019,0.1175,0.803
-Quinces,World,2019,0.0106,0.0112
-Quinoa,World,2019,0.2115,0.4443
-Radish,World,2019,0.177,0.1881
-Ramie,World,2019,,
-Rapeseed and mustards,World,2019,0.2262,0.4155
-Raspberries,World,2019,0.0253,0.0653
-Rhubarb,World,2019,0.1654,0.3116
-Rhynchosia,World,2019,0.281,0.388
-Rice bean,World,2019,0.2424,0.9049
-Roselle,World,2019,0.0688,0.1969
-Rosemary,World,2019,0.0104,0.0175
-Runner bean,World,2019,0.2161,0.9005
-Rye,World,2019,0.0784,0.0838
-Safflower,World,2019,0.2515,0.2618
-Salsify,World,2019,0.3111,0.5
-Salsola,World,2019,,
-Savory,World,2019,0.2051,0.2133
-Service tree,World,2019,0.0336,0.5417
-Sesame,World,2019,0.3207,0.4683
-Sesbania,World,2019,0.2938,0.5653
-Sisal,World,2019,,
-Slippery cabbage,World,2019,0.1159,0.5936
-Snake gourd,World,2019,0.0238,0.0326
-Sorghum,World,2019,0.2321,0.238
-Sorrel,World,2019,0.0537,0.1962
-Soybeans,World,2019,0.2978,0.3182
-Spider plant,World,2019,,
-Spinach,World,2019,0.3098,0.3274
-Strawberries,World,2019,0.0106,0.0777
-Stylosanthes,World,2019,0.3814,0.6005
-Sugar beets,World,2019,0.1169,0.1446
-Sugarcane,World,2019,0.0007,0.0021
-Sunflowers,World,2019,0.155,0.1807
-Sunn hemp,World,2019,0.2056,0.862
-Sweetpotatoes,World,2019,0.0987,0.1157
-Sword bean,World,2019,0.3568,0.8677
-Tamarind,World,2019,0.04,0.04
-Taro,World,2019,,
-Tarragon,World,2019,0.0724,0.5593
-Teff,World,2019,0.1969,0.4949
-Tepary bean,World,2019,0.2161,0.9694
-Thyme,World,2019,0.1343,0.4754
-Tobacco,World,2019,0.0727,0.0862
-Tomatillo,World,2019,0.1178,0.1723
-Tomatoes,World,2019,0.1762,0.389
-Tree tomato,World,2019,0.1762,0.9888
-Tripsacum,World,2019,,
-Triticale,World,2019,0.4382,
-Turnips,World,2019,0.2262,0.5746
-Ulluco,World,2019,,
-Velvet bean,World,2019,0.1926,0.2597
-Velvet leaf,World,2019,0.3424,0.5
-Vetch,World,2019,0.0609,0.1888
-Walnuts,World,2019,,
-Water dropwort,World,2019,0.2857,0.75
-Watercress,World,2019,0.2069,0.2609
-Watermelons,World,2019,0.0654,0.0672
-Wax gourd,World,2019,0.086,0.0951
-West Indian Gherkin,World,2019,0.1788,0.9599
+Abaca,World,2019,0,0
+Acerola,World,2019,0,0
+Achira,World,2019,0,0
+Ackee,World,2019,0,0
+Adlay,World,2019,0.0558,0.057
+Adzuki bean,World,2019,0.2391,0.8597
+Aeschynomene,World,2019,0.3403,0.5532
+African eggplant,World,2019,0.1444,0.937
+Rice (African),World,2019,0.2564,0.9427
+Agave,World,2019,0,0
+Agropyron,World,2019,0.0215,0.0313
+Agrostis,World,2019,0.1771,0.294
+Ahipa,World,2019,0.1547,0.7202
+Albardine,World,2019,0,0
+Alfalfa,World,2019,0.2661,0.4313
+Allspice,World,2019,0,0
+Almonds,World,2019,0,0
+Alopecurus,World,2019,0.1202,0.1684
+Alysicarpus,World,2019,0.1866,0.2667
+Amaranth,World,2019,0.0878,0.1303
+Andropogon,World,2019,0.0778,0.3376
+Anise,World,2019,0.0813,0.1568
+Annato,World,2019,0,0
+Apple,World,2019,0,0
+Apricot,World,2019,0,0
+Areca nuts,World,2019,0,0
+Arracacha,World,2019,0,0
+Arrhenatherum,World,2019,0.1049,0.1065
+Arrowroot,World,2019,0,0
+Artichokes,World,2019,0.0315,0.0444
+Rice (Asian),World,2019,0.2564,0.2686
+Asparagus,World,2019,0.042,0.0825
+Astragalus,World,2019,0.1269,0.6292
+Atemoya,World,2019,0,0
+Atriplex,World,2019,0.0852,0.2086
+Avocado,World,2019,0,0
+Azarole,World,2019,0.001,0.0244
+Babaco,World,2019,0,0
+Badian,World,2019,0,0
+Bambara bean,World,2019,0.2391,0.873
+Bamboo shoot,World,2019,0,0
+Bananas,World,2019,0,0
+Barley,World,2019,0.2061,0.2313
+Basil,World,2019,0.158,0.2555
+Bay leaf,World,2019,0,0
+Beech nut,World,2019,0,0
+Beets,World,2019,0.092,0.1134
+Black gram,World,2019,0.2391,0.8335
+Black nightshade,World,2019,0.1444,0.9924
+Black salsify,World,2019,0.1468,0.2832
+Blueberry,World,2019,0.0255,0.0973
+Brachiaria,World,2019,0.1305,0.2267
+Brazil nut,World,2019,0,0
+Breadfruit,World,2019,0,0
+Buckwheat,World,2019,0.0398,0.0412
+Butter-nut,World,2019,0,0
+Butternut squash,World,2019,0.0482,0.1348
+Cabbages,World,2019,0.152,0.3962
+Cabbages and other brassicas,World,2019,0.152,0.1705
+Caesarweed,World,2019,0.0127,0.0128
+Cainito,World,2019,0,0
+Calabash,World,2019,0.0358,0.0426
+Calopogonium,World,2019,0.3445,0.365
+Canary seed,World,2019,0.1035,0.6375
+Candlenut,World,2019,0,0
+Canola,World,2019,0.152,0.4628
+Capers,World,2019,0,0
+Carambola,World,2019,0,0
+Carapa,World,2019,0,0
+Caraway,World,2019,0.1614,0.1912
+Cardamoms,World,2019,0,0
+Carneros Yucca,World,2019,0,0
+Caroa,World,2019,0,0
+Carobs,World,2019,0.0137,0.0139
+Carrots,World,2019,0.1355,0.1452
+Cashews,World,2019,0,0
+Cassava,World,2019,0,0
+Castor bean,World,2019,0.007,0.0073
+Ceara,World,2019,0,0
+Celery,World,2019,0.1205,0.1261
+Centrosema,World,2019,0.3816,0.8326
+Ceylon-spinach,World,2019,0.0714,0.4444
+Chayote,World,2019,0,0
+Cherimoya,World,2019,0,0
+Cherries,World,2019,0,0
+Chervil,World,2019,0.116,0.2763
+Chestnuts,World,2019,0,0
+Chickpeas,World,2019,0.22,0.2244
+Chicle,World,2019,0,0
+Chicory,World,2019,0.2186,0.2401
+Chillies and peppers,World,2019,0.0677,0.0786
+Chinotto,World,2019,0,0
+Chontadura,World,2019,0,0
+Chufa,World,2019,0.0014,0.0333
+Cinnamon,World,2019,0,0
+Citron,World,2019,0,0
+Citronella,World,2019,0.0473,0.2581
+Clovers,World,2019,0.0683,0.0662
+Cloves,World,2019,0,0
+Cocoa,World,2019,0,0
+Coconuts,World,2019,0,0
+Coffee,World,2019,0,0
+Common bean,World,2019,0.2111,0.2347
+Coriander,World,2019,0.0945,0.1063
+Coronilla,World,2019,0.0964,0.1843
+Cotton,World,2019,0.0012,0.0017
+Cowpeas,World,2019,0.2391,0.3824
+Crambe,World,2019,0.1695,0.228
+Cranberries,World,2019,0.0255,0.3156
+Cress,World,2019,0.2615,0.5164
+crop,World,2019,0,0
+Cucumbers and gherkins,World,2019,0.1108,0.2351
+Cumin,World,2019,0.0072,0.0074
+Currants,World,2019,0.0096,0.0214
+Cushaw,World,2019,0.0482,0.6205
+Custard apple,World,2019,0,0
+Dactylis,World,2019,0.1135,0.1152
+Dates,World,2019,0,0
+Desmodium,World,2019,0.3263,0.8717
+Devil's cotton,World,2019,0,0
+Dill,World,2019,0.1294,0.133
+Durian,World,2019,0,0
+Eggplant,World,2019,0.1444,0.5961
+Elderberry,World,2019,0.0025,0.0038
+Esparto,World,2019,0.0361,0.3333
+Ethiopian rape,World,2019,0.152,0.8633
+Faba beans,World,2019,0.0596,0.1171
+Feijoa,World,2019,0,0
+Fennel,World,2019,0.0861,0.0983
+Fenugreek,World,2019,0.1045,0.1521
+Festuca,World,2019,0.1062,0.1203
+Fig leaf gourd,World,2019,0.0482,0.694
+Figs,World,2019,0,0
+Finger millet,World,2019,0.1952,0.2027
+Fique,World,2019,0,0
+Flax,World,2019,0.1154,0.1286
+Fonio,World,2019,0.0526,0.1515
+Foxtail millet,World,2019,0.1941,0.2223
+Galactia,World,2019,0.3595,0.5261
+Garlic,World,2019,0.0351,0.1651
+Giant cabuya,World,2019,0,0
+Ginger,World,2019,0,0
+Gooseberries,World,2019,0.0096,0.0492
+Grapefruits,World,2019,0,0
+Grapes,World,2019,0,0
+Grasspea,World,2019,0.114,0.1729
+Groundnuts,World,2019,0.2304,0.2381
+Guavas,World,2019,0.0016,0.002
+Guayule,World,2019,0,0
+Gutta-percha,World,2019,0,0
+Hazelnuts,World,2019,0,0
+Hedysarum,World,2019,0.0334,0.0567
+Hemp,World,2019,0.0332,0.0339
+Hops,World,2019,0.007,0.007
+Horseradish,World,2019,0,0
+Huckleberry,World,2019,0,0
+Indigofera,World,2019,0.1562,0.4176
+Jack bean,World,2019,0.2403,0.4806
+Jackfruit,World,2019,0,0
+Japanese millet,World,2019,0.1757,0.2755
+Jelutong,World,2019,0,0
+Jerusalem artichoke,World,2019,0.1311,0.8571
+Jicama,World,2019,0.1547,0.2719
+Jojoba,World,2019,0.0019,0.0019
+Jujube,World,2019,0.0139,0.0318
+Jute,World,2019,0.0142,0.0168
+Kaniwa,World,2019,0.0568,0.3802
+Kapok,World,2019,0,0
+Karite nuts,World,2019,0,0
+Kenaf,World,2019,0.0232,0.0559
+Kiwi fruit,World,2019,0.004,0.0096
+Kiwicha,World,2019,0.0878,0.4489
+Kodo millet,World,2019,0.1194,0.2031
+Kola nuts,World,2019,0,0
+Kumquat,World,2019,0,0
+Lablab,World,2019,0.1029,0.1053
+Lavender,World,2019,0.038,0.1525
+Leeks and other alliaceous vegetables,World,2019,0.0351,0.4036
+Lemons and limes,World,2019,0,0
+Lentils,World,2019,0.1879,0.1949
+Lespedeza,World,2019,0.0257,0.0419
+Lettuce,World,2019,0.2006,0.2381
+Leucaena,World,2019,0.1584,0.2479
+Licorice,World,2019,0.0264,0.0578
+Lima bean,World,2019,0.2111,0.838
+Litchi,World,2019,0,0
+Little millet,World,2019,0.0698,0.5349
+Lolium,World,2019,0.1477,0.158
+Longan,World,2019,0,0
+Loquat,World,2019,0,0
+Lotus,World,2019,0.0583,0.1004
+Lupins,World,2019,0.0483,0.0635
+Maca,World,2019,0.2615,0.7577
+Macadamia nut,World,2019,0,0
+Macroptilium,World,2019,0.328,0.5047
+Mahuwa,World,2019,0,0
+Maize,World,2019,0.1493,0.1525
+Malabar spinach,World,2019,0.1561,0.1573
+Mamey sapote,World,2019,0,0
+Mammee,World,2019,0,0
+Mandarines,World,2019,0,0
+Mango,World,2019,0,0
+Mangosteen,World,2019,0,0
+Maple sugar,World,2019,0,0
+Marjoram,World,2019,0.0652,0.5842
+Mashua,World,2019,0.01,0.0114
+Mat bean,World,2019,0.2391,0.9443
+Mate,World,2019,0,0
+Mauka,World,2019,0.1313,0.2708
+Medlar,World,2019,0.0055,0.0055
+Melilotus,World,2019,0.0913,0.1297
+Melons,World,2019,0.1108,0.2146
+Mombin,World,2019,0,0
+Mulberry,World,2019,0,0
+Mung bean,World,2019,0.2391,0.5927
+Myrtle,World,2019,0,0
+Naranjilla,World,2019,0.1444,0.9867
+Neonotonia,World,2019,0.2121,0.2141
+New Zealand flax,World,2019,0,0
+New Zealand spinach,World,2019,0.0841,0.18
+Noog,World,2019,0.0034,0.0035
+Nutmeg,World,2019,0,0
+Oats,World,2019,0.1317,0.2
+Oca,World,2019,0,0
+Oil palm,World,2019,0,0
+Oiticica,World,2019,0,0
+Okra,World,2019,0.0673,0.0849
+Olives,World,2019,0.0004,0.0004
+Onions,World,2019,0.0351,0.0732
+Onobrychis,World,2019,0.0577,0.1635
+Orache,World,2019,0.0852,0.5093
+Oranges,World,2019,0,0
+Oregano,World,2019,0.0652,0.0754
+Ornithopus,World,2019,0.0291,0.1379
+Papayas,World,2019,0,0
+Parsley,World,2019,0.0916,0.1101
+Parsnip,World,2019,0.1641,0.1731
+Passionfruit,World,2019,0.001,0.0053
+Pawpaw,World,2019,0,0
+Peaches and nectarines,World,2019,0,0
+Pearl millet,World,2019,0.2699,0.1989
+Pears,World,2019,0.0006,0.0007
+Peas,World,2019,0.126,0.1326
+Pecan,World,2019,0,0
+Pepino,World,2019,0.1444,0.9992
+Pepper,World,2019,0,0
+Peppermint,World,2019,0.0157,0.1667
+Perilla,World,2019,0.1832,0.1902
+Persimmons,World,2019,0.0009,0.0012
+Phalaris,World,2019,0.1035,0.1391
+Phleum,World,2019,0.1538,0.1637
+Physic nut,World,2019,0.0003,0.0003
+Pigeonpeas,World,2019,0.3143,0.3206
+Pili nut,World,2019,0,0
+Pine nut,World,2019,0.0156,0.8085
+Pineapples,World,2019,0,0
+Pistachios,World,2019,0,0
+Plantains,World,2019,0,0
+Plums,World,2019,0,0
+Poa,World,2019,0.1189,0.1524
+Pomegranate,World,2019,0,0
+Pongamia oil,World,2019,0.0013,0.0909
+Poppies,World,2019,0.0868,0.1042
+Potatoes,World,2019,0.1444,0.4265
+Prickly pear,World,2019,0,0
+Proso millet,World,2019,0.0698,0.089
+Prosopis,World,2019,0.0163,0.218
+Pueraria,World,2019,0.2509,0.2838
+Pumpkin,World,2019,0.0482,0.1884
+Purging croton,World,2019,0.009,0.1
+Pyrethrum,World,2019,0.0424,0.3118
+Quinces,World,2019,0.0033,0.0033
+Quinoa,World,2019,0.0568,0.0803
+Radish,World,2019,0.138,0.1472
+Rambutan,World,2019,0,0
+Ramie,World,2019,0,0
+Rapeseed and mustards,World,2019,0.152,0.322
+Raspberries,World,2019,0.0173,0.0421
+Rhubarb,World,2019,0.0564,0.1369
+Rhynchosia,World,2019,0.2507,0.365
+Rice bean,World,2019,0.2391,0.9049
+Roselle,World,2019,0.0232,0.0601
+Rosemary,World,2019,0.0047,0.0061
+"Rubber, natural",World,2019,0,0
+Runner bean,World,2019,0.2111,0.8883
+Rye,World,2019,0.0759,0.0821
+Safflower,World,2019,0.0754,0.0777
+Saffron,World,2019,0,0
+Sago palm,World,2019,0,0
+Salsify,World,2019,0.1302,0.3373
+Salsola,World,2019,0,0
+Sapodilla,World,2019,0,0
+Savory,World,2019,0.0762,0.0928
+Service tree,World,2019,0.011,0.1074
+Sesame,World,2019,0.0638,0.0724
+Sesbania,World,2019,0.2016,0.5144
+Shala tree,World,2019,0,0
+Sisal,World,2019,0,0
+Slippery cabbage,World,2019,0.0673,0.5066
+Snake gourd,World,2019,0.0028,0.0129
+Snake plant,World,2019,0,0
+Sorghum,World,2019,0.2302,0.2368
+Sorrel,World,2019,0.0349,0.1258
+Soursop,World,2019,0,0
+Soybeans,World,2019,0.2257,0.2425
+Spider plant,World,2019,0,0
+Spinach,World,2019,0.197,0.2053
+Strawberries,World,2019,0.0088,0.0344
+Strawberry tree,World,2019,0,0
+Stylosanthes,World,2019,0.317,0.5691
+Sugar apple,World,2019,0,0
+Sugar beets,World,2019,0.092,0.1134
+Sugarcane,World,2019,0.0002,0.0012
+Sunflowers,World,2019,0.1311,0.1574
+Sunn hemp,World,2019,0.1369,0.5765
+Sweetpotatoes,World,2019,0.0963,0.1125
+Sword bean,World,2019,0.2403,0.7264
+Tallowtree,World,2019,0,0
+Tamarind,World,2019,0.0064,0.0064
+Taro,World,2019,0,0
+Tarragon,World,2019,0.031,0.3474
+Tea,World,2019,0,0
+Teff,World,2019,0.0485,0.0709
+Tepary bean,World,2019,0.2111,0.9679
+Thyme,World,2019,0.0346,0.1487
+Tobacco,World,2019,0.0201,0.0247
+Tomatillo,World,2019,0.0321,0.0474
+Tomatoes,World,2019,0.1444,0.3443
+Tree tomato,World,2019,0.1444,0.9841
+Tripsacum,World,2019,0,0
+Triticale,World,2019,0.408,1
+Tung nuts,World,2019,0,0
+Turmeric,World,2019,0,0
+Turnips,World,2019,0.152,0.4708
+Ulluco,World,2019,0,0
+Vanilla,World,2019,0,0
+Velvet bean,World,2019,0.0572,0.0785
+Velvet leaf,World,2019,0.1346,0.3962
+Vetch,World,2019,0.0596,0.1833
+Walnuts,World,2019,0,0
+Water dropwort,World,2019,0.0667,0.6667
+Watercress,World,2019,0.055,0.0625
+Watermelons,World,2019,0.0358,0.0383
+Wax gourd,World,2019,0.0306,0.0328
+West Indian Gherkin,World,2019,0.1108,0.9168
 Wheat,World,2019,0.2109,0.2588
-Winged bean,World,2019,0.0621,0.0713
-Yacon,World,2019,,
-Yams,World,2019,,
-"Yautia, cocoyam",World,2019,,
-Year bean,World,2019,0.2347,0.9873
-Zornia,World,2019,0.3678,0.9475
-Zucchini,World,2019,0.0884,0.2361
+Wildrice,World,2019,0,0
+Winged bean,World,2019,0.0433,0.0485
+Yacon,World,2019,0,0
+Yams,World,2019,0,0
+"Yautia, cocoyam",World,2019,0,0
+Year bean,World,2019,0.2111,0.9817
+Zornia,World,2019,0.3498,0.917
+Zucchini,World,2019,0.0482,0.1572

@@ -36,7 +36,7 @@ domain,domain_name,component,group,metric,units,useable,global_level,country_lev
 2,interdependence,faostat,production,production_global,percentage,1,1,0
 2,interdependence,faostat,food_supply,protein_supply_quantity_global,percentage,1,1,0
 3,demand,genebank_distributions,recipient_country_genebank_distributions,crop_count_recipients_distributions,percentage,1,1,1
-3,demand,varietal_release,upov_varietal_release,upov_genus_varietal_release,value,1,1,1
+3,demand,varietal_release,upov_varietal_release,upov_genus_varietal_release,value,0,1,1
 3,demand,varietal_release,upov_varietal_release,upov_species_varietal_release,value,1,1,1
 4,supply,genebank_collections,institution_country,genus_count_institution_supply,records,1,1,1
 4,supply,genebank_collections,origin_country,genus_count_origin_supply,records,1,1,1
@@ -55,7 +55,7 @@ domain,domain_name,component,group,metric,units,useable,global_level,country_lev
 5,security,accessions_sgsv,accessions_sgsv,species_accessions_sgsv,percentage,1,1,0
 5,security,equality_of_demand,gini_germplasm_distributions,crop_count_gini_recipients_distributions,value,1,1,0
 5,security,equality_of_demand,gini_germplasm_distributions,crop_count_gini_providers_distributions,value,1,1,0
-5,security,equality_of_demand,gini_upov,gini_upov_genus,value,1,1,0
+5,security,equality_of_demand,gini_upov,gini_upov_genus,value,0,1,0
 5,security,equality_of_demand,gini_upov,gini_upov_species,value,1,1,0
 5,security,equality_of_supply,gini_genebanks_institution_country,genus_count_gini_institution,value,1,1,0
 5,security,equality_of_supply,gini_genebanks_origin_country,genus_count_gini_origin,value,1,1,0
