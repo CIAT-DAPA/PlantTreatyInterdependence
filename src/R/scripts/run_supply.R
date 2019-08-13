@@ -22,8 +22,8 @@ library(ineq)
 #setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
 #setwd("/home/hsotelo/fao/R/")
 setwd("D:/ToBackup/code/planttreaty/PlantTreatyInterdependence/src/R/")
-file.countries= "D:/planttreaty/EXPORT_FINAL_COUNTRIES.csv"
-file.world= "D:/planttreaty/EXPORT_FINAL_WORLD.csv"
+file.countries= "D:/OneDrive - CGIAR/PlantTreaty/FINAL_INDICATOR/mid_exports/EXPORT_GROUP1_FINAL_COUNTRIES.csv"
+
 
 # Global variables
 conf.folder = "conf"
@@ -98,10 +98,10 @@ source("scripts/composite_index.R")
 
 data.regions= data.countries %>% select(crop, 
                           country,
-                          "2019"=year
+                          year,
+                          genus_count_origin_supply,
                           species_count_origin_supply
-                  ) %>%  rename(year = "2019")
-
+                  )
 
 
 
