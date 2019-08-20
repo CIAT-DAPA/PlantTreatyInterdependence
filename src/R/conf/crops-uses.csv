@@ -8,19 +8,20 @@ Adzuki bean,Food,Pulse
 Aeschynomene,Forage,Forage
 African eggplant,Food,Vegetable
 Agave,Fiber,Fiber
+Agave,Food,Beverage
 Agropyron,Forage,Forage
 Agrostis,Forage,Forage
 Ahipa,Food,Pulse
 Albardine,Fiber,Fiber
 Alfalfa,Forage,Forage
-Allspice,Food,Spice
+Allspice,Food,Herbs and spices
 Almonds,Food,Nut
 Alopecurus,Forage,Forage
 Alysicarpus,Forage,Forage
 Amaranth,Food,Cereal
 Andropogon,Forage,Forage
-Anise,Food,Spice
-Annato,Food,Spice
+Anise,Food,Herbs and spices
+Annato,Food,Herbs and spices
 Apple,Food,Fruit
 Apricot,Food,Fruit
 Areca nuts,Food,Nut
@@ -35,15 +36,17 @@ Atriplex,Forage,Forage
 Avocado,Food,Fruit
 Azarole,Food,Fruit
 Babaco,Food,Fruit
-Badian,Food,Spice
+Badian,Food,Herbs and spices
 Bambara bean,Food,Pulse
 Bamboo shoot,Food,Vegetable
 Bananas,Food,Fruit
 Barley,Food,Cereal
-Basil,Food,Herb
-Bay leaf,Food,Spice
+Barley,Food,Beverage
+Basil,Food,Herbs and spices
+Bay leaf,Food,Herbs and spices
 Beech nut,Food,Oil
 Beets,Food,Vegetable
+Bitter gourd,Food,Vegetable
 Black gram,Food,Pulse
 Black nightshade,Food,Vegetable
 Black salsify,Food,Vegetable
@@ -66,8 +69,8 @@ Canola,Food,Vegetable
 Capers,Food,Vegetable
 Carambola,Food,Fruit
 Carapa,Food,Oil
-Caraway,Food,Spice
-Cardamoms,Food,Spice
+Caraway,Food,Herbs and spices
+Cardamoms,Food,Herbs and spices
 Carneros Yucca,Fiber,Fiber
 Caroa,Fiber,Fiber
 Carobs,Food,Vegetable
@@ -87,28 +90,33 @@ Chestnuts,Food,Nut
 Chickpeas,Food,Pulse
 Chicle,Gum,Gum
 Chicory,Food,Vegetable
-Chillies and peppers,Food,Spice
+Chillies and peppers,Food,Herbs and spices
+Chillies and peppers,Food,Vegetable
 Chinotto,Food,Fruit
 Chontadura,Food,Oil
+Chontadura,Food,Fruit
 Chufa,Food,Roots and Tubers
-Cinnamon,Food,Spice
+Cinnamon,Food,Herbs and spices
 Citron,Food,Fruit
 Citronella,Insecticide,Insecticide
 Clovers,Forage,Forage
-Cloves,Food,Spice
-Cocoa,Food,Spice
+Cloves,Food,Herbs and spices
+Cocoa,Food,Herbs and spices
+Cocoa,Food,Stimulant
 Coconuts,Food,Oil
 Coffee,Food,Stimulant
 Common bean,Food,Pulse
-Coriander,Food,Spice
+Common bean,Food,Vegetable
+Coriander,Food,Herbs and spices
 Coronilla,Forage,Forage
 Cotton,Fiber,Fiber
+Cotton,Food,Oil
 Cowpeas,Food,Pulse
 Crambe,Food,Oil
 Cranberries,Food,Fruit
 Cress,Food,Vegetable
 Cucumbers and gherkins,Food,Vegetable
-Cumin,Food,Spice
+Cumin,Food,Herbs and spices
 Currants,Food,Fruit
 Cushaw,Food,Vegetable
 Custard apple,Food,Fruit
@@ -116,7 +124,7 @@ Dactylis,Forage,Forage
 Dates,Food,Fruit
 Desmodium,Forage,Forage
 Devil's cotton,Fiber,Fiber
-Dill,Food,Spice
+Dill,Food,Herbs and spices
 Durian,Food,Fruit
 Eggplant,Food,Vegetable
 Elderberry,Food,Fruit
@@ -124,32 +132,36 @@ Esparto,Fiber,Fiber
 Ethiopian rape,Food,Vegetable
 Faba beans,Food,Pulse
 Feijoa,Food,Fruit
-Fennel,Food,Spice
-Fenugreek,Food,Spice
+Fennel,Food,Herbs and spices
+Fenugreek,Food,Herbs and spices
 Fescue,Forage,Forage
 Fig leaf gourd,Food,Vegetable
 Figs,Food,Fruit
 Finger millet,Food,Cereal
 Fique,Fiber,Fiber
 Flax,Food,Oil
+Flax,Fiber,Fiber
 Fonio,Food,Cereal
 Foxtail millet,Food,Cereal
 Galactia,Forage,Forage
 Garlic,Food,Vegetable
 Giant cabuya,Fiber,Fiber
-Ginger,Food,Spice
+Ginger,Food,Herbs and spices
 Gooseberries,Food,Fruit
 Grapefruits,Food,Fruit
 Grapes,Food,Fruit
+Grapes,Food,Beverage
 Grasspea,Food,Pulse
 Groundnuts,Food,Pulse
+Groundnuts,Food,Oil
 Guavas,Food,Fruit
 Guayule,Gum,Gum
 Gutta-percha,Gum,Gum
 Hazelnuts,Food,Nut
 Hedysarum,Forage,Forage
 Hemp,Food,Oil
-Hops,Food,Herb
+Hemp,Narcotic,Narcotic
+Hops,Food,Herbs and spices
 Horseradish,Food,Vegetable
 Huckleberry,Food,Fruit
 Indigofera,Forage,Forage
@@ -158,7 +170,7 @@ Jackfruit,Food,Fruit
 Japanese millet,Food,Cereal
 Jelutong,Gum,Gum
 Jerusalem artichoke,Food,Roots and Tubers
-Jicama,Food,Pulse
+Jicama,Food,Roots and Tubers
 Jojoba,Food,Oil
 Jujube,Food,Fruit
 Jute,Fiber,Fiber
@@ -172,14 +184,14 @@ Kodo millet,Food,Cereal
 Kola nuts,Food,Nut
 Kumquat,Food,Fruit
 Lablab,Food,Pulse
-Lavender,Food,Herb
+Lavender,Food,Herbs and spices
 Leeks and other alliaceous vegetables,Food,Vegetable
 Lemons and limes,Food,Fruit
 Lentils,Food,Pulse
 Lespedeza,Forage,Forage
 Lettuce,Food,Vegetable
 Leucaena,Forage,Forage
-Licorice,Food,Herb
+Licorice,Food,Herbs and spices
 Lima bean,Food,Pulse
 Litchi,Food,Fruit
 Little millet,Food,Cereal
@@ -187,12 +199,15 @@ Lolium,Forage,Forage
 Longan,Food,Fruit
 Loquat,Food,Fruit
 Lotus,Forage,Forage
+Luffa,Food,Vegetable
 Lupins,Food,Pulse
 Maca,Food,Roots and Tubers
 Macadamia nut,Food,Nut
 Macroptilium,Forage,Forage
 Mahuwa,Food,Oil
 Maize,Food,Cereal
+Maize,Food,Oil
+Maize,Food,Sugar
 Malabar spinach,Food,Vegetable
 Mamey sapote,Food,Fruit
 Mammee,Food,Fruit
@@ -200,7 +215,7 @@ Mandarines,Food,Fruit
 Mango,Food,Fruit
 Mangosteen,Food,Fruit
 Maple sugar,Food,Sugar
-Marjoram,Food,Vegetable
+Marjoram,Food,Herbs and spices
 Mashua,Food,Roots and Tubers
 Mat bean,Food,Pulse
 Mate,Food,Stimulant
@@ -217,7 +232,7 @@ Neonotonia,Forage,Forage
 New Zealand flax,Fiber,Fiber
 New Zealand Spinach,Food,Vegetable
 Noog,Food,Oil
-Nutmeg,Food,Spice
+Nutmeg,Food,Herbs and spices
 Oats,Food,Cereal
 Oca,Food,Roots and Tubers
 Oil palm,Food,Oil
@@ -228,7 +243,7 @@ Onions,Food,Vegetable
 Onobrychis,Forage,Forage
 Orache,Food,Vegetable
 Oranges,Food,Fruit
-Oregano,Food,Herb
+Oregano,Food,Herbs and spices
 Ornithopus,Forage,Forage
 Papayas,Food,Fruit
 Parsley,Food,Vegetable
@@ -241,8 +256,8 @@ Pears,Food,Fruit
 Peas,Food,Pulse
 Pecan,Food,Nut
 Pepino,Food,Fruit
-Pepper,Food,Spice
-Peppermint,Food,Herb
+Pepper,Food,Herbs and spices
+Peppermint,Food,Herbs and spices
 Perilla,Food,Oil
 Persimmons,Food,Fruit
 Phalaris,Forage,Forage
@@ -259,6 +274,7 @@ Poa,Forage,Forage
 Pomegranate,Food,Fruit
 Pongamia oil,Food,Oil
 Poppies,Food,Oil
+Poppies,Narcotic,Narcotic
 Potatoes,Food,Roots and Tubers
 Prickly pear,Food,Fruit
 Proso millet,Food,Cereal
@@ -280,12 +296,12 @@ Rice (African),Food,Cereal
 Rice (Asian),Food,Cereal
 Rice bean,Food,Pulse
 Roselle,Fiber,Fiber
-Rosemary,Food,Herb
+Rosemary,Food,Herbs and spices
 "Rubber, natural",Gum,Gum
 Runner bean,Food,Pulse
 Rye,Food,Cereal
 Safflower,Food,Oil
-Saffron,Food,Spice
+Saffron,Food,Herbs and spices
 Sago palm,Food,Roots and Tubers
 Salsify,Food,Vegetable
 Salsola,Forage,Forage
@@ -303,6 +319,7 @@ Sorghum,Food,Cereal
 Sorrel,Food,Vegetable
 Soursop,Food,Fruit
 Soybeans,Food,Oil
+Soybeans,Food,Pulse
 Spider plant,Food,Vegetable
 Spinach,Food,Vegetable
 Strawberries,Food,Fruit
@@ -322,7 +339,7 @@ Tarragon,Food,Vegetable
 Tea,Food,Stimulant
 Teff,Food,Cereal
 Tepary bean,Food,Pulse
-Thyme,Food,Spice
+Thyme,Food,Herbs and spices
 Tobacco,Narcotic,Narcotic
 Tomatillo,Food,Fruit
 Tomatoes,Food,Vegetable
@@ -330,13 +347,13 @@ Tree tomato,Food,Fruit
 Tripsacum,Forage,Forage
 Triticale,Food,Cereal
 Tung nuts,Food,Oil
-Turmeric,Food,Spice
+Turmeric,Food,Herbs and spices
 Turnips,Food,Vegetable
 Ulluco,Food,Roots and Tubers
-Vanilla,Food,Spice
+Vanilla,Food,Herbs and spices
 Velvet bean,Food,Pulse
 Velvet leaf,Fiber,Fiber
-Vetch,Food,Pulse
+Vetch,Forage,Forage
 Walnuts,Food,Nut
 Water dropwort,Food,Vegetable
 Watercress,Food,Vegetable
