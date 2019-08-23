@@ -102,4 +102,51 @@ analysis.crop.index.country = function(data,countries = 230){
   tmp.data[, tmp.cols] <- tmp.data[, tmp.cols] / countries
   return(tmp.data)
 }
+
+# This function calculate the country for crop and year, it depends of the variables
+# (data.frame) data: Dataframe
+analysis.countries.count.thresholds = function(data,folder,thresholds){
+  
+  # calculating total amount by year, crop and variable
+  tmp.summary = data.frame(year = data$year, crop = data$crop)
+  tmp.summary = unique(tmp.summary)
+  
+  tmp.vars = names(data)
+  tmp.vars = tmp.vars[4:length(tmp.vars)]
+  
+  for(v in tmp.vars){
+    print(paste0("Acum ",v))
+    tmp.df = data %>%
+                group_by(year,crop) %>%
+                summarise_(.dots = setNames( paste0("sum(",v,", na.rm = T)"), paste0("global_",v)))
+    
+    tmp.summary = merge(x=tmp.summary,y=tmp.df,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = F)
+  }
+  
+  # calculating total amount by year, crop and variable
+  tmp.data = data
+  tmp.data = merge(x=tmp.data,y=tmp.summary,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = T)
+  
+  for(v in tmp.vars){
+    print(paste0("Calculating ",v))
+    # Contrib
+    tmp.df = tmp.data %>%
+      group_by(year,crop, country) %>%
+      summarise_(.dots = setNames( paste0(v,"/ global_",v), paste0("contrib_",v)))
+    
+    tmp.data = merge(x=tmp.data,y=tmp.df,by.x=c("crop","year","country"),by.y=c("crop","year","country"),all.x = T,all.y = F)
+    
+    # Cumsum
+    tmp.df = tmp.data %>%
+      arrange_(paste0("desc(contrib_",v,")")) %>%
+      group_by(year,crop, country) %>%
+      #mutate_(paste0("cumsum_",v," = cumsum(contrib_",v,")"))
+      summarise_(.dots = setNames( paste0("cumsum(contrib_",v,")"), paste0("cumsum_",v)))
+    
+    tmp.data = merge(x=tmp.data,y=tmp.df,by.x=c("crop","year","country"),by.y=c("crop","year","country"),all.x = T,all.y = F)
+  }
+  
+  write.csv(tmp.data,paste0(analysis.folder,"/data.countries.contrib.csv"), row.names = F)
+  
+}
 ##############################################

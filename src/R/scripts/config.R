@@ -30,8 +30,9 @@ conf.import.countries = function(f){
 
 # This function saves a list of crops in the database
 # (string) f: Path of file to crops into database
-conf.import.crops = function(f){
-  db_cnn = connect_db()
+# (string) cnn: Name of connection
+conf.import.crops = function(f,cnn){
+  db_cnn = connect_db(cnn)
   crops = read.csv(paste0(conf.folder, "/", f), header = T)
   print(paste0("........Crops were loaded from file ",dim(crops)[1]))
   

@@ -60,7 +60,7 @@ conf.import.metrics("variables.csv",conf.db)
 ####  02-FAOSTAT
 
 source("scripts/faostat.R")
-db_cnn = connect_db("fao")
+db_cnn = connect_db(conf.db)
 inputs.groups.query = dbSendQuery(db_cnn,"select id,name,source,url from groups")
 # Get list of groups available
 inputs.group = fetch(inputs.groups.query, n=-1)
