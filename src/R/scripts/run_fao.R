@@ -105,6 +105,8 @@ data.n = ci.normalize.full(data.filtered,"range", global =F)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
 
+data.countries = analysis.countries.count.thresholds(data = data.filtered,folder = analysis.folder,thresholds =c(0.9, 0.95))
+
 data.countries.count = analysis.countries.count(data.filtered)
 write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)
 
