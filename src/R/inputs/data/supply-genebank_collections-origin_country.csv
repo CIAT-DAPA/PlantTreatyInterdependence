@@ -7,7 +7,7 @@ Adlay,World,2019,254,248
 Adzuki bean,World,2019,103630,5313
 Aeschynomene,World,2019,2491,1038
 African eggplant,World,2019,122252,1388
-African rice,World,2019,461100,9663
+Rice (African),World,2019,461100,9663
 Agave,World,2019,738,41
 Agropyron,World,2019,3237,2201
 Agrostis,World,2019,3782,1955
@@ -29,10 +29,10 @@ Arracacha,World,2019,623,615
 Arrhenatherum,World,2019,1161,1141
 Arrowroot,World,2019,17,12
 Artichokes,World,2019,338,237
-Asian rice,World,2019,461100,432940
+Rice (Asian),World,2019,461100,432940
 Asparagus,World,2019,752,367
 Astragalus,World,2019,5696,488
-Atemoya,World,2019,1428,
+Atemoya,World,2019,1428,0
 Atriplex,World,2019,1772,626
 Avocado,World,2019,1263,1162
 Azarole,World,2019,987,40
@@ -54,7 +54,7 @@ Brachiaria,World,2019,2964,1518
 Brazil nut,World,2019,20,20
 Breadfruit,World,2019,532,291
 Buckwheat,World,2019,10353,9979
-Butter-nut,World,2019,1,
+Butter-nut,World,2019,1,0
 Butternut squash,World,2019,29769,9662
 Cabbages,World,2019,66531,18178
 Cabbages and other brassicas,World,2019,66531,58050
@@ -67,11 +67,11 @@ Candlenut,World,2019,11,5
 Canola,World,2019,66531,13848
 Capers,World,2019,710,611
 Carambola,World,2019,150,132
-Carapa,World,2019,1,
+Carapa,World,2019,1,0
 Caraway,World,2019,878,715
 Cardamoms,World,2019,156,79
 Carneros Yucca,World,2019,113,3
-Caroa,World,2019,1,
+Caroa,World,2019,1,0
 Carobs,World,2019,144,142
 Carrots,World,2019,8390,7744
 Cashews,World,2019,874,814
@@ -91,13 +91,13 @@ Chicle,World,2019,212,201
 Chicory,World,2019,2181,1931
 Chillies and peppers,World,2019,42939,36528
 Chinotto,World,2019,4844,13
-Chontadura,World,2019,5,
+Chontadura,World,2019,5,0
 Chufa,World,2019,691,29
 Cinnamon,World,2019,29,7
 Citron,World,2019,4844,126
 Citronella,World,2019,322,46
 Clovers,World,2019,92046,95287
-Cloves,World,2019,48,
+Cloves,World,2019,48,0
 Cocoa,World,2019,7401,6873
 Coconuts,World,2019,441,441
 Coffee,World,2019,8881,8571
@@ -132,13 +132,13 @@ Festuca,World,2019,27756,24135
 Fig leaf gourd,World,2019,29769,664
 Figs,World,2019,2130,1679
 Finger millet,World,2019,31641,30192
-Fique,World,2019,4,
+Fique,World,2019,4,0
 Flax,World,2019,36218,32014
 Fonio,World,2019,2879,896
 Foxtail millet,World,2019,11450,9647
 Galactia,World,2019,1076,544
 Garlic,World,2019,25337,4659
-Giant cabuya,World,2019,4,
+Giant cabuya,World,2019,4,0
 Ginger,World,2019,210,141
 Gooseberries,World,2019,6111,1139
 Grapefruits,World,2019,5044,193
@@ -285,7 +285,7 @@ Runner bean,World,2019,180615,6077
 Rye,World,2019,20328,18670
 Safflower,World,2019,14988,14502
 Saffron,World,2019,855,152
-Sago palm,World,2019,1,
+Sago palm,World,2019,1,0
 Salsify,World,2019,187,55
 Salsola,World,2019,125,24
 Sapodilla,World,2019,212,201
@@ -327,7 +327,7 @@ Tomatillo,World,2019,2290,1528
 Tomatoes,World,2019,122252,39305
 Tree tomato,World,2019,122252,333
 Tripsacum,World,2019,517,7
-Triticale,World,2019,31593,
+Triticale,World,2019,31593,0
 Tung nuts,World,2019,12,3
 Turmeric,World,2019,109,12
 Turnips,World,2019,66531,13409
@@ -343,7 +343,7 @@ Watermelons,World,2019,11082,10337
 Wax gourd,World,2019,1107,1032
 West Indian Gherkin,World,2019,29007,328
 Wheat,World,2019,662487,507049
-Wildrice,World,2019,2,
+Wildrice,World,2019,2,0
 Winged bean,World,2019,1700,1512
 Yacon,World,2019,334,331
 Yams,World,2019,10275,7257

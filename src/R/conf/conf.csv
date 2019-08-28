@@ -1,5 +1,9 @@
 name,value
-db_host,
-db_user,
-db_password,
-db_name,
+fao_db_host,
+fao_db_user,
+fao_db_password,
+fao_db_name,
+indicator_db_host,
+indicator_db_user,
+indicator_db_password,
+indicator_db_name,

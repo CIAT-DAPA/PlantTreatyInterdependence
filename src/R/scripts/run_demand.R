@@ -44,6 +44,36 @@ source("scripts/tools.R")
 ##############################################
 
 ##############################################
+# 01 - FUZZY MATCH
+
+data = read.csv(paste0(demand.folder,"/demand-crops.csv"), header = T)
+
+tmp.taxa = read.csv(paste0(conf.folder,"/crops-taxa.csv"), header = T)
+results1 = tools.fuzzy_match(data, tmp.taxa, c("crop_original","taxa"))
+results1 = merge(x=tmp.taxa,y=results1,by.x = "taxa", by.y = "taxa", all.x = F, all.y = T)
+results1 = merge(x=data,y=results1,by.x = "crop_original", by.y = "crop_original", all.x = F, all.y = T)
+write.csv(results1,paste0(demand.folder,"/demand-fixed1.csv"), row.names = F)
+
+crops = read.csv(paste0(conf.folder,"/crops.csv"), header = T)
+results2 = tools.fuzzy_match(data, crops, c("crop_original","name"))
+results2 = merge(x=data,y=results2,by.x = "crop_original", by.y = "crop_original", all.x = F, all.y = T)
+
+write.csv(results2,paste0(demand.folder,"/demand-fixed2.csv"), row.names = F)
+##############################################
+
+##############################################
+# 02 - JOIN DATABASES
+
+tmp.r = read.csv(paste0(demand.folder,"/r.csv"), header = T)
+tmp.p = read.csv(paste0(demand.folder,"/p.csv"), header = T)
+
+tmp.f = merge(x = tmp.r, y = tmp.p, by = c("crop","country","year"), all.x = T, all.y = T )
+write.csv(tmp.f,paste0(demand.folder,"/f.csv"), row.names = F)
+
+##############################################
+
+
+##############################################
 ####  06 - GINI
 source("scripts/tools.R")
 source("scripts/analysis.R")

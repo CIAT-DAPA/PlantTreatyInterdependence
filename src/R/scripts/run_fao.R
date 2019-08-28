@@ -60,7 +60,7 @@ conf.import.metrics("variables.csv",conf.db)
 ####  02-FAOSTAT
 
 source("scripts/faostat.R")
-db_cnn = connect_db("fao")
+db_cnn = connect_db(conf.db)
 inputs.groups.query = dbSendQuery(db_cnn,"select id,name,source,url from groups")
 # Get list of groups available
 inputs.group = fetch(inputs.groups.query, n=-1)
@@ -104,6 +104,8 @@ write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names 
 data.n = ci.normalize.full(data.filtered,"range", global =F)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
+
+data.countries = analysis.countries.count.thresholds(data = data.filtered,folder = analysis.folder,thresholds =c(0.9, 0.95))
 
 data.countries.count = analysis.countries.count(data.filtered)
 write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)

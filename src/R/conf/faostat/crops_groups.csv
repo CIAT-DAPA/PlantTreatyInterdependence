@@ -1,4 +1,109 @@
 Item,Item_cleaned,Metric,Useable
+Alcoholic Beverages,Alcoholic Beverages,faostat-food_supply,N
+Beer,Beer,faostat-food_supply,N
+"Beverages, Alcoholic","Beverages, Alcoholic",faostat-food_supply,N
+"Beverages, Fermented","Beverages, Fermented",faostat-food_supply,N
+Cereals - Excluding Beer,Cereals - Excluding Beer,faostat-food_supply,N
+Fruits - Excluding Wine,Fruits - Excluding Wine,faostat-food_supply,N
+Grand Total,Grand Total,faostat-food_supply,N
+Groundnuts (in Shell Eq),Groundnut,faostat-food_supply,N
+Infant food,Infant food,faostat-food_supply,N
+Miscellaneous,Miscellaneous,faostat-food_supply,N
+Molasses,Molasses,faostat-food_supply,N
+Oilcrops,Oilcrops,faostat-food_supply,N
+"Oilcrops Oil, Other","Oilcrops Oil, Other",faostat-food_supply,N
+Pulses,Pulses,faostat-food_supply,N
+Rice (Paddy Equivalent),Rice,faostat-food_supply,N
+Roots & Tuber Dry Equiv,Roots & Tuber Dry Equiv,faostat-food_supply,N
+Spices,Spices,faostat-food_supply,N
+Starchy Roots,Starchy Roots,faostat-food_supply,N
+Sugar Crops,Sugar,faostat-food_supply,N
+Sugar & Sweeteners,Sugar & Sweeteners,faostat-food_supply,N
+Sugar non-centrifugal,Sugar non-centrifugal,faostat-food_supply,N
+"Sugar, Raw Equivalent","Sugar, Raw Equivalent",faostat-food_supply,N
+"Sugar, Refined Equiv","Sugar, Refined Equiv",faostat-food_supply,N
+Vegetable Oils,Vegetable Oils,faostat-food_supply,N
+Vegetables,Vegetables,faostat-food_supply,N
+Vegetal Products,Vegetal Products,faostat-food_supply,N
+Apples and products,Apples,faostat-food_supply,Y
+Bananas,Bananas,faostat-food_supply,Y
+Barley and products,Barley,faostat-food_supply,Y
+Beans,Beans,faostat-food_supply,Y
+Cassava and products,Cassava,faostat-food_supply,Y
+"Cereals, Other","Cereals, Other",faostat-food_supply,Y
+Pimento,Chillies and peppers,faostat-food_supply,Y
+"Citrus, Other","Citrus, Other",faostat-food_supply,Y
+Cloves,Cloves,faostat-food_supply,Y
+Cocoa Beans and products,Cocoa,faostat-food_supply,Y
+Coconut Oil,Coconut,faostat-food_supply,Y
+Coconuts - Incl Copra,Coconut,faostat-food_supply,Y
+Coffee and products,Coffee,faostat-food_supply,Y
+Cottonseed Oil,Cotton,faostat-food_supply,Y
+Dates,Dates,faostat-food_supply,Y
+"Fruits, Other","Fruits, Other",faostat-food_supply,Y
+Grapefruit and products,Grapefruit,faostat-food_supply,Y
+Grapes and products (excl wine),Grapes,faostat-food_supply,Y
+Wine,Grapes,faostat-food_supply,Y
+Groundnut Oil,Groundnut,faostat-food_supply,Y
+Groundnuts (Shelled Eq),Groundnut,faostat-food_supply,Y
+"Lemons, Limes and products",Lemons and limes,faostat-food_supply,Y
+Maize and products,Maize,faostat-food_supply,Y
+Maize Germ Oil,Maize,faostat-food_supply,Y
+Millet and products,Millet,faostat-food_supply,Y
+Nuts and products,Nuts,faostat-food_supply,Y
+Oats,Oats,faostat-food_supply,Y
+Palm Oil,Oil palm,faostat-food_supply,Y
+Palmkernel Oil,Oil palm,faostat-food_supply,Y
+"Oilcrops, Other","Oilcrops, Other",faostat-food_supply,Y
+Olive Oil,Olive,faostat-food_supply,Y
+Olives (including preserved),Olive,faostat-food_supply,Y
+Onions,Onions,faostat-food_supply,Y
+"Oranges, Mandarines",Oranges and mandarines,faostat-food_supply,Y
+Peas,Peas,faostat-food_supply,Y
+Pepper,Pepper,faostat-food_supply,Y
+Pineapples and products,Pineapples,faostat-food_supply,Y
+Plantains,Plantains,faostat-food_supply,Y
+Potatoes and products,Potatoes,faostat-food_supply,Y
+"Pulses, Other and products","Pulses, Other",faostat-food_supply,Y
+Rape and Mustard Oil,Rapeseed and Mustard,faostat-food_supply,Y
+Rice (Milled Equivalent),Rice,faostat-food_supply,Y
+Ricebran Oil,Rice,faostat-food_supply,Y
+"Roots, Other","Roots, Other",faostat-food_supply,Y
+Rye and products,Rye,faostat-food_supply,Y
+Sesame seed,Sesame,faostat-food_supply,Y
+Sesameseed Oil,Sesame,faostat-food_supply,Y
+Sorghum and products,Sorghum,faostat-food_supply,Y
+Soyabean Oil,Soybean,faostat-food_supply,Y
+Soyabeans,Soybean,faostat-food_supply,Y
+"Spices, Other","Spices, Other",faostat-food_supply,Y
+Stimulants,Stimulants,faostat-food_supply,Y
+Sugar beet,Sugar beet,faostat-food_supply,Y
+Sugar cane,Sugarcane,faostat-food_supply,Y
+Sunflower seed,Sunflower,faostat-food_supply,Y
+Sunflowerseed Oil,Sunflower,faostat-food_supply,Y
+Sugar (Raw Equivalent),"Sweeteners, Other",faostat-food_supply,Y
+"Sweeteners, Other","Sweeteners, Other",faostat-food_supply,Y
+Sweet potatoes,Sweetpotato,faostat-food_supply,Y
+Tea (including mate),Tea and mate,faostat-food_supply,Y
+Tomatoes and products,Tomato,faostat-food_supply,Y
+Treenuts,Treenuts,faostat-food_supply,Y
+"Vegetables, Other","Vegetables, Other",faostat-food_supply,Y
+Wheat and products,Wheat,faostat-food_supply,Y
+Yams,Yams,faostat-food_supply,Y
+"Cereals,Total","Cereals,Total",faostat-crops,N
+"Citrus Fruit,Total",Citrus,faostat-crops,N
+"Coarse Grain, Total","Coarse Grain, Total",faostat-crops,N
+Fibre Crops Primary,Fibre Crops Primary,faostat-crops,N
+Fruit Primary,Fruit Primary,faostat-crops,N
+"Grain, mixed","Grain, mixed",faostat-crops,N
+"Oilcrops, Cake Equivalent","Oilcrops, Cake Equivalent",faostat-crops,N
+"Oilcrops, Oil Equivalent","Oilcrops, Oil Equivalent",faostat-crops,N
+"Pulses,Total","Pulses,Total",faostat-crops,N
+"Rice, paddy",Rice,faostat-crops,N
+"Roots and Tubers,Total","Roots and Tubers,Total",faostat-crops,N
+"Treenuts,Total","Treenuts,Total",faostat-crops,N
+Vegetables Primary,Vegetables Primary,faostat-crops,N
+"Vegetables, leguminous nes","Vegetables, leguminous nes",faostat-crops,N
 Manila fibre (abaca),Abaca,faostat-crops,Y
 Agave fibres nes,Agave fibres nes,faostat-crops,Y
 "Almonds, with shell",Almonds,faostat-crops,Y
@@ -31,7 +136,6 @@ Cassava,Cassava,faostat-crops,Y
 Cassava leaves,Cassava,faostat-crops,Y
 Castor oil seed,Castor bean,faostat-crops,Y
 "Cereals, nes","Cereals, nes",faostat-crops,Y
-"Cereals,Total","Cereals,Total",faostat-crops,N
 Cherries,Cherries,faostat-crops,Y
 "Cherries, sour",Cherries,faostat-crops,Y
 Chestnut,Chestnut,faostat-crops,Y
@@ -39,10 +143,8 @@ Chick peas,Chickpeas,faostat-crops,Y
 "Chillies and peppers, dry",Chillies and peppers,faostat-crops,Y
 "Chillies and peppers, green",Chillies and peppers,faostat-crops,Y
 Cinnamon (canella),Cinnamon,faostat-crops,Y
-"Citrus Fruit,Total",Citrus,faostat-crops,N
 "Fruit, citrus nes","Citrus, Other",faostat-crops,Y
 Cloves,Cloves,faostat-crops,Y
-"Coarse Grain, Total","Coarse Grain, Total",faostat-crops,N
 "Cocoa, beans",Cocoa,faostat-crops,Y
 Coconuts,Coconut,faostat-crops,Y
 Coir,Coconut,faostat-crops,Y
@@ -58,12 +160,10 @@ Dates,Dates,faostat-crops,Y
 Eggplants (aubergines),Eggplants,faostat-crops,Y
 "Broad beans, horse beans, dry",Faba beans,faostat-crops,Y
 Fibre crops nes,Fibre crops nes,faostat-crops,Y
-Fibre Crops Primary,Fibre Crops Primary,faostat-crops,N
 Figs,Figs,faostat-crops,Y
 Flax fibre and tow,Flax,faostat-crops,Y
 Linseed,Flax,faostat-crops,Y
 Fonio,Fonio,faostat-crops,Y
-Fruit Primary,Fruit Primary,faostat-crops,N
 "Fruit, fresh nes","Fruit, fresh nes",faostat-crops,Y
 "Fruit, pome nes","Fruit, pome nes",faostat-crops,Y
 "Fruit, stone nes","Fruit, stone nes",faostat-crops,Y
@@ -71,7 +171,6 @@ Fruit Primary,Fruit Primary,faostat-crops,N
 Garlic,Garlic,faostat-crops,Y
 Ginger,Ginger,faostat-crops,Y
 Gooseberries,Gooseberries,faostat-crops,Y
-"Grain, mixed","Grain, mixed",faostat-crops,N
 Grapefruit (inc. pomelos),Grapefruit,faostat-crops,Y
 Grapes,Grapes,faostat-crops,Y
 "Groundnuts, with shell",Groundnut,faostat-crops,Y
@@ -101,15 +200,12 @@ Maté,Mate,faostat-crops,Y
 "Melons, other (inc.cantaloupes)",Melons,faostat-crops,Y
 Melonseed,Melons,faostat-crops,Y
 Millet,Millet,faostat-crops,Y
-Mushrooms and truffles,Mushrooms and truffles,faostat-crops,N
 "Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms",faostat-crops,Y
 "Nuts, nes","Nuts, nes",faostat-crops,Y
 Oats,Oats,faostat-crops,Y
 Oil palm fruit,Oil palm,faostat-crops,Y
 "Oil, palm",Oil palm,faostat-crops,Y
 Palm kernels,Oil palm,faostat-crops,Y
-"Oilcrops, Cake Equivalent","Oilcrops, Cake Equivalent",faostat-crops,N
-"Oilcrops, Oil Equivalent","Oilcrops, Oil Equivalent",faostat-crops,N
 Oilseeds nes,Oilseeds nes,faostat-crops,Y
 Okra,Okra,faostat-crops,Y
 Olives,Olive,faostat-crops,Y
@@ -133,7 +229,6 @@ Plums and sloes,Plums,faostat-crops,Y
 Poppy seed,Poppy,faostat-crops,Y
 Potatoes,Potatoes,faostat-crops,Y
 "Pulses, nes","Pulses, nes",faostat-crops,Y
-"Pulses,Total","Pulses,Total",faostat-crops,N
 "Pumpkins, squash and gourds","Pumpkins, squash and gourds",faostat-crops,Y
 "Pyrethrum, dried",Pyrethrum,faostat-crops,Y
 Quinces,Quinces,faostat-crops,Y
@@ -142,10 +237,8 @@ Ramie,Ramie,faostat-crops,Y
 Mustard seed,Rapeseed and Mustard,faostat-crops,Y
 Rapeseed,Rapeseed and Mustard,faostat-crops,Y
 Raspberries,Raspberries,faostat-crops,Y
-"Rice, paddy",Rice,faostat-crops,N
 Cereals (Rice Milled Eqv),Rice,faostat-crops,Y
 "Roots and tubers, nes","Roots and tubers, nes",faostat-crops,Y
-"Roots and Tubers,Total","Roots and Tubers,Total",faostat-crops,N
 "Rubber, natural","Rubber, natural",faostat-crops,Y
 Rye,Rye,faostat-crops,Y
 Safflower seed,Safflower,faostat-crops,Y
@@ -166,143 +259,39 @@ Taro (cocoyam),Taro,faostat-crops,Y
 Tea,Tea,faostat-crops,Y
 "Tobacco, unmanufactured",Tobacco,faostat-crops,Y
 Tomatoes,Tomato,faostat-crops,Y
-"Treenuts,Total","Treenuts,Total",faostat-crops,N
 Triticale,Triticale,faostat-crops,Y
 Tung nuts,Tung,faostat-crops,Y
 Vanilla,Vanilla,faostat-crops,Y
-Vegetables Primary,Vegetables Primary,faostat-crops,N
 "Vegetables, fresh nes","Vegetables, fresh nes",faostat-crops,Y
-"Vegetables, leguminous nes","Vegetables, leguminous nes",faostat-crops,N
 Vetches,Vetches,faostat-crops,Y
 "Walnuts, with shell",Walnuts,faostat-crops,Y
 Watermelons,Watermelons,faostat-crops,Y
 Wheat,Wheat,faostat-crops,Y
 Yams,Yams,faostat-crops,Y
 Yautia (cocoyam),Yautia cocoyam,faostat-crops,Y
-Manila fibre (abaca),Abaca,faostat-crops_lives_products,Y
 "Agricult.Products,Total","Agricult.Products,Total",faostat-crops_lives_products,N
-Alfalfa meal and pellets,Alfalfa,faostat-crops_lives_products,Y
-Almonds shelled,Almonds,faostat-crops_lives_products,Y
-Animal fats,Animal fats,faostat-crops_lives_products,N
-Animal Oil+Fat+Grs,Animal Oil+Fat+Grs,faostat-crops_lives_products,N
-Animal Vegetable Oil,Animal Vegetable Oil,faostat-crops_lives_products,N
-"Anise, badian, fennel, coriander","Anise, badian, fennel, coriander",faostat-crops_lives_products,Y
-Apples,Apples,faostat-crops_lives_products,Y
-Apricots,Apricots,faostat-crops_lives_products,Y
-"Apricots, dry",Apricots,faostat-crops_lives_products,Y
-Artichokes,Artichokes,faostat-crops_lives_products,Y
-Asparagus,Asparagus,faostat-crops_lives_products,Y
-Avocados,Avocados,faostat-crops_lives_products,Y
-Bacon and ham,Bacon and ham,faostat-crops_lives_products,N
-Bambara beans,Bambara beans,faostat-crops_lives_products,Y
-Bananas,Bananas,faostat-crops_lives_products,Y
 Bananas and plantains,Bananas and plantains,faostat-crops_lives_products,N
-Barley,Barley,faostat-crops_lives_products,Y
-"Barley, pearled",Barley,faostat-crops_lives_products,Y
-Beer of barley,Barley,faostat-crops_lives_products,Y
-"Beans, dry",Beans,faostat-crops_lives_products,Y
-"Beans, green",Beans,faostat-crops_lives_products,Y
 Beer,Beer,faostat-crops_lives_products,N
-Beeswax,Beeswax,faostat-crops_lives_products,N
-Beet pulp,Beets,faostat-crops_lives_products,Y
 Beverages,Beverages,faostat-crops_lives_products,N
 "Beverages, distilled alcoholic","Beverages, distilled alcoholic",faostat-crops_lives_products,N
 "Beverages, non alcoholic","Beverages, non alcoholic",faostat-crops_lives_products,N
 Beverages+Tobacco,Beverages+Tobacco,faostat-crops_lives_products,N
-Blueberries,Blueberries,faostat-crops_lives_products,Y
-Bovine Meat,Bovine Meat,faostat-crops_lives_products,N
-"Brazil nuts, shelled",Brazil nuts,faostat-crops_lives_products,Y
 Bread,Bread,faostat-crops_lives_products,N
-"Bran, buckwheat",Buckwheat,faostat-crops_lives_products,Y
-Buckwheat,Buckwheat,faostat-crops_lives_products,Y
-Butter,Butter,faostat-crops_lives_products,N
-"Butter, cow milk","Butter, cow milk",faostat-crops_lives_products,N
-"Buttermilk, curdled, acidified milk","Buttermilk, curdled, acidified milk",faostat-crops_lives_products,N
-Cabbages and other brassicas,Cabbages and other brassicas,faostat-crops_lives_products,Y
-Cauliflowers and broccoli,Cabbages and other brassicas,faostat-crops_lives_products,Y
-Canary seed,Canary seed,faostat-crops_lives_products,Y
-Canned Meat nes,Canned Meat nes,faostat-crops_lives_products,N
-Carrots and turnips,Carrots and turnips,faostat-crops_lives_products,Y
-"Cashew nuts, shelled",Cashew,faostat-crops_lives_products,Y
-"Cashew nuts, with shell",Cashew,faostat-crops_lives_products,Y
-Cashewapple,Cashew,faostat-crops_lives_products,Y
-Cassava,Cassava,faostat-crops_lives_products,Y
-Cassava dried,Cassava,faostat-crops_lives_products,Y
-Cassava Equivalent,Cassava,faostat-crops_lives_products,Y
-"Starch, cassava",Cassava,faostat-crops_lives_products,Y
-"Oil, castor beans",Castor bean,faostat-crops_lives_products,Y
+"Cashew nuts, with shell",Cashew,faostat-crops_lives_products,N
 "Cereal preparations, nes","Cereal preparations, nes",faostat-crops_lives_products,N
 Cereals,Cereals,faostat-crops_lives_products,N
 Cereals and Preparations,Cereals and Preparations,faostat-crops_lives_products,N
 "Cereals, breakfast","Cereals, breakfast",faostat-crops_lives_products,N
-Cheese and Curd,Cheese and Curd,faostat-crops_lives_products,N
-"Cheese, processed","Cheese, processed",faostat-crops_lives_products,N
-"Cheese, sheep milk","Cheese, sheep milk",faostat-crops_lives_products,N
-"Cheese, whole cow milk","Cheese, whole cow milk",faostat-crops_lives_products,N
-Cherries,Cherries,faostat-crops_lives_products,Y
-"Cherries, sour",Cherries,faostat-crops_lives_products,Y
-Chestnut,Chestnut,faostat-crops_lives_products,Y
-Chick peas,Chickpeas,faostat-crops_lives_products,Y
-"Chillies and peppers, dry",Chillies and peppers,faostat-crops_lives_products,Y
-"Chillies and peppers, green",Chillies and peppers,faostat-crops_lives_products,Y
 Cider etc,Cider etc,faostat-crops_lives_products,N
 Cigarettes,Cigarettes,faostat-crops_lives_products,N
 "Cigars, cheroots","Cigars, cheroots",faostat-crops_lives_products,N
-Cinnamon (canella),Cinnamon,faostat-crops_lives_products,Y
-"Oil, citronella",Citronella,faostat-crops_lives_products,Y
 "Juice, citrus, concentrated",Citrus,faostat-crops_lives_products,N
 "Juice, citrus, single strength",Citrus,faostat-crops_lives_products,N
-Oth Citrus Frt,"Citrus, Other",faostat-crops_lives_products,Y
-"Forage and silage, clover",Clover,faostat-crops_lives_products,Y
-Cloves,Cloves,faostat-crops_lives_products,Y
-Chocolate products nes,Cocoa,faostat-crops_lives_products,Y
-"Cocoa, beans",Cocoa,faostat-crops_lives_products,Y
-"Cocoa, butter",Cocoa,faostat-crops_lives_products,Y
-"Cocoa, paste",Cocoa,faostat-crops_lives_products,Y
-"Cocoa, powder & cake",Cocoa,faostat-crops_lives_products,Y
-Coconuts,Coconut,faostat-crops_lives_products,Y
-"Coconuts, desiccated",Coconut,faostat-crops_lives_products,Y
-"Oil, coconut (copra)",Coconut,faostat-crops_lives_products,Y
-"Cake, copra",Coconut,faostat-crops_lives_products,Y
-Copra,Coconut,faostat-crops_lives_products,Y
-"Cocoons, unreelable & waste","Cocoons, unreelable & waste",faostat-crops_lives_products,N
-Coffee Green+Roast,Coffee,faostat-crops_lives_products,Y
-"Coffee, extracts",Coffee,faostat-crops_lives_products,Y
-"Coffee, green",Coffee,faostat-crops_lives_products,Y
-"Coffee, husks and skins",Coffee,faostat-crops_lives_products,Y
-"Coffee, roasted",Coffee,faostat-crops_lives_products,Y
-"Coffee, substitutes containing coffee",Coffee,faostat-crops_lives_products,Y
 Coffee+Tea+Cocoa+Sp,Coffee+Tea+Cocoa+Sp,faostat-crops_lives_products,N
-"Cake, cottonseed",Cotton,faostat-crops_lives_products,Y
-Cotton lint,Cotton,faostat-crops_lives_products,Y
-Cotton linter,Cotton,faostat-crops_lives_products,Y
-Cotton waste,Cotton,faostat-crops_lives_products,Y
-"Cotton, carded, combed",Cotton,faostat-crops_lives_products,Y
-Cottonseed,Cotton,faostat-crops_lives_products,Y
-"Oil, cottonseed",Cotton,faostat-crops_lives_products,Y
-Cranberries,Cranberries,faostat-crops_lives_products,Y
-Cream fresh,Cream fresh,faostat-crops_lives_products,N
 Crude materials,Crude materials,faostat-crops_lives_products,N
 Crude Materials -Ex2,Crude Materials -Ex2,faostat-crops_lives_products,N
 Crude Materials nes,Crude Materials nes,faostat-crops_lives_products,N
-Cucumbers and gherkins,Cucumbers and gherkins,faostat-crops_lives_products,Y
-Currants,Currants,faostat-crops_lives_products,Y
-Dairy Products+Eggs,Dairy Products+Eggs,faostat-crops_lives_products,N
-Dates,Dates,faostat-crops_lives_products,Y
 "Dregs from brewing, distillation","Dregs from brewing, distillation",faostat-crops_lives_products,N
-Eggplants (aubergines),Eggplants,faostat-crops_lives_products,Y
-Eggs in The Shell,Eggs in The Shell,faostat-crops_lives_products,N
-"Eggs Liquid,Dried","Eggs Liquid,Dried",faostat-crops_lives_products,N
-"Eggs, dried","Eggs, dried",faostat-crops_lives_products,N
-"Eggs, hen, in shell","Eggs, hen, in shell",faostat-crops_lives_products,N
-"Eggs, liquid","Eggs, liquid",faostat-crops_lives_products,N
-"Eggs, other bird, in shell","Eggs, other bird, in shell",faostat-crops_lives_products,N
-"Broad beans, horse beans, dry",Faba beans,faostat-crops_lives_products,Y
-"Fat, camels","Fat, camels",faostat-crops_lives_products,N
-"Fat, cattle","Fat, cattle",faostat-crops_lives_products,N
-"Fat, liver prepared (foie gras)","Fat, liver prepared (foie gras)",faostat-crops_lives_products,N
-"Fat, nes, prepared","Fat, nes, prepared",faostat-crops_lives_products,N
-"Fat, pigs","Fat, pigs",faostat-crops_lives_products,N
 Fatty acids,Fatty acids,faostat-crops_lives_products,N
 Fatty substance residues,Fatty substance residues,faostat-crops_lives_products,N
 "Feed and meal, gluten","Feed and meal, gluten",faostat-crops_lives_products,N
@@ -311,23 +300,11 @@ Feed supplements,Feed supplements,faostat-crops_lives_products,N
 "Feed, compound, nes","Feed, compound, nes",faostat-crops_lives_products,N
 "Feed, pulp of fruit","Feed, pulp of fruit",faostat-crops_lives_products,N
 "Feed, vegetable products nes","Feed, vegetable products nes",faostat-crops_lives_products,N
-Figs,Figs,faostat-crops_lives_products,Y
-Figs dried,Figs,faostat-crops_lives_products,Y
 Fixed Vegetable Oils,Fixed Vegetable Oils,faostat-crops_lives_products,N
-Flax Fib+Tow+W,Flax,faostat-crops_lives_products,Y
-Flax fibre and tow,Flax,faostat-crops_lives_products,Y
-Flax fibre raw,Flax,faostat-crops_lives_products,Y
-Flax tow waste,Flax,faostat-crops_lives_products,Y
-"Cake, linseed",Flax,faostat-crops_lives_products,Y
-Linseed,Flax,faostat-crops_lives_products,Y
-"Oil, linseed",Flax,faostat-crops_lives_products,Y
 "Flour, cereals","Flour, cereals",faostat-crops_lives_products,N
 "Flour, mixed grain","Flour, mixed grain",faostat-crops_lives_products,N
 "Flour, roots and tubers nes","Flour, roots and tubers nes",faostat-crops_lives_products,N
 Fodder & Feeding stuff,Fodder & Feeding stuff,faostat-crops_lives_products,N
-"Bran, fonio",Fonio,faostat-crops_lives_products,Y
-"Flour, fonio",Fonio,faostat-crops_lives_products,Y
-Fonio,Fonio,faostat-crops_lives_products,Y
 Food and Animals,Food and Animals,faostat-crops_lives_products,N
 Food Excl Fish,Food Excl Fish,faostat-crops_lives_products,N
 Food prep nes,Food prep nes,faostat-crops_lives_products,N
@@ -339,62 +316,173 @@ Forage products,Forage products,faostat-crops_lives_products,N
 "Fructose and syrup, other","Fructose and syrup, other",faostat-crops_lives_products,N
 Fruit and Vegetables,Fruit and Vegetables,faostat-crops_lives_products,N
 "Fruit, cooked, homogenized preparations","Fruit, cooked, homogenized preparations",faostat-crops_lives_products,N
+"Fruit, prepared nes","Fruit, prepared nes",faostat-crops_lives_products,N
+Glucose and dextrose,Glucose and dextrose,faostat-crops_lives_products,N
+"Grain, mixed","Grain, mixed",faostat-crops_lives_products,N
+Groundnuts Total Shelled,Groundnut,faostat-crops_lives_products,N
+"Hay (clover, lucerne,etc)","Hay (clover, lucerne,etc)",faostat-crops_lives_products,N
+Hay (unspecified),Hay (unspecified),faostat-crops_lives_products,N
+Infant food,Infant food,faostat-crops_lives_products,N
+"Juice, fruit nes","Juice, fruit nes",faostat-crops_lives_products,N
+Kapokseed in shell,Kapok,faostat-crops_lives_products,N
+Malt,Malt,faostat-crops_lives_products,N
+"Margarine, liquid","Margarine, liquid",faostat-crops_lives_products,N
+"Margarine, short","Margarine, short",faostat-crops_lives_products,N
+Miscellaneous Food,Miscellaneous Food,faostat-crops_lives_products,N
+Mixes and doughs,Mixes and doughs,faostat-crops_lives_products,N
+Molasses,Molasses,faostat-crops_lives_products,N
+"Nuts, prepared (exc. groundnuts)","Nuts, prepared (exc. groundnuts)",faostat-crops_lives_products,N
+"Oil, boiled etc","Oil, boiled etc",faostat-crops_lives_products,N
+"Oil, essential nes","Oil, essential nes",faostat-crops_lives_products,N
+"Oil, vegetable origin nes","Oil, vegetable origin nes",faostat-crops_lives_products,N
+Oilseed Cake Meal,Oilseed Cake Meal,faostat-crops_lives_products,N
+Oilseed Cake nes,Oilseed Cake nes,faostat-crops_lives_products,N
+Oilseeds,Oilseeds,faostat-crops_lives_products,N
+Pastry,Pastry,faostat-crops_lives_products,N
+Pet food,Pet food,faostat-crops_lives_products,N
+Rice - total  (Rice milled equivalent),Rice,faostat-crops_lives_products,N
+Straw husks,Straw husks,faostat-crops_lives_products,N
+Sugar and Honey,Sugar,faostat-crops_lives_products,N
+Sugar confectionery,Sugar confectionery,faostat-crops_lives_products,N
+Sugar non-centrifugal,Sugar non-centrifugal,faostat-crops_lives_products,N
+Sugar Raw Centrifugal,Sugar Raw Centrifugal,faostat-crops_lives_products,N
+Sugar refined,Sugar refined,faostat-crops_lives_products,N
+"Sugar, nes","Sugar, nes",faostat-crops_lives_products,N
+"Sugar,Total (Raw Equiv.)","Sugar,Total (Raw Equiv.)",faostat-crops_lives_products,N
+Textile Fibres,Textile Fibres,faostat-crops_lives_products,N
+Total Merchandise Trade,Total Merchandise Trade,faostat-crops_lives_products,N
+Vegetable tallow,Vegetable tallow,faostat-crops_lives_products,N
+Vegetables in vinegar,Vegetables in vinegar,faostat-crops_lives_products,N
+"Vegetables, canned nes","Vegetables, canned nes",faostat-crops_lives_products,N
+"Vegetables, dehydrated","Vegetables, dehydrated",faostat-crops_lives_products,N
+"Vegetables, dried nes","Vegetables, dried nes",faostat-crops_lives_products,N
+"Vegetables, fresh or dried products nes","Vegetables, fresh or dried products nes",faostat-crops_lives_products,N
+"Vegetables, frozen","Vegetables, frozen",faostat-crops_lives_products,N
+"Vegetables, homogenized preparations","Vegetables, homogenized preparations",faostat-crops_lives_products,N
+"Vegetables, preserved nes","Vegetables, preserved nes",faostat-crops_lives_products,N
+"Vegetables, preserved, frozen","Vegetables, preserved, frozen",faostat-crops_lives_products,N
+"Vegetables, temporarily preserved","Vegetables, temporarily preserved",faostat-crops_lives_products,N
+Vermouths & similar,Vermouths & similar,faostat-crops_lives_products,N
+Vitamins,Vitamins,faostat-crops_lives_products,N
+Wafers,Wafers,faostat-crops_lives_products,N
+"Walnuts, with shell",Walnuts,faostat-crops_lives_products,N
+"Waters,ice etc","Waters,ice etc",faostat-crops_lives_products,N
+Waxes vegetable,Waxes vegetable,faostat-crops_lives_products,N
+Manila fibre (abaca),Abaca,faostat-crops_lives_products,Y
+Alfalfa meal and pellets,Alfalfa,faostat-crops_lives_products,Y
+Almonds shelled,Almonds,faostat-crops_lives_products,Y
+"Anise, badian, fennel, coriander","Anise, badian, fennel, coriander",faostat-crops_lives_products,Y
+Apples,Apples,faostat-crops_lives_products,Y
+Apricots,Apricots,faostat-crops_lives_products,Y
+"Apricots, dry",Apricots,faostat-crops_lives_products,Y
+Artichokes,Artichokes,faostat-crops_lives_products,Y
+Asparagus,Asparagus,faostat-crops_lives_products,Y
+Avocados,Avocados,faostat-crops_lives_products,Y
+Bambara beans,Bambara beans,faostat-crops_lives_products,Y
+Bananas,Bananas,faostat-crops_lives_products,Y
+Barley,Barley,faostat-crops_lives_products,Y
+"Barley, pearled",Barley,faostat-crops_lives_products,Y
+Beer of barley,Barley,faostat-crops_lives_products,Y
+"Beans, dry",Beans,faostat-crops_lives_products,Y
+"Beans, green",Beans,faostat-crops_lives_products,Y
+Beet pulp,Beets,faostat-crops_lives_products,Y
+Blueberries,Blueberries,faostat-crops_lives_products,Y
+"Brazil nuts, shelled",Brazil nuts,faostat-crops_lives_products,Y
+"Bran, buckwheat",Buckwheat,faostat-crops_lives_products,Y
+Buckwheat,Buckwheat,faostat-crops_lives_products,Y
+Cabbages and other brassicas,Cabbages and other brassicas,faostat-crops_lives_products,Y
+Cauliflowers and broccoli,Cabbages and other brassicas,faostat-crops_lives_products,Y
+Canary seed,Canary seed,faostat-crops_lives_products,Y
+Carrots and turnips,Carrots and turnips,faostat-crops_lives_products,Y
+"Cashew nuts, shelled",Cashew,faostat-crops_lives_products,Y
+Cashewapple,Cashew,faostat-crops_lives_products,Y
+Cassava,Cassava,faostat-crops_lives_products,Y
+Cassava dried,Cassava,faostat-crops_lives_products,Y
+Cassava Equivalent,Cassava,faostat-crops_lives_products,Y
+"Starch, cassava",Cassava,faostat-crops_lives_products,Y
+"Oil, castor beans",Castor bean,faostat-crops_lives_products,Y
+Cherries,Cherries,faostat-crops_lives_products,Y
+"Cherries, sour",Cherries,faostat-crops_lives_products,Y
+Chestnut,Chestnut,faostat-crops_lives_products,Y
+Chick peas,Chickpeas,faostat-crops_lives_products,Y
+"Chillies and peppers, dry",Chillies and peppers,faostat-crops_lives_products,Y
+"Chillies and peppers, green",Chillies and peppers,faostat-crops_lives_products,Y
+Cinnamon (canella),Cinnamon,faostat-crops_lives_products,Y
+"Oil, citronella",Citronella,faostat-crops_lives_products,Y
+Oth Citrus Frt,"Citrus, Other",faostat-crops_lives_products,Y
+"Forage and silage, clover",Clover,faostat-crops_lives_products,Y
+Cloves,Cloves,faostat-crops_lives_products,Y
+Chocolate products nes,Cocoa,faostat-crops_lives_products,Y
+"Cocoa, beans",Cocoa,faostat-crops_lives_products,Y
+"Cocoa, butter",Cocoa,faostat-crops_lives_products,Y
+"Cocoa, paste",Cocoa,faostat-crops_lives_products,Y
+"Cocoa, powder & cake",Cocoa,faostat-crops_lives_products,Y
+"Cake, copra",Coconut,faostat-crops_lives_products,Y
+Coconuts,Coconut,faostat-crops_lives_products,Y
+"Coconuts, desiccated",Coconut,faostat-crops_lives_products,Y
+Copra,Coconut,faostat-crops_lives_products,Y
+"Oil, coconut (copra)",Coconut,faostat-crops_lives_products,Y
+Coffee Green+Roast,Coffee,faostat-crops_lives_products,Y
+"Coffee, extracts",Coffee,faostat-crops_lives_products,Y
+"Coffee, green",Coffee,faostat-crops_lives_products,Y
+"Coffee, husks and skins",Coffee,faostat-crops_lives_products,Y
+"Coffee, roasted",Coffee,faostat-crops_lives_products,Y
+"Coffee, substitutes containing coffee",Coffee,faostat-crops_lives_products,Y
+"Cake, cottonseed",Cotton,faostat-crops_lives_products,Y
+Cotton lint,Cotton,faostat-crops_lives_products,Y
+Cotton linter,Cotton,faostat-crops_lives_products,Y
+Cotton waste,Cotton,faostat-crops_lives_products,Y
+"Cotton, carded, combed",Cotton,faostat-crops_lives_products,Y
+Cottonseed,Cotton,faostat-crops_lives_products,Y
+"Oil, cottonseed",Cotton,faostat-crops_lives_products,Y
+Cranberries,Cranberries,faostat-crops_lives_products,Y
+Cucumbers and gherkins,Cucumbers and gherkins,faostat-crops_lives_products,Y
+Currants,Currants,faostat-crops_lives_products,Y
+Dates,Dates,faostat-crops_lives_products,Y
+Eggplants (aubergines),Eggplants,faostat-crops_lives_products,Y
+"Broad beans, horse beans, dry",Faba beans,faostat-crops_lives_products,Y
+Figs,Figs,faostat-crops_lives_products,Y
+Figs dried,Figs,faostat-crops_lives_products,Y
+"Cake, linseed",Flax,faostat-crops_lives_products,Y
+Flax Fib+Tow+W,Flax,faostat-crops_lives_products,Y
+Flax fibre and tow,Flax,faostat-crops_lives_products,Y
+Flax fibre raw,Flax,faostat-crops_lives_products,Y
+Flax tow waste,Flax,faostat-crops_lives_products,Y
+Linseed,Flax,faostat-crops_lives_products,Y
+"Oil, linseed",Flax,faostat-crops_lives_products,Y
+"Bran, fonio",Fonio,faostat-crops_lives_products,Y
+"Flour, fonio",Fonio,faostat-crops_lives_products,Y
+Fonio,Fonio,faostat-crops_lives_products,Y
 "Fruit, dried nes","Fruit, dried nes",faostat-crops_lives_products,Y
 "Fruit, fresh nes","Fruit, fresh nes",faostat-crops_lives_products,Y
-"Fruit, prepared nes","Fruit, prepared nes",faostat-crops_lives_products,N
 "Fruit, tropical fresh nes","Fruit, tropical fresh nes",faostat-crops_lives_products,Y
 Garlic,Garlic,faostat-crops_lives_products,Y
-"Ghee, of buffalo milk","Ghee, of buffalo milk",faostat-crops_lives_products,N
 Ginger,Ginger,faostat-crops_lives_products,Y
-Glucose and dextrose,Glucose and dextrose,faostat-crops_lives_products,N
 Gooseberries,Gooseberries,faostat-crops_lives_products,Y
-"Grain, mixed","Grain, mixed",faostat-crops_lives_products,N
 Grapefruit (inc. pomelos),Grapefruit,faostat-crops_lives_products,Y
 "Juice, grapefruit",Grapefruit,faostat-crops_lives_products,Y
 "Juice, grapefruit, concentrated",Grapefruit,faostat-crops_lives_products,Y
-"Juice, grape",Grapes,faostat-crops_lives_products,Y
 Grapes,Grapes,faostat-crops_lives_products,Y
+"Juice, grape",Grapes,faostat-crops_lives_products,Y
 Raisins,Grapes,faostat-crops_lives_products,Y
 Wine,Grapes,faostat-crops_lives_products,Y
 Wine+Vermouth+Sim.,Grapes,faostat-crops_lives_products,Y
-Grease incl. lanolin wool,Grease incl. lanolin wool,faostat-crops_lives_products,N
-Groundnuts Total Shelled,Groundnut,faostat-crops_lives_products,N
 "Cake, groundnuts",Groundnut,faostat-crops_lives_products,Y
 "Groundnuts, shelled",Groundnut,faostat-crops_lives_products,Y
 "Oil, groundnut",Groundnut,faostat-crops_lives_products,Y
 Peanut butter,Groundnut,faostat-crops_lives_products,Y
-"Hair, fine","Hair, fine",faostat-crops_lives_products,N
-"Hair, goat, coarse","Hair, goat, coarse",faostat-crops_lives_products,N
-"Hay (clover, lucerne,etc)","Hay (clover, lucerne,etc)",faostat-crops_lives_products,N
-Hay (unspecified),Hay (unspecified),faostat-crops_lives_products,N
 "Hazelnuts, shelled",Hazelnuts,faostat-crops_lives_products,Y
 "Cake, hempseed",Hemp,faostat-crops_lives_products,Y
-"Hides and skins nes, fresh","Hides and skins nes, fresh",faostat-crops_lives_products,N
-"Hides, buffalo, dry salted","Hides, buffalo, dry salted",faostat-crops_lives_products,N
-"Hides, buffalo, wet salted","Hides, buffalo, wet salted",faostat-crops_lives_products,N
-"Hides, camel, nes","Hides, camel, nes",faostat-crops_lives_products,N
-"Hides, camel, wet salted","Hides, camel, wet salted",faostat-crops_lives_products,N
-"Hides, cattle, fresh","Hides, cattle, fresh",faostat-crops_lives_products,N
-"Hides, cattle, wet salted","Hides, cattle, wet salted",faostat-crops_lives_products,N
-"Hides, horse, dry salted","Hides, horse, dry salted",faostat-crops_lives_products,N
-"Hides, nes","Hides, nes",faostat-crops_lives_products,N
-"Honey, natural","Honey, natural",faostat-crops_lives_products,N
 Hops,Hops,faostat-crops_lives_products,Y
-Ice cream and edible ice,Ice cream and edible ice,faostat-crops_lives_products,N
-Infant food,Infant food,faostat-crops_lives_products,N
-"Juice, fruit nes","Juice, fruit nes",faostat-crops_lives_products,N
 Jute,Jute,faostat-crops_lives_products,Y
 Jute+Bast Fibres,Jute,faostat-crops_lives_products,Y
 "Cake, kapok",Kapok,faostat-crops_lives_products,Y
 Kapok fibre,Kapok,faostat-crops_lives_products,Y
-Kapokseed in shell,Kapok,faostat-crops_lives_products,Y
 Kapokseed shelled,Kapok,faostat-crops_lives_products,Y
 "Oil, kapok",Kapok,faostat-crops_lives_products,Y
 Butter of karite nuts,Karite nuts,faostat-crops_lives_products,Y
 Kiwi fruit,Kiwi fruit,faostat-crops_lives_products,Y
 Kola nuts,Kola nuts,faostat-crops_lives_products,Y
-Lactose,Lactose,faostat-crops_lives_products,N
-Lard,Lard,faostat-crops_lives_products,N
 "Leeks, other alliaceous vegetables",Leeks and other alliaceous vegetables,faostat-crops_lives_products,Y
 "Juice, lemon, concentrated",Lemons and limes,faostat-crops_lives_products,Y
 Lemons and limes,Lemons and limes,faostat-crops_lives_products,Y
@@ -410,88 +498,20 @@ Maize,Maize,faostat-crops_lives_products,Y
 Popcorn,Maize,faostat-crops_lives_products,Y
 Sweet corn frozen,Maize,faostat-crops_lives_products,Y
 Sweet corn prep or preserved,Maize,faostat-crops_lives_products,Y
-Malt,Malt,faostat-crops_lives_products,N
 "Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas",faostat-crops_lives_products,Y
 Maple sugar and syrups,Maple sugar,faostat-crops_lives_products,Y
-"Margarine, liquid","Margarine, liquid",faostat-crops_lives_products,N
-"Margarine, short","Margarine, short",faostat-crops_lives_products,N
 Maté,Mate,faostat-crops_lives_products,Y
 "Tea, mate extracts",Mate,faostat-crops_lives_products,Y
-"Meal, meat","Meal, meat",faostat-crops_lives_products,N
-Meat and Meat Preparations,Meat and Meat Preparations,faostat-crops_lives_products,N
-Meat Bovine Fresh,Meat Bovine Fresh,faostat-crops_lives_products,N
-Meat Fresh+Ch+Frozen,Meat Fresh+Ch+Frozen,faostat-crops_lives_products,N
-Meat of Swine,Meat of Swine,faostat-crops_lives_products,N
-Meat Poultry Fresh,Meat Poultry Fresh,faostat-crops_lives_products,N
-Meat Prepared Pres,Meat Prepared Pres,faostat-crops_lives_products,N
-Meat Sheep Fresh,Meat Sheep Fresh,faostat-crops_lives_products,N
-"Meat, ass","Meat, ass",faostat-crops_lives_products,N
-"Meat, beef and veal sausages","Meat, beef and veal sausages",faostat-crops_lives_products,N
-"Meat, beef, preparations","Meat, beef, preparations",faostat-crops_lives_products,N
-"Meat, cattle","Meat, cattle",faostat-crops_lives_products,N
-"Meat, cattle, boneless (beef & veal)","Meat, cattle, boneless (beef & veal)",faostat-crops_lives_products,N
-"Meat, chicken","Meat, chicken",faostat-crops_lives_products,N
-"Meat, chicken, canned","Meat, chicken, canned",faostat-crops_lives_products,N
-"Meat, dried nes","Meat, dried nes",faostat-crops_lives_products,N
-"Meat, duck","Meat, duck",faostat-crops_lives_products,N
-"Meat, game","Meat, game",faostat-crops_lives_products,N
-"Meat, goat","Meat, goat",faostat-crops_lives_products,N
-"Meat, goose and guinea fowl","Meat, goose and guinea fowl",faostat-crops_lives_products,N
-"Meat, horse","Meat, horse",faostat-crops_lives_products,N
-"Meat, nes","Meat, nes",faostat-crops_lives_products,N
-"Meat, pig","Meat, pig",faostat-crops_lives_products,N
-"Meat, pig sausages","Meat, pig sausages",faostat-crops_lives_products,N
-"Meat, pig, preparations","Meat, pig, preparations",faostat-crops_lives_products,N
-"Meat, pork","Meat, pork",faostat-crops_lives_products,N
-"Meat, rabbit","Meat, rabbit",faostat-crops_lives_products,N
-"Meat, sheep","Meat, sheep",faostat-crops_lives_products,N
-"Meat, turkey","Meat, turkey",faostat-crops_lives_products,N
 "Melons, other (inc.cantaloupes)",Melons,faostat-crops_lives_products,Y
-Milk Condensed + Evaporated,Milk Condensed + Evaporated,faostat-crops_lives_products,N
-Milk Condensed+Dry+Fresh,Milk Condensed+Dry+Fresh,faostat-crops_lives_products,N
-Milk Dry,Milk Dry,faostat-crops_lives_products,N
-Milk Equivalent,Milk Equivalent,faostat-crops_lives_products,N
-Milk Fresh,Milk Fresh,faostat-crops_lives_products,N
-"Milk, products of natural constituents nes","Milk, products of natural constituents nes",faostat-crops_lives_products,N
-"Milk, reconstituted","Milk, reconstituted",faostat-crops_lives_products,N
-"Milk, skimmed cow","Milk, skimmed cow",faostat-crops_lives_products,N
-"Milk, skimmed dried","Milk, skimmed dried",faostat-crops_lives_products,N
-"Milk, whole condensed","Milk, whole condensed",faostat-crops_lives_products,N
-"Milk, whole dried","Milk, whole dried",faostat-crops_lives_products,N
-"Milk, whole evaporated","Milk, whole evaporated",faostat-crops_lives_products,N
-"Milk, whole fresh cow","Milk, whole fresh cow",faostat-crops_lives_products,N
-"Milk, whole fresh sheep","Milk, whole fresh sheep",faostat-crops_lives_products,N
 "Bran, millet",Millet,faostat-crops_lives_products,Y
 Millet,Millet,faostat-crops_lives_products,Y
-Miscellaneous Food,Miscellaneous Food,faostat-crops_lives_products,N
-Mixes and doughs,Mixes and doughs,faostat-crops_lives_products,N
-Molasses,Molasses,faostat-crops_lives_products,N
-Mushrooms and truffles,Mushrooms and truffles,faostat-crops_lives_products,N
-"Mushrooms, canned","Mushrooms, canned",faostat-crops_lives_products,N
 "Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms",faostat-crops_lives_products,Y
 "Nuts, nes","Nuts, nes",faostat-crops_lives_products,Y
-"Nuts, prepared (exc. groundnuts)","Nuts, prepared (exc. groundnuts)",faostat-crops_lives_products,N
 Oats,Oats,faostat-crops_lives_products,Y
 Oats rolled,Oats,faostat-crops_lives_products,Y
-Offals Edibl Fresh,Offals Edibl Fresh,faostat-crops_lives_products,N
-"Offals, edible, cattle","Offals, edible, cattle",faostat-crops_lives_products,N
-"Offals, edible, goats","Offals, edible, goats",faostat-crops_lives_products,N
-"Offals, liver chicken","Offals, liver chicken",faostat-crops_lives_products,N
-"Offals, liver duck","Offals, liver duck",faostat-crops_lives_products,N
-"Offals, liver geese","Offals, liver geese",faostat-crops_lives_products,N
-"Offals, other camelids","Offals, other camelids",faostat-crops_lives_products,N
-"Offals, pigs, edible","Offals, pigs, edible",faostat-crops_lives_products,N
-"Offals, sheep,edible","Offals, sheep,edible",faostat-crops_lives_products,N
 "Cake, palm kernel",Oil palm,faostat-crops_lives_products,Y
 "Oil, palm",Oil palm,faostat-crops_lives_products,Y
 "Oil, palm kernel",Oil palm,faostat-crops_lives_products,Y
-"Oil, boiled etc","Oil, boiled etc",faostat-crops_lives_products,N
-"Oil, essential nes","Oil, essential nes",faostat-crops_lives_products,N
-"Oil, vegetable origin nes","Oil, vegetable origin nes",faostat-crops_lives_products,N
-"Oils, fats of animal nes","Oils, fats of animal nes",faostat-crops_lives_products,N
-Oilseed Cake Meal,Oilseed Cake Meal,faostat-crops_lives_products,N
-Oilseed Cake nes,Oilseed Cake nes,faostat-crops_lives_products,N
-Oilseeds,Oilseeds,faostat-crops_lives_products,N
 Oilseeds nes,Oilseeds nes,faostat-crops_lives_products,Y
 "Oil, olive residues",Olive,faostat-crops_lives_products,Y
 "Oil, olive, virgin",Olive,faostat-crops_lives_products,Y
@@ -506,10 +526,7 @@ Onions,Onions,faostat-crops_lives_products,Y
 Oranges,Oranges and mandarines,faostat-crops_lives_products,Y
 Oranges+Tang+Clem,Oranges and mandarines,faostat-crops_lives_products,Y
 "Tangerines, mandarins, clementines, satsumas",Oranges and mandarines,faostat-crops_lives_products,Y
-Other Meat,Other Meat,faostat-crops_lives_products,N
-Ovine Meat,Ovine Meat,faostat-crops_lives_products,N
 Papayas,Papayas,faostat-crops_lives_products,Y
-Pastry,Pastry,faostat-crops_lives_products,N
 Peaches and nectarines,Peaches and nectarines,faostat-crops_lives_products,Y
 Pears,Pears,faostat-crops_lives_products,Y
 "Peas, dry",Peas,faostat-crops_lives_products,Y
@@ -517,8 +534,6 @@ Pears,Pears,faostat-crops_lives_products,Y
 Pepper (piper spp.),Pepper,faostat-crops_lives_products,Y
 Peppermint,Peppermint,faostat-crops_lives_products,Y
 Persimmons,Persimmons,faostat-crops_lives_products,Y
-Pet food,Pet food,faostat-crops_lives_products,N
-Pigmeat,Pigmeat,faostat-crops_lives_products,N
 "Juice, pineapple",Pineapples,faostat-crops_lives_products,Y
 "Juice, pineapple, concentrated",Pineapples,faostat-crops_lives_products,Y
 Pineapples,Pineapples,faostat-crops_lives_products,Y
@@ -529,13 +544,12 @@ Plantains and others,Plantains,faostat-crops_lives_products,Y
 "Juice, plum, single strength",Plums,faostat-crops_lives_products,Y
 Plums and sloes,Plums,faostat-crops_lives_products,Y
 Plums dried (prunes),Plums,faostat-crops_lives_products,Y
-Poppy seed,Poppy,faostat-crops_lives_products,Y
 "Oil, poppy",Poppy,faostat-crops_lives_products,Y
+Poppy seed,Poppy,faostat-crops_lives_products,Y
 "Flour, potatoes",Potatoes,faostat-crops_lives_products,Y
 Potato offals,Potatoes,faostat-crops_lives_products,Y
 Potatoes,Potatoes,faostat-crops_lives_products,Y
 "Potatoes, frozen",Potatoes,faostat-crops_lives_products,Y
-Poultry Meat,Poultry Meat,faostat-crops_lives_products,N
 "Flour, pulses",Pulses,faostat-crops_lives_products,Y
 Pulses,Pulses,faostat-crops_lives_products,Y
 "Pumpkins, squash and gourds","Pumpkins, squash and gourds",faostat-crops_lives_products,Y
@@ -543,14 +557,13 @@ Pulses,Pulses,faostat-crops_lives_products,Y
 "Pyrethrum, extraction",Pyrethrum,faostat-crops_lives_products,Y
 Quinces,Quinces,faostat-crops_lives_products,Y
 "Cake, mustard",Rapeseed and Mustard,faostat-crops_lives_products,Y
+"Cake, rapeseed",Rapeseed and Mustard,faostat-crops_lives_products,Y
 "Flour, mustard",Rapeseed and Mustard,faostat-crops_lives_products,Y
 Mustard seed,Rapeseed and Mustard,faostat-crops_lives_products,Y
-"Cake, rapeseed",Rapeseed and Mustard,faostat-crops_lives_products,Y
 "Oil, rapeseed",Rapeseed and Mustard,faostat-crops_lives_products,Y
-Rapeseed,Rapeseed and Mustard,faostat-crops_lives_products,Y
 Rape+Mustard Oils,Rapeseed and Mustard,faostat-crops_lives_products,Y
 Rape+Mustard Seed,Rapeseed and Mustard,faostat-crops_lives_products,Y
-Rice - total  (Rice milled equivalent),Rice,faostat-crops_lives_products,N
+Rapeseed,Rapeseed and Mustard,faostat-crops_lives_products,Y
 "Beverages, fermented rice",Rice,faostat-crops_lives_products,Y
 "Cake, rice bran",Rice,faostat-crops_lives_products,Y
 "Oil, rice bran",Rice,faostat-crops_lives_products,Y
@@ -565,15 +578,6 @@ Rye,Rye,faostat-crops_lives_products,Y
 "Cake, sesame seed",Sesame,faostat-crops_lives_products,Y
 "Oil, sesame",Sesame,faostat-crops_lives_products,Y
 Sesame seed,Sesame,faostat-crops_lives_products,Y
-Silk,Silk,faostat-crops_lives_products,N
-Silk raw,Silk raw,faostat-crops_lives_products,N
-"Silk-worm cocoons, reelable","Silk-worm cocoons, reelable",faostat-crops_lives_products,N
-"Skins, calve, wet salted","Skins, calve, wet salted",faostat-crops_lives_products,N
-"Skins, goat, wet salted","Skins, goat, wet salted",faostat-crops_lives_products,N
-"Skins, sheep, dry salted","Skins, sheep, dry salted",faostat-crops_lives_products,N
-"Skins, sheep, fresh","Skins, sheep, fresh",faostat-crops_lives_products,N
-"Skins, sheep, wet salted","Skins, sheep, wet salted",faostat-crops_lives_products,N
-"Skins, sheep, with wool","Skins, sheep, with wool",faostat-crops_lives_products,N
 Beer of sorghum,Sorghum,faostat-crops_lives_products,Y
 "Bran, sorghum",Sorghum,faostat-crops_lives_products,Y
 Sorghum,Sorghum,faostat-crops_lives_products,Y
@@ -585,17 +589,9 @@ Soya sauce,Soybean,faostat-crops_lives_products,Y
 Soybeans,Soybean,faostat-crops_lives_products,Y
 "Spices, nes","Spices, nes",faostat-crops_lives_products,Y
 Spinach,Spinach,faostat-crops_lives_products,Y
-Straw husks,Straw husks,faostat-crops_lives_products,N
 Strawberries,Strawberries,faostat-crops_lives_products,Y
-Sugar and Honey,Sugar,faostat-crops_lives_products,N
 Sugar beet,Sugar beet,faostat-crops_lives_products,Y
-Sugar confectionery,Sugar confectionery,faostat-crops_lives_products,N
 "Sugar crops, nes","Sugar crops, nes",faostat-crops_lives_products,Y
-Sugar non-centrifugal,Sugar non-centrifugal,faostat-crops_lives_products,N
-Sugar Raw Centrifugal,Sugar Raw Centrifugal,faostat-crops_lives_products,N
-Sugar refined,Sugar refined,faostat-crops_lives_products,N
-"Sugar, nes","Sugar, nes",faostat-crops_lives_products,N
-"Sugar,Total (Raw Equiv.)","Sugar,Total (Raw Equiv.)",faostat-crops_lives_products,N
 Cane tops,Sugarcane,faostat-crops_lives_products,Y
 "Cake, sunflower",Sunflower,faostat-crops_lives_products,Y
 "Oil, sunflower",Sunflower,faostat-crops_lives_products,Y
@@ -603,7 +599,6 @@ Sunflower seed,Sunflower,faostat-crops_lives_products,Y
 Sweet potatoes,Sweetpotato,faostat-crops_lives_products,Y
 Tallow,Tallow,faostat-crops_lives_products,Y
 Tea,Tea,faostat-crops_lives_products,Y
-Textile Fibres,Textile Fibres,faostat-crops_lives_products,N
 Tobacco,Tobacco,faostat-crops_lives_products,Y
 Tobacco products nes,Tobacco,faostat-crops_lives_products,Y
 "Tobacco, unmanufactured",Tobacco,faostat-crops_lives_products,Y
@@ -611,139 +606,32 @@ Tobacco products nes,Tobacco,faostat-crops_lives_products,Y
 Tomatoes,Tomato,faostat-crops_lives_products,Y
 "Tomatoes, paste",Tomato,faostat-crops_lives_products,Y
 "Tomatoes, peeled",Tomato,faostat-crops_lives_products,Y
-Total Meat,Total Meat,faostat-crops_lives_products,N
-Total Merchandise Trade,Total Merchandise Trade,faostat-crops_lives_products,N
 Triticale,Triticale,faostat-crops_lives_products,Y
 Turnips for fodder,Turnip,faostat-crops_lives_products,Y
 Vanilla,Vanilla,faostat-crops_lives_products,Y
-Vegetable tallow,Vegetable tallow,faostat-crops_lives_products,N
-Vegetables in vinegar,Vegetables in vinegar,faostat-crops_lives_products,N
-"Vegetables, canned nes","Vegetables, canned nes",faostat-crops_lives_products,N
-"Vegetables, dehydrated","Vegetables, dehydrated",faostat-crops_lives_products,N
-"Vegetables, dried nes","Vegetables, dried nes",faostat-crops_lives_products,N
 "Vegetables, fresh nes","Vegetables, fresh nes",faostat-crops_lives_products,Y
-"Vegetables, fresh or dried products nes","Vegetables, fresh or dried products nes",faostat-crops_lives_products,N
-"Vegetables, frozen","Vegetables, frozen",faostat-crops_lives_products,N
-"Vegetables, homogenized preparations","Vegetables, homogenized preparations",faostat-crops_lives_products,N
-"Vegetables, preserved nes","Vegetables, preserved nes",faostat-crops_lives_products,N
-"Vegetables, preserved, frozen","Vegetables, preserved, frozen",faostat-crops_lives_products,N
-"Vegetables, temporarily preserved","Vegetables, temporarily preserved",faostat-crops_lives_products,N
-Vermouths & similar,Vermouths & similar,faostat-crops_lives_products,N
 Vetches,Vetches,faostat-crops_lives_products,Y
-Vitamins,Vitamins,faostat-crops_lives_products,N
-Wafers,Wafers,faostat-crops_lives_products,N
 "Walnuts, shelled",Walnuts,faostat-crops_lives_products,Y
-"Walnuts, with shell",Walnuts,faostat-crops_lives_products,Y
 Watermelons,Watermelons,faostat-crops_lives_products,Y
-"Waters,ice etc","Waters,ice etc",faostat-crops_lives_products,N
-Waxes vegetable,Waxes vegetable,faostat-crops_lives_products,N
 "Bran, wheat",Wheat,faostat-crops_lives_products,Y
 Bulgur,Wheat,faostat-crops_lives_products,Y
 "Flour, wheat",Wheat,faostat-crops_lives_products,Y
 Macaroni,Wheat,faostat-crops_lives_products,Y
 Wheat,Wheat,faostat-crops_lives_products,Y
 "Wheat+Flour,Wheat Equivalent",Wheat,faostat-crops_lives_products,Y
-"Whey, condensed","Whey, condensed",faostat-crops_lives_products,N
-"Whey, dry","Whey, dry",faostat-crops_lives_products,N
-"Whey, Pres+Concen","Whey, Pres+Concen",faostat-crops_lives_products,N
-"Wool, degreased","Wool, degreased",faostat-crops_lives_products,N
-"Wool, greasy","Wool, greasy",faostat-crops_lives_products,N
-"Wool, hair waste","Wool, hair waste",faostat-crops_lives_products,N
-"Yoghurt, concentrated or not","Yoghurt, concentrated or not",faostat-crops_lives_products,N
-Alcoholic Beverages,Alcoholic Beverages,faostat-food_supply,N
-Apples and products,Apples,faostat-food_supply,Y
-Bananas,Bananas,faostat-food_supply,Y
-Barley and products,Barley,faostat-food_supply,Y
-Beans,Beans,faostat-food_supply,Y
-Beer,Beer,faostat-food_supply,N
-"Beverages, Alcoholic","Beverages, Alcoholic",faostat-food_supply,N
-"Beverages, Fermented","Beverages, Fermented",faostat-food_supply,N
-Cassava and products,Cassava,faostat-food_supply,Y
-Cereals - Excluding Beer,Cereals - Excluding Beer,faostat-food_supply,N
-"Cereals, Other","Cereals, Other",faostat-food_supply,Y
-Pimento,Chillies and peppers,faostat-food_supply,Y
-"Citrus, Other","Citrus, Other",faostat-food_supply,Y
-Cloves,Cloves,faostat-food_supply,Y
-Cocoa Beans and products,Cocoa,faostat-food_supply,Y
-Coconut Oil,Coconut,faostat-food_supply,Y
-Coconuts - Incl Copra,Coconut,faostat-food_supply,Y
-Coffee and products,Coffee,faostat-food_supply,Y
-Cottonseed Oil,Cotton,faostat-food_supply,Y
-Dates,Dates,faostat-food_supply,Y
-Fruits - Excluding Wine,Fruits - Excluding Wine,faostat-food_supply,N
-"Fruits, Other","Fruits, Other",faostat-food_supply,Y
-Grand Total,Grand Total,faostat-food_supply,N
-Grapefruit and products,Grapefruit,faostat-food_supply,Y
-Grapes and products (excl wine),Grapes,faostat-food_supply,Y
-Wine,Grapes,faostat-food_supply,Y
-Groundnuts (in Shell Eq),Groundnut,faostat-food_supply,N
-Groundnut Oil,Groundnut,faostat-food_supply,Y
-Groundnuts (Shelled Eq),Groundnut,faostat-food_supply,Y
-Infant food,Infant food,faostat-food_supply,N
-"Lemons, Limes and products",Lemons and limes,faostat-food_supply,Y
-Maize and products,Maize,faostat-food_supply,Y
-Maize Germ Oil,Maize,faostat-food_supply,Y
-Millet and products,Millet,faostat-food_supply,Y
-Miscellaneous,Miscellaneous,faostat-food_supply,N
-Molasses,Molasses,faostat-food_supply,N
-Nuts and products,Nuts,faostat-food_supply,Y
-Oats,Oats,faostat-food_supply,Y
-Palm Oil,Oil palm,faostat-food_supply,Y
-Palmkernel Oil,Oil palm,faostat-food_supply,Y
-Oilcrops,Oilcrops,faostat-food_supply,N
-"Oilcrops Oil, Other","Oilcrops Oil, Other",faostat-food_supply,N
-"Oilcrops, Other","Oilcrops, Other",faostat-food_supply,Y
-Olive Oil,Olive,faostat-food_supply,Y
-Olives (including preserved),Olive,faostat-food_supply,Y
-Onions,Onions,faostat-food_supply,Y
-"Oranges, Mandarines",Oranges and mandarines,faostat-food_supply,Y
-Peas,Peas,faostat-food_supply,Y
-Pepper,Pepper,faostat-food_supply,Y
-Pineapples and products,Pineapples,faostat-food_supply,Y
-Plantains,Plantains,faostat-food_supply,Y
-Potatoes and products,Potatoes,faostat-food_supply,Y
-Pulses,Pulses,faostat-food_supply,N
-"Pulses, Other and products","Pulses, Other",faostat-food_supply,Y
-Rape and Mustard Oil,Rapeseed and Mustard,faostat-food_supply,Y
-Rice (Paddy Equivalent),Rice,faostat-food_supply,N
-Rice (Milled Equivalent),Rice,faostat-food_supply,Y
-Ricebran Oil,Rice,faostat-food_supply,Y
-Roots & Tuber Dry Equiv,Roots & Tuber Dry Equiv,faostat-food_supply,N
-"Roots, Other","Roots, Other",faostat-food_supply,Y
-Rye and products,Rye,faostat-food_supply,Y
-Sesame seed,Sesame,faostat-food_supply,Y
-Sesameseed Oil,Sesame,faostat-food_supply,Y
-Sorghum and products,Sorghum,faostat-food_supply,Y
-Soyabean Oil,Soybean,faostat-food_supply,Y
-Soyabeans,Soybean,faostat-food_supply,Y
-Spices,Spices,faostat-food_supply,N
-"Spices, Other","Spices, Other",faostat-food_supply,Y
-Starchy Roots,Starchy Roots,faostat-food_supply,N
-Stimulants,Stimulants,faostat-food_supply,Y
-Sugar Crops,Sugar,faostat-food_supply,N
-Sugar & Sweeteners,Sugar & Sweeteners,faostat-food_supply,N
-Sugar beet,Sugar beet,faostat-food_supply,Y
-Sugar non-centrifugal,Sugar non-centrifugal,faostat-food_supply,N
-"Sugar, Raw Equivalent","Sugar, Raw Equivalent",faostat-food_supply,N
-"Sugar, Refined Equiv","Sugar, Refined Equiv",faostat-food_supply,N
-Sugar cane,Sugarcane,faostat-food_supply,Y
-Sunflower seed,Sunflower,faostat-food_supply,Y
-Sunflowerseed Oil,Sunflower,faostat-food_supply,Y
-Sugar (Raw Equivalent),"Sweeteners, Other",faostat-food_supply,Y
-"Sweeteners, Other","Sweeteners, Other",faostat-food_supply,Y
-Sweet potatoes,Sweetpotato,faostat-food_supply,Y
-Tea (including mate),Tea and mate,faostat-food_supply,Y
-Tomatoes and products,Tomato,faostat-food_supply,Y
-Treenuts,Treenuts,faostat-food_supply,Y
-Vegetable Oils,Vegetable Oils,faostat-food_supply,N
-Vegetables,Vegetables,faostat-food_supply,N
-"Vegetables, Other","Vegetables, Other",faostat-food_supply,Y
-Vegetal Products,Vegetal Products,faostat-food_supply,N
-Wheat and products,Wheat,faostat-food_supply,Y
-Yams,Yams,faostat-food_supply,Y
+Agriculture (PIN),Agriculture (PIN),faostat-value_agricultural_production,N
+"Cereals,Total","Cereals,Total",faostat-value_agricultural_production,N
+Crops (PIN),Crops (PIN),faostat-value_agricultural_production,N
+Food (PIN),Food (PIN),faostat-value_agricultural_production,N
+"Grain, mixed","Grain, mixed",faostat-value_agricultural_production,N
+Non Food (PIN),Non Food (PIN),faostat-value_agricultural_production,N
+"Oilcrops, Oil Equivalent","Oilcrops, Oil Equivalent",faostat-value_agricultural_production,N
+"Roots and Tubers,Total","Roots and Tubers,Total",faostat-value_agricultural_production,N
+"Sugar, raw","Sugar, raw",faostat-value_agricultural_production,N
+Vegetables and Fruit Primary,Vegetables and Fruit Primary,faostat-value_agricultural_production,N
+"Vegetables, leguminous nes","Vegetables, leguminous nes",faostat-value_agricultural_production,N
 Manila fibre (abaca),Abaca,faostat-value_agricultural_production,Y
 Agave fibres nes,Agave fibres nes,faostat-value_agricultural_production,Y
-Agriculture (PIN),Agriculture (PIN),faostat-value_agricultural_production,N
 "Almonds, with shell",Almonds,faostat-value_agricultural_production,Y
 "Anise, badian, fennel, coriander","Anise, badian, fennel, coriander",faostat-value_agricultural_production,Y
 Apples,Apples,faostat-value_agricultural_production,Y
@@ -759,7 +647,6 @@ Barley,Barley,faostat-value_agricultural_production,Y
 "Beans, dry",Beans,faostat-value_agricultural_production,Y
 "Beans, green",Beans,faostat-value_agricultural_production,Y
 String beans,Beans,faostat-value_agricultural_production,Y
-Beeswax,Beeswax,faostat-value_agricultural_production,N
 Berries nes,"Berries, nes",faostat-value_agricultural_production,Y
 Blueberries,Blueberries,faostat-value_agricultural_production,Y
 "Brazil nuts, with shell",Brazil nuts,faostat-value_agricultural_production,Y
@@ -774,7 +661,6 @@ Cashewapple,Cashew,faostat-value_agricultural_production,Y
 Cassava,Cassava,faostat-value_agricultural_production,Y
 Castor oil seed,Castor bean,faostat-value_agricultural_production,Y
 "Cereals, nes","Cereals, nes",faostat-value_agricultural_production,Y
-"Cereals,Total","Cereals,Total",faostat-value_agricultural_production,N
 Cherries,Cherries,faostat-value_agricultural_production,Y
 "Cherries, sour",Cherries,faostat-value_agricultural_production,Y
 Chestnut,Chestnut,faostat-value_agricultural_production,Y
@@ -792,20 +678,16 @@ Cottonseed,Cotton,faostat-value_agricultural_production,Y
 Seed cotton,Cotton,faostat-value_agricultural_production,Y
 "Cow peas, dry",Cowpeas,faostat-value_agricultural_production,Y
 Cranberries,Cranberries,faostat-value_agricultural_production,Y
-Crops (PIN),Crops (PIN),faostat-value_agricultural_production,N
 Cucumbers and gherkins,Cucumbers and gherkins,faostat-value_agricultural_production,Y
 Currants,Currants,faostat-value_agricultural_production,Y
 Dates,Dates,faostat-value_agricultural_production,Y
 Eggplants (aubergines),Eggplants,faostat-value_agricultural_production,Y
-"Eggs, hen, in shell","Eggs, hen, in shell",faostat-value_agricultural_production,N
-"Eggs, other bird, in shell","Eggs, other bird, in shell",faostat-value_agricultural_production,N
 "Broad beans, horse beans, dry",Faba beans,faostat-value_agricultural_production,Y
 Fibre crops nes,Fibre crops nes,faostat-value_agricultural_production,Y
 Figs,Figs,faostat-value_agricultural_production,Y
 Flax fibre and tow,Flax,faostat-value_agricultural_production,Y
 Linseed,Flax,faostat-value_agricultural_production,Y
 Fonio,Fonio,faostat-value_agricultural_production,Y
-Food (PIN),Food (PIN),faostat-value_agricultural_production,N
 "Fruit, fresh nes","Fruit, fresh nes",faostat-value_agricultural_production,Y
 "Fruit, pome nes","Fruit, pome nes",faostat-value_agricultural_production,Y
 "Fruit, stone nes","Fruit, stone nes",faostat-value_agricultural_production,Y
@@ -813,7 +695,6 @@ Food (PIN),Food (PIN),faostat-value_agricultural_production,N
 Garlic,Garlic,faostat-value_agricultural_production,Y
 Ginger,Ginger,faostat-value_agricultural_production,Y
 Gooseberries,Gooseberries,faostat-value_agricultural_production,Y
-"Grain, mixed","Grain, mixed",faostat-value_agricultural_production,N
 Grapefruit (inc. pomelos),Grapefruit,faostat-value_agricultural_production,Y
 Grapes,Grapes,faostat-value_agricultural_production,Y
 "Groundnuts, with shell",Groundnut,faostat-value_agricultural_production,Y
@@ -821,7 +702,6 @@ Grapes,Grapes,faostat-value_agricultural_production,Y
 "Hazelnuts, with shell",Hazelnuts,faostat-value_agricultural_production,Y
 Hemp tow waste,Hemp,faostat-value_agricultural_production,Y
 Hempseed,Hemp,faostat-value_agricultural_production,Y
-"Honey, natural","Honey, natural",faostat-value_agricultural_production,N
 Hops,Hops,faostat-value_agricultural_production,Y
 Jute,Jute,faostat-value_agricultural_production,Y
 Kapok fruit,Kapok,faostat-value_agricultural_production,Y
@@ -834,67 +714,20 @@ Lemons and limes,Lemons and limes,faostat-value_agricultural_production,Y
 Lentils,Lentils,faostat-value_agricultural_production,Y
 Chicory roots,Lettuce and chicory,faostat-value_agricultural_production,Y
 Lettuce and chicory,Lettuce and chicory,faostat-value_agricultural_production,Y
-Livestock (PIN),Livestock (PIN),faostat-value_agricultural_production,N
 Lupins,Lupins,faostat-value_agricultural_production,Y
 Maize,Maize,faostat-value_agricultural_production,Y
 "Maize, green",Maize,faostat-value_agricultural_production,Y
 "Mangoes, mangosteens, guavas","Mangoes, mangosteens, guavas",faostat-value_agricultural_production,Y
 Maté,Mate,faostat-value_agricultural_production,Y
-"Meat indigenous, ass","Meat indigenous, ass",faostat-value_agricultural_production,N
-"Meat indigenous, bird nes","Meat indigenous, bird nes",faostat-value_agricultural_production,N
-"Meat indigenous, buffalo","Meat indigenous, buffalo",faostat-value_agricultural_production,N
-"Meat indigenous, camel","Meat indigenous, camel",faostat-value_agricultural_production,N
-"Meat indigenous, cattle","Meat indigenous, cattle",faostat-value_agricultural_production,N
-"Meat indigenous, chicken","Meat indigenous, chicken",faostat-value_agricultural_production,N
-"Meat indigenous, duck","Meat indigenous, duck",faostat-value_agricultural_production,N
-"Meat indigenous, geese","Meat indigenous, geese",faostat-value_agricultural_production,N
-"Meat indigenous, goat","Meat indigenous, goat",faostat-value_agricultural_production,N
-"Meat indigenous, horse","Meat indigenous, horse",faostat-value_agricultural_production,N
-"Meat indigenous, mule","Meat indigenous, mule",faostat-value_agricultural_production,N
-"Meat indigenous, other camelids","Meat indigenous, other camelids",faostat-value_agricultural_production,N
-"Meat indigenous, pig","Meat indigenous, pig",faostat-value_agricultural_production,N
-"Meat indigenous, rabbit","Meat indigenous, rabbit",faostat-value_agricultural_production,N
-"Meat indigenous, rodents","Meat indigenous, rodents",faostat-value_agricultural_production,N
-"Meat indigenous, sheep","Meat indigenous, sheep",faostat-value_agricultural_production,N
-"Meat indigenous, total","Meat indigenous, total",faostat-value_agricultural_production,N
-"Meat indigenous, turkey","Meat indigenous, turkey",faostat-value_agricultural_production,N
-"Meat, ass","Meat, ass",faostat-value_agricultural_production,N
-"Meat, bird nes","Meat, bird nes",faostat-value_agricultural_production,N
-"Meat, buffalo","Meat, buffalo",faostat-value_agricultural_production,N
-"Meat, camel","Meat, camel",faostat-value_agricultural_production,N
-"Meat, cattle","Meat, cattle",faostat-value_agricultural_production,N
-"Meat, chicken","Meat, chicken",faostat-value_agricultural_production,N
-"Meat, duck","Meat, duck",faostat-value_agricultural_production,N
-"Meat, game","Meat, game",faostat-value_agricultural_production,N
-"Meat, goat","Meat, goat",faostat-value_agricultural_production,N
-"Meat, goose and guinea fowl","Meat, goose and guinea fowl",faostat-value_agricultural_production,N
-"Meat, horse","Meat, horse",faostat-value_agricultural_production,N
-"Meat, mule","Meat, mule",faostat-value_agricultural_production,N
-"Meat, nes","Meat, nes",faostat-value_agricultural_production,N
-"Meat, other camelids","Meat, other camelids",faostat-value_agricultural_production,N
-"Meat, other rodents","Meat, other rodents",faostat-value_agricultural_production,N
-"Meat, pig","Meat, pig",faostat-value_agricultural_production,N
-"Meat, rabbit","Meat, rabbit",faostat-value_agricultural_production,N
-"Meat, sheep","Meat, sheep",faostat-value_agricultural_production,N
-"Meat, turkey","Meat, turkey",faostat-value_agricultural_production,N
 "Melons, other (inc.cantaloupes)",Melons,faostat-value_agricultural_production,Y
 Melonseed,Melons,faostat-value_agricultural_production,Y
-"Milk, whole fresh buffalo","Milk, whole fresh buffalo",faostat-value_agricultural_production,N
-"Milk, whole fresh camel","Milk, whole fresh camel",faostat-value_agricultural_production,N
-"Milk, whole fresh cow","Milk, whole fresh cow",faostat-value_agricultural_production,N
-"Milk, whole fresh goat","Milk, whole fresh goat",faostat-value_agricultural_production,N
-"Milk, whole fresh sheep","Milk, whole fresh sheep",faostat-value_agricultural_production,N
-"Milk,Total","Milk,Total",faostat-value_agricultural_production,N
 Millet,Millet,faostat-value_agricultural_production,Y
-Mushrooms and truffles,Mushrooms and truffles,faostat-value_agricultural_production,N
-Non Food (PIN),Non Food (PIN),faostat-value_agricultural_production,N
 "Nutmeg, mace and cardamoms","Nutmeg, mace and cardamoms",faostat-value_agricultural_production,Y
 "Nuts, nes","Nuts, nes",faostat-value_agricultural_production,Y
 Oats,Oats,faostat-value_agricultural_production,Y
 Oil palm fruit,Oil palm,faostat-value_agricultural_production,Y
 "Oil, palm",Oil palm,faostat-value_agricultural_production,Y
 Palm kernels,Oil palm,faostat-value_agricultural_production,Y
-"Oilcrops, Oil Equivalent","Oilcrops, Oil Equivalent",faostat-value_agricultural_production,N
 Oilseeds nes,Oilseeds nes,faostat-value_agricultural_production,Y
 Okra,Okra,faostat-value_agricultural_production,Y
 Olives,Olive,faostat-value_agricultural_production,Y
@@ -928,12 +761,10 @@ Rapeseed,Rapeseed and Mustard,faostat-value_agricultural_production,Y
 Raspberries,Raspberries,faostat-value_agricultural_production,Y
 "Rice, paddy",Rice,faostat-value_agricultural_production,Y
 "Roots and tubers, nes","Roots and tubers, nes",faostat-value_agricultural_production,Y
-"Roots and Tubers,Total","Roots and Tubers,Total",faostat-value_agricultural_production,N
 "Rubber, natural","Rubber, natural",faostat-value_agricultural_production,Y
 Rye,Rye,faostat-value_agricultural_production,Y
 Safflower seed,Safflower,faostat-value_agricultural_production,Y
 Sesame seed,Sesame,faostat-value_agricultural_production,Y
-"Silk-worm cocoons, reelable","Silk-worm cocoons, reelable",faostat-value_agricultural_production,N
 Sisal,Sisal,faostat-value_agricultural_production,Y
 Sorghum,Sorghum,faostat-value_agricultural_production,Y
 Soybeans,Soybean,faostat-value_agricultural_production,Y
@@ -942,7 +773,6 @@ Spinach,Spinach,faostat-value_agricultural_production,Y
 Strawberries,Strawberries,faostat-value_agricultural_production,Y
 Sugar beet,Sugar beet,faostat-value_agricultural_production,Y
 "Sugar crops, nes","Sugar crops, nes",faostat-value_agricultural_production,Y
-"Sugar, raw","Sugar, raw",faostat-value_agricultural_production,N
 Sugar cane,Sugarcane,faostat-value_agricultural_production,Y
 Sunflower seed,Sunflower,faostat-value_agricultural_production,Y
 Sweet potatoes,Sweetpotato,faostat-value_agricultural_production,Y
@@ -953,13 +783,10 @@ Tomatoes,Tomato,faostat-value_agricultural_production,Y
 Triticale,Triticale,faostat-value_agricultural_production,Y
 Tung nuts,Tung,faostat-value_agricultural_production,Y
 Vanilla,Vanilla,faostat-value_agricultural_production,Y
-Vegetables and Fruit Primary,Vegetables and Fruit Primary,faostat-value_agricultural_production,N
 "Vegetables, fresh nes","Vegetables, fresh nes",faostat-value_agricultural_production,Y
-"Vegetables, leguminous nes","Vegetables, leguminous nes",faostat-value_agricultural_production,N
 Vetches,Vetches,faostat-value_agricultural_production,Y
 "Walnuts, with shell",Walnuts,faostat-value_agricultural_production,Y
 Watermelons,Watermelons,faostat-value_agricultural_production,Y
 Wheat,Wheat,faostat-value_agricultural_production,Y
-"Wool, greasy","Wool, greasy",faostat-value_agricultural_production,N
 Yams,Yams,faostat-value_agricultural_production,Y
 Yautia (cocoyam),Yautia cocoyam,faostat-value_agricultural_production,Y

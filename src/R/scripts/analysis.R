@@ -102,4 +102,75 @@ analysis.crop.index.country = function(data,countries = 230){
   tmp.data[, tmp.cols] <- tmp.data[, tmp.cols] / countries
   return(tmp.data)
 }
+
+# This function calculate the country for crop and year, it depends of the variables
+# (data.frame) data: Dataframe
+analysis.countries.count.thresholds = function(data,folder,thresholds){
+  
+  dir.create(file.path(folder, "count_countries"), showWarnings = FALSE)
+  folder.final = paste0(folder,"/count_countries")
+  
+  # calculating total amount by year, crop and variable
+  tmp.summary = data.frame(year = data$year, crop = data$crop)
+  tmp.summary = unique(tmp.summary)
+  
+  tmp.vars = names(data)
+  tmp.vars = tmp.vars[4:length(tmp.vars)]
+  
+  for(v in tmp.vars){
+    print(paste0("Acum ",v))
+    tmp.df = data %>%
+                group_by(year,crop) %>%
+                summarise_(.dots = setNames( paste0("sum(",v,", na.rm = T)"), paste0("global_",v)))
+    
+    tmp.summary = merge(x=tmp.summary,y=tmp.df,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = F)
+  }
+  
+  # calculating total amount by year, crop and variable
+  tmp.data = data
+  tmp.data = merge(x=tmp.data,y=tmp.summary,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = T)
+  
+  # Dataframe to save the amount of countries
+  tmp.final = tmp.summary[,c("crop","year")]
+  
+  for(v in tmp.vars){
+    print(paste0("Calculating ",v))
+    # Getting the total of  each country contribute
+    tmp.df = tmp.data %>%
+      group_by(year,crop, country) %>%
+      summarise_(.dots = setNames( paste0(v,"/ global_",v), paste0("contrib_",v)))
+    
+    tmp.data = merge(x=tmp.data,y=tmp.df,by.x=c("crop","year","country"),by.y=c("crop","year","country"),all.x = T,all.y = F)
+    
+    
+    # Filtering records with data
+    tmp.filter = tmp.data[,c("crop","year","country",v,paste0("global_",v), paste0("contrib_",v))]
+    tmp.filter = tmp.filter[complete.cases(tmp.filter),]
+    tmp.filter = tmp.filter[order(tmp.filter[,1],tmp.filter[,2],tmp.filter[,4],decreasing=T),]
+    row.names(tmp.filter) = 1:nrow(tmp.filter)
+    
+    # Cumsum by crop, year, country
+    tmp.filter[,paste0("cumsum_",v)] = ave(tmp.filter[,paste0("contrib_",v)],list(tmp.filter[,"crop"],tmp.filter[,"year"]),FUN=cumsum) 
+    
+    # Saving cumulative sum for each variable
+    write.csv(tmp.filter,paste0(folder.final,"/data.countries.contrib_",v,".csv"), row.names = F)
+    
+    tmp.filter = tmp.filter[,c("crop","year","country",paste0("cumsum_",v))]
+    
+    # Filtering by each treashold
+    for(t in thresholds){
+      tmp.filter2 = tmp.filter[which(tmp.filter[,4] <= t),]
+      tmp.df2 = tmp.filter2 %>%
+        group_by(crop, year) %>% 
+        tally()
+      
+      colnames(tmp.df2) = c("crop","year", paste0(v,"_count_",t))
+      
+      tmp.final = merge(x=tmp.final,y=tmp.df2,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = F)
+    }
+    
+  }
+  
+  return(tmp.final)
+}
 ##############################################

@@ -1,6 +1,45 @@
+#install.packages(c("plyr","dplyr","ggplot2","RMySQL","tidyr","corrplot","Hmisc","caret","corrplot","ade4","scales","stringr","stringdist","ineq"))
+library(plyr)
+library(dplyr)
+library(ggplot2)
+library(RMySQL)
+library(tidyr)
+library(corrplot)
+library(Hmisc)
+#library(caret)
+library(corrplot)
+library(ade4)
+require(scales)
+library(stringr)
+library(stringdist)
+library(ineq)
+##############################################
+####  00- GLOBAL VARIABLES
 
-data = read.csv(paste0(demand.folder,"/demand-crops.csv"), header = T)
-tmp.crops = read.csv(paste0(conf.folder,"/crops.csv"), header = T)
+#setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
+setwd("/home/hsotelo/fao/R/")
 
-results = tools.fuzzy_match(data, tmp.crops, c("crop_original","name"))
-write.csv(results,paste0(demand.folder,"/demand-fixed.csv"), row.names = F)
+# Global variables
+conf.folder = "conf"
+conf.file = "conf_test.csv"
+inputs.folder = "inputs"
+data.folder = paste0(inputs.folder,"/data")
+process.folder = "process"
+analysis.folder = "analysis"
+interdependence.folder = "interdependence"
+demand.folder = "demand"
+conf.global = F
+conf.db = "fao"
+
+conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
+
+point = format_format(big.mark = ".", decimal.mark = ",", scientific = FALSE)
+
+# Load variables
+data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
+source("scripts/tools.R")
+##############################################
+
+
+
+

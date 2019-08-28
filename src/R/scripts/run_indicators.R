@@ -65,10 +65,10 @@ source("scripts/tools.R")
 
 p = list.files(data.folder)
 
-tools.save.data(p[34])
+#tools.save.data(p[34])
 #tools.save.data(p[5])
 #tools.save.data(p[6])
-#lapply(p,tools.save.data)
+lapply(p,tools.save.data)
 
 ##############################################
 
@@ -119,7 +119,7 @@ write.csv(indicator.tableau.weight,paste0(analysis.folder,"/indicator.tableau.we
 
 
 
-
+#data, vars
 
 #ci.group.sum = data.n
 #ci.group.sum[,names(indicator.groups)] = indicator.groups
