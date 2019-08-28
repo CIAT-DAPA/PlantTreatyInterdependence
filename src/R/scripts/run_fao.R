@@ -97,15 +97,19 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 data.filtered = ci.variables.exclude(data.raw,data.vars)
 write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
 
-####  03- NORMALIZING DATA
-
 #normalize 
 
 data.n = ci.normalize.full(data.filtered,"range", global =F)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
+##############################################
 
-data.countries = analysis.countries.count.thresholds(data = data.filtered,folder = analysis.folder,thresholds =c(0.9, 0.95))
+##############################################
+####  04- COUNTRIES AMOUNT
+
+
+countries.treashold.count = analysis.countries.count.thresholds(data = data.filtered,folder = analysis.folder,thresholds =c(0.9, 0.95))
+write.csv(countries.treashold.count,paste0(analysis.folder,"/countries.treashold.count.csv"), row.names = F)
 
 data.countries.count = analysis.countries.count(data.filtered)
 write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)
