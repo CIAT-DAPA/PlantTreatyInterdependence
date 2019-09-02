@@ -1,29 +1,29 @@
 domain,domain_name,component,group,metric,units,useable,global_level,country_level
-1,importance,faostat,food_supply,fs_fat_supply_quantity,g/capita/day,1,1,1
-1,importance,faostat,food_supply,fs_food_supply_kcal,kcal/capita/day,1,1,1
-1,importance,faostat,food_supply,fs_food_supply_quantity_g,g/capita/day,1,1,1
-1,importance,faostat,food_supply,fs_protein_supply_quantity,g/capita/day,1,1,1
-1,importance,faostat,production,c_area_harvested,ha,1,1,1
-1,importance,faostat,production,c_production,tonnes,1,1,1
-1,importance,faostat,production,vap_gross_production_value_us,USD,1,1,1
-1,importance,faostat,trade,clp_export_quantity,tonnes,1,1,1
-1,importance,faostat,trade,clp_export_value,1000 US$,1,1,1
-1,importance,faostat,trade,clp_import_quantity,tonnes,1,1,1
-1,importance,faostat,trade,clp_import_value,1000 US$,1,1,1
-1,importance,faostat_count_countries,food_supply,fs_fat_supply_quantity,records,1,1,0
-1,importance,faostat_count_countries,food_supply,fs_food_supply_kcal,records,1,1,0
-1,importance,faostat_count_countries,food_supply,fs_food_supply_quantity_g,records,1,1,0
-1,importance,faostat_count_countries,food_supply,fs_protein_supply_quantity,records,1,1,0
-1,importance,faostat_count_countries,production,c_area_harvested,records,1,1,0
-1,importance,faostat_count_countries,production,c_production,records,1,1,0
-1,importance,faostat_count_countries,production,vap_gross_production_value_us,records,1,1,0
-1,importance,faostat_count_countries,trade,clp_export_quantity,records,1,1,0
-1,importance,faostat_count_countries,trade,clp_export_value,records,1,1,0
-1,importance,faostat_count_countries,trade,clp_import_quantity,records,1,1,0
-1,importance,faostat_count_countries,trade,clp_import_value,records,1,1,0
-1,importance,research_significance,google_scholar,common_name,records,1,1,0
-1,importance,research_significance,google_scholar,genus,records,1,1,0
-1,importance,research_significance,google_scholar,taxon,records,1,1,0
+1,crop_use,faostat,food_supply,fs_fat_supply_quantity,g/capita/day,1,1,1
+1,crop_use,faostat,food_supply,fs_food_supply_kcal,kcal/capita/day,1,1,1
+1,crop_use,faostat,food_supply,fs_food_supply_quantity_g,g/capita/day,1,1,1
+1,crop_use,faostat,food_supply,fs_protein_supply_quantity,g/capita/day,1,1,1
+1,crop_use,faostat,production,c_area_harvested,ha,1,1,1
+1,crop_use,faostat,production,c_production,tonnes,1,1,1
+1,crop_use,faostat,production,vap_gross_production_value_us,USD,1,1,1
+1,crop_use,faostat,trade,clp_export_quantity,tonnes,1,1,1
+1,crop_use,faostat,trade,clp_export_value,1000 US$,1,1,1
+1,crop_use,faostat,trade,clp_import_quantity,tonnes,1,1,1
+1,crop_use,faostat,trade,clp_import_value,1000 US$,1,1,1
+1,crop_use,faostat_count_countries,food_supply,fs_fat_supply_quantity,records,1,1,0
+1,crop_use,faostat_count_countries,food_supply,fs_food_supply_kcal,records,1,1,0
+1,crop_use,faostat_count_countries,food_supply,fs_food_supply_quantity_g,records,1,1,0
+1,crop_use,faostat_count_countries,food_supply,fs_protein_supply_quantity,records,1,1,0
+1,crop_use,faostat_count_countries,production,c_area_harvested,records,1,1,0
+1,crop_use,faostat_count_countries,production,c_production,records,1,1,0
+1,crop_use,faostat_count_countries,production,vap_gross_production_value_us,records,1,1,0
+1,crop_use,faostat_count_countries,trade,clp_export_quantity,records,1,1,0
+1,crop_use,faostat_count_countries,trade,clp_export_value,records,1,1,0
+1,crop_use,faostat_count_countries,trade,clp_import_quantity,records,1,1,0
+1,crop_use,faostat_count_countries,trade,clp_import_value,records,1,1,0
+1,crop_use,research_significance,google_scholar,common_name,records,1,1,0
+1,crop_use,research_significance,google_scholar,genus,records,1,1,0
+1,crop_use,research_significance,google_scholar,taxon,records,1,1,0
 2,interdependence,faostat,food_supply,fat_supply_quantity_global,percentage,1,1,0
 2,interdependence,faostat,food_supply,food_supply_kcal_global,percentage,1,1,0
 2,interdependence,faostat,food_supply,food_supply_quantity_g_global,percentage,1,1,0

@@ -29,7 +29,7 @@ inputs.folder = "inputs"
 data.folder = paste0(inputs.folder,"/data")
 process.folder = "process"
 analysis.folder = "analysis"
-interdependence.folder = "interdependence"
+interdependence.folder = "analysis/interdependence"
 demand.folder = "demand"
 conf.global = F
 conf.db = "fao"
@@ -131,7 +131,7 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 #data.vars$vars = paste0(data.vars$domain_name,"-",data.vars$component,"-",data.vars$group,"-",data.vars$metric)
 
 db_cnn = connect_db(conf.db)
-data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
+data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type=conf.db)
 dbDisconnect(db_cnn)
 data.raw[is.na(data.raw)] = 0
 
@@ -141,7 +141,11 @@ data.filtered = ci.variables.exclude(data.raw,data.vars)
 
 
 interdependence.region(data=data.filtered, method="sum", normalize = F)
+interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 3)
+interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 5)
 interdependence.region(data=data.filtered, method="segregation", normalize = F)
+interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 3)
+interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 5)
 ##############################################
 
 
