@@ -33,7 +33,7 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
   tmp.vars = tmp.vars[4:length(tmp.vars)]
   
   # Cycle for calculating indicator by variable
-  lapply(tmp.vars, function(v){
+  tmp.interdependence = lapply(tmp.vars, function(v){
     print(paste0("Calculating ", v))
     # Creating the dataframe of crops with year only
     tmp.values = data.frame(crop = data$crop, year = data$year)
@@ -123,6 +123,10 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
       #tmp.crop_rows$global_outside_origin[is.na(tmp.crop_rows$global_outside_origin)] = 0
       #tmp.crop_rows$global_outside_origin[is.infinite(tmp.crop_rows$global_outside_origin)] = -1
       
+      # Filtering crops with data in origin
+      tmp.crop_rows = tmp.crop_rows[!is.na(tmp.crop_rows$origin),]
+      tmp.crop_rows = tmp.crop_rows[tmp.crop_rows$origin>0,]
+      
       #return(tmp.crop_rows[,c("crop","year","origin","outside","world","global","global_outside_origin")])
       return(tmp.crop_rows[,c("crop","year","origin","outside","world","global")])
       
@@ -137,6 +141,7 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
     }
     
     tmp.final = tmp.final[tmp.final$world != 0,]
+    tmp.final = tmp.final[!is.na(tmp.final$world),]
     
     # Saving file
     dir.create(file.path(interdependence.folder, method), showWarnings = FALSE)
@@ -145,8 +150,24 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
       tmp.file.name = paste0(interdependence.folder,"/", method ,"/",v,"_",threshold,".csv")
     }
     write.csv(tmp.final,tmp.file.name, row.names = F)
+    return(interdependence.transform(tmp.final[,seq(1:25)],v))
   })
+  return (tmp.interdependence)
 }
 
-
+# This method transform the data frame of interdependence in countries
+# (data.frame) df: Dataset
+# (string) var: Name of var
+interdependence.transform = function(df, var){
+  tmp.names = names(df)
+  
+  tmp.final = do.call(rbind, lapply(seq(3:25)+2,function(v){
+    tmp.df = data.frame(crop=df$crop,year=df$year, country = tmp.names[v])
+    tmp.df[,var] = df[,tmp.names[v]]
+    return(tmp.df)
+  }))
+  
+  return (tmp.final)
+  
+}
 

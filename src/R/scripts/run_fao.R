@@ -20,7 +20,7 @@ library(ineq)
 ####  00- GLOBAL VARIABLES
 
 #setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
-setwd("/home/hsotelo/fao/R/")
+setwd("/home/hsotelo/planttreaty/R/")
 
 # Global variables
 conf.folder = "conf"
@@ -86,20 +86,26 @@ process.load.measure(p[3])
 ####  03-FAO ANALYSIS
 source("scripts/tools.R")
 source("scripts/analysis.R")
-source("scripts/composite_index.R")
 db_cnn = connect_db("fao")
 data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type=conf.db)
 dbDisconnect(db_cnn)
 
+#data.raw = read.csv(paste0(analysis.folder,"/data.raw-old.csv"),header = T)
+#data.raw$crop = as.character(data.raw$crop)
+#data.raw$country = as.character(data.raw$country)
+#data.raw$year = as.character(data.raw$year)
+
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
+
+
 
 data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 data.filtered = ci.variables.exclude(data.raw,data.vars)
 write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
 
 #normalize 
-
-data.n = ci.normalize.full(data.filtered,"range", global =F)
+source("scripts/composite_index.R")
+data.n = ci.normalize.full(data.filtered,"proportion", global =T)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
 ##############################################
@@ -117,7 +123,6 @@ write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv
 data.countries.index = analysis.crop.index.country(data.filtered)
 write.csv(data.countries.index,paste0(analysis.folder,"/data.countries.index.csv"), row.names = F)
 
-#tmp = merge(x=data.raw,y=data.countries.count, c("crop_name","year"))
 ##############################################
 
 ##############################################
@@ -139,35 +144,42 @@ write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
 data.filtered = ci.variables.exclude(data.raw,data.vars)
 
-
-interdependence.region(data=data.filtered, method="sum", normalize = F)
-interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 3)
-interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 5)
-interdependence.region(data=data.filtered, method="segregation", normalize = F)
-interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 3)
-interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 5)
+# Generate the interdependence for both methods
+inter.sum = interdependence.region(data=data.filtered, method="sum", normalize = F)
+#interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 3)
+#interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 5)
+inter.seg = interdependence.region(data=data.filtered, method="segregation", normalize = F)
+#interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 3)
+#interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 5)
 ##############################################
 
 
 ##############################################
-####  06 - GINI
+####  06 - GINI REGIONS
 source("scripts/tools.R")
 source("scripts/analysis.R")
 source("scripts/gini.R")
 source("scripts/composite_index.R")
+library(tidyverse)
 
 data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 
 
-db_cnn = connect_db(conf.db)
-data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
-dbDisconnect(db_cnn)
-data.raw[is.na(data.raw)] = 0
 
-write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
-data.filtered = ci.variables.exclude(data.raw,data.vars)
 
+
+inter.sum = inter.sum %>% 
+                reduce(full_join, by = c("crop","year","country"))
+
+inter.sum = inter.sum[,c(1,2,3,4,5,6,7,8,9,10)]
+
+inter.seg = inter.seg %>%
+                reduce(full_join, by = c("crop","year","country"))
+inter.seg = inter.seg[,c(1,2,3,11,12,13,14)]
+
+
+#ddply(inter.sum[[1]],.(crop,year,id_crop,year),summarise,value=sum(value))
 # aggregation
 data.agg = ci.aggregation.avg(data.filtered)
 write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
@@ -198,6 +210,60 @@ for(c in names(gini.indicator)){
   }
 }
 
-write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.csv"), row.names = F)
+write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.regions.csv"), row.names = F)
+
+##############################################
+
+
+##############################################
+####  07 - GINI COUNTRIES
+source("scripts/tools.R")
+source("scripts/analysis.R")
+source("scripts/gini.R")
+source("scripts/composite_index.R")
+
+data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
+
+
+db_cnn = connect_db(conf.db)
+data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type="fao")
+dbDisconnect(db_cnn)
+data.raw[is.na(data.raw)] = 0
+
+write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
+
+data.filtered = ci.variables.exclude(data.raw,data.vars)
+
+# aggregation
+data.agg = ci.aggregation.avg(data.filtered)
+write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+
+# Filling countries
+countries.amount = data.agg %>%
+  group_by(crop) %>%
+  tally()
+
+df.fill = do.call(rbind,lapply(1:nrow(countries.amount),function(c){
+  times = 230 - countries.amount$n[c]
+  fields = names(data.agg)
+  df = as.data.frame(matrix(rep(c(0), times = 230*length(fields)), ncol  = length(fields)))
+  names(df) = fields
+  df$crop = countries.amount$crop[c]
+  df$country = ""
+  return (df)
+}))
+
+data.agg = rbind.data.frame(data.agg,df.fill)
+
+# gini
+gini.indicator = gini.crop(data.agg)
+
+for(c in names(gini.indicator)){
+  if(nrow(gini.indicator[gini.indicator[,c]==1,])>0){
+    gini.indicator[gini.indicator[,c]==1,c] = NA
+  }
+}
+
+write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.countries.csv"), row.names = F)
 
 ##############################################

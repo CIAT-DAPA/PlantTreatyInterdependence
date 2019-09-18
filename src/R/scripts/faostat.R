@@ -184,10 +184,20 @@ process.load.measure = function(f){
     tmp.df = ddply(tmp.df,.(id_metric,id_country,id_crop,year),summarise,value=sum(value))
     
     write.csv(tmp.df, paste0(process.folder, "/final/",gsub(".csv","",f),as.character(names(tmp.measure)[y]),".csv"), row.names = F)
-    db_cnn = connect_db("fao")
-    dbWriteTable(db_cnn, value = tmp.df, name = "measures", append = TRUE, row.names=F)
-    dbDisconnect(db_cnn)
-    print(paste0("........Records were saved year: ",names(tmp.measure)[y],"-",as.integer(names(tmp.measure)[y])," count: ", dim(tmp.df)[1]))
+    
+    rows = nrow(tmp.df)
+    for (i in seq(from=1,to=rows, by=10000)){
+      end = i+(10000-1)
+      if(end > rows){
+        end = rows
+      }
+      records = tmp.df[i:end,]
+      db_cnn1 = connect_db("fao")
+      print(paste0("........COnnected"))
+      dbWriteTable(db_cnn1, value = records, name = "measures", append = TRUE, row.names=F)
+      dbDisconnect(db_cnn1) 
+      print(paste0("........Records were saved year: ",names(tmp.measure)[y],"  count: ", dim(records)[1]))
+    }
   })
   
 }
