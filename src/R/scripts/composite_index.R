@@ -168,29 +168,54 @@ ci.multivariate.cluster = function(data){
 # (data.frame) data: data frame
 # (string) type: Type of normalization
 ci.normalize = function(data, type = "range"){
-  if(nrow(data) > 1){
-    d = tryCatch({
-      tmp.model = preProcess(data, method = type )
-      tmp.data = predict(tmp.model, data)  
-      return(tmp.data)
-    }, warning = function(w) {
-      #print(paste0("Warning ",nrow(data)))
+  if(type=="range"){
+    if(nrow(data) > 1){
+      d = tryCatch({
+        tmp.model = preProcess(data, method = type )
+        tmp.data = predict(tmp.model, data)  
+        return(tmp.data)
+      }, warning = function(w) {
+        #print(paste0("Warning ",nrow(data)))
+        tmp.data = data
+        #tmp.data[,ci.variables.numeric.vars(data)] = 1
+        numCols = which(sapply(tmp.data,is.numeric))
+        numData = tmp.data[,numCols]
+        numData[!is.na(numData)] = 1
+        tmp.data[,numCols] = numData  
+        return(tmp.data)
+      })
+    } else {
       tmp.data = data
-      #tmp.data[,ci.variables.numeric.vars(data)] = 1
       numCols = which(sapply(tmp.data,is.numeric))
       numData = tmp.data[,numCols]
       numData[!is.na(numData)] = 1
       tmp.data[,numCols] = numData  
-      return(tmp.data)
-    })
-  } else {
-    tmp.data = data
-    numCols = which(sapply(tmp.data,is.numeric))
-    numData = tmp.data[,numCols]
-    numData[!is.na(numData)] = 1
-    tmp.data[,numCols] = numData  
-    d = tmp.data
+      d = tmp.data
+    }  
+  } else if(type=="proportion"){
+    tmp.vars = names(data)
+    tmp.vars = tmp.vars[! tmp.vars %in% c("crop","country","year")]
+    tmp.final = as.data.frame(unique(data[,c("crop","country","year")]))
+    # executing for each variable
+    for(v in tmp.vars){
+      
+      # fixing dataset and names of columns
+      tmp.data = as.data.frame(data[,c("crop","country","year",v)])
+      names(tmp.data) = c("crop","country","year","value")
+      # filtering data and order dataset
+      #tmp.data = tmp.data[complete.cases(tmp.data),]
+      #row.names(tmp.data) = NULL
+      #tmp.data = tmp.data[order(tmp.data$crop,tmp.data$value),]
+      # normalizing
+      tmp.data$value = tmp.data$value / sum(tmp.data$value,na.rm=T)
+      # adding amount of records by each crop
+      names(tmp.data) = c("crop","country","year",v)
+      tmp.final = merge(x=tmp.final, y=tmp.data, by.x=c("crop","country","year"), by.y=c("crop","country","year"), all.x = T, all.y = F)
+    }
+    
+    d = tmp.final
   }
+  
   return (d)
 }
 

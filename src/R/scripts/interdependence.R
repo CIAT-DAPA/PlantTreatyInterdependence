@@ -2,7 +2,7 @@
 # (data.frame) data: Dataset
 # (string) method: Name of method that want to implement: sum or segregation
 # (bool) normalize: If you want or not to normalized the results
-interdependence.region = function(data, method, normalize = F, type_countries = NA){
+interdependence.region = function(data, method, normalize = F, type_countries = NA, threshold = NA){
   # Loading configurations files
   if(method == "sum"){
     if(is.na(type_countries)){
@@ -33,7 +33,7 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
   tmp.vars = tmp.vars[4:length(tmp.vars)]
   
   # Cycle for calculating indicator by variable
-  lapply(tmp.vars, function(v){
+  tmp.interdependence = lapply(tmp.vars, function(v){
     print(paste0("Calculating ", v))
     # Creating the dataframe of crops with year only
     tmp.values = data.frame(crop = data$crop, year = data$year)
@@ -98,19 +98,34 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
           }
         }
       }
-      # Calculating indicators
+      
+      # Calculating indicators origin, outside and world
+      # Validating threshold
+      if(!is.na(threshold)){
+        # Validating threshold
+        records.threshold = apply(tmp.crop_rows,1,function(x)sum(x!=0)) - 2
+        tmp.crop_rows = tmp.crop_rows[records.threshold>3,]
+      } 
+      
       tmp.crop_rows$origin = rowSums(as.data.frame(tmp.crop_rows[,c(tmp.crop_region)]), na.rm = T)
       tmp.crop_rows$outside = rowSums(as.data.frame(tmp.crop_rows[,c(tmp.others)]), na.rm = T)
       if(method == "segregation") {
         tmp.crop_rows$world = (tmp.crop_rows$origin * (origin/world.population)) + (tmp.crop_rows$outside * (outside/world.population))
       } else {
         tmp.crop_rows$world = tmp.crop_rows$origin + tmp.crop_rows$outside 
-      }
+      }  
+      
+      
+      
       tmp.crop_rows$global = tmp.crop_rows$outside / tmp.crop_rows$world
       tmp.crop_rows$global[is.na(tmp.crop_rows$global)] = 0
       #tmp.crop_rows$global_outside_origin = tmp.crop_rows$outside / tmp.crop_rows$origin
       #tmp.crop_rows$global_outside_origin[is.na(tmp.crop_rows$global_outside_origin)] = 0
       #tmp.crop_rows$global_outside_origin[is.infinite(tmp.crop_rows$global_outside_origin)] = -1
+      
+      # Filtering crops with data in origin
+      tmp.crop_rows = tmp.crop_rows[!is.na(tmp.crop_rows$origin),]
+      tmp.crop_rows = tmp.crop_rows[tmp.crop_rows$origin>0,]
       
       #return(tmp.crop_rows[,c("crop","year","origin","outside","world","global","global_outside_origin")])
       return(tmp.crop_rows[,c("crop","year","origin","outside","world","global")])
@@ -126,10 +141,33 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
     }
     
     tmp.final = tmp.final[tmp.final$world != 0,]
+    tmp.final = tmp.final[!is.na(tmp.final$world),]
     
-    write.csv(tmp.final,paste0(interdependence.folder,"/", method ,"/",v,".csv"), row.names = F)
+    # Saving file
+    dir.create(file.path(interdependence.folder, method), showWarnings = FALSE)
+    tmp.file.name = paste0(interdependence.folder,"/", method ,"/",v,".csv")
+    if(!is.na(threshold)){
+      tmp.file.name = paste0(interdependence.folder,"/", method ,"/",v,"_",threshold,".csv")
+    }
+    write.csv(tmp.final,tmp.file.name, row.names = F)
+    return(interdependence.transform(tmp.final[,seq(1:25)],v))
   })
+  return (tmp.interdependence)
 }
 
-
+# This method transform the data frame of interdependence in countries
+# (data.frame) df: Dataset
+# (string) var: Name of var
+interdependence.transform = function(df, var){
+  tmp.names = names(df)
+  
+  tmp.final = do.call(rbind, lapply(seq(3:25)+2,function(v){
+    tmp.df = data.frame(crop=df$crop,year=df$year, country = tmp.names[v])
+    tmp.df[,var] = df[,tmp.names[v]]
+    return(tmp.df)
+  }))
+  
+  return (tmp.final)
+  
+}
 

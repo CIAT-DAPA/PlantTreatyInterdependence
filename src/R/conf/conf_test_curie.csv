@@ -1,0 +1,9 @@
+name,value
+fao_db_host,localhost
+fao_db_user,hsotelo
+fao_db_password,783836@ciat
+fao_db_name,planttreaty
+indicator_db_host,localhost
+indicator_db_user,hsotelo
+indicator_db_password,783836@ciat
+indicator_db_name,indicator
