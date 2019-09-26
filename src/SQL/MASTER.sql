@@ -383,7 +383,7 @@ COUNT(*) as upov_species_varietal_release
 from PLUTO_CLEAN p
 left join CIAT_crop_taxon c on (p.species=c.taxon)
 where c.rank="species"
- p.year IN ("2018","2017","2016","2015","2014")
+and p.year IN ("2018","2017","2016","2015","2014")
 group by c.crop, p.year
 order by c.crop, p.year
 
