@@ -55,3 +55,4 @@ src/R/demand/
 
 src/Python/Spider/.ipynb_checkpoints/
 src/Python/Spider/outputs/
+/src/Java/counts/RemoteSystemsTempFiles/*.project
