@@ -1,16 +1,16 @@
 crop,country,year,food_supply_kcal_global
-Adlay,World,2010,1.047685595
-Adlay,World,2011,1.048131676
-Adlay,World,2012,1.06489107
-Adlay,World,2013,1.063120673
-Adzuki bean,World,2010,1.400689274
-Adzuki bean,World,2011,1.433264514
-Adzuki bean,World,2012,1.462160131
-Adzuki bean,World,2013,1.476625397
+Adlay,World,2010,1
+Adlay,World,2011,1
+Adlay,World,2012,1
+Adlay,World,2013,1
+Adzuki bean,World,2010,1
+Adzuki bean,World,2011,1
+Adzuki bean,World,2012,1
+Adzuki bean,World,2013,1
 Allspice,World,2010,0.996859876
 Allspice,World,2011,0.996521983
 Allspice,World,2012,0.996410117
-Allspice,World,2013,1.000265336
+Allspice,World,2013,1
 Almonds,World,2010,0.949282131
 Almonds,World,2011,0.965318831
 Almonds,World,2012,0.961581466
@@ -31,34 +31,34 @@ Apricot,World,2010,0.892010944
 Apricot,World,2011,0.88511293
 Apricot,World,2012,0.870474879
 Apricot,World,2013,0.874807097
-Areca nuts,World,2010,1.15288416
-Areca nuts,World,2011,1.149282074
-Areca nuts,World,2012,1.138349942
-Areca nuts,World,2013,1.148207379
+Areca nuts,World,2010,1
+Areca nuts,World,2011,1
+Areca nuts,World,2012,1
+Areca nuts,World,2013,1
 Arracacha,World,2010,0.999702042
 Arracacha,World,2011,0.998582332
 Arracacha,World,2012,0.999259739
 Arracacha,World,2013,0.999133226
-Arrowroot,World,2010,1.013026599
-Arrowroot,World,2011,1.01084814
-Arrowroot,World,2012,1.008201502
-Arrowroot,World,2013,1.005141538
-Artichokes,World,2010,1.020406197
-Artichokes,World,2011,1.02010974
-Artichokes,World,2012,1.021554321
-Artichokes,World,2013,1.023037491
-Asparagus,World,2010,1.104994793
-Asparagus,World,2011,1.100953619
-Asparagus,World,2012,1.10624947
-Asparagus,World,2013,1.107208077
-Atemoya,World,2010,1.00416552
-Atemoya,World,2011,1.003068244
-Atemoya,World,2012,1.006721793
-Atemoya,World,2013,1.00626052
-Avocado,World,2010,1.001164
-Avocado,World,2011,1.000056467
-Avocado,World,2012,1.001421006
-Avocado,World,2013,1.001745144
+Arrowroot,World,2010,1
+Arrowroot,World,2011,1
+Arrowroot,World,2012,1
+Arrowroot,World,2013,1
+Artichokes,World,2010,1
+Artichokes,World,2011,1
+Artichokes,World,2012,1
+Artichokes,World,2013,1
+Asparagus,World,2010,1
+Asparagus,World,2011,1
+Asparagus,World,2012,1
+Asparagus,World,2013,1
+Atemoya,World,2010,1
+Atemoya,World,2011,1
+Atemoya,World,2012,1
+Atemoya,World,2013,1
+Avocado,World,2010,1
+Avocado,World,2011,1
+Avocado,World,2012,1
+Avocado,World,2013,1
 Azarole,World,2010,0.986966106
 Azarole,World,2011,0.986534916
 Azarole,World,2012,0.992157082
@@ -67,10 +67,10 @@ Babaco,World,2010,0.997079222
 Babaco,World,2011,0.998451762
 Babaco,World,2012,0.99831757
 Babaco,World,2013,0.996595415
-Badian,World,2010,1.300427152
-Badian,World,2011,1.373427393
-Badian,World,2012,1.35374538
-Badian,World,2013,1.324639181
+Badian,World,2010,1
+Badian,World,2011,1
+Badian,World,2012,1
+Badian,World,2013,1
 Bambara bean,World,2010,0.960175783
 Bambara bean,World,2011,0.956275965
 Bambara bean,World,2012,0.958858792
@@ -87,106 +87,103 @@ Barley,World,2010,0.72470205
 Barley,World,2011,0.742494817
 Barley,World,2012,0.74946918
 Barley,World,2013,0.721087368
-Bay leaf,World,2010,1.005134679
-Bay leaf,World,2011,1.006370983
+Bay leaf,World,2010,1
+Bay leaf,World,2011,1
 Bay leaf,World,2012,0.992232931
 Bay leaf,World,2013,0.989515148
-Beech nut,World,2010,1.01604667
-Beech nut,World,2011,1.041606771
-Beech nut,World,2012,1.028445563
+Beech nut,World,2010,1
+Beech nut,World,2011,1
+Beech nut,World,2012,1
 Beech nut,World,2013,0.990280164
-Beets,World,2010,1.049010281
-Beets,World,2011,1.047557128
-Beets,World,2012,1.051576804
-Beets,World,2013,1.053131417
+Beets,World,2010,1
+Beets,World,2011,1
+Beets,World,2012,1
+Beets,World,2013,1
 Black gram,World,2010,0.900005166
 Black gram,World,2011,0.915254532
 Black gram,World,2012,0.930832851
 Black gram,World,2013,0.939626528
-Black salsify,World,2010,1.020406197
-Black salsify,World,2011,1.02010974
-Black salsify,World,2012,1.021554321
-Black salsify,World,2013,1.023037491
-Blueberry,World,2010,1.007780959
-Blueberry,World,2011,1.004897054
-Blueberry,World,2012,1.002338625
-Blueberry,World,2013,1.002332865
-Brazil nut,World,2010,1.03039308
-Brazil nut,World,2011,1.026466598
-Brazil nut,World,2012,1.029833901
-Brazil nut,World,2013,1.029108372
+Black salsify,World,2010,1
+Black salsify,World,2011,1
+Black salsify,World,2012,1
+Black salsify,World,2013,1
+Blueberry,World,2010,1
+Blueberry,World,2011,1
+Blueberry,World,2012,1
+Blueberry,World,2013,1
+Brazil nut,World,2010,1
+Brazil nut,World,2011,1
+Brazil nut,World,2012,1
+Brazil nut,World,2013,1
 Breadfruit,World,2010,0.985901003
 Breadfruit,World,2011,0.980891863
 Breadfruit,World,2012,0.982189553
 Breadfruit,World,2013,0.98925181
-Buckwheat,World,2010,1.306638037
-Buckwheat,World,2011,1.308924073
-Buckwheat,World,2012,1.301780793
-Buckwheat,World,2013,1.303156429
-Butter-nut,World,2010,1.039755747
-Butter-nut,World,2011,1.03517747
-Butter-nut,World,2012,1.039100594
-Butter-nut,World,2013,1.038841222
-Butternut squash,World,2010,1.065926511
-Butternut squash,World,2011,1.065759291
-Butternut squash,World,2012,1.067235791
-Butternut squash,World,2013,1.06802889
-Cabbages and other brassicas,World,2010,0.406093741
-Cabbages and other brassicas,World,2011,0.409319848
-Cabbages and other brassicas,World,2012,0.4134051
-Cabbages and other brassicas,World,2013,0.413361253
+Buckwheat,World,2010,1
+Buckwheat,World,2011,1
+Buckwheat,World,2012,1
+Buckwheat,World,2013,1
+Butter-nut,World,2010,1
+Butter-nut,World,2011,1
+Butter-nut,World,2012,1
+Butter-nut,World,2013,1
+Butternut squash,World,2010,1
+Butternut squash,World,2011,1
+Butternut squash,World,2012,1
+Butternut squash,World,2013,1
 Cabbages,World,2010,0.406093741
 Cabbages,World,2011,0.409319848
 Cabbages,World,2012,0.4134051
 Cabbages,World,2013,0.413361253
+Cabbages and other brassicas,World,2010,0.406093741
+Cabbages and other brassicas,World,2011,0.409319848
+Cabbages and other brassicas,World,2012,0.4134051
+Cabbages and other brassicas,World,2013,0.413361253
 Cainito,World,2010,0.997220529
 Cainito,World,2011,0.997907912
 Cainito,World,2012,0.998244964
 Cainito,World,2013,0.998138735
-Calabash,World,2010,1.018429796
-Calabash,World,2011,1.01818623
-Calabash,World,2012,1.01829542
-Calabash,World,2013,1.018562536
-Canary seed,World,2010,1.054005258
-Canary seed,World,2011,1.041885479
-Canary seed,World,2012,1.038607272
-Canary seed,World,2013,1.035273316
-Candlenut,World,2010,1.073242037
-Candlenut,World,2011,1.073242037
-Candlenut,World,2012,1.070178751
-Candlenut,World,2013,1.073242037
-Canola,World,2010,1.058228711
-Canola,World,2011,1.057091171
-Canola,World,2012,1.05926908
-Canola,World,2013,1.060900233
-Capers,World,2010,1.020406197
-Capers,World,2011,1.02010974
-Capers,World,2012,1.021554321
-Capers,World,2013,1.023037491
-Carambola,World,2010,1.01494681
-Carambola,World,2011,1.0150483
-Carambola,World,2012,1.009153196
-Carambola,World,2013,1.011999714
-Carapa,World,2010,1.003378349
-Carapa,World,2011,1.005241851
-Carapa,World,2012,1.002231209
-Carapa,World,2013,1.002472874
+Calabash,World,2010,1
+Calabash,World,2011,1
+Calabash,World,2012,1
+Calabash,World,2013,1
+Canary seed,World,2010,1
+Canary seed,World,2011,1
+Canary seed,World,2012,1
+Canary seed,World,2013,1
+Candlenut,World,2012,1
+Canola,World,2010,1
+Canola,World,2011,1
+Canola,World,2012,1
+Canola,World,2013,1
+Capers,World,2010,1
+Capers,World,2011,1
+Capers,World,2012,1
+Capers,World,2013,1
+Carambola,World,2010,1
+Carambola,World,2011,1
+Carambola,World,2012,1
+Carambola,World,2013,1
+Carapa,World,2010,1
+Carapa,World,2011,1
+Carapa,World,2012,1
+Carapa,World,2013,1
 Cardamoms,World,2010,0.551185166
 Cardamoms,World,2011,0.490332544
 Cardamoms,World,2012,0.528993433
 Cardamoms,World,2013,0.530682225
-Carobs,World,2010,1.020406197
-Carobs,World,2011,1.02010974
-Carobs,World,2012,1.021554321
-Carobs,World,2013,1.023037491
-Carrots,World,2010,1.069524902
-Carrots,World,2011,1.066942004
-Carrots,World,2012,1.069322672
-Carrots,World,2013,1.070247037
-Cashews,World,2010,1.03039308
-Cashews,World,2011,1.026466598
-Cashews,World,2012,1.029833901
-Cashews,World,2013,1.029108372
+Carobs,World,2010,1
+Carobs,World,2011,1
+Carobs,World,2012,1
+Carobs,World,2013,1
+Carrots,World,2010,1
+Carrots,World,2011,1
+Carrots,World,2012,1
+Carrots,World,2013,1
+Cashews,World,2010,1
+Cashews,World,2011,1
+Cashews,World,2012,1
+Cashews,World,2013,1
 Cassava,World,2010,0.943964615
 Cassava,World,2011,0.94767787
 Cassava,World,2012,0.954326989
@@ -195,22 +192,22 @@ Castor bean,World,2010,0.994687906
 Castor bean,World,2011,0.853389838
 Castor bean,World,2012,0.872338924
 Castor bean,World,2013,0.820350175
-Celery,World,2010,1.020406197
-Celery,World,2011,1.02010974
-Celery,World,2012,1.021554321
-Celery,World,2013,1.023037491
-Cherimoya,World,2010,1.002899226
-Cherimoya,World,2011,1.002952436
-Cherimoya,World,2012,1.005144857
-Cherimoya,World,2013,1.00436172
-Cherries,World,2010,1.001690596
-Cherries,World,2011,1.002179356
-Cherries,World,2012,1.005705544
-Cherries,World,2013,1.001771877
-Chervil,World,2010,1.03097669
-Chervil,World,2011,1.029112817
-Chervil,World,2012,1.032023353
-Chervil,World,2013,1.031440355
+Celery,World,2010,1
+Celery,World,2011,1
+Celery,World,2012,1
+Celery,World,2013,1
+Cherimoya,World,2010,1
+Cherimoya,World,2011,1
+Cherimoya,World,2012,1
+Cherimoya,World,2013,1
+Cherries,World,2010,1
+Cherries,World,2011,1
+Cherries,World,2012,1
+Cherries,World,2013,1
+Chervil,World,2010,1
+Chervil,World,2011,1
+Chervil,World,2012,1
+Chervil,World,2013,1
 Chestnuts,World,2010,0.88512914
 Chestnuts,World,2011,0.913696745
 Chestnuts,World,2012,0.898422671
@@ -219,50 +216,46 @@ Chickpeas,World,2010,0.54870679
 Chickpeas,World,2011,0.539483348
 Chickpeas,World,2012,0.552794603
 Chickpeas,World,2013,0.513720524
-Chicory,World,2010,1.285531596
-Chicory,World,2011,1.280898369
-Chicory,World,2012,1.282610489
-Chicory,World,2013,1.282403752
-Chillies and peppers,World,2010,1.000123515
+Chicory,World,2010,1
+Chicory,World,2011,1
+Chicory,World,2012,1
+Chicory,World,2013,1
+Chillies and peppers,World,2010,1
 Chillies and peppers,World,2011,0.997647248
 Chillies and peppers,World,2012,0.998555421
 Chillies and peppers,World,2013,0.999507237
-Chinotto,World,2010,1.061421522
-Chinotto,World,2011,1.062560103
-Chinotto,World,2012,1.062293239
-Chinotto,World,2013,1.061300476
-Chontadura,World,2010,1.0227831
-Chontadura,World,2011,1.024682641
-Chontadura,World,2012,1.02002803
-Chontadura,World,2013,1.020400357
-Chufa,World,2010,1.066231687
-Chufa,World,2011,1.066192929
-Chufa,World,2012,1.064599473
-Chufa,World,2013,1.066550019
+Chinotto,World,2010,1
+Chinotto,World,2011,1
+Chinotto,World,2012,1
+Chinotto,World,2013,1
+Chontadura,World,2010,1
+Chontadura,World,2011,1
+Chontadura,World,2012,1
+Chontadura,World,2013,1
+Chufa,World,2010,1
+Chufa,World,2011,1
+Chufa,World,2012,1
+Chufa,World,2013,1
 Cinnamon,World,2010,0.673883728
 Cinnamon,World,2011,0.661547565
 Cinnamon,World,2012,0.718582061
 Cinnamon,World,2013,0.724294739
-Citron,World,2010,1.192742834
-Citron,World,2011,1.192780078
-Citron,World,2012,1.192734766
-Citron,World,2013,1.192734521
-Cloves,World,2010,1.073242037
-Cloves,World,2011,1.073242037
-Cloves,World,2012,1.073242037
-Cloves,World,2013,1.069670565
-Cocoa,World,2010,1.010623964
-Cocoa,World,2011,1.012062174
-Cocoa,World,2012,1.003508216
-Cocoa,World,2013,1.011013628
+Citron,World,2010,1
+Citron,World,2012,1
+Citron,World,2013,1
+Cloves,World,2013,1
+Cocoa,World,2010,1
+Cocoa,World,2011,1
+Cocoa,World,2012,1
+Cocoa,World,2013,1
 Coconuts,World,2010,0.553029956
 Coconuts,World,2011,0.515641588
 Coconuts,World,2012,0.511175371
 Coconuts,World,2013,0.447411278
-Coffee,World,2010,1.051787553
-Coffee,World,2011,1.053947798
-Coffee,World,2012,1.057228746
-Coffee,World,2013,1.06356302
+Coffee,World,2010,1
+Coffee,World,2011,1
+Coffee,World,2012,1
+Coffee,World,2013,1
 Common bean,World,2010,0.924199024
 Common bean,World,2011,0.93773723
 Common bean,World,2012,0.917693502
@@ -271,22 +264,22 @@ Coriander,World,2010,0.960467552
 Coriander,World,2011,0.963363823
 Coriander,World,2012,0.936272651
 Coriander,World,2013,0.939871907
-Cotton,World,2010,1.031995366
-Cotton,World,2011,1.023142281
-Cotton,World,2012,1.02462848
-Cotton,World,2013,1.02504426
+Cotton,World,2010,1
+Cotton,World,2011,1
+Cotton,World,2012,1
+Cotton,World,2013,1
 Cowpeas,World,2010,0.882438349
 Cowpeas,World,2011,0.888743932
 Cowpeas,World,2012,0.879852925
 Cowpeas,World,2013,0.893653171
-Cranberries,World,2010,1.007780959
-Cranberries,World,2011,1.004897054
-Cranberries,World,2012,1.002338625
-Cranberries,World,2013,1.002332865
-Cress,World,2010,1.074889203
-Cress,World,2011,1.073639038
-Cress,World,2012,1.074009065
-Cress,World,2013,1.075547405
+Cranberries,World,2010,1
+Cranberries,World,2011,1
+Cranberries,World,2012,1
+Cranberries,World,2013,1
+Cress,World,2010,1
+Cress,World,2011,1
+Cress,World,2012,1
+Cress,World,2013,1
 Cucumbers and gherkins,World,2010,0.44762798
 Cucumbers and gherkins,World,2011,0.453969641
 Cucumbers and gherkins,World,2012,0.442112704
@@ -299,10 +292,10 @@ Currants,World,2010,0.980868023
 Currants,World,2011,0.982781774
 Currants,World,2012,0.993413238
 Currants,World,2013,0.986960144
-Cushaw,World,2010,1.013136186
-Cushaw,World,2011,1.01317317
-Cushaw,World,2012,1.013226146
-Cushaw,World,2013,1.013412514
+Cushaw,World,2010,1
+Cushaw,World,2011,1
+Cushaw,World,2012,1
+Cushaw,World,2013,1
 Custard apple,World,2010,0.99833809
 Custard apple,World,2011,0.997925548
 Custard apple,World,2012,0.999639892
@@ -311,10 +304,10 @@ Dates,World,2010,0.286398002
 Dates,World,2011,0.278050191
 Dates,World,2012,0.280509136
 Dates,World,2013,0.29546351
-Dill,World,2010,1.061542214
-Dill,World,2011,1.066646178
-Dill,World,2012,1.052024723
-Dill,World,2013,1.045531922
+Dill,World,2010,1
+Dill,World,2011,1
+Dill,World,2012,1
+Dill,World,2013,1
 Durian,World,2010,0.985037651
 Durian,World,2011,0.980006645
 Durian,World,2012,0.981288776
@@ -327,18 +320,18 @@ Elderberry,World,2010,0.989390447
 Elderberry,World,2011,0.988214995
 Elderberry,World,2012,0.996084428
 Elderberry,World,2013,0.989875451
-Ethiopian rape,World,2010,1.024207658
-Ethiopian rape,World,2011,1.024534542
-Ethiopian rape,World,2012,1.02407058
-Ethiopian rape,World,2013,1.024324454
+Ethiopian rape,World,2010,1
+Ethiopian rape,World,2011,1
+Ethiopian rape,World,2012,1
+Ethiopian rape,World,2013,1
 Faba beans,World,2010,0.954142141
 Faba beans,World,2011,0.95491824
 Faba beans,World,2012,0.967124052
 Faba beans,World,2013,0.962348013
-Feijoa,World,2010,1.002899226
-Feijoa,World,2011,1.002952436
-Feijoa,World,2012,1.005144857
-Feijoa,World,2013,1.00436172
+Feijoa,World,2010,1
+Feijoa,World,2011,1
+Feijoa,World,2012,1
+Feijoa,World,2013,1
 Fennel,World,2010,0.976113875
 Fennel,World,2011,0.980990355
 Fennel,World,2012,0.951912327
@@ -347,14 +340,14 @@ Fenugreek,World,2010,0.972708069
 Fenugreek,World,2011,0.976018261
 Fenugreek,World,2012,0.962977913
 Fenugreek,World,2013,0.969004409
-Fig leaf gourd,World,2010,1.055267054
-Fig leaf gourd,World,2011,1.054875175
-Fig leaf gourd,World,2012,1.055770444
-Fig leaf gourd,World,2013,1.055852844
-Figs,World,2010,1.031571476
-Figs,World,2011,1.045426964
-Figs,World,2012,1.043681711
-Figs,World,2013,1.034402302
+Fig leaf gourd,World,2010,1
+Fig leaf gourd,World,2011,1
+Fig leaf gourd,World,2012,1
+Fig leaf gourd,World,2013,1
+Figs,World,2010,1
+Figs,World,2011,1
+Figs,World,2012,1
+Figs,World,2013,1
 Finger millet,World,2010,0.974110414
 Finger millet,World,2011,0.969266138
 Finger millet,World,2012,0.990099291
@@ -371,78 +364,76 @@ Foxtail millet,World,2010,0.974560735
 Foxtail millet,World,2011,0.909380734
 Foxtail millet,World,2012,0.969796607
 Foxtail millet,World,2013,0.956920289
-Garlic,World,2010,1.008401835
-Garlic,World,2011,1.007167435
-Garlic,World,2012,1.007289645
-Garlic,World,2013,1.006630792
+Garlic,World,2010,1
+Garlic,World,2011,1
+Garlic,World,2012,1
+Garlic,World,2013,1
 Ginger,World,2010,0.613186402
 Ginger,World,2011,0.554316982
 Ginger,World,2012,0.598382788
 Ginger,World,2013,0.622271678
 Gooseberries,World,2010,0.988133013
 Gooseberries,World,2011,0.993721966
-Gooseberries,World,2012,1.006472604
+Gooseberries,World,2012,1
 Gooseberries,World,2013,0.999027774
 Grapefruits,World,2010,0.681119892
 Grapefruits,World,2011,0.682437373
 Grapefruits,World,2012,0.677497411
 Grapefruits,World,2013,0.507587859
-Grapes,World,2010,1.025176394
-Grapes,World,2011,1.042796408
-Grapes,World,2012,1.00131634
+Grapes,World,2010,1
+Grapes,World,2011,1
+Grapes,World,2012,1
 Grapes,World,2013,0.979686651
 Grasspea,World,2010,0.954142141
 Grasspea,World,2011,0.95491824
 Grasspea,World,2012,0.967124052
 Grasspea,World,2013,0.962348013
-Groundnuts,World,2010,1.032629628
-Groundnuts,World,2011,1.030201142
-Groundnuts,World,2012,1.031711521
-Groundnuts,World,2013,1.035984187
-Guavas,World,2010,1.00416552
-Guavas,World,2011,1.003068244
-Guavas,World,2012,1.006721793
-Guavas,World,2013,1.00626052
+Groundnuts,World,2010,1
+Groundnuts,World,2011,1
+Groundnuts,World,2012,1
+Groundnuts,World,2013,1
+Guavas,World,2010,1
+Guavas,World,2011,1
+Guavas,World,2012,1
+Guavas,World,2013,1
 Hazelnuts,World,2010,0.856192606
 Hazelnuts,World,2011,0.881222478
 Hazelnuts,World,2012,0.884249905
 Hazelnuts,World,2013,0.879734511
-Hemp,World,2010,1.03987977
+Hemp,World,2010,1
 Hemp,World,2011,0.956681078
 Hemp,World,2012,0.965391007
 Hemp,World,2013,0.941583955
-Horseradish,World,2010,1.037428514
-Horseradish,World,2011,1.036568568
-Horseradish,World,2012,1.037610552
-Horseradish,World,2013,1.037854062
-Huckleberry,World,2010,1.007780959
-Huckleberry,World,2011,1.004897054
-Huckleberry,World,2012,1.002338625
-Huckleberry,World,2013,1.002332865
-Jack bean,World,2010,1.009703271
-Jack bean,World,2011,1.010425518
-Jack bean,World,2012,1.009755746
-Jack bean,World,2013,1.009387231
-Jackfruit,World,2010,1.030359003
-Jackfruit,World,2011,1.036043593
-Jackfruit,World,2012,1.029203414
-Jackfruit,World,2013,1.023970978
+Horseradish,World,2010,1
+Horseradish,World,2011,1
+Horseradish,World,2012,1
+Horseradish,World,2013,1
+Huckleberry,World,2010,1
+Huckleberry,World,2011,1
+Huckleberry,World,2012,1
+Huckleberry,World,2013,1
+Jack bean,World,2010,1
+Jack bean,World,2011,1
+Jack bean,World,2012,1
+Jack bean,World,2013,1
+Jackfruit,World,2010,1
+Jackfruit,World,2011,1
+Jackfruit,World,2012,1
+Jackfruit,World,2013,1
 Japanese millet,World,2010,0.974560735
 Japanese millet,World,2011,0.909380734
 Japanese millet,World,2012,0.969796607
 Japanese millet,World,2013,0.956920289
-Jerusalem artichoke,World,2010,1.031476422
-Jerusalem artichoke,World,2011,1.031460582
-Jerusalem artichoke,World,2012,1.025138914
-Jerusalem artichoke,World,2013,1.025022987
-Jicama,World,2010,1.009703271
-Jicama,World,2011,1.010425518
-Jicama,World,2012,1.009755746
-Jicama,World,2013,1.009387231
-Jojoba,World,2010,1.059800495
-Jojoba,World,2011,1.059800495
-Jojoba,World,2012,1.054612778
-Jojoba,World,2013,1.055037568
+Jerusalem artichoke,World,2010,1
+Jerusalem artichoke,World,2011,1
+Jerusalem artichoke,World,2012,1
+Jerusalem artichoke,World,2013,1
+Jicama,World,2010,1
+Jicama,World,2011,1
+Jicama,World,2012,1
+Jicama,World,2013,1
+Jojoba,World,2012,1
+Jojoba,World,2013,1
 Jujube,World,2010,0.896206094
 Jujube,World,2011,0.889672304
 Jujube,World,2012,0.875462177
@@ -483,22 +474,22 @@ Lablab,World,2010,0.878769666
 Lablab,World,2011,0.885079132
 Lablab,World,2012,0.875845286
 Lablab,World,2013,0.889671296
-Leeks and other alliaceous vegetables,World,2010,1.069524902
-Leeks and other alliaceous vegetables,World,2011,1.066942004
-Leeks and other alliaceous vegetables,World,2012,1.069322672
-Leeks and other alliaceous vegetables,World,2013,1.070247037
-Lemons and limes,World,2010,1.080142302
-Lemons and limes,World,2011,1.135692269
-Lemons and limes,World,2012,1.130381041
-Lemons and limes,World,2013,1.134070833
+Leeks and other alliaceous vegetables,World,2010,1
+Leeks and other alliaceous vegetables,World,2011,1
+Leeks and other alliaceous vegetables,World,2012,1
+Leeks and other alliaceous vegetables,World,2013,1
+Lemons and limes,World,2010,1
+Lemons and limes,World,2011,1
+Lemons and limes,World,2012,1
+Lemons and limes,World,2013,1
 Lentils,World,2010,0.54870679
 Lentils,World,2011,0.539483348
 Lentils,World,2012,0.552794603
 Lentils,World,2013,0.513720524
-Lettuce,World,2010,1.104994793
-Lettuce,World,2011,1.100953619
-Lettuce,World,2012,1.10624947
-Lettuce,World,2013,1.107208077
+Lettuce,World,2010,1
+Lettuce,World,2011,1
+Lettuce,World,2012,1
+Lettuce,World,2013,1
 Lima bean,World,2010,0.924199024
 Lima bean,World,2011,0.93773723
 Lima bean,World,2012,0.917693502
@@ -507,14 +498,14 @@ Litchi,World,2010,0.896206094
 Litchi,World,2011,0.889672304
 Litchi,World,2012,0.875462177
 Litchi,World,2013,0.880089224
-Little millet,World,2010,1.123484768
-Little millet,World,2011,1.045354778
-Little millet,World,2012,1.114969358
-Little millet,World,2013,1.100102633
-Longan,World,2010,1.030359003
-Longan,World,2011,1.036043593
-Longan,World,2012,1.029203414
-Longan,World,2013,1.023970978
+Little millet,World,2010,1
+Little millet,World,2011,1
+Little millet,World,2012,1
+Little millet,World,2013,1
+Longan,World,2010,1
+Longan,World,2011,1
+Longan,World,2012,1
+Longan,World,2013,1
 Loquat,World,2010,0.896206094
 Loquat,World,2011,0.889672304
 Loquat,World,2012,0.875462177
@@ -531,10 +522,6 @@ Macadamia nut,World,2010,0.994149452
 Macadamia nut,World,2011,0.995188615
 Macadamia nut,World,2012,0.994891019
 Macadamia nut,World,2013,0.994608971
-Mahuwa,World,2010,1.192780078
-Mahuwa,World,2011,1.192780078
-Mahuwa,World,2012,1.192780078
-Mahuwa,World,2013,1.192780078
 Maize,World,2010,0.88685092
 Maize,World,2011,0.886923053
 Maize,World,2012,0.886524978
@@ -543,18 +530,18 @@ Mamey sapote,World,2010,0.99833809
 Mamey sapote,World,2011,0.997925548
 Mamey sapote,World,2012,0.999639892
 Mamey sapote,World,2013,0.999857349
-Mammee,World,2010,1.002899226
-Mammee,World,2011,1.002952436
-Mammee,World,2012,1.005144857
-Mammee,World,2013,1.00436172
-Mandarines,World,2010,1.017312598
+Mammee,World,2010,1
+Mammee,World,2011,1
+Mammee,World,2012,1
+Mammee,World,2013,1
+Mandarines,World,2010,1
 Mandarines,World,2011,0.931809529
 Mandarines,World,2012,0.905833186
 Mandarines,World,2013,0.897101362
-Mango,World,2010,1.01494681
-Mango,World,2011,1.0150483
-Mango,World,2012,1.009153196
-Mango,World,2013,1.011999714
+Mango,World,2010,1
+Mango,World,2011,1
+Mango,World,2012,1
+Mango,World,2013,1
 Mangosteen,World,2010,0.985037651
 Mangosteen,World,2011,0.980006645
 Mangosteen,World,2012,0.981288776
@@ -563,10 +550,10 @@ Maple sugar,World,2010,0.927724321
 Maple sugar,World,2011,0.925580435
 Maple sugar,World,2012,0.926078709
 Maple sugar,World,2013,0.926141144
-Marjoram,World,2010,1.013925051
-Marjoram,World,2011,1.013109754
-Marjoram,World,2012,1.013763266
-Marjoram,World,2013,1.015068794
+Marjoram,World,2010,1
+Marjoram,World,2011,1
+Marjoram,World,2012,1
+Marjoram,World,2013,1
 Mashua,World,2010,0.999702042
 Mashua,World,2011,0.998582332
 Mashua,World,2012,0.999259739
@@ -583,30 +570,30 @@ Mauka,World,2010,0.999702042
 Mauka,World,2011,0.998582332
 Mauka,World,2012,0.999259739
 Mauka,World,2013,0.999133226
-Medlar,World,2010,1.001808682
-Medlar,World,2011,1.002364268
-Medlar,World,2012,1.005717692
-Medlar,World,2013,1.002215484
+Medlar,World,2010,1
+Medlar,World,2011,1
+Medlar,World,2012,1
+Medlar,World,2013,1
 Melons,World,2010,0.982923895
 Melons,World,2011,0.981676549
 Melons,World,2012,0.947437718
 Melons,World,2013,0.970382429
-Mombin,World,2010,1.001241602
-Mombin,World,2011,1.000867102
-Mombin,World,2012,1.004895675
-Mombin,World,2013,1.004319601
-Mulberry,World,2010,1.00572049
-Mulberry,World,2011,1.008894612
-Mulberry,World,2012,1.010113203
-Mulberry,World,2013,1.009209877
-Mung bean,World,2010,1.512820863
-Mung bean,World,2011,1.544323775
-Mung bean,World,2012,1.585002444
-Mung bean,World,2013,1.606837041
-Myrtle,World,2010,1.039707693
-Myrtle,World,2011,1.046534431
-Myrtle,World,2012,1.04238951
-Myrtle,World,2013,1.032873662
+Mombin,World,2010,1
+Mombin,World,2011,1
+Mombin,World,2012,1
+Mombin,World,2013,1
+Mulberry,World,2010,1
+Mulberry,World,2011,1
+Mulberry,World,2012,1
+Mulberry,World,2013,1
+Mung bean,World,2010,1
+Mung bean,World,2011,1
+Mung bean,World,2012,1
+Mung bean,World,2013,1
+Myrtle,World,2010,1
+Myrtle,World,2011,1
+Myrtle,World,2012,1
+Myrtle,World,2013,1
 Naranjilla,World,2010,0.997079222
 Naranjilla,World,2011,0.998451762
 Naranjilla,World,2012,0.99831757
@@ -635,14 +622,14 @@ Oil palm,World,2010,0.928179221
 Oil palm,World,2011,0.931904626
 Oil palm,World,2012,0.924677343
 Oil palm,World,2013,0.928821866
-Oiticica,World,2010,1.008209771
-Oiticica,World,2011,1.010045051
-Oiticica,World,2012,1.007011827
-Oiticica,World,2013,1.007205044
-Okra,World,2010,1.174666156
-Okra,World,2011,1.175401649
-Okra,World,2012,1.167174905
-Okra,World,2013,1.165399145
+Oiticica,World,2010,1
+Oiticica,World,2011,1
+Oiticica,World,2012,1
+Oiticica,World,2013,1
+Okra,World,2010,1
+Okra,World,2011,1
+Okra,World,2012,1
+Okra,World,2013,1
 Olives,World,2010,0.325682904
 Olives,World,2011,0.333774687
 Olives,World,2012,0.352971183
@@ -655,30 +642,30 @@ Orache,World,2010,0.40300434
 Orache,World,2011,0.40524733
 Orache,World,2012,0.410782344
 Orache,World,2013,0.410817347
-Oranges,World,2010,1.017312598
+Oranges,World,2010,1
 Oranges,World,2011,0.931809529
 Oranges,World,2012,0.905833186
 Oranges,World,2013,0.897101362
-Papayas,World,2010,1.00416552
-Papayas,World,2011,1.003068244
-Papayas,World,2012,1.006721793
-Papayas,World,2013,1.00626052
-Parsley,World,2010,1.020406197
-Parsley,World,2011,1.02010974
-Parsley,World,2012,1.021554321
-Parsley,World,2013,1.023037491
-Parsnip,World,2010,1.058228711
-Parsnip,World,2011,1.057091171
-Parsnip,World,2012,1.05926908
-Parsnip,World,2013,1.060900233
-Passionfruit,World,2010,1.00416552
-Passionfruit,World,2011,1.003068244
-Passionfruit,World,2012,1.006721793
-Passionfruit,World,2013,1.00626052
-Pawpaw,World,2010,1.007780959
-Pawpaw,World,2011,1.004897054
-Pawpaw,World,2012,1.002338625
-Pawpaw,World,2013,1.002332865
+Papayas,World,2010,1
+Papayas,World,2011,1
+Papayas,World,2012,1
+Papayas,World,2013,1
+Parsley,World,2010,1
+Parsley,World,2011,1
+Parsley,World,2012,1
+Parsley,World,2013,1
+Parsnip,World,2010,1
+Parsnip,World,2011,1
+Parsnip,World,2012,1
+Parsnip,World,2013,1
+Passionfruit,World,2010,1
+Passionfruit,World,2011,1
+Passionfruit,World,2012,1
+Passionfruit,World,2013,1
+Pawpaw,World,2010,1
+Pawpaw,World,2011,1
+Pawpaw,World,2012,1
+Pawpaw,World,2013,1
 Peaches and nectarines,World,2010,0.896206094
 Peaches and nectarines,World,2011,0.889672304
 Peaches and nectarines,World,2012,0.875462177
@@ -691,7 +678,7 @@ Pears,World,2010,0.846037875
 Pears,World,2011,0.829947486
 Pears,World,2012,0.820144126
 Pears,World,2013,0.832234332
-Peas,World,2010,1.015175044
+Peas,World,2010,1
 Peas,World,2011,0.994716732
 Peas,World,2012,0.982339366
 Peas,World,2013,0.96865193
@@ -699,30 +686,25 @@ Pecan,World,2010,0.961566403
 Pecan,World,2011,0.951353499
 Pecan,World,2012,0.964390309
 Pecan,World,2013,0.956187183
-Pepper,World,2010,1.151343635
-Pepper,World,2011,1.123579931
-Pepper,World,2012,1.116584667
-Pepper,World,2013,1.170911233
-Perilla,World,2010,1.298475686
-Perilla,World,2011,1.298475686
-Perilla,World,2012,1.29476953
-Perilla,World,2013,1.298475686
+Pepper,World,2010,1
+Pepper,World,2011,1
+Pepper,World,2012,1
+Pepper,World,2013,1
+Perilla,World,2012,1
 Persimmons,World,2010,0.896206094
 Persimmons,World,2011,0.889672304
 Persimmons,World,2012,0.875462177
 Persimmons,World,2013,0.880089224
-Physic nut,World,2010,1.018600746
-Physic nut,World,2011,1.018600746
-Physic nut,World,2012,1.01707557
-Physic nut,World,2013,1.017196745
+Physic nut,World,2012,1
+Physic nut,World,2013,1
 Pigeonpeas,World,2010,0.696378519
 Pigeonpeas,World,2011,0.679856693
 Pigeonpeas,World,2012,0.669901097
 Pigeonpeas,World,2013,0.642705161
-Pili nut,World,2010,1.034166806
-Pili nut,World,2011,1.035301701
-Pili nut,World,2012,1.042377016
-Pili nut,World,2013,1.041053571
+Pili nut,World,2010,1
+Pili nut,World,2011,1
+Pili nut,World,2012,1
+Pili nut,World,2013,1
 Pine nut,World,2010,0.943799273
 Pine nut,World,2011,0.954477488
 Pine nut,World,2012,0.944107928
@@ -735,66 +717,66 @@ Pistachios,World,2010,0.949282131
 Pistachios,World,2011,0.965318831
 Pistachios,World,2012,0.961581466
 Pistachios,World,2013,0.961226691
-Plantains,World,2010,1.05222361
-Plantains,World,2011,1.048909454
-Plantains,World,2012,1.048575722
-Plantains,World,2013,1.04806618
+Plantains,World,2010,1
+Plantains,World,2011,1
+Plantains,World,2012,1
+Plantains,World,2013,1
 Plums,World,2010,0.846037875
 Plums,World,2011,0.829947486
 Plums,World,2012,0.820144126
 Plums,World,2013,0.832234332
-Pomegranate,World,2010,1.039466478
-Pomegranate,World,2011,1.049394235
-Pomegranate,World,2012,1.043528012
-Pomegranate,World,2013,1.036825578
-Pongamia oil,World,2010,1.299684503
-Pongamia oil,World,2011,1.299960068
-Pongamia oil,World,2012,1.296406373
-Pongamia oil,World,2013,1.300169925
+Pomegranate,World,2010,1
+Pomegranate,World,2011,1
+Pomegranate,World,2012,1
+Pomegranate,World,2013,1
+Pongamia oil,World,2010,1
+Pongamia oil,World,2011,1
+Pongamia oil,World,2012,1
+Pongamia oil,World,2013,1
 Poppies,World,2010,0.974448833
-Poppies,World,2011,1.010929718
+Poppies,World,2011,1
 Poppies,World,2012,0.990926063
 Poppies,World,2013,0.908059549
 Potatoes,World,2010,0.991875217
 Potatoes,World,2011,0.991999902
 Potatoes,World,2012,0.992447115
 Potatoes,World,2013,0.991023946
-Prickly pear,World,2010,1.001164
-Prickly pear,World,2011,1.000056467
-Prickly pear,World,2012,1.001421006
-Prickly pear,World,2013,1.001745144
-Proso millet,World,2010,1.026339112
+Prickly pear,World,2010,1
+Prickly pear,World,2011,1
+Prickly pear,World,2012,1
+Prickly pear,World,2013,1
+Proso millet,World,2010,1
 Proso millet,World,2011,0.945495104
-Proso millet,World,2012,1.010497977
+Proso millet,World,2012,1
 Proso millet,World,2013,0.996786011
-Pumpkin,World,2010,1.030257957
-Pumpkin,World,2011,1.029897688
-Pumpkin,World,2012,1.030665936
-Pumpkin,World,2013,1.03043396
-Purging croton,World,2010,2.195461567
-Purging croton,World,2011,2.188657123
-Purging croton,World,2012,2.210607148
-Purging croton,World,2013,2.221851404
-Quinces,World,2010,1.005709023
-Quinces,World,2011,1.008887507
-Quinces,World,2012,1.010219061
-Quinces,World,2013,1.008960369
+Pumpkin,World,2010,1
+Pumpkin,World,2011,1
+Pumpkin,World,2012,1
+Pumpkin,World,2013,1
+Purging croton,World,2010,1
+Purging croton,World,2011,1
+Purging croton,World,2012,1
+Purging croton,World,2013,1
+Quinces,World,2010,1
+Quinces,World,2011,1
+Quinces,World,2012,1
+Quinces,World,2013,1
 Quinoa,World,2010,0.999709051
 Quinoa,World,2011,0.999526791
 Quinoa,World,2012,0.999938349
 Quinoa,World,2013,0.996116553
-Radish,World,2010,1.020406197
-Radish,World,2011,1.02010974
-Radish,World,2012,1.021554321
-Radish,World,2013,1.023037491
+Radish,World,2010,1
+Radish,World,2011,1
+Radish,World,2012,1
+Radish,World,2013,1
 Rambutan,World,2010,0.985037651
 Rambutan,World,2011,0.980006645
 Rambutan,World,2012,0.981288776
 Rambutan,World,2013,0.988349589
-Rapeseed and Mustards,World,2010,1.043946241
-Rapeseed and Mustards,World,2011,1.043659206
-Rapeseed and Mustards,World,2012,1.041251086
-Rapeseed and Mustards,World,2013,1.040260758
+Rapeseed and Mustards,World,2010,1
+Rapeseed and Mustards,World,2011,1
+Rapeseed and Mustards,World,2012,1
+Rapeseed and Mustards,World,2013,1
 Raspberries,World,2010,0.830444377
 Raspberries,World,2011,0.823941718
 Raspberries,World,2012,0.819394908
@@ -803,10 +785,10 @@ Rhubarb,World,2010,0.436366701
 Rhubarb,World,2011,0.43968706
 Rhubarb,World,2012,0.441355044
 Rhubarb,World,2013,0.439248353
-Rice (African),World,2010,1.012594086
-Rice (African),World,2011,1.012201199
-Rice (African),World,2012,1.012672619
-Rice (African),World,2013,1.012282656
+Rice (African),World,2010,1
+Rice (African),World,2011,1
+Rice (African),World,2012,1
+Rice (African),World,2013,1
 Rice (Asian),World,2010,0.28215195
 Rice (Asian),World,2011,0.283336048
 Rice (Asian),World,2012,0.282840767
@@ -819,10 +801,10 @@ Runner bean,World,2010,0.924312601
 Runner bean,World,2011,0.939476044
 Runner bean,World,2012,0.919121158
 Runner bean,World,2013,0.914466686
-Rye,World,2010,1.022621786
-Rye,World,2011,1.02483822
-Rye,World,2012,1.022092855
-Rye,World,2013,1.024132173
+Rye,World,2010,1
+Rye,World,2011,1
+Rye,World,2012,1
+Rye,World,2013,1
 Safflower,World,2010,0.821380248
 Safflower,World,2011,0.772026444
 Safflower,World,2012,0.771930886
@@ -831,42 +813,38 @@ Saffron,World,2010,0.989820945
 Saffron,World,2011,0.989269994
 Saffron,World,2012,0.976692346
 Saffron,World,2013,0.974115244
-Sago palm,World,2010,1.006330704
-Sago palm,World,2011,1.008013057
-Sago palm,World,2012,1.010388619
-Sago palm,World,2013,1.010669589
-Salsify,World,2010,1.008852531
-Salsify,World,2011,1.009289046
-Salsify,World,2012,1.010461398
-Salsify,World,2013,1.010793412
+Sago palm,World,2010,1
+Sago palm,World,2011,1
+Sago palm,World,2012,1
+Sago palm,World,2013,1
+Salsify,World,2010,1
+Salsify,World,2011,1
+Salsify,World,2012,1
+Salsify,World,2013,1
 Sapodilla,World,2010,0.99833809
 Sapodilla,World,2011,0.997925548
 Sapodilla,World,2012,0.999639892
 Sapodilla,World,2013,0.999857349
-Savory,World,2010,1.020406197
-Savory,World,2011,1.02010974
-Savory,World,2012,1.021554321
-Savory,World,2013,1.023037491
+Savory,World,2010,1
+Savory,World,2011,1
+Savory,World,2012,1
+Savory,World,2013,1
 Service tree,World,2010,0.981556889
 Service tree,World,2011,0.98350055
 Service tree,World,2012,0.993760689
 Service tree,World,2013,0.987820063
 Sesame,World,2010,0.978040165
-Sesame,World,2011,1.035582494
-Sesame,World,2012,1.050088387
-Sesame,World,2013,1.070303452
-Shala tree,World,2010,1.192780078
-Shala tree,World,2011,1.192780078
-Shala tree,World,2012,1.192780078
-Shala tree,World,2013,1.192780078
+Sesame,World,2011,1
+Sesame,World,2012,1
+Sesame,World,2013,1
 Sorghum,World,2010,0.399518767
 Sorghum,World,2011,0.41163593
 Sorghum,World,2012,0.430481496
 Sorghum,World,2013,0.425928206
-Sorrel,World,2010,1.049010281
-Sorrel,World,2011,1.047557128
-Sorrel,World,2012,1.051576804
-Sorrel,World,2013,1.053131417
+Sorrel,World,2010,1
+Sorrel,World,2011,1
+Sorrel,World,2012,1
+Sorrel,World,2013,1
 Soursop,World,2010,0.99833809
 Soursop,World,2011,0.997925548
 Soursop,World,2012,0.999639892
@@ -875,14 +853,14 @@ Soybeans,World,2010,0.957550458
 Soybeans,World,2011,0.972029571
 Soybeans,World,2012,0.986765612
 Soybeans,World,2013,0.993193439
-Spinach,World,2010,1.043769638
-Spinach,World,2011,1.04167431
-Spinach,World,2012,1.042414943
-Spinach,World,2013,1.041765048
-Strawberries,World,2010,1.009942386
-Strawberries,World,2011,1.008092928
-Strawberries,World,2012,1.004732848
-Strawberries,World,2013,1.005242962
+Spinach,World,2010,1
+Spinach,World,2011,1
+Spinach,World,2012,1
+Spinach,World,2013,1
+Strawberries,World,2010,1
+Strawberries,World,2011,1
+Strawberries,World,2012,1
+Strawberries,World,2013,1
 Strawberry tree,World,2010,0.987454895
 Strawberry tree,World,2011,0.991081977
 Strawberry tree,World,2012,0.996844595
@@ -891,34 +869,30 @@ Sugar apple,World,2010,0.99833809
 Sugar apple,World,2011,0.997925548
 Sugar apple,World,2012,0.999639892
 Sugar apple,World,2013,0.999857349
-Sugar beets,World,2010,1.148360568
-Sugar beets,World,2011,1.148360568
-Sugar beets,World,2012,1.148360568
-Sugar beets,World,2013,1.148360568
 Sugarcane,World,2010,0.552962524
 Sugarcane,World,2011,0.537404869
 Sugarcane,World,2012,0.520304737
 Sugarcane,World,2013,0.496194019
-Sunflowers,World,2010,1.025146831
-Sunflowers,World,2011,1.027570273
-Sunflowers,World,2012,1.025640234
-Sunflowers,World,2013,1.02695782
-Sweetpotatoes,World,2010,1.053188784
-Sweetpotatoes,World,2011,1.052063795
-Sweetpotatoes,World,2012,1.053080012
-Sweetpotatoes,World,2013,1.053367968
-Sword bean,World,2010,1.394716848
-Sword bean,World,2011,1.383245301
-Sword bean,World,2012,1.384774929
-Sword bean,World,2013,1.404565828
-Tamarind,World,2010,1.051582235
-Tamarind,World,2011,1.05267419
-Tamarind,World,2012,1.055944959
-Tamarind,World,2013,1.058621978
-Taro,World,2010,1.197414794
-Taro,World,2011,1.200067943
-Taro,World,2012,1.204711957
-Taro,World,2013,1.205045817
+Sunflowers,World,2010,1
+Sunflowers,World,2011,1
+Sunflowers,World,2012,1
+Sunflowers,World,2013,1
+Sweetpotatoes,World,2010,1
+Sweetpotatoes,World,2011,1
+Sweetpotatoes,World,2012,1
+Sweetpotatoes,World,2013,1
+Sword bean,World,2010,1
+Sword bean,World,2011,1
+Sword bean,World,2012,1
+Sword bean,World,2013,1
+Tamarind,World,2010,1
+Tamarind,World,2011,1
+Tamarind,World,2012,1
+Tamarind,World,2013,1
+Taro,World,2010,1
+Taro,World,2011,1
+Taro,World,2012,1
+Taro,World,2013,1
 Tarragon,World,2010,0.387148693
 Tarragon,World,2011,0.386386011
 Tarragon,World,2012,0.390651396
@@ -935,38 +909,38 @@ Tepary bean,World,2010,0.924312601
 Tepary bean,World,2011,0.939476044
 Tepary bean,World,2012,0.919121158
 Tepary bean,World,2013,0.914466686
-Thyme,World,2010,1.007741816
-Thyme,World,2011,1.011522901
-Thyme,World,2012,1.005500136
-Thyme,World,2013,1.00487886
-Tomatoes,World,2010,1.015841765
-Tomatoes,World,2011,1.016793884
-Tomatoes,World,2012,1.013329913
-Tomatoes,World,2013,1.014975518
-Triticale,World,2010,1.088658032
-Triticale,World,2011,1.085913573
-Triticale,World,2012,1.091196561
-Triticale,World,2013,1.090695523
-Tung nuts,World,2010,1.605758542
-Tung nuts,World,2011,1.600781778
-Tung nuts,World,2012,1.616836005
-Tung nuts,World,2013,1.625060044
+Thyme,World,2010,1
+Thyme,World,2011,1
+Thyme,World,2012,1
+Thyme,World,2013,1
+Tomatoes,World,2010,1
+Tomatoes,World,2011,1
+Tomatoes,World,2012,1
+Tomatoes,World,2013,1
+Triticale,World,2010,1
+Triticale,World,2011,1
+Triticale,World,2012,1
+Triticale,World,2013,1
+Tung nuts,World,2010,1
+Tung nuts,World,2011,1
+Tung nuts,World,2012,1
+Tung nuts,World,2013,1
 Turmeric,World,2010,0.551185166
 Turmeric,World,2011,0.490332544
 Turmeric,World,2012,0.528993433
 Turmeric,World,2013,0.530682225
-Turnips,World,2010,1.069524902
-Turnips,World,2011,1.066942004
-Turnips,World,2012,1.069322672
-Turnips,World,2013,1.070247037
+Turnips,World,2010,1
+Turnips,World,2011,1
+Turnips,World,2012,1
+Turnips,World,2013,1
 Ulluco,World,2010,0.999702042
 Ulluco,World,2011,0.998582332
 Ulluco,World,2012,0.999259739
 Ulluco,World,2013,0.999133226
-Vanilla,World,2010,1.041437624
-Vanilla,World,2011,1.03660588
-Vanilla,World,2012,1.036272379
-Vanilla,World,2013,1.033386403
+Vanilla,World,2010,1
+Vanilla,World,2011,1
+Vanilla,World,2012,1
+Vanilla,World,2013,1
 Velvet bean,World,2010,0.513064813
 Velvet bean,World,2011,0.502637278
 Velvet bean,World,2012,0.480610604
@@ -975,43 +949,43 @@ Vetch,World,2010,0.8961006
 Vetch,World,2011,0.905422429
 Vetch,World,2012,0.927783822
 Vetch,World,2013,0.920794484
-Walnuts,World,2010,1.015046052
-Walnuts,World,2011,1.034743539
-Walnuts,World,2012,1.004656425
-Walnuts,World,2013,1.024603891
-Watercress,World,2010,1.091752005
-Watercress,World,2011,1.089312087
-Watercress,World,2012,1.094301314
-Watercress,World,2013,1.096020337
-Watermelons,World,2010,1.01903446
-Watermelons,World,2011,1.019577032
-Watermelons,World,2012,1.020308751
-Watermelons,World,2013,1.021848129
+Walnuts,World,2010,1
+Walnuts,World,2011,1
+Walnuts,World,2012,1
+Walnuts,World,2013,1
+Watercress,World,2010,1
+Watercress,World,2011,1
+Watercress,World,2012,1
+Watercress,World,2013,1
+Watermelons,World,2010,1
+Watermelons,World,2011,1
+Watermelons,World,2012,1
+Watermelons,World,2013,1
 Wheat,World,2010,0.874691897
 Wheat,World,2011,0.87624307
 Wheat,World,2012,0.874347522
 Wheat,World,2013,0.876590138
-Wildrice,World,2010,1.010853657
-Wildrice,World,2011,1.00531853
-Wildrice,World,2012,1.003663
-Wildrice,World,2013,1.003237656
-Winged bean,World,2010,1.038437525
-Winged bean,World,2011,1.039710942
-Winged bean,World,2012,1.041411795
-Winged bean,World,2013,1.042799561
+Wildrice,World,2010,1
+Wildrice,World,2011,1
+Wildrice,World,2012,1
+Wildrice,World,2013,1
+Winged bean,World,2010,1
+Winged bean,World,2011,1
+Winged bean,World,2012,1
+Winged bean,World,2013,1
 Yams,World,2010,0.114337085
 Yams,World,2011,0.111867138
 Yams,World,2012,0.146780696
 Yams,World,2013,0.141306599
-"Yautia, cocoyam",World,2010,1.013026599
-"Yautia, cocoyam",World,2011,1.01084814
-"Yautia, cocoyam",World,2012,1.008201502
-"Yautia, cocoyam",World,2013,1.005141538
+"Yautia, cocoyam",World,2010,1
+"Yautia, cocoyam",World,2011,1
+"Yautia, cocoyam",World,2012,1
+"Yautia, cocoyam",World,2013,1
 Year bean,World,2010,0.924312601
 Year bean,World,2011,0.939476044
 Year bean,World,2012,0.919121158
 Year bean,World,2013,0.914466686
-Zucchini,World,2010,1.013136186
-Zucchini,World,2011,1.01317317
-Zucchini,World,2012,1.013226146
-Zucchini,World,2013,1.013412514
+Zucchini,World,2010,1
+Zucchini,World,2011,1
+Zucchini,World,2012,1
+Zucchini,World,2013,1

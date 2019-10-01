@@ -129,20 +129,18 @@ Butternut squash,World,2010,0.97197393
 Butternut squash,World,2011,0.965722128
 Butternut squash,World,2012,0.884571943
 Butternut squash,World,2013,0.653684208
-Cabbages and other brassicas,World,2010,0.507787435
-Cabbages and other brassicas,World,2011,0.492421093
-Cabbages and other brassicas,World,2012,0.493032193
-Cabbages and other brassicas,World,2013,0.488155978
 Cabbages,World,2010,0.507787435
 Cabbages,World,2011,0.492421093
 Cabbages,World,2012,0.493032193
 Cabbages,World,2013,0.488155978
+Cabbages and other brassicas,World,2010,0.507787435
+Cabbages and other brassicas,World,2011,0.492421093
+Cabbages and other brassicas,World,2012,0.493032193
+Cabbages and other brassicas,World,2013,0.488155978
 Cainito,World,2010,0.999337646
 Cainito,World,2011,0.999183115
 Cainito,World,2012,0.989212358
 Cainito,World,2013,0.985140176
-Calabash,World,2010,1
-Calabash,World,2011,1
 Calabash,World,2012,0.994430849
 Calabash,World,2013,0.993306863
 Canary seed,World,2010,0.987863978
@@ -241,10 +239,6 @@ Citron,World,2010,0.994813545
 Citron,World,2011,0.995729933
 Citron,World,2012,0.996396473
 Citron,World,2013,0.995930689
-Citronella,World,2010,1
-Citronella,World,2011,1
-Citronella,World,2012,1
-Citronella,World,2013,1
 Cloves,World,2010,0.752981087
 Cloves,World,2011,0.832541026
 Cloves,World,2012,0.670145825
@@ -357,8 +351,6 @@ Flax,World,2010,0.207650964
 Flax,World,2011,0.152068966
 Flax,World,2012,0.150321265
 Flax,World,2013,0.17395908
-Fonio,World,2012,1
-Fonio,World,2013,1
 Foxtail millet,World,2010,0.568182453
 Foxtail millet,World,2011,0.706652808
 Foxtail millet,World,2012,0.712132076
@@ -511,8 +503,6 @@ Mangosteen,World,2010,0.901284138
 Mangosteen,World,2011,0.872920217
 Mangosteen,World,2012,0.877047995
 Mangosteen,World,2013,0.867343208
-Maple sugar,World,2012,1
-Maple sugar,World,2013,1
 Marjoram,World,2010,0.949572997
 Marjoram,World,2011,0.948097908
 Marjoram,World,2012,0.94641463
@@ -669,8 +659,6 @@ Pistachios,World,2010,0.569328622
 Pistachios,World,2011,0.627801331
 Pistachios,World,2012,0.761201533
 Pistachios,World,2013,0.836135553
-Plantains,World,2010,1
-Plantains,World,2011,1
 Plantains,World,2012,0.997810815
 Plantains,World,2013,0.995097695
 Plums,World,2010,0.8909813
@@ -709,10 +697,6 @@ Purging croton,World,2010,0.703178381
 Purging croton,World,2011,0.617299837
 Purging croton,World,2012,0.675338639
 Purging croton,World,2013,0.741050638
-Pyrethrum,World,2010,1
-Pyrethrum,World,2011,1
-Pyrethrum,World,2012,1
-Pyrethrum,World,2013,1
 Quinces,World,2010,0.782852109
 Quinces,World,2011,0.73972907
 Quinces,World,2012,0.763098689
@@ -756,7 +740,6 @@ Runner bean,World,2013,0.963573691
 Rye,World,2010,0.999996135
 Rye,World,2011,0.999996866
 Rye,World,2012,0.997973336
-Rye,World,2013,1
 Safflower,World,2010,0.990467753
 Safflower,World,2011,0.993218009
 Safflower,World,2012,0.991006843
@@ -873,7 +856,6 @@ Tomatoes,World,2010,0.889077011
 Tomatoes,World,2011,0.860661125
 Tomatoes,World,2012,0.883043269
 Tomatoes,World,2013,0.882518647
-Triticale,World,2010,1
 Triticale,World,2011,0.999832668
 Triticale,World,2012,0.99922984
 Triticale,World,2013,0.999861176

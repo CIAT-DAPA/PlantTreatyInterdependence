@@ -15,10 +15,6 @@ Agave,World,2010,0.728041656
 Agave,World,2011,0.723099385
 Agave,World,2012,0.711441465
 Agave,World,2013,0.711063943
-Albardine,World,2010,1
-Albardine,World,2011,1
-Albardine,World,2012,1
-Albardine,World,2013,1
 Allspice,World,2010,0.955845384
 Allspice,World,2011,0.956279011
 Allspice,World,2012,0.958989483
@@ -87,10 +83,6 @@ Badian,World,2010,0.927528322
 Badian,World,2011,0.935376669
 Badian,World,2012,0.93355734
 Badian,World,2013,0.928854203
-Bambara bean,World,2010,1
-Bambara bean,World,2011,1
-Bambara bean,World,2012,1
-Bambara bean,World,2013,1
 Bamboo shoot,World,2010,0.259313975
 Bamboo shoot,World,2011,0.246929953
 Bamboo shoot,World,2012,0.25108302
@@ -147,14 +139,14 @@ Butternut squash,World,2010,0.956169102
 Butternut squash,World,2011,0.958752363
 Butternut squash,World,2012,0.956522133
 Butternut squash,World,2013,0.957518001
-Cabbages and other brassicas,World,2010,0.392646931
-Cabbages and other brassicas,World,2011,0.401132445
-Cabbages and other brassicas,World,2012,0.401139543
-Cabbages and other brassicas,World,2013,0.400596937
 Cabbages,World,2010,0.392646931
 Cabbages,World,2011,0.401132445
 Cabbages,World,2012,0.401139543
 Cabbages,World,2013,0.400596937
+Cabbages and other brassicas,World,2010,0.392646931
+Cabbages and other brassicas,World,2011,0.401132445
+Cabbages and other brassicas,World,2012,0.401139543
+Cabbages and other brassicas,World,2013,0.400596937
 Caesarweed,World,2010,0.816209097
 Caesarweed,World,2011,0.819046567
 Caesarweed,World,2012,0.842584075
@@ -187,22 +179,10 @@ Carambola,World,2010,0.575611589
 Carambola,World,2011,0.609891622
 Carambola,World,2012,0.615284024
 Carambola,World,2013,0.623302509
-Carapa,World,2010,1
-Carapa,World,2011,1
-Carapa,World,2012,1
-Carapa,World,2013,1
 Cardamoms,World,2010,0.230421911
 Cardamoms,World,2011,0.227775405
 Cardamoms,World,2012,0.220681624
 Cardamoms,World,2013,0.22254337
-Carneros Yucca,World,2010,1
-Carneros Yucca,World,2011,1
-Carneros Yucca,World,2012,1
-Carneros Yucca,World,2013,1
-Caroa,World,2010,1
-Caroa,World,2011,1
-Caroa,World,2012,1
-Caroa,World,2013,1
 Carobs,World,2010,0.044930736
 Carobs,World,2011,0.050086194
 Carobs,World,2012,0.053221858
@@ -259,10 +239,6 @@ Chinotto,World,2010,0.984393598
 Chinotto,World,2011,0.982640163
 Chinotto,World,2012,0.984127535
 Chinotto,World,2013,0.983179143
-Chontadura,World,2010,1
-Chontadura,World,2011,1
-Chontadura,World,2012,1
-Chontadura,World,2013,1
 Chufa,World,2010,0.993938175
 Chufa,World,2011,0.994098245
 Chufa,World,2012,0.993932776
@@ -359,10 +335,6 @@ Elderberry,World,2010,0.982742464
 Elderberry,World,2011,0.981520611
 Elderberry,World,2012,0.982443795
 Elderberry,World,2013,0.982009347
-Esparto,World,2010,1
-Esparto,World,2011,1
-Esparto,World,2012,1
-Esparto,World,2013,1
 Ethiopian rape,World,2010,0.987561397
 Ethiopian rape,World,2011,0.987925907
 Ethiopian rape,World,2012,0.987660082
@@ -395,10 +367,6 @@ Finger millet,World,2010,0.892069848
 Finger millet,World,2011,0.874714564
 Finger millet,World,2012,0.900693645
 Finger millet,World,2013,0.855128247
-Fique,World,2010,1
-Fique,World,2011,1
-Fique,World,2012,1
-Fique,World,2013,1
 Flax,World,2010,0.580410161
 Flax,World,2011,0.461568255
 Flax,World,2012,0.457059765
@@ -415,10 +383,6 @@ Garlic,World,2010,0.982973383
 Garlic,World,2011,0.982585167
 Garlic,World,2012,0.982855882
 Garlic,World,2013,0.981948267
-Giant cabuya,World,2010,1
-Giant cabuya,World,2011,1
-Giant cabuya,World,2012,1
-Giant cabuya,World,2013,1
 Ginger,World,2010,0.541675688
 Ginger,World,2011,0.477760351
 Ginger,World,2012,0.547471075
@@ -479,10 +443,6 @@ Japanese millet,World,2010,0.629400609
 Japanese millet,World,2011,0.647473745
 Japanese millet,World,2012,0.612640511
 Japanese millet,World,2013,0.662068394
-Jerusalem artichoke,World,2010,1
-Jerusalem artichoke,World,2011,1
-Jerusalem artichoke,World,2012,1
-Jerusalem artichoke,World,2013,1
 Jicama,World,2010,0.99781829
 Jicama,World,2011,0.998557093
 Jicama,World,2012,0.998618458
@@ -503,10 +463,6 @@ Kaniwa,World,2010,0.997757732
 Kaniwa,World,2011,0.997157971
 Kaniwa,World,2012,0.997527961
 Kaniwa,World,2013,0.997702406
-Kapok,World,2010,1
-Kapok,World,2011,1
-Kapok,World,2012,1
-Kapok,World,2013,1
 Karite nuts,World,2010,0
 Karite nuts,World,2011,0
 Karite nuts,World,2012,0
@@ -615,10 +571,6 @@ Mangosteen,World,2010,0.870108753
 Mangosteen,World,2011,0.854846322
 Mangosteen,World,2012,0.850120032
 Mangosteen,World,2013,0.855832065
-Maple sugar,World,2010,1
-Maple sugar,World,2011,1
-Maple sugar,World,2012,1
-Maple sugar,World,2013,1
 Marjoram,World,2010,0.98560877
 Marjoram,World,2011,0.98515537
 Marjoram,World,2012,0.985775471
@@ -695,10 +647,6 @@ Oil palm,World,2010,0.757329241
 Oil palm,World,2011,0.766505749
 Oil palm,World,2012,0.771219395
 Oil palm,World,2013,0.792447834
-Oiticica,World,2010,1
-Oiticica,World,2011,1
-Oiticica,World,2012,1
-Oiticica,World,2013,1
 Okra,World,2010,0.580662279
 Okra,World,2011,0.702770479
 Okra,World,2012,0.711679613
@@ -775,10 +723,6 @@ Persimmons,World,2010,0.022043519
 Persimmons,World,2011,0.020216433
 Persimmons,World,2012,0.0203174
 Persimmons,World,2013,0.021906322
-Physic nut,World,2010,1
-Physic nut,World,2011,1
-Physic nut,World,2012,1
-Physic nut,World,2013,1
 Pigeonpeas,World,2010,0.277341202
 Pigeonpeas,World,2011,0.245378706
 Pigeonpeas,World,2012,0.274708814
@@ -839,10 +783,6 @@ Purging croton,World,2010,0.529630907
 Purging croton,World,2011,0.578553291
 Purging croton,World,2012,0.599542194
 Purging croton,World,2013,0.626021547
-Pyrethrum,World,2010,1
-Pyrethrum,World,2011,1
-Pyrethrum,World,2012,1
-Pyrethrum,World,2013,1
 Quinces,World,2010,0.786549917
 Quinces,World,2011,0.789481092
 Quinces,World,2012,0.791023867
@@ -943,10 +883,6 @@ Sisal,World,2010,0.966661866
 Sisal,World,2011,0.979435669
 Sisal,World,2012,0.972443226
 Sisal,World,2013,0.975424933
-Snake plant,World,2010,1
-Snake plant,World,2011,1
-Snake plant,World,2012,1
-Snake plant,World,2013,1
 Sorghum,World,2010,0.391608388
 Sorghum,World,2011,0.384035872
 Sorghum,World,2012,0.398849907
@@ -1095,10 +1031,6 @@ Wheat,World,2010,0.703706612
 Wheat,World,2011,0.700169521
 Wheat,World,2012,0.710984442
 Wheat,World,2013,0.703106849
-Wildrice,World,2010,1
-Wildrice,World,2011,1
-Wildrice,World,2012,1
-Wildrice,World,2013,1
 Winged bean,World,2010,0.935988721
 Winged bean,World,2011,0.938596561
 Winged bean,World,2012,0.947235677

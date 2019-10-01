@@ -1,1152 +1,1017 @@
 crop,country,year,crop_count_recipients_distributions
-Abaca,World,2014,149
-Abaca,World,2015,92
-Abaca,World,2016,177
-Abaca,World,2017,522
-Acerola,World,2014,4
-Acerola,World,2017,35
-Achira,World,2015,9
-Ackee,World,2015,1
-Ackee,World,2017,1
-Adlay,World,2014,24
-Adlay,World,2015,32
-Adlay,World,2016,8
-Adlay,World,2017,28
-Adzuki bean,World,2014,3151
-Adzuki bean,World,2015,2908
-Adzuki bean,World,2016,1847
-Adzuki bean,World,2017,9809
-Aeschynomene,World,2014,4
-Aeschynomene,World,2015,8
-Aeschynomene,World,2016,15
-Aeschynomene,World,2017,5
-African eggplant,World,2014,7566
-African eggplant,World,2015,10405
-African eggplant,World,2016,12967
-African eggplant,World,2017,11532
-African rice,World,2014,14777
-African rice,World,2015,86644
-African rice,World,2016,9448
-African rice,World,2017,9637
-Agave,World,2014,19
-Agave,World,2015,20
-Agave,World,2016,24
-Agave,World,2017,13
-Agropyron,World,2014,160
-Agropyron,World,2015,903
-Agropyron,World,2016,306
-Agropyron,World,2017,123
-Agrostis,World,2014,108
-Agrostis,World,2015,43
-Agrostis,World,2016,65
-Agrostis,World,2017,35
-Ahipa,World,2014,5
-Ahipa,World,2015,7
-Ahipa,World,2016,4
-Ahipa,World,2017,10
-Alfalfa,World,2014,5832
-Alfalfa,World,2015,5837
-Alfalfa,World,2016,4038
-Alfalfa,World,2017,5471
-Allspice,World,2014,3
-Allspice,World,2015,3
-Allspice,World,2016,2
-Allspice,World,2017,12
-Almonds,World,2014,2042
-Almonds,World,2015,1269
-Almonds,World,2016,743
-Almonds,World,2017,1534
-Alopecurus,World,2014,20
-Alopecurus,World,2015,4
-Alopecurus,World,2016,19
-Alopecurus,World,2017,34
-Alysicarpus,World,2015,1
-Alysicarpus,World,2016,4
-Alysicarpus,World,2017,1
-Amaranth,World,2014,1370
-Amaranth,World,2015,1741
-Amaranth,World,2016,4618
-Amaranth,World,2017,7330
-Andropogon,World,2014,21
-Andropogon,World,2015,105
-Andropogon,World,2016,6
-Andropogon,World,2017,46
-Anise,World,2014,2
-Anise,World,2015,8
-Anise,World,2016,1
-Anise,World,2017,6
-Annato,World,2014,3
-Annato,World,2015,2
-Annato,World,2016,1
-Apple,World,2014,5221
-Apple,World,2015,5312
-Apple,World,2016,5315
-Apple,World,2017,6006
-Apricot,World,2014,2045
-Apricot,World,2015,1269
-Apricot,World,2016,743
-Apricot,World,2017,1534
-Areca nuts,World,2016,1
-Areca nuts,World,2017,1
-Arrhenatherum,World,2014,18
-Arrhenatherum,World,2015,5
-Arrhenatherum,World,2016,8
-Arrhenatherum,World,2017,72
-Asian rice,World,2014,14777
-Asian rice,World,2015,86644
-Asian rice,World,2016,9448
-Asian rice,World,2017,9637
-Asparagus,World,2014,121
-Asparagus,World,2015,116
-Asparagus,World,2016,86
-Asparagus,World,2017,48
-Astragalus,World,2014,60
-Astragalus,World,2015,32
-Astragalus,World,2016,718
-Astragalus,World,2017,452
-Atemoya,World,2014,29
-Atemoya,World,2015,1
-Atemoya,World,2016,40
-Atemoya,World,2017,172
-Atriplex,World,2014,549
-Atriplex,World,2015,45
-Atriplex,World,2016,37
-Atriplex,World,2017,79
-Avocado,World,2014,3
-Avocado,World,2015,9
-Avocado,World,2016,22
-Avocado,World,2017,268
-Azarole,World,2015,9
-Azarole,World,2016,54
-Azarole,World,2017,60
-Babaco,World,2014,20
-Babaco,World,2015,13
-Babaco,World,2016,7
-Babaco,World,2017,41
-Badian,World,2016,1
-Badian,World,2017,2
-Bambara bean,World,2014,4094
-Bambara bean,World,2015,3705
-Bambara bean,World,2016,2136
-Bambara bean,World,2017,10828
-Bamboo shoot,World,2014,31
-Bamboo shoot,World,2015,21
-Bamboo shoot,World,2016,31
-Bamboo shoot,World,2017,56
-Bananas,World,2014,903
-Bananas,World,2015,785
-Bananas,World,2016,1249
-Bananas,World,2017,1338
-Barley,World,2014,14110
-Barley,World,2015,134890
-Barley,World,2016,21686
-Barley,World,2017,23021
-Basil,World,2014,454
-Basil,World,2015,249
-Basil,World,2016,184
-Basil,World,2017,453
-Bay leaf,World,2017,22
-Beech nut,World,2015,1
-Beech nut,World,2016,10
-Beech nut,World,2017,1
-Beets,World,2014,2185
-Beets,World,2015,1195
-Beets,World,2016,2966
-Beets,World,2017,822
-Black gram,World,2014,3151
-Black gram,World,2015,2908
-Black gram,World,2016,1847
-Black gram,World,2017,9808
-Black nightshade,World,2014,7563
-Black nightshade,World,2015,10405
-Black nightshade,World,2016,12965
-Black nightshade,World,2017,11532
-Black salsify,World,2014,7
-Black salsify,World,2015,9
-Black salsify,World,2016,7
-Black salsify,World,2017,7
-Blueberry,World,2014,1220
-Blueberry,World,2015,1067
-Blueberry,World,2016,1032
-Blueberry,World,2017,1419
-Brachiaria,World,2014,33
-Brachiaria,World,2015,29
-Brachiaria,World,2016,9
-Brachiaria,World,2017,27
-Breadfruit,World,2014,34
-Breadfruit,World,2015,6
-Breadfruit,World,2016,12
-Breadfruit,World,2017,38
-Buckwheat,World,2014,405
-Buckwheat,World,2015,370
-Buckwheat,World,2016,262
-Buckwheat,World,2017,351
-Butternut squash,World,2014,4348
-Butternut squash,World,2015,2072
-Butternut squash,World,2016,2619
-Butternut squash,World,2017,3037
-Cabbages,World,2014,5644
-Cabbages,World,2015,6703
-Cabbages,World,2016,5189
-Cabbages,World,2017,9185
-Cabbages and other brassicas,World,2014,9366
-Cabbages and other brassicas,World,2015,13165
-Cabbages and other brassicas,World,2016,10941
-Cabbages and other brassicas,World,2017,12173
-Caesarweed,World,2014,1
-Caesarweed,World,2016,1
-Caesarweed,World,2017,5
-Cainito,World,2014,1
-Cainito,World,2015,1
-Cainito,World,2016,2
-Cainito,World,2017,4
-Calabash,World,2014,80
-Calabash,World,2015,147
-Calabash,World,2016,657
-Calabash,World,2017,631
-Calopogonium,World,2017,4
-Canary seed,World,2014,91
-Canary seed,World,2015,89
-Canary seed,World,2016,130
-Canary seed,World,2017,299
-Candlenut,World,2017,1
-Canola,World,2014,5644
-Canola,World,2015,6703
-Canola,World,2016,5189
-Canola,World,2017,9185
-Capers,World,2017,1
-Carambola,World,2014,5
-Carambola,World,2015,3
-Carambola,World,2016,8
-Carambola,World,2017,68
-Caraway,World,2014,10
-Caraway,World,2015,14
-Caraway,World,2016,10
-Caraway,World,2017,26
-Carneros Yucca,World,2014,27
-Carneros Yucca,World,2015,5
-Carneros Yucca,World,2016,37
-Carneros Yucca,World,2017,22
-Carrots,World,2014,3012
-Carrots,World,2015,1723
-Carrots,World,2016,2859
-Carrots,World,2017,5142
-Cashews,World,2014,1
-Cashews,World,2015,5
-Cashews,World,2016,3
-Cashews,World,2017,1
-Cassava,World,2014,1216
-Cassava,World,2015,2778
-Cassava,World,2016,1472
-Cassava,World,2017,84
-Castor bean,World,2014,97
-Castor bean,World,2015,215
-Castor bean,World,2016,260
-Castor bean,World,2017,190
-Ceara,World,2017,8
-Celery,World,2014,252
-Celery,World,2015,59
-Celery,World,2016,93
-Celery,World,2017,179
-Centrosema,World,2014,1
-Centrosema,World,2015,1
-Centrosema,World,2016,1
-Centrosema,World,2017,40
-Ceylon-spinach,World,2015,1
-Ceylon-spinach,World,2016,2
-Cherimoya,World,2014,29
-Cherimoya,World,2015,1
-Cherimoya,World,2016,40
-Cherimoya,World,2017,172
-Cherries,World,2014,2042
-Cherries,World,2015,1269
-Cherries,World,2016,743
-Cherries,World,2017,1534
-Chervil,World,2014,1
-Chervil,World,2015,1
-Chestnuts,World,2016,5
-Chestnuts,World,2017,12
-Chickpeas,World,2014,24156
-Chickpeas,World,2015,87504
-Chickpeas,World,2016,17732
-Chickpeas,World,2017,24345
-Chicle,World,2014,9
-Chicle,World,2015,1
-Chicle,World,2016,21
-Chicle,World,2017,75
-Chicory,World,2014,97
-Chicory,World,2015,346
-Chicory,World,2016,92
-Chicory,World,2017,434
-Chillies and peppers,World,2014,4251
-Chillies and peppers,World,2015,4627
-Chillies and peppers,World,2016,7952
-Chillies and peppers,World,2017,4541
-Chinotto,World,2014,232
-Chinotto,World,2015,240
-Chinotto,World,2016,190
-Chinotto,World,2017,206
-Chufa,World,2014,8
-Chufa,World,2015,8
-Chufa,World,2016,9
-Chufa,World,2017,11
-Cinnamon,World,2014,4
-Cinnamon,World,2015,6
-Cinnamon,World,2016,1
-Cinnamon,World,2017,16
-Citron,World,2014,232
-Citron,World,2015,240
-Citron,World,2016,190
-Citron,World,2017,206
-Citronella,World,2014,25
-Citronella,World,2015,7
-Citronella,World,2016,20
-Citronella,World,2017,24
-Clovers,World,2014,1767
-Clovers,World,2015,1906
-Clovers,World,2016,760
-Clovers,World,2017,2171
-Cloves,World,2014,2
-Cloves,World,2016,6
-Cloves,World,2017,17
-Cocoa,World,2014,183
-Cocoa,World,2015,301
-Cocoa,World,2016,298
-Cocoa,World,2017,158
-Coconuts,World,2014,7
-Coconuts,World,2015,5
-Coconuts,World,2016,5
-Coconuts,World,2017,126
-Coffee,World,2014,359
-Coffee,World,2015,260
-Coffee,World,2016,299
-Coffee,World,2017,23
-Common bean,World,2014,14831
-Common bean,World,2015,11179
-Common bean,World,2016,18646
-Common bean,World,2017,8857
-Coriander,World,2014,61
-Coriander,World,2015,349
-Coriander,World,2016,68
-Coriander,World,2017,564
-Coronilla,World,2014,7
-Coronilla,World,2015,72
-Coronilla,World,2016,7
-Coronilla,World,2017,13
-Cotton,World,2014,108
-Cotton,World,2016,163
-Cowpeas,World,2014,5914
-Cowpeas,World,2015,8319
-Cowpeas,World,2016,6390
-Cowpeas,World,2017,13608
-Crambe,World,2014,195
-Crambe,World,2015,216
-Crambe,World,2016,377
-Crambe,World,2017,21
-Cranberries,World,2014,1220
-Cranberries,World,2015,1067
-Cranberries,World,2016,1032
-Cranberries,World,2017,1419
-Cress,World,2014,21
-Cress,World,2015,28
-Cress,World,2016,12
-Cress,World,2017,99
-Cucumbers and gherkins,World,2014,7172
-Cucumbers and gherkins,World,2015,2711
-Cucumbers and gherkins,World,2016,5701
-Cucumbers and gherkins,World,2017,4517
-Cumin,World,2014,9
-Cumin,World,2015,20
-Cumin,World,2016,21
-Cumin,World,2017,27
-Currants,World,2014,873
-Currants,World,2015,476
-Currants,World,2016,523
-Currants,World,2017,506
-Cushaw,World,2014,4346
-Cushaw,World,2015,2072
-Cushaw,World,2016,2619
-Cushaw,World,2017,3037
-Custard apple,World,2014,29
-Custard apple,World,2015,1
-Custard apple,World,2016,40
-Custard apple,World,2017,172
-Dactylis,World,2014,665
-Dactylis,World,2015,620
-Dactylis,World,2016,796
-Dactylis,World,2017,225
-Dates,World,2014,12
-Dates,World,2015,152
-Dates,World,2016,132
-Dates,World,2017,15
-Desmodium,World,2014,29
-Desmodium,World,2015,10
-Desmodium,World,2016,37
-Desmodium,World,2017,66
-Dill,World,2014,54
-Dill,World,2015,16
-Dill,World,2016,9
-Dill,World,2017,117
-Durian,World,2014,1
-Durian,World,2016,1
-Durian,World,2017,3
-Eggplant,World,2014,7924
-Eggplant,World,2015,10972
-Eggplant,World,2016,13251
-Eggplant,World,2017,12243
-Elderberry,World,2014,220
-Elderberry,World,2015,69
-Elderberry,World,2016,164
-Elderberry,World,2017,222
-Esparto,World,2014,31
-Esparto,World,2015,6
-Esparto,World,2016,4
-Esparto,World,2017,158
-Ethiopian rape,World,2014,5644
-Ethiopian rape,World,2015,6703
-Ethiopian rape,World,2016,5189
-Ethiopian rape,World,2017,9185
-Faba beans,World,2014,1559
-Faba beans,World,2015,23792
-Faba beans,World,2016,6713
-Faba beans,World,2017,3991
-Fennel,World,2014,36
-Fennel,World,2015,52
-Fennel,World,2016,5
-Fennel,World,2017,45
-Fenugreek,World,2014,126
-Fenugreek,World,2015,182
-Fenugreek,World,2016,364
-Fenugreek,World,2017,751
-Festuca,World,2014,3250
-Festuca,World,2015,641
-Festuca,World,2016,1412
-Festuca,World,2017,2086
-Fig leaf gourd,World,2014,4346
-Fig leaf gourd,World,2015,2072
-Fig leaf gourd,World,2016,2619
-Fig leaf gourd,World,2017,3037
-Figs,World,2014,3707
-Figs,World,2015,5155
-Figs,World,2016,790
-Figs,World,2017,708
-Finger millet,World,2014,827
-Finger millet,World,2015,2282
-Finger millet,World,2016,1430
-Finger millet,World,2017,1270
-Flax,World,2014,1776
-Flax,World,2015,1410
-Flax,World,2016,2140
-Flax,World,2017,1177
-Fonio,World,2014,46
-Fonio,World,2015,59
-Fonio,World,2016,18
-Fonio,World,2017,105
-Foxtail millet,World,2014,537
-Foxtail millet,World,2015,629
-Foxtail millet,World,2016,1330
-Foxtail millet,World,2017,1389
-Galactia,World,2015,1
-Galactia,World,2017,1
-Garlic,World,2014,1444
-Garlic,World,2015,1620
-Garlic,World,2016,2702
-Garlic,World,2017,2322
-Ginger,World,2014,1
-Ginger,World,2015,1
-Ginger,World,2016,12
-Ginger,World,2017,17
-Gooseberries,World,2014,873
-Gooseberries,World,2015,476
-Gooseberries,World,2016,533
-Gooseberries,World,2017,506
-Grapefruits,World,2014,304
-Grapefruits,World,2015,266
-Grapefruits,World,2016,222
-Grapefruits,World,2017,222
-Grapes,World,2014,2000
-Grapes,World,2015,3191
-Grapes,World,2016,1359
-Grapes,World,2017,1286
-Grasspea,World,2014,1190
-Grasspea,World,2015,3835
-Grasspea,World,2016,2415
-Grasspea,World,2017,1341
-Groundnuts,World,2014,4152
-Groundnuts,World,2015,6211
-Groundnuts,World,2016,4522
-Groundnuts,World,2017,13068
-Guavas,World,2014,29
-Guavas,World,2015,13
-Guavas,World,2016,34
-Guavas,World,2017,48
-Guayule,World,2014,209
-Guayule,World,2015,391
-Guayule,World,2016,133
-Guayule,World,2017,217
-Gutta-percha,World,2016,1
-Hazelnuts,World,2014,174
-Hazelnuts,World,2015,197
-Hazelnuts,World,2016,206
-Hazelnuts,World,2017,67
-Hedysarum,World,2014,26
-Hedysarum,World,2015,5
-Hedysarum,World,2016,12
-Hedysarum,World,2017,40
-Hops,World,2014,1015
-Hops,World,2015,821
-Hops,World,2016,1203
-Hops,World,2017,1168
-Huckleberry,World,2014,8
-Huckleberry,World,2015,8
-Huckleberry,World,2016,19
-Huckleberry,World,2017,11
-Indigofera,World,2014,39
-Indigofera,World,2015,25
-Indigofera,World,2016,81
-Indigofera,World,2017,53
-Jack bean,World,2014,15
-Jack bean,World,2015,85
-Jack bean,World,2016,4
-Jack bean,World,2017,30
-Jackfruit,World,2014,34
-Jackfruit,World,2015,6
-Jackfruit,World,2016,12
-Jackfruit,World,2017,38
-Japanese millet,World,2014,251
-Japanese millet,World,2015,268
-Japanese millet,World,2016,10
-Japanese millet,World,2017,320
-Jerusalem artichoke,World,2014,2539
-Jerusalem artichoke,World,2015,4810
-Jerusalem artichoke,World,2016,5237
-Jerusalem artichoke,World,2017,12897
-Jicama,World,2014,12
-Jicama,World,2015,9
-Jicama,World,2016,6
-Jicama,World,2017,4
-Jojoba,World,2014,37
-Jojoba,World,2015,73
-Jojoba,World,2016,6
-Jujube,World,2015,2
-Jujube,World,2016,1
-Jujube,World,2017,16
-Jute,World,2014,14
-Jute,World,2015,17
-Jute,World,2016,14
-Jute,World,2017,28
-Kaniwa,World,2014,1942
-Kaniwa,World,2015,2465
-Kaniwa,World,2016,2082
-Kaniwa,World,2017,3221
-Kapok,World,2017,6
-Kenaf,World,2014,134
-Kenaf,World,2015,256
-Kenaf,World,2016,102
-Kenaf,World,2017,466
-Kiwi fruit,World,2014,432
-Kiwi fruit,World,2015,684
-Kiwi fruit,World,2016,184
-Kiwi fruit,World,2017,190
-Kiwicha,World,2014,1300
-Kiwicha,World,2015,1086
-Kiwicha,World,2016,4543
-Kiwicha,World,2017,7318
-Kodo millet,World,2014,161
-Kodo millet,World,2015,746
-Kodo millet,World,2016,86
-Kodo millet,World,2017,355
-Kumquat,World,2014,14
-Kumquat,World,2015,9
-Kumquat,World,2016,6
-Kumquat,World,2017,5
-Lablab,World,2014,75
-Lablab,World,2015,204
-Lablab,World,2016,134
-Lablab,World,2017,62
-Lavender,World,2014,21
-Lavender,World,2015,13
-Lavender,World,2016,27
-Lavender,World,2017,38
-Leeks and other alliaceous vegetables,World,2014,1444
-Leeks and other alliaceous vegetables,World,2015,1620
-Leeks and other alliaceous vegetables,World,2016,2718
-Leeks and other alliaceous vegetables,World,2017,2339
-Lemons and limes,World,2014,232
-Lemons and limes,World,2015,240
-Lemons and limes,World,2016,190
-Lemons and limes,World,2017,206
-Lentils,World,2014,4192
-Lentils,World,2015,48841
-Lentils,World,2016,11990
-Lentils,World,2017,9676
-Lespedeza,World,2014,10
-Lespedeza,World,2015,140
-Lespedeza,World,2016,126
-Lespedeza,World,2017,10
-Lettuce,World,2014,3828
-Lettuce,World,2015,3450
-Lettuce,World,2016,1958
-Lettuce,World,2017,2155
-Leucaena,World,2014,6
-Leucaena,World,2015,3
-Leucaena,World,2016,11
-Leucaena,World,2017,57
-Licorice,World,2014,10
-Licorice,World,2015,46
-Licorice,World,2016,58
-Licorice,World,2017,77
-Lima bean,World,2014,5476
-Lima bean,World,2015,5551
-Lima bean,World,2016,7225
-Lima bean,World,2017,6600
-Litchi,World,2014,3
-Litchi,World,2015,3
-Litchi,World,2016,6
-Litchi,World,2017,39
-Little millet,World,2014,2033
-Little millet,World,2015,493
-Little millet,World,2016,1522
-Little millet,World,2017,1424
-Lolium,World,2014,856
-Lolium,World,2015,1826
-Lolium,World,2016,1691
-Lolium,World,2017,1090
-Longan,World,2014,40
-Longan,World,2017,19
-Loquat,World,2016,1
-Loquat,World,2017,2
-Lotus,World,2014,275
-Lotus,World,2015,149
-Lotus,World,2016,1327
-Lotus,World,2017,774
-Lupins,World,2014,1177
-Lupins,World,2015,1402
-Lupins,World,2016,1779
-Lupins,World,2017,1369
-Maca,World,2014,21
-Maca,World,2015,28
-Maca,World,2016,12
-Maca,World,2017,99
-Macadamia nut,World,2014,8
-Macadamia nut,World,2015,10
-Macadamia nut,World,2016,6
-Macadamia nut,World,2017,44
-Macroptilium,World,2014,2
-Macroptilium,World,2017,15
-Maize,World,2014,45450
-Maize,World,2015,48670
-Maize,World,2016,87586
-Maize,World,2017,14884
-Malabar spinach,World,2014,8
-Malabar spinach,World,2015,12
-Malabar spinach,World,2016,2
-Mamey sapote,World,2014,9
-Mamey sapote,World,2015,5
-Mamey sapote,World,2016,18
-Mamey sapote,World,2017,47
-Mammee,World,2014,1
-Mammee,World,2015,3
-Mammee,World,2016,2
-Mammee,World,2017,1
-Mandarines,World,2014,304
-Mandarines,World,2015,266
-Mandarines,World,2016,222
-Mandarines,World,2017,222
-Mango,World,2014,56
-Mango,World,2015,73
-Mango,World,2016,351
-Mango,World,2017,573
-Mangosteen,World,2014,32
-Mangosteen,World,2015,34
-Mangosteen,World,2016,16
-Mangosteen,World,2017,23
-Maple sugar,World,2014,3
-Maple sugar,World,2015,17
-Maple sugar,World,2016,23
-Maple sugar,World,2017,57
-Marjoram,World,2014,22
-Marjoram,World,2015,33
-Marjoram,World,2016,42
-Marjoram,World,2017,82
-Mat bean,World,2014,3151
-Mat bean,World,2015,2908
-Mat bean,World,2016,1847
-Mat bean,World,2017,9808
-Mate,World,2015,2
-Mate,World,2016,8
-Mate,World,2017,70
-Mauka,World,2015,1
-Mauka,World,2016,2
-Medlar,World,2014,46
-Medlar,World,2015,85
-Medlar,World,2016,67
-Medlar,World,2017,47
-Melilotus,World,2014,992
-Melilotus,World,2015,133
-Melilotus,World,2016,201
-Melilotus,World,2017,76
-Melons,World,2014,6686
-Melons,World,2015,2648
-Melons,World,2016,5701
-Melons,World,2017,4392
-Mombin,World,2017,3
-Mulberry,World,2014,313
-Mulberry,World,2015,409
-Mulberry,World,2016,54
-Mulberry,World,2017,103
-Mung bean,World,2014,3163
-Mung bean,World,2015,2981
-Mung bean,World,2016,1919
-Mung bean,World,2017,9829
-Naranjilla,World,2014,7563
-Naranjilla,World,2015,10405
-Naranjilla,World,2016,12978
-Naranjilla,World,2017,11532
-Neonotonia,World,2015,1
-Neonotonia,World,2017,1
-New Zealand spinach,World,2015,1
-Noog,World,2014,5
-Noog,World,2015,12
-Noog,World,2016,8
-Oats,World,2014,5294
-Oats,World,2015,3568
-Oats,World,2016,5609
-Oats,World,2017,5888
-Oca,World,2016,2
-Oil palm,World,2014,2
-Oil palm,World,2015,2
-Oiticica,World,2014,1
-Oiticica,World,2016,3
-Okra,World,2014,546
-Okra,World,2015,793
-Okra,World,2016,737
-Okra,World,2017,1003
-Olives,World,2014,301
-Olives,World,2015,485
-Olives,World,2016,82
-Olives,World,2017,378
-Onions,World,2014,1694
-Onions,World,2015,1821
-Onions,World,2016,2718
-Onions,World,2017,2581
-Onobrychis,World,2014,325
-Onobrychis,World,2015,113
-Onobrychis,World,2016,594
-Onobrychis,World,2017,531
-Orache,World,2014,1096
-Orache,World,2015,90
-Orache,World,2016,74
-Orache,World,2017,158
-Oranges,World,2014,304
-Oranges,World,2015,266
-Oranges,World,2016,222
-Oranges,World,2017,222
-Oregano,World,2014,22
-Oregano,World,2015,33
-Oregano,World,2016,42
-Oregano,World,2017,82
-Ornithopus,World,2014,20
-Ornithopus,World,2015,1
-Ornithopus,World,2016,21
-Papayas,World,2014,30
-Papayas,World,2015,2
-Papayas,World,2016,16
-Papayas,World,2017,33
-Parsley,World,2014,65
-Parsley,World,2015,24
-Parsley,World,2016,18
-Parsley,World,2017,28
-Parsnip,World,2014,84
-Parsnip,World,2015,13
-Parsnip,World,2017,8
-Passionfruit,World,2014,4
-Passionfruit,World,2015,1
-Pawpaw,World,2014,19
-Pawpaw,World,2015,12
-Pawpaw,World,2016,12
-Pawpaw,World,2017,5
-Peaches and nectarines,World,2014,2044
-Peaches and nectarines,World,2015,1269
-Peaches and nectarines,World,2016,743
-Peaches and nectarines,World,2017,1534
-Pearl millet,World,2014,1672
-Pearl millet,World,2015,8371
-Pearl millet,World,2016,9062
-Pearl millet,World,2017,4837
-Pears,World,2014,1872
-Pears,World,2015,1986
-Pears,World,2016,827
-Pears,World,2017,1064
-Peas,World,2014,3356
-Peas,World,2015,4414
-Peas,World,2016,5897
-Peas,World,2017,2847
-Pecan,World,2014,14
-Pecan,World,2015,2
-Pecan,World,2016,18
-Pecan,World,2017,7
-Pepino,World,2014,7563
-Pepino,World,2015,10405
-Pepino,World,2016,12965
-Pepino,World,2017,11532
-Pepper,World,2014,601
-Pepper,World,2015,1576
-Pepper,World,2016,210
-Pepper,World,2017,357
-Peppermint,World,2014,569
-Peppermint,World,2015,375
-Peppermint,World,2016,466
-Peppermint,World,2017,690
-Perilla,World,2014,64
-Perilla,World,2015,66
-Perilla,World,2016,14
-Perilla,World,2017,32
-Persimmons,World,2014,224
-Persimmons,World,2015,358
-Persimmons,World,2016,113
-Persimmons,World,2017,131
-Phalaris,World,2014,103
-Phalaris,World,2015,94
-Phalaris,World,2016,132
-Phalaris,World,2017,299
-Phleum,World,2014,172
-Phleum,World,2015,25
-Phleum,World,2016,49
-Phleum,World,2017,55
-Physic nut,World,2015,1
-Pigeonpeas,World,2014,2857
-Pigeonpeas,World,2015,2306
-Pigeonpeas,World,2016,1688
-Pigeonpeas,World,2017,3078
-Pili nut,World,2014,6
-Pili nut,World,2017,2
-Pine nut,World,2014,471
-Pine nut,World,2015,297
-Pine nut,World,2016,7
-Pine nut,World,2017,26
-Pineapples,World,2014,17
-Pineapples,World,2015,260
-Pineapples,World,2016,116
-Pineapples,World,2017,171
-Pistachios,World,2014,51
-Pistachios,World,2015,70
-Pistachios,World,2016,27
-Pistachios,World,2017,23
-Plantains,World,2014,149
-Plantains,World,2015,92
-Plantains,World,2016,183
-Plantains,World,2017,522
-Plums,World,2014,2042
-Plums,World,2015,1269
-Plums,World,2016,743
-Plums,World,2017,1534
-Poa,World,2014,377
-Poa,World,2015,255
-Poa,World,2016,670
-Poa,World,2017,213
-Pomegranate,World,2014,1429
-Pomegranate,World,2015,1140
-Pomegranate,World,2016,511
-Pomegranate,World,2017,509
-Pongamia oil,World,2017,1
-Poppies,World,2014,79
-Poppies,World,2015,56
-Poppies,World,2016,624
-Poppies,World,2017,124
-Potatoes,World,2014,10657
-Potatoes,World,2015,12952
-Potatoes,World,2016,15416
-Potatoes,World,2017,14907
-Prickly pear,World,2014,74
-Prickly pear,World,2015,48
-Prickly pear,World,2016,28
-Prickly pear,World,2017,5
-Proso millet,World,2014,2022
-Proso millet,World,2015,647
-Proso millet,World,2016,1742
-Proso millet,World,2017,1601
-Prosopis,World,2014,2
-Prosopis,World,2015,1
-Prosopis,World,2016,5
-Prosopis,World,2017,12
-Pueraria,World,2014,27
-Pueraria,World,2015,12
-Pueraria,World,2016,6
-Pueraria,World,2017,4
-Pumpkin,World,2014,4346
-Pumpkin,World,2015,2077
-Pumpkin,World,2016,2622
-Pumpkin,World,2017,3037
-Purging croton,World,2014,1
-Purging croton,World,2015,1
-Purging croton,World,2017,2
-Pyrethrum,World,2014,10
-Pyrethrum,World,2015,16
-Pyrethrum,World,2016,5
-Pyrethrum,World,2017,34
-Quinces,World,2014,156
-Quinces,World,2015,131
-Quinces,World,2016,260
-Quinces,World,2017,112
-Quinoa,World,2014,1942
-Quinoa,World,2015,2465
-Quinoa,World,2016,2082
-Quinoa,World,2017,3221
-Radish,World,2014,733
-Radish,World,2015,136
-Radish,World,2016,751
-Radish,World,2017,765
-Rambutan,World,2014,10
-Rambutan,World,2015,174
-Rambutan,World,2016,3
-Rambutan,World,2017,13
-Ramie,World,2015,1
-Ramie,World,2017,1
-Rapeseed and Mustards,World,2014,5644
-Rapeseed and Mustards,World,2015,6703
-Rapeseed and Mustards,World,2016,5189
-Rapeseed and Mustards,World,2017,9185
-Raspberries,World,2014,1084
-Raspberries,World,2015,1145
-Raspberries,World,2016,763
-Raspberries,World,2017,935
-Rhubarb,World,2014,117
-Rhubarb,World,2015,295
-Rhubarb,World,2016,253
-Rhubarb,World,2017,241
-Rhynchosia,World,2014,1
-Rhynchosia,World,2017,5
-Rice (Asian),World,2014,91090
-Rice (Asian),World,2015,77110
-Rice (Asian),World,2016,49961
-Rice (Asian),World,2017,39554
-Rice bean,World,2014,3162
-Rice bean,World,2015,2913
-Rice bean,World,2016,1847
-Rice bean,World,2017,9820
-Roselle,World,2014,133
-Roselle,World,2015,248
-Roselle,World,2016,91
-Roselle,World,2017,466
-"Rubber, natural",World,2016,1
-"Rubber, natural",World,2017,2
-Runner bean,World,2014,5467
-Runner bean,World,2015,5419
-Runner bean,World,2016,7209
-Runner bean,World,2017,6584
-Rye,World,2014,3406
-Rye,World,2015,930
-Rye,World,2016,804
-Rye,World,2017,3201
-Safflower,World,2014,546
-Safflower,World,2015,296
-Safflower,World,2016,3539
-Safflower,World,2017,1693
-Sago palm,World,2016,3
-Salsify,World,2014,3
-Salsify,World,2015,3
-Salsify,World,2016,5
-Salsify,World,2017,9
-Salsola,World,2014,6
-Sapodilla,World,2014,9
-Sapodilla,World,2015,1
-Sapodilla,World,2016,21
-Sapodilla,World,2017,75
-Savory,World,2014,23
-Savory,World,2015,26
-Savory,World,2016,5
-Savory,World,2017,27
-Service tree,World,2014,18
-Service tree,World,2015,7
-Service tree,World,2016,25
-Service tree,World,2017,39
-Sesame,World,2014,738
-Sesame,World,2015,475
-Sesame,World,2016,1480
-Sesame,World,2017,1052
-Sesbania,World,2014,5
-Sesbania,World,2015,5
-Sesbania,World,2016,68
-Sesbania,World,2017,21
-Sisal,World,2014,19
-Sisal,World,2015,20
-Sisal,World,2016,24
-Sisal,World,2017,13
-Slippery cabbage,World,2014,358
-Slippery cabbage,World,2015,739
-Slippery cabbage,World,2016,709
-Slippery cabbage,World,2017,822
-Sorghum,World,2014,22194
-Sorghum,World,2015,21842
-Sorghum,World,2016,27785
-Sorghum,World,2017,22038
-Sorrel,World,2014,7
-Sorrel,World,2015,7
-Sorrel,World,2016,5
-Sorrel,World,2017,46
-Soursop,World,2014,29
-Soursop,World,2015,1
-Soursop,World,2016,40
-Soursop,World,2017,172
-Soybeans,World,2014,29850
-Soybeans,World,2015,26425
-Soybeans,World,2016,24777
-Soybeans,World,2017,22199
-Spider plant,World,2014,79
-Spider plant,World,2015,35
-Spider plant,World,2016,11
-Spinach,World,2014,2659
-Spinach,World,2015,1819
-Spinach,World,2016,2034
-Spinach,World,2017,3743
-Strawberries,World,2014,1627
-Strawberries,World,2015,2051
-Strawberries,World,2016,2889
-Strawberries,World,2017,3178
-Strawberry tree,World,2014,7
-Strawberry tree,World,2015,3
-Strawberry tree,World,2016,4
-Strawberry tree,World,2017,2
-Stylosanthes,World,2014,5
-Stylosanthes,World,2015,8
-Stylosanthes,World,2016,3
-Stylosanthes,World,2017,112
-Sugar apple,World,2014,29
-Sugar apple,World,2015,1
-Sugar apple,World,2016,40
-Sugar apple,World,2017,172
-Sugar beets,World,2014,1597
-Sugar beets,World,2015,920
-Sugar beets,World,2016,2239
-Sugar beets,World,2017,739
-Sugarcane,World,2014,232
-Sugarcane,World,2015,27
-Sugarcane,World,2016,127
-Sugarcane,World,2017,730
-Sunflowers,World,2014,2920
-Sunflowers,World,2015,5056
-Sunflowers,World,2016,5792
-Sunflowers,World,2017,12926
-Sunn hemp,World,2014,97
-Sunn hemp,World,2015,34
-Sunn hemp,World,2016,27
-Sunn hemp,World,2017,293
-Sweetpotatoes,World,2014,628
-Sweetpotatoes,World,2015,1115
-Sweetpotatoes,World,2016,1198
-Sweetpotatoes,World,2017,412
-Sword bean,World,2014,7
-Sword bean,World,2015,62
-Sword bean,World,2016,5
-Sword bean,World,2017,28
-Tamarind,World,2014,2
-Tamarind,World,2015,8
-Tamarind,World,2017,9
-Tarragon,World,2014,32
-Tarragon,World,2015,121
-Tarragon,World,2016,116
-Tarragon,World,2017,456
-Tea,World,2016,13
-Tea,World,2017,6
-Teff,World,2014,1223
-Teff,World,2015,1682
-Teff,World,2016,2320
-Teff,World,2017,301
-Tepary bean,World,2014,5467
-Tepary bean,World,2015,5419
-Tepary bean,World,2016,7209
-Tepary bean,World,2017,6584
-Thyme,World,2014,38
-Thyme,World,2015,31
-Thyme,World,2016,32
-Thyme,World,2017,51
-Tobacco,World,2014,13
-Tobacco,World,2015,41
-Tobacco,World,2016,612
-Tobacco,World,2017,475
-Tomatillo,World,2014,49
-Tomatillo,World,2015,249
-Tomatillo,World,2016,26
-Tomatillo,World,2017,108
-Tomatoes,World,2014,8077
-Tomatoes,World,2015,10579
-Tomatoes,World,2016,13573
-Tomatoes,World,2017,11637
-Tree tomato,World,2014,7563
-Tree tomato,World,2015,10405
-Tree tomato,World,2016,12965
-Tree tomato,World,2017,11532
-Tripsacum,World,2014,4
-Tripsacum,World,2015,2
-Tripsacum,World,2016,8
-Tripsacum,World,2017,78
-Triticale,World,2014,680
-Triticale,World,2015,2226
-Triticale,World,2016,4923
-Triticale,World,2017,6615
-Tung nuts,World,2017,1
-Turmeric,World,2014,1
-Turmeric,World,2016,10
-Turmeric,World,2017,6
-Turnips,World,2014,5644
-Turnips,World,2015,6703
-Turnips,World,2016,5189
-Turnips,World,2017,9185
-Vanilla,World,2014,3
-Vanilla,World,2016,1
-Vanilla,World,2017,2
-Velvet bean,World,2014,32
-Velvet bean,World,2015,15
-Velvet bean,World,2016,16
-Velvet bean,World,2017,19
-Velvet leaf,World,2014,2
-Velvet leaf,World,2015,1
-Velvet leaf,World,2016,7
-Velvet leaf,World,2017,7
-Vetch,World,2014,758
-Vetch,World,2015,1816
-Vetch,World,2016,2357
-Vetch,World,2017,1202
-Walnuts,World,2014,121
-Walnuts,World,2015,162
-Walnuts,World,2016,93
-Walnuts,World,2017,174
-Water dropwort,World,2015,1
-Water dropwort,World,2016,1
-Watercress,World,2014,1
-Watermelons,World,2014,3565
-Watermelons,World,2015,3256
-Watermelons,World,2016,1831
-Watermelons,World,2017,2272
-Wax gourd,World,2014,41
-Wax gourd,World,2015,77
-Wax gourd,World,2016,55
-Wax gourd,World,2017,16
-West Indian Gherkin,World,2014,6567
-West Indian Gherkin,World,2015,2634
-West Indian Gherkin,World,2016,5701
-West Indian Gherkin,World,2017,4324
-Wheat,World,2014,284096
-Wheat,World,2015,341102
-Wheat,World,2016,226525
-Wheat,World,2017,79002
-Winged bean,World,2014,35
-Winged bean,World,2015,690
-Winged bean,World,2016,190
-Winged bean,World,2017,112
-Yams,World,2014,64
-Yams,World,2015,43
-Yams,World,2016,45
-Yams,World,2017,77
-Year bean,World,2014,5467
-Year bean,World,2015,5419
-Year bean,World,2016,7209
-Year bean,World,2017,6584
-Zornia,World,2015,1
-Zornia,World,2016,1
-Zornia,World,2017,1
-Zucchini,World,2014,4563
-Zucchini,World,2015,2183
-Zucchini,World,2016,2839
-Zucchini,World,2017,3071
+Acerola,World,2014,1.49431E-06
+Adlay,World,2014,3.58633E-05
+Adzuki bean,World,2014,0.000349668
+Aeschynomene,World,2014,2.98861E-06
+African eggplant,World,2014,7.02324E-05
+African rice,World,2014,0.000279435
+Agropyron,World,2014,0.000222652
+Agrostis,World,2014,7.91982E-05
+Ahipa,World,2014,4.48292E-06
+Alfalfa,World,2014,0.007238418
+Almonds,World,2014,4.33349E-05
+Alopecurus,World,2014,7.47153E-06
+Amaranth,World,2014,0.002287782
+Andropogon,World,2014,2.98861E-06
+Anise,World,2014,1.49431E-06
+Annato,World,2014,4.48292E-06
+Apple,World,2014,0.004045086
+Apricot,World,2014,0.000227135
+Arrhenatherum,World,2014,2.39089E-05
+Asian rice,World,2014,0.021497085
+Asparagus,World,2014,0.000173339
+Astragalus,World,2014,7.47153E-06
+Atriplex,World,2014,0.000170351
+Avocado,World,2014,4.48292E-06
+Bambara bean,World,2014,0.001483846
+Bamboo shoot,World,2014,7.47153E-06
+Bananas,World,2014,0.001255217
+Barley,World,2014,0.020758898
+Basil,World,2014,0.000436337
+Beets,World,2014,0.003253104
+Black gram,World,2014,0.0002361
+Black nightshade,World,2014,1.04601E-05
+Black salsify,World,2014,1.04601E-05
+Blueberry,World,2014,0.000892101
+Brachiaria,World,2014,1.79317E-05
+Breadfruit,World,2014,2.68975E-05
+Buckwheat,World,2014,0.000605194
+Butternut squash,World,2014,0.000969805
+Cabbages,World,2014,0.003139537
+Cabbages and other brassicas,World,2014,0.01370428
+Caesarweed,World,2014,1.49431E-06
+Cainito,World,2014,1.49431E-06
+Calabash,World,2014,0.000112073
+Canary seed,World,2014,2.39089E-05
+Canola,World,2014,0.000222652
+Carambola,World,2014,7.47153E-06
+Caraway,World,2014,1.49431E-05
+Carneros Yucca,World,2014,4.48292E-06
+Carrots,World,2014,0.004077961
+Cashews,World,2014,1.49431E-06
+Cassava,World,2014,0.001817076
+Castor bean,World,2014,0.000144948
+Celery,World,2014,0.000366105
+Cherimoya,World,2014,7.47153E-06
+Cherries,World,2014,0.000394497
+Chickpeas,World,2014,0.035806559
+Chicle,World,2014,1.34488E-05
+Chicory,World,2014,0.000144948
+Chillies and peppers,World,2014,0.006029524
+Cinnamon,World,2014,4.48292E-06
+Citron,World,2014,8.96584E-06
+Citronella,World,2014,1.49431E-05
+Clovers,World,2014,0.003302416
+Cocoa,World,2014,0.000265986
+Coconuts,World,2014,1.04601E-05
+Coffee,World,2014,0.000536456
+Common bean,World,2014,0.02080821
+Coriander,World,2014,9.11527E-05
+Coronilla,World,2014,1.04601E-05
+Cotton,World,2014,0.000135982
+Cowpeas,World,2014,0.006554026
+Crambe,World,2014,0.000282424
+Cranberries,World,2014,8.66697E-05
+Cucumbers and gherkins,World,2014,0.003448858
+Cumin,World,2014,1.34488E-05
+Currants,World,2014,0.000364611
+Cushaw,World,2014,0.000394497
+Custard apple,World,2014,1.34488E-05
+Dactylis,World,2014,0.000989231
+Dates,World,2014,1.49431E-05
+Desmodium,World,2014,2.09203E-05
+Dill,World,2014,8.06925E-05
+Durian,World,2014,1.49431E-06
+Eggplant,World,2014,0.001083372
+Elderberry,World,2014,0.000285412
+Ethiopian rape,World,2014,0.000606688
+Faba beans,World,2014,0.002020302
+Fennel,World,2014,5.3795E-05
+Fenugreek,World,2014,0.00010759
+Festuca,World,2014,0.004509815
+Figs,World,2014,0.005440768
+Finger millet,World,2014,0.001204411
+Flax,World,2014,0.002571701
+Fonio,World,2014,7.47153E-06
+Foxtail millet,World,2014,0.00063508
+Garlic,World,2014,0.000872675
+Ginger,World,2014,1.49431E-06
+Gooseberries,World,2014,0.000309321
+Grapefruits,World,2014,2.24146E-05
+Grapes,World,2014,0.000854743
+Grasspea,World,2014,0.001349358
+Groundnuts,World,2014,0.006001133
+Guavas,World,2014,4.33349E-05
+Guayule,World,2014,0.000222652
+Hazelnuts,World,2014,0.000182305
+Hedysarum,World,2014,2.98861E-05
+Hops,World,2014,0.001507755
+Huckleberry,World,2014,1.49431E-06
+Indigofera,World,2014,3.4369E-05
+Jack bean,World,2014,2.24146E-05
+Jackfruit,World,2014,5.97722E-06
+Japanese millet,World,2014,0.00032277
+Jerusalem artichoke,World,2014,0.000144948
+Jicama,World,2014,1.79317E-05
+Jojoba,World,2014,5.52893E-05
+Jute,World,2014,2.09203E-05
+Kaniwa,World,2014,0.000104601
+Kenaf,World,2014,3.8852E-05
+Kiwi fruit,World,2014,0.00038852
+Kiwicha,World,2014,0.000201731
+Kodo millet,World,2014,0.000135982
+Kumquat,World,2014,1.49431E-06
+Lablab,World,2014,0.000112073
+Leeks and other alliaceous vegetables,World,2014,5.3795E-05
+Lemons and limes,World,2014,4.63235E-05
+Lentils,World,2014,0.006144586
+Lespedeza,World,2014,7.47153E-06
+Lettuce,World,2014,0.005442262
+Leucaena,World,2014,7.47153E-06
+Licorice,World,2014,1.19544E-05
+Lima bean,World,2014,0.000355645
+Litchi,World,2014,4.48292E-06
+Little millet,World,2014,0.000231617
+Lolium,World,2014,0.001258206
+Longan,World,2014,5.97722E-05
+Lotus,World,2014,0.000316793
+Lupins,World,2014,0.001213376
+Maca,World,2014,4.48292E-06
+Macadamia nut,World,2014,1.19544E-05
+Macroptilium,World,2014,1.49431E-06
+Maize,World,2014,0.067774246
+Malabar spinach,World,2014,1.19544E-05
+Mammee,World,2014,1.49431E-06
+Mandarines,World,2014,3.4369E-05
+Mango,World,2014,7.91982E-05
+Mangosteen,World,2014,8.96584E-06
+Maple sugar,World,2014,1.49431E-06
+Mat bean,World,2014,1.49431E-05
+Medlar,World,2014,6.87381E-05
+Melilotus,World,2014,0.000951873
+Melons,World,2014,0.007260833
+Mulberry,World,2014,0.000221157
+Mung bean,World,2014,0.001554078
+Naranjilla,World,2014,7.47153E-06
+Noog,World,2014,7.47153E-06
+Oats,World,2014,0.006842427
+Oil palm,World,2014,2.98861E-06
+Okra,World,2014,0.000381048
+Olives,World,2014,0.000449786
+Onions,World,2014,0.001174524
+Onobrychis,World,2014,0.000197248
+Orache,World,2014,0.000144948
+Oranges,World,2014,7.91982E-05
+Oregano,World,2014,3.28747E-05
+Ornithopus,World,2014,2.98861E-06
+Papayas,World,2014,4.48292E-05
+Parsley,World,2014,9.71299E-05
+Parsnip,World,2014,0.000125522
+Passionfruit,World,2014,1.49431E-06
+Pawpaw,World,2014,7.47153E-06
+Peaches and nectarines,World,2014,0.001322461
+Pearl millet,World,2014,0.002355026
+Pears,World,2014,0.002322151
+Peas,World,2014,0.004892358
+Pecan,World,2014,1.49431E-06
+Pepper,World,2014,0.000898078
+Peppermint,World,2014,0.00019426
+Perilla,World,2014,9.56356E-05
+Persimmons,World,2014,0.000227135
+Phalaris,World,2014,7.77039E-05
+Phleum,World,2014,0.000212191
+Pigeonpeas,World,2014,0.004269232
+Pili nut,World,2014,8.96584E-06
+Pineapples,World,2014,2.54032E-05
+Pistachios,World,2014,6.57495E-05
+Plantains,World,2014,1.49431E-06
+Plums,World,2014,0.000460246
+Poa,World,2014,0.000258515
+Pomegranate,World,2014,0.002135363
+Poppies,World,2014,2.98861E-06
+Potatoes,World,2014,0.006866336
+Prickly pear,World,2014,7.77039E-05
+Proso millet,World,2014,0.001728912
+Pueraria,World,2014,2.68975E-05
+Pumpkin,World,2014,0.001501777
+Pyrethrum,World,2014,8.96584E-06
+Quinces,World,2014,0.000233112
+Quinoa,World,2014,0.002378935
+Radish,World,2014,0.001063946
+Rambutan,World,2014,7.47153E-06
+Rapeseed and Mustards,World,2014,0.004302107
+Raspberries,World,2014,0.000675426
+Rhubarb,World,2014,4.48292E-06
+Rhynchosia,World,2014,1.49431E-06
+Rice (Asian),World,2014,0.136116329
+Rice bean,World,2014,7.62096E-05
+Roselle,World,2014,7.91982E-05
+Runner bean,World,2014,0.00021518
+Rye,World,2014,0.004893852
+Safflower,World,2014,0.000806925
+Salsify,World,2014,4.48292E-06
+Sapodilla,World,2014,1.34488E-05
+Savory,World,2014,3.4369E-05
+Service tree,World,2014,2.98861E-06
+Sesame,World,2014,0.00108636
+Sesbania,World,2014,7.47153E-06
+Slippery cabbage,World,2014,0.000134488
+Sorghum,World,2014,0.033004735
+Soursop,World,2014,2.98861E-06
+Soybeans,World,2014,0.037843298
+Spider plant,World,2014,0.00011805
+Spinach,World,2014,0.00390761
+Strawberries,World,2014,0.001189468
+Stylosanthes,World,2014,2.98861E-06
+Sugar apple,World,2014,4.48292E-06
+Sugar beets,World,2014,0.002374452
+Sugarcane,World,2014,0.00013897
+Sunflowers,World,2014,0.003632658
+Sunn hemp,World,2014,9.2647E-05
+Sweetpotatoes,World,2014,0.000835317
+Sword bean,World,2014,2.98861E-06
+Tamarind,World,2014,2.98861E-06
+Tarragon,World,2014,1.19544E-05
+Teff,World,2014,0.00157201
+Tepary bean,World,2014,0.000612665
+Thyme,World,2014,2.39089E-05
+Tobacco,World,2014,4.48292E-06
+Tomatillo,World,2014,4.18406E-05
+Tomatoes,World,2014,0.002552275
+Triticale,World,2014,0.000170351
+Turmeric,World,2014,1.49431E-06
+Turnips,World,2014,0.001177513
+Vanilla,World,2014,4.48292E-06
+Velvet bean,World,2014,3.58633E-05
+Vetch,World,2014,0.000231617
+Walnuts,World,2014,6.42552E-05
+Watercress,World,2014,1.49431E-06
+Watermelons,World,2014,0.004152676
+Wax gourd,World,2014,2.24146E-05
+West Indian Gherkin,World,2014,1.64374E-05
+Wheat,World,2014,0.415382684
+Winged bean,World,2014,5.23007E-05
+Yams,World,2014,9.56356E-05
+Year bean,World,2014,0.000134488
+Zucchini,World,2014,0.00371335
+Canavalia,World,2014,1.64374E-05
+Bitter gourd,World,2014,5.97722E-06
+Luffa,World,2014,4.93121E-05
+Achira,World,2015,8.55234E-06
+Ackee,World,2015,9.5026E-07
+Adlay,World,2015,3.04083E-05
+Adzuki bean,World,2015,1.23534E-05
+Aeschynomene,World,2015,2.85078E-06
+African eggplant,World,2015,6.55679E-05
+African rice,World,2015,0.000100728
+Agropyron,World,2015,0.000854283
+Agrostis,World,2015,1.52042E-05
+Alfalfa,World,2015,0.005288195
+Almonds,World,2015,6.27171E-05
+Alopecurus,World,2015,1.90052E-06
+Alysicarpus,World,2015,9.5026E-07
+Amaranth,World,2015,0.00138928
+Anise,World,2015,7.60208E-06
+Annato,World,2015,1.90052E-06
+Apple,World,2015,0.003202375
+Apricot,World,2015,0.000104529
+Arrhenatherum,World,2015,4.7513E-06
+Asian rice,World,2015,0.082120485
+Asparagus,World,2015,0.00010833
+Astragalus,World,2015,7.60208E-06
+Atriplex,World,2015,4.7513E-06
+Avocado,World,2015,8.55234E-06
+Azarole,World,2015,3.80104E-06
+Babaco,World,2015,9.5026E-07
+Bambara bean,World,2015,0.000765909
+Bamboo shoot,World,2015,2.85078E-06
+Bananas,World,2015,0.000706993
+Barley,World,2015,0.127773808
+Basil,World,2015,0.000161544
+Beech nut,World,2015,9.5026E-07
+Beets,World,2015,0.001127008
+Black gram,World,2015,2.9458E-05
+Black nightshade,World,2015,7.60208E-06
+Black salsify,World,2015,8.55234E-06
+Blueberry,World,2015,0.000553051
+Brachiaria,World,2015,9.5026E-06
+Buckwheat,World,2015,0.000351596
+Butternut squash,World,2015,0.000210958
+Cabbages,World,2015,0.001504261
+Cabbages and other brassicas,World,2015,0.012364778
+Cainito,World,2015,9.5026E-07
+Calabash,World,2015,0.000138738
+Canary seed,World,2015,3.80104E-06
+Canola,World,2015,0.000539747
+Carambola,World,2015,2.85078E-06
+Caraway,World,2015,1.33036E-05
+Carrots,World,2015,0.001556525
+Cashews,World,2015,4.7513E-06
+Cassava,World,2015,0.002639821
+Castor bean,World,2015,0.000204306
+Celery,World,2015,4.94135E-05
+Ceylon-spinach,World,2015,9.5026E-07
+Cherimoya,World,2015,9.5026E-07
+Cherries,World,2015,0.000202405
+Chickpeas,World,2015,0.083003276
+Chicle,World,2015,9.5026E-07
+Chicory,World,2015,0.000324989
+Chillies and peppers,World,2015,0.004263815
+Cinnamon,World,2015,5.70156E-06
+Citron,World,2015,1.04529E-05
+Citronella,World,2015,6.65182E-06
+Clovers,World,2015,0.001877713
+Cocoa,World,2015,0.000280327
+Coconuts,World,2015,4.7513E-06
+Coffee,World,2015,0.000247067
+Common bean,World,2015,0.009630881
+Coriander,World,2015,0.000331641
+Coronilla,World,2015,6.17669E-05
+Cowpeas,World,2015,0.00684377
+Crambe,World,2015,0.000138738
+Cranberries,World,2015,5.22643E-05
+Cress,World,2015,5.70156E-06
+Cucumbers and gherkins,World,2015,0.000895145
+Cumin,World,2015,1.90052E-05
+Currants,World,2015,0.000154892
+Cushaw,World,2015,1.33036E-05
+Dactylis,World,2015,0.000578708
+Dates,World,2015,0.000129235
+Desmodium,World,2015,2.85078E-06
+Dill,World,2015,1.52042E-05
+Eggplant,World,2015,0.000793467
+Elderberry,World,2015,5.89161E-05
+Ethiopian rape,World,2015,0.000280327
+Faba beans,World,2015,0.021248755
+Fennel,World,2015,4.94135E-05
+Fenugreek,World,2015,0.000162494
+Festuca,World,2015,0.000575857
+Figs,World,2015,0.004821617
+Finger millet,World,2015,0.002154239
+Flax,World,2015,0.001336065
+Fonio,World,2015,6.65182E-06
+Foxtail millet,World,2015,0.000377253
+Galactia,World,2015,9.5026E-07
+Garlic,World,2015,0.000838129
+Ginger,World,2015,9.5026E-07
+Gooseberries,World,2015,0.000128285
+Grapefruits,World,2015,6.65182E-06
+Grapes,World,2015,0.000927453
+Grasspea,World,2015,0.003536866
+Groundnuts,World,2015,0.005652144
+Guavas,World,2015,1.23534E-05
+Guayule,World,2015,0.00032879
+Hazelnuts,World,2015,0.00011118
+Hedysarum,World,2015,2.85078E-06
+Hops,World,2015,0.000762108
+Huckleberry,World,2015,3.80104E-06
+Indigofera,World,2015,1.52042E-05
+Jack bean,World,2015,8.07721E-05
+Jackfruit,World,2015,5.70156E-06
+Japanese millet,World,2015,0.000189102
+Jerusalem artichoke,World,2015,0.000133036
+Jicama,World,2015,7.60208E-06
+Jojoba,World,2015,6.9369E-05
+Jute,World,2015,1.61544E-05
+Kaniwa,World,2015,2.85078E-05
+Kenaf,World,2015,5.98664E-05
+Kiwi fruit,World,2015,0.000350646
+Kiwicha,World,2015,0.000226162
+Kodo millet,World,2015,7.12695E-05
+Kumquat,World,2015,9.5026E-07
+Lablab,World,2015,0.000193853
+Leeks and other alliaceous vegetables,World,2015,4.08612E-05
+Lemons and limes,World,2015,1.90052E-05
+Lentils,World,2015,0.046366967
+Lespedeza,World,2015,4.65627E-05
+Lettuce,World,2015,0.003092145
+Leucaena,World,2015,1.90052E-06
+Licorice,World,2015,1.42539E-05
+Lima bean,World,2015,0.000785865
+Litchi,World,2015,2.85078E-06
+Little millet,World,2015,0.000107379
+Lolium,World,2015,0.001700014
+Lotus,World,2015,0.000107379
+Lupins,World,2015,0.001277149
+Maca,World,2015,9.5026E-07
+Macadamia nut,World,2015,9.5026E-06
+Maize,World,2015,0.046199722
+Malabar spinach,World,2015,1.14031E-05
+Mammee,World,2015,2.85078E-06
+Mandarines,World,2015,2.09057E-05
+Mango,World,2015,6.27171E-05
+Mangosteen,World,2015,1.80549E-05
+Maple sugar,World,2015,9.5026E-07
+Mat bean,World,2015,0.000154892
+Medlar,World,2015,8.07721E-05
+Melilotus,World,2015,0.00011023
+Melons,World,2015,0.001524216
+Mulberry,World,2015,0.000193853
+Mung bean,World,2015,0.000860935
+Naranjilla,World,2015,8.55234E-06
+Neonotonia,World,2015,9.5026E-07
+Noog,World,2015,1.14031E-05
+Oats,World,2015,0.002471625
+Oil palm,World,2015,1.90052E-06
+Okra,World,2015,0.000592962
+Olives,World,2015,0.000458975
+Onions,World,2015,0.000434269
+Onobrychis,World,2015,7.22197E-05
+Oranges,World,2015,4.08612E-05
+Oregano,World,2015,3.13586E-05
+Ornithopus,World,2015,9.5026E-07
+Papayas,World,2015,1.90052E-06
+Parsley,World,2015,2.28062E-05
+Parsnip,World,2015,1.23534E-05
+Peaches and nectarines,World,2015,0.000272725
+Pearl millet,World,2015,0.007947021
+Pears,World,2015,0.001626844
+Peas,World,2015,0.004049056
+Pecan,World,2015,9.5026E-07
+Pepper,World,2015,0.001497609
+Peppermint,World,2015,9.97773E-05
+Perilla,World,2015,6.27171E-05
+Persimmons,World,2015,0.000278426
+Phalaris,World,2015,3.51596E-05
+Phleum,World,2015,1.42539E-05
+Physic nut,World,2015,9.5026E-07
+Pigeonpeas,World,2015,0.002191299
+Pineapples,World,2015,0.000233764
+Pistachios,World,2015,5.51151E-05
+Plantains,World,2015,2.85078E-06
+Plums,World,2015,0.000308834
+Poa,World,2015,0.000113081
+Pomegranate,World,2015,0.001083296
+Potatoes,World,2015,0.004470971
+Prickly pear,World,2015,3.13586E-05
+Proso millet,World,2015,0.000399109
+Pueraria,World,2015,3.80104E-06
+Pumpkin,World,2015,0.000390557
+Quinces,World,2015,0.000124484
+Quinoa,World,2015,0.002116228
+Radish,World,2015,0.000125434
+Rambutan,World,2015,0.000136837
+Rapeseed and Mustards,World,2015,0.004002493
+Raspberries,World,2015,0.000538797
+Rice (Asian),World,2015,0.073274519
+Rice bean,World,2015,6.55679E-05
+Roselle,World,2015,9.40757E-05
+Runner bean,World,2015,5.60653E-05
+Rye,World,2015,0.000784914
+Safflower,World,2015,0.000280327
+Salsify,World,2015,2.85078E-06
+Sapodilla,World,2015,9.5026E-07
+Savory,World,2015,2.47067E-05
+Service tree,World,2015,1.90052E-06
+Sesame,World,2015,0.000442821
+Sesbania,World,2015,1.90052E-06
+Slippery cabbage,World,2015,8.55234E-06
+Sorghum,World,2015,0.020580723
+Soybeans,World,2015,0.023708027
+Spider plant,World,2015,3.32591E-05
+Spinach,World,2015,0.001690512
+Strawberries,World,2015,0.000999673
+Strawberry tree,World,2015,1.90052E-06
+Sugar beets,World,2015,0.000865687
+Sugarcane,World,2015,1.90052E-06
+Sunflowers,World,2015,0.004125077
+Sunn hemp,World,2015,2.28062E-05
+Sweetpotatoes,World,2015,0.000910349
+Sword bean,World,2015,3.32591E-05
+Tamarind,World,2015,7.60208E-06
+Tarragon,World,2015,2.47067E-05
+Teff,World,2015,0.001545122
+Tepary bean,World,2015,0.0001815
+Tobacco,World,2015,1.90052E-06
+Tomatillo,World,2015,0.000212858
+Tomatoes,World,2015,0.002843177
+Triticale,World,2015,0.00150236
+Turnips,World,2015,0.002351893
+Velvet bean,World,2015,1.42539E-05
+Velvet leaf,World,2015,9.5026E-07
+Vetch,World,2015,0.000932205
+Walnuts,World,2015,8.93244E-05
+Watermelons,World,2015,0.002521989
+Wax gourd,World,2015,1.23534E-05
+West Indian Gherkin,World,2015,3.99109E-05
+Wheat,World,2015,0.319418365
+Winged bean,World,2015,0.000655679
+Yams,World,2015,4.08612E-05
+Year bean,World,2015,2.09057E-05
+Zucchini,World,2015,0.001433942
+Canavalia,World,2015,2.85078E-06
+Bitter gourd,World,2015,6.65182E-06
+Luffa,World,2015,6.36674E-05
+Adlay,World,2016,1.24023E-05
+Adzuki bean,World,2016,3.10056E-05
+Aeschynomene,World,2016,2.17039E-05
+African eggplant,World,2016,3.25559E-05
+African rice,World,2016,0.000299204
+Agave,World,2016,4.65085E-06
+Agropyron,World,2016,0.000376718
+Agrostis,World,2016,9.61175E-05
+Alfalfa,World,2016,0.005700386
+Almonds,World,2016,1.70531E-05
+Alopecurus,World,2016,2.63548E-05
+Alysicarpus,World,2016,6.20113E-06
+Amaranth,World,2016,0.005305064
+Anise,World,2016,1.55028E-06
+Annato,World,2016,1.55028E-06
+Apple,World,2016,0.005763948
+Apricot,World,2016,8.83661E-05
+Arrhenatherum,World,2016,1.24023E-05
+Asian rice,World,2016,0.014186629
+Asparagus,World,2016,0.000117821
+Astragalus,World,2016,0.000187584
+Avocado,World,2016,3.25559E-05
+Azarole,World,2016,1.55028E-06
+Bambara bean,World,2016,0.00055035
+Bamboo shoot,World,2016,4.65085E-06
+Bananas,World,2016,0.00181693
+Barley,World,2016,0.032524913
+Basil,World,2016,0.00016743
+Beech nut,World,2016,9.30169E-06
+Beets,World,2016,0.004528373
+Black gram,World,2016,0.000897613
+Black nightshade,World,2016,1.24023E-05
+Black salsify,World,2016,1.0852E-05
+Blueberry,World,2016,0.000649568
+Brachiaria,World,2016,3.10056E-06
+Breadfruit,World,2016,4.65085E-06
+Buckwheat,World,2016,0.000406174
+Butternut squash,World,2016,0.000761188
+Cabbages,World,2016,0.003534643
+Cabbages and other brassicas,World,2016,0.016583365
+Caesarweed,World,2016,1.55028E-06
+Cainito,World,2016,3.10056E-06
+Calabash,World,2016,0.001018535
+Canary seed,World,2016,1.86034E-05
+Canola,World,2016,0.000821649
+Carambola,World,2016,1.24023E-05
+Caraway,World,2016,1.55028E-05
+Carrots,World,2016,0.004154755
+Cashews,World,2016,4.65085E-06
+Cassava,World,2016,0.002282015
+Castor bean,World,2016,0.000403073
+Celery,World,2016,0.000141076
+Centrosema,World,2016,1.55028E-06
+Ceylon-spinach,World,2016,3.10056E-06
+Cherimoya,World,2016,4.65085E-06
+Cherries,World,2016,0.000237193
+Chestnuts,World,2016,3.10056E-06
+Chickpeas,World,2016,0.027430687
+Chicle,World,2016,3.25559E-05
+Chicory,World,2016,0.000139525
+Chillies and peppers,World,2016,0.01204414
+Cinnamon,World,2016,1.55028E-06
+Citron,World,2016,9.30169E-06
+Citronella,World,2016,2.01537E-05
+Clovers,World,2016,0.00099063
+Cocoa,World,2016,0.000460434
+Coconuts,World,2016,7.75141E-06
+Coffee,World,2016,0.000463534
+Common bean,World,2016,0.026705155
+Coriander,World,2016,0.000105419
+Coronilla,World,2016,7.75141E-06
+Cotton,World,2016,0.000251146
+Cowpeas,World,2016,0.008221145
+Crambe,World,2016,0.000399973
+Cranberries,World,2016,8.99163E-05
+Cress,World,2016,3.10056E-06
+Cucumbers and gherkins,World,2016,0.004322186
+Cumin,World,2016,3.25559E-05
+Currants,World,2016,0.000252696
+Cushaw,World,2016,0.000173632
+Custard apple,World,2016,3.41062E-05
+Dactylis,World,2016,0.001223172
+Dates,World,2016,0.000195336
+Desmodium,World,2016,1.39525E-05
+Dill,World,2016,1.39525E-05
+Durian,World,2016,1.55028E-06
+Eggplant,World,2016,0.001060393
+Elderberry,World,2016,0.000142626
+Ethiopian rape,World,2016,5.73604E-05
+Faba beans,World,2016,0.009067598
+Fennel,World,2016,7.75141E-06
+Fenugreek,World,2016,0.000558101
+Festuca,World,2016,0.00209133
+Fig leaf gourd,World,2016,1.55028E-06
+Figs,World,2016,0.001184415
+Finger millet,World,2016,0.002215353
+Flax,World,2016,0.003013748
+Fonio,World,2016,7.75141E-06
+Foxtail millet,World,2016,0.001854137
+Garlic,World,2016,0.001311538
+Ginger,World,2016,1.70531E-05
+Gooseberries,World,2016,0.00022169
+Grapefruits,World,2016,1.70531E-05
+Grapes,World,2016,0.00049764
+Grasspea,World,2016,0.003604405
+Groundnuts,World,2016,0.006153069
+Guavas,World,2016,4.80587E-05
+Guayule,World,2016,0.00016743
+Hazelnuts,World,2016,0.00016588
+Hedysarum,World,2016,1.24023E-05
+Hops,World,2016,0.001841735
+Huckleberry,World,2016,9.30169E-06
+Indigofera,World,2016,6.0461E-05
+Jack bean,World,2016,6.20113E-06
+Jackfruit,World,2016,9.30169E-06
+Japanese millet,World,2016,9.30169E-06
+Jerusalem artichoke,World,2016,3.56565E-05
+Jicama,World,2016,7.75141E-06
+Jojoba,World,2016,9.30169E-06
+Jujube,World,2016,1.55028E-06
+Jute,World,2016,2.17039E-05
+Kaniwa,World,2016,7.75141E-05
+Kenaf,World,2016,9.30169E-05
+Kiwi fruit,World,2016,0.000178282
+Kiwicha,World,2016,0.001269681
+Kodo millet,World,2016,1.0852E-05
+Kumquat,World,2016,1.55028E-06
+Lablab,World,2016,0.000207738
+Leeks and other alliaceous vegetables,World,2016,0.000189134
+Lemons and limes,World,2016,2.79051E-05
+Lentils,World,2016,0.01848091
+Lespedeza,World,2016,0.000134875
+Lettuce,World,2016,0.002643231
+Leucaena,World,2016,1.70531E-05
+Licorice,World,2016,6.82124E-05
+Lima bean,World,2016,0.00120922
+Litchi,World,2016,9.30169E-06
+Little millet,World,2016,7.75141E-06
+Lolium,World,2016,0.00258742
+Lotus,World,2016,0.001471217
+Lupins,World,2016,0.001905296
+Maca,World,2016,1.55028E-06
+Macadamia nut,World,2016,7.75141E-06
+Maize,World,2016,0.135679116
+Malabar spinach,World,2016,3.10056E-06
+Mamey sapote,World,2016,1.86034E-05
+Mammee,World,2016,3.10056E-06
+Mandarines,World,2016,4.49582E-05
+Mango,World,2016,0.000531747
+Mangosteen,World,2016,1.24023E-05
+Mat bean,World,2016,8.37152E-05
+Medlar,World,2016,0.000103869
+Melilotus,World,2016,0.000283702
+Melons,World,2016,0.003748581
+Mulberry,World,2016,4.34079E-05
+Mung bean,World,2016,0.000587557
+Naranjilla,World,2016,3.41062E-05
+Noog,World,2016,1.24023E-05
+Oats,World,2016,0.00715145
+Oca,World,2016,3.10056E-06
+Okra,World,2016,0.000364316
+Olives,World,2016,0.000127123
+Onions,World,2016,0.001196818
+Onobrychis,World,2016,0.000336411
+Oranges,World,2016,4.65085E-05
+Oregano,World,2016,6.51118E-05
+Ornithopus,World,2016,3.25559E-05
+Papayas,World,2016,2.48045E-05
+Parsley,World,2016,2.79051E-05
+Pawpaw,World,2016,1.0852E-05
+Peaches and nectarines,World,2016,0.000406174
+Pearl millet,World,2016,0.013870372
+Pears,World,2016,0.000734834
+Peas,World,2016,0.008980783
+Pecan,World,2016,1.55028E-06
+Pepper,World,2016,0.000325559
+Peppermint,World,2016,0.000184484
+Perilla,World,2016,2.17039E-05
+Persimmons,World,2016,0.000128673
+Phalaris,World,2016,7.90644E-05
+Phleum,World,2016,7.59638E-05
+Pigeonpeas,World,2016,0.002616876
+Pineapples,World,2016,0.00016278
+Pistachios,World,2016,2.79051E-05
+Plantains,World,2016,1.0852E-05
+Plums,World,2016,0.000192235
+Poa,World,2016,0.000615462
+Pomegranate,World,2016,0.000792194
+Potatoes,World,2016,0.007892485
+Prickly pear,World,2016,2.79051E-05
+Proso millet,World,2016,0.001554933
+Pueraria,World,2016,1.55028E-06
+Pumpkin,World,2016,0.001998313
+Pyrethrum,World,2016,1.55028E-06
+Quinces,World,2016,0.000403073
+Quinoa,World,2016,0.002478901
+Radish,World,2016,0.001142558
+Rambutan,World,2016,4.65085E-06
+Rapeseed and Mustards,World,2016,0.00346643
+Raspberries,World,2016,0.000424777
+Rice (Asian),World,2016,0.077453631
+Rice bean,World,2016,5.89107E-05
+Roselle,World,2016,4.65085E-05
+"Rubber, natural",World,2016,1.55028E-06
+Runner bean,World,2016,0.000644917
+Rye,World,2016,0.001091398
+Safflower,World,2016,0.005374827
+Salsify,World,2016,7.75141E-06
+Sapodilla,World,2016,3.25559E-05
+Savory,World,2016,7.75141E-06
+Service tree,World,2016,4.65085E-06
+Sesame,World,2016,0.002275814
+Sesbania,World,2016,6.0461E-05
+Slippery cabbage,World,2016,0.000430978
+Sorghum,World,2016,0.042880796
+Soursop,World,2016,7.75141E-06
+Soybeans,World,2016,0.035681287
+Spider plant,World,2016,1.70531E-05
+Spinach,World,2016,0.003071108
+Strawberries,World,2016,0.002295967
+Stylosanthes,World,2016,3.10056E-06
+Sugar apple,World,2016,1.55028E-06
+Sugar beets,World,2016,0.003401318
+Sugarcane,World,2016,0.000130224
+Sunflowers,World,2016,0.007895585
+Sunn hemp,World,2016,2.32542E-05
+Sweetpotatoes,World,2016,0.001728564
+Sword bean,World,2016,6.20113E-06
+Tarragon,World,2016,2.01537E-05
+Tea,World,2016,6.20113E-06
+Teff,World,2016,0.003161025
+Tepary bean,World,2016,0.000173632
+Tobacco,World,2016,0.00038292
+Tomatillo,World,2016,2.63548E-05
+Tomatoes,World,2016,0.002886625
+Triticale,World,2016,0.005669381
+Turmeric,World,2016,1.55028E-05
+Turnips,World,2016,0.000985979
+Vanilla,World,2016,1.55028E-06
+Velvet bean,World,2016,2.48045E-05
+Velvet leaf,World,2016,6.20113E-06
+Vetch,World,2016,0.001189066
+Walnuts,World,2016,4.9609E-05
+Watermelons,World,2016,0.00143091
+Wax gourd,World,2016,4.34079E-05
+West Indian Gherkin,World,2016,0.000229442
+Wheat,World,2016,0.344204426
+Winged bean,World,2016,0.000286802
+Yams,World,2016,6.97627E-05
+Year bean,World,2016,5.27096E-05
+Zornia,World,2016,1.55028E-06
+Zucchini,World,2016,0.001384402
+Canavalia,World,2016,9.30169E-06
+Mashua,World,2016,1.55028E-06
+Bitter gourd,World,2016,6.20113E-06
+Luffa,World,2016,0.000190685
+Acerola,World,2017,5.72455E-05
+Ackee,World,2017,2.38523E-06
+Adlay,World,2017,6.67864E-05
+Adzuki bean,World,2017,0.000670249
+Aeschynomene,World,2017,4.77046E-06
+African eggplant,World,2017,0.000276687
+African rice,World,2017,0.000565299
+Agropyron,World,2017,0.000233752
+Agrostis,World,2017,5.2475E-05
+Ahipa,World,2017,1.43114E-05
+Alfalfa,World,2017,0.011596982
+Allspice,World,2017,1.90818E-05
+Almonds,World,2017,0.000188433
+Alopecurus,World,2017,6.44012E-05
+Alysicarpus,World,2017,2.38523E-06
+Amaranth,World,2017,0.013400215
+Anise,World,2017,2.38523E-06
+Apple,World,2017,0.010301803
+Apricot,World,2017,0.000286227
+Arrhenatherum,World,2017,0.000171736
+Asian rice,World,2017,0.022196939
+Asparagus,World,2017,9.06387E-05
+Astragalus,World,2017,0.000391178
+Avocado,World,2017,0.000627315
+Azarole,World,2017,4.77046E-06
+Bambara bean,World,2017,0.002461556
+Bamboo shoot,World,2017,9.54092E-06
+Bananas,World,2017,0.003069789
+Barley,World,2017,0.053283625
+Basil,World,2017,0.000648782
+Bay leaf,World,2017,5.2475E-05
+Beets,World,2017,0.001946347
+Black gram,World,2017,0.002063223
+Black nightshade,World,2017,1.43114E-05
+Black salsify,World,2017,1.66966E-05
+Blueberry,World,2017,0.001784151
+Brachiaria,World,2017,2.38523E-05
+Breadfruit,World,2017,4.77046E-06
+Buckwheat,World,2017,0.000837215
+Butternut squash,World,2017,0.002802644
+Cabbages,World,2017,0.006454429
+Cabbages and other brassicas,World,2017,0.028400919
+Caesarweed,World,2017,1.19261E-05
+Cainito,World,2017,7.15569E-06
+Calabash,World,2017,0.001497924
+Calopogonium,World,2017,9.54092E-06
+Canary seed,World,2017,7.15569E-06
+Candlenut,World,2017,2.38523E-06
+Canola,World,2017,0.00219441
+Carambola,World,2017,0.000157425
+Caraway,World,2017,6.20159E-05
+Carrots,World,2017,0.012119347
+Cashews,World,2017,2.38523E-06
+Cassava,World,2017,0.000200359
+Castor bean,World,2017,0.000453193
+Celery,World,2017,0.000426956
+Centrosema,World,2017,1.66966E-05
+Cherimoya,World,2017,0.000119261
+Cherries,World,2017,0.000601078
+Chestnuts,World,2017,9.54092E-06
+Chickpeas,World,2017,0.057412456
+Chicle,World,2017,0.000171736
+Chicory,World,2017,0.001028034
+Chillies and peppers,World,2017,0.009791364
+Chinotto,World,2017,2.38523E-06
+Cinnamon,World,2017,7.15569E-06
+Citron,World,2017,1.90818E-05
+Citronella,World,2017,3.57784E-05
+Clovers,World,2017,0.007074588
+Cocoa,World,2017,0.00036971
+Coconuts,World,2017,0.000300539
+Coffee,World,2017,5.48603E-05
+Common bean,World,2017,0.017650693
+Coriander,World,2017,0.001345269
+Coronilla,World,2017,2.86227E-05
+Cowpeas,World,2017,0.012913628
+Crambe,World,2017,1.66966E-05
+Cranberries,World,2017,0.000162196
+Cress,World,2017,0.000188433
+Cucumbers and gherkins,World,2017,0.007186694
+Cumin,World,2017,6.44012E-05
+Currants,World,2017,0.000331547
+Cushaw,World,2017,8.58682E-05
+Custard apple,World,2017,0.000102565
+Dactylis,World,2017,0.000515209
+Dates,World,2017,1.43114E-05
+Desmodium,World,2017,5.48603E-05
+Dill,World,2017,0.000279072
+Durian,World,2017,7.15569E-06
+Eggplant,World,2017,0.003821136
+Elderberry,World,2017,0.000357784
+Ethiopian rape,World,2017,0.000598692
+Faba beans,World,2017,0.008450865
+Fennel,World,2017,0.000107335
+Fenugreek,World,2017,0.001538473
+Festuca,World,2017,0.004863481
+Figs,World,2017,0.001352425
+Finger millet,World,2017,0.002998233
+Flax,World,2017,0.00244963
+Fonio,World,2017,1.66966E-05
+Foxtail millet,World,2017,0.002890897
+Galactia,World,2017,2.38523E-06
+Garlic,World,2017,0.002752554
+Ginger,World,2017,3.1008E-05
+Gooseberries,World,2017,0.000281457
+Grapefruits,World,2017,2.62375E-05
+Grapes,World,2017,0.000665479
+Grasspea,World,2017,0.002828881
+Groundnuts,World,2017,0.029498124
+Guavas,World,2017,0.000107335
+Guayule,World,2017,0.00046512
+Hazelnuts,World,2017,0.000135958
+Hedysarum,World,2017,7.63273E-05
+Hops,World,2017,0.002750169
+Huckleberry,World,2017,1.90818E-05
+Indigofera,World,2017,9.54092E-05
+Jack bean,World,2017,6.67864E-05
+Jackfruit,World,2017,8.3483E-05
+Japanese millet,World,2017,0.00072511
+Jerusalem artichoke,World,2017,0.000512824
+Jicama,World,2017,9.54092E-06
+Jute,World,2017,6.44012E-05
+Kaniwa,World,2017,0.000290998
+Kapok,World,2017,2.38523E-06
+Kenaf,World,2017,0.000651167
+Kiwi fruit,World,2017,0.000188433
+Kiwicha,World,2017,0.002988692
+Kodo millet,World,2017,0.000546217
+Lablab,World,2017,0.000147884
+Leeks and other alliaceous vegetables,World,2017,0.000386407
+Lemons and limes,World,2017,5.00898E-05
+Lentils,World,2017,0.022979294
+Lespedeza,World,2017,1.19261E-05
+Lettuce,World,2017,0.004889719
+Leucaena,World,2017,4.77046E-05
+Licorice,World,2017,4.05489E-05
+Lima bean,World,2017,0.000698872
+Litchi,World,2017,9.30239E-05
+Little millet,World,2017,0.000438882
+Lolium,World,2017,0.002590358
+Longan,World,2017,4.53193E-05
+Lotus,World,2017,0.001579021
+Lupins,World,2017,0.002881356
+Maca,World,2017,7.15569E-06
+Macadamia nut,World,2017,7.87125E-05
+Macroptilium,World,2017,3.57784E-05
+Maize,World,2017,0.035101026
+Mamey sapote,World,2017,5.48603E-05
+Mammee,World,2017,2.38523E-06
+Mandarines,World,2017,6.91716E-05
+Mango,World,2017,0.001340499
+Mangosteen,World,2017,3.1008E-05
+Maple sugar,World,2017,1.19261E-05
+Mat bean,World,2017,4.29341E-05
+Medlar,World,2017,0.000112106
+Melilotus,World,2017,0.000164581
+Melons,World,2017,0.003387025
+Mombin,World,2017,7.15569E-06
+Mulberry,World,2017,0.000138343
+Mung bean,World,2017,0.016658438
+Naranjilla,World,2017,4.77046E-06
+Neonotonia,World,2017,2.38523E-06
+Oats,World,2017,0.010096673
+Okra,World,2017,0.001970199
+Olives,World,2017,0.000901616
+Onions,World,2017,0.001395359
+Onobrychis,World,2017,0.000849141
+Oranges,World,2017,0.000114491
+Oregano,World,2017,0.000195589
+Papayas,World,2017,7.87125E-05
+Parsley,World,2017,6.67864E-05
+Parsnip,World,2017,1.90818E-05
+Peaches and nectarines,World,2017,0.00119977
+Pearl millet,World,2017,0.011422861
+Pears,World,2017,0.00171975
+Peas,World,2017,0.006487822
+Pecan,World,2017,2.38523E-06
+Pepper,World,2017,0.000851527
+Peppermint,World,2017,0.000300539
+Perilla,World,2017,7.63273E-05
+Persimmons,World,2017,0.000219441
+Phalaris,World,2017,0.0006297
+Phleum,World,2017,0.000116876
+Pigeonpeas,World,2017,0.007341734
+Pili nut,World,2017,4.77046E-06
+Pineapples,World,2017,0.000388792
+Pistachios,World,2017,2.62375E-05
+Plums,World,2017,0.000453193
+Poa,World,2017,0.000293383
+Pomegranate,World,2017,0.001214081
+Pongamia oil,World,2017,2.38523E-06
+Potatoes,World,2017,0.016179007
+Prickly pear,World,2017,7.15569E-06
+Proso millet,World,2017,0.002793103
+Pumpkin,World,2017,0.002015518
+Pyrethrum,World,2017,9.54092E-06
+Quinces,World,2017,0.000267146
+Quinoa,World,2017,0.005302364
+Radish,World,2017,0.001810389
+Rambutan,World,2017,3.1008E-05
+Rapeseed and Mustards,World,2017,0.012510525
+Raspberries,World,2017,0.000937395
+Rhynchosia,World,2017,1.19261E-05
+Rice (Asian),World,2017,0.094345338
+Rice bean,World,2017,0.000131188
+Roselle,World,2017,0.000288613
+"Rubber, natural",World,2017,4.77046E-06
+Runner bean,World,2017,0.000706028
+Rye,World,2017,0.007344119
+Safflower,World,2017,0.003844989
+Salsify,World,2017,1.66966E-05
+Sapodilla,World,2017,0.000171736
+Savory,World,2017,6.44012E-05
+Service tree,World,2017,9.54092E-06
+Sesame,World,2017,0.002490179
+Sesbania,World,2017,2.38523E-05
+Slippery cabbage,World,2017,0.000276687
+Sorghum,World,2017,0.052362927
+Soursop,World,2017,4.53193E-05
+Soybeans,World,2017,0.048949665
+Spinach,World,2017,0.008541504
+Strawberries,World,2017,0.004598721
+Stylosanthes,World,2017,6.20159E-05
+Sugar apple,World,2017,3.81637E-05
+Sugar beets,World,2017,0.001748373
+Sugarcane,World,2017,0.00046989
+Sunflowers,World,2017,0.020734794
+Sunn hemp,World,2017,0.000178892
+Sweetpotatoes,World,2017,0.000827674
+Sword bean,World,2017,7.15569E-06
+Tamarind,World,2017,2.14671E-05
+Tarragon,World,2017,7.15569E-05
+Teff,World,2017,0.000651167
+Tepary bean,World,2017,0.001385818
+Tobacco,World,2017,0.000407874
+Tomatillo,World,2017,0.000164581
+Tomatoes,World,2017,0.001805618
+Tripsacum,World,2017,2.38523E-06
+Triticale,World,2017,6.67864E-05
+Turmeric,World,2017,1.19261E-05
+Turnips,World,2017,0.007010187
+Vanilla,World,2017,4.77046E-06
+Velvet bean,World,2017,4.05489E-05
+Velvet leaf,World,2017,1.43114E-05
+Vetch,World,2017,0.000386407
+Walnuts,World,2017,0.000283842
+Watermelons,World,2017,0.003995258
+Wax gourd,World,2017,1.90818E-05
+West Indian Gherkin,World,2017,3.1008E-05
+Wheat,World,2017,0.171741241
+Winged bean,World,2017,0.000262375
+Yams,World,2017,0.000183663
+Year bean,World,2017,0.000417415
+Zornia,World,2017,2.38523E-06
+Zucchini,World,2017,0.002330368
+Bitter gourd,World,2017,1.19261E-05
+Luffa,World,2017,0.00036017

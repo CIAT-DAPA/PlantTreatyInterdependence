@@ -20,6 +20,7 @@ library(ineq)
 ####  00- GLOBAL VARIABLES
 
 #setwd("G:/CIAT/Code/CWR/PlantTreatyInterdependence/src/R/")
+#load(file = "mydata.rda")
 setwd("/home/hsotelo/planttreaty/R/")
 
 # Global variables
@@ -87,24 +88,32 @@ process.load.measure(p[3])
 source("scripts/tools.R")
 source("scripts/analysis.R")
 db_cnn = connect_db("fao")
-data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type=conf.db)
+data.raw = analysis.get.matrix(global=T, years="2010,2011,2012,2013", type=conf.db)
 dbDisconnect(db_cnn)
 
+# COuntries
 #data.raw = read.csv(paste0(analysis.folder,"/data.raw-old.csv"),header = T)
 #data.raw$crop = as.character(data.raw$crop)
 #data.raw$country = as.character(data.raw$country)
 #data.raw$year = as.character(data.raw$year)
 
+# Global 
+#data = read.csv(paste0(analysis.folder,"/data.csv"),header = T)
+#data$metric = as.character(data$metric)
+#data$country = as.character(data$country)
+#data$crop = as.character(data$crop)
+#data$year = as.character(data$year)
+#data.raw = analysis.built.matrix(data, type=conf.db)
+
 write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 
 
-
+source("scripts/composite_index.R")
 data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 data.filtered = ci.variables.exclude(data.raw,data.vars)
 write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
 
 #normalize 
-source("scripts/composite_index.R")
 data.n = ci.normalize.full(data.filtered,"proportion", global =T)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
@@ -145,10 +154,10 @@ write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 data.filtered = ci.variables.exclude(data.raw,data.vars)
 
 # Generate the interdependence for both methods
-inter.sum = interdependence.region(data=data.filtered, method="sum", normalize = F)
+inter.sum = interdependence.region(data=data.filtered[, c("crop","country","year","c_area_harvested","c_production","vap_gross_production_value_us","clp_export_quantity","clp_export_value","clp_import_quantity","clp_import_value")], method="sum", normalize = F)
 #interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 3)
 #interdependence.region(data=data.filtered, method="sum", normalize = F, threshold = 5)
-inter.seg = interdependence.region(data=data.filtered, method="segregation", normalize = F)
+inter.seg = interdependence.region(data=data.filtered[, c("crop","country","year","fs_fat_supply_quantity","fs_food_supply_kcal","fs_food_supply_quantity_g","fs_protein_supply_quantity")], method="segregation", normalize = F)
 #interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 3)
 #interdependence.region(data=data.filtered, method="segregation", normalize = F, threshold = 5)
 ##############################################
@@ -172,17 +181,18 @@ data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 inter.sum = inter.sum %>% 
                 reduce(full_join, by = c("crop","year","country"))
 
-inter.sum = inter.sum[,c(1,2,3,4,5,6,7,8,9,10)]
+#inter.sum = inter.sum[,c(1,2,3,4,5,6,7,8,9,10)]
 
 inter.seg = inter.seg %>%
                 reduce(full_join, by = c("crop","year","country"))
-inter.seg = inter.seg[,c(1,2,3,11,12,13,14)]
+#inter.seg = inter.seg[,c(1,2,3,4,5,6,7)]
 
+inter.final = merge(x=inter.sum, y=inter.seg, by.x= c("crop","year","country"), by.y= c("crop","year","country"), all.x =T, all.y = F)
 
-#ddply(inter.sum[[1]],.(crop,year,id_crop,year),summarise,value=sum(value))
 # aggregation
-data.agg = ci.aggregation.avg(data.filtered)
-write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+inter.final[is.na(inter.final)] = 0
+data.agg = ci.aggregation.avg(inter.final)
+write.csv(data.agg,paste0(analysis.folder,"/data.agg.region.csv"), row.names = F)
 
 # Filling countries
 countries.amount = data.agg %>%

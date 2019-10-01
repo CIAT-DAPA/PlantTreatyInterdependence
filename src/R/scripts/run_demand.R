@@ -117,3 +117,69 @@ for(c in names(gini.indicator)){
 }
 
 write.csv(gini.indicator,paste0(analysis.folder,"/gini.indicator.csv"), row.names = F)
+
+##############################################
+####  07 - GINI REGIONS
+
+# COuntries
+data.raw = read.csv(paste0(demand.folder,"/demand-countries-recipients.csv"),header = T)
+data.raw$crop = as.character(data.raw$crop)
+data.raw$country = as.character(data.raw$country)
+data.raw$year = as.character(data.raw$year)
+data.raw$crop_count_recipients_distributions = as.numeric(data.raw$crop_count_recipients_distributions)
+
+data.countries = read.csv(paste0(conf.folder, "/countries.csv"), header = T)
+
+data.filtered =  merge(x=data.raw, y=data.countries, by.x="country", by.y="iso3", all.x = T, all.y = F)
+data.filtered = data.filtered[,c("crop","year","name","crop_count_recipients_distributions")]
+names(data.filtered) = c("crop","year","country","crop_count_recipients_distributions")
+#data.filtered = data.filtered[complete.cases(data.filtered),]
+#write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
+
+source("scripts/tools.R")
+source("scripts/analysis.R")
+source("scripts/interdependence.R")
+source("scripts/composite_index.R")
+source("scripts/gini.R")
+library(tidyverse)
+
+inter.dem = interdependence.region(data=data.filtered, method="sum", normalize = F)
+
+inter.final.dem = inter.dem %>% 
+                reduce(full_join, by = c("crop","year","country"))
+
+inter.final.dem[is.na(inter.final.dem)] = 0
+data.agg.dem = ci.aggregation.avg(inter.final.dem)
+write.csv(data.agg.dem,paste0(analysis.folder,"/data.agg.region.dem.csv"), row.names = F)
+
+countries.amount.dem = data.agg.dem %>%
+  group_by(crop) %>%
+  tally()
+
+df.fill = do.call(rbind,lapply(1:nrow(countries.amount.dem),function(c){
+  times = 230 - countries.amount.dem$n[c]
+  fields = names(data.agg.dem)
+  df = as.data.frame(matrix(rep(c(0), times = 230*length(fields)), ncol  = length(fields)))
+  names(df) = fields
+  df$crop = countries.amount.dem$crop[c]
+  df$country = ""
+  return (df)
+}))
+
+data.agg.dem = rbind.data.frame(data.agg.dem,df.fill)
+
+# gini
+gini.indicator.dem = gini.crop(data.agg.dem)
+
+for(c in names(gini.indicator.dem)){
+  if(nrow(gini.indicator.dem[gini.indicator.dem[,c]==1,])>0){
+    gini.indicator.dem[gini.indicator.dem[,c]==1,c] = NA
+  }
+}
+
+write.csv(gini.indicator.dem,paste0(analysis.folder,"/security-equality_of_demand-gini_germplasm_distributions.csv"), row.names = F)
+
+#
+
+
+

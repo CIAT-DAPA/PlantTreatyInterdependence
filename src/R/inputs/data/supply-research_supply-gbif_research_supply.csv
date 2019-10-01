@@ -7,7 +7,7 @@ Adlay,World,2019,13,11
 Adzuki bean,World,2019,5211,2
 Aeschynomene,World,2019,229,119
 African eggplant,World,2019,8000,605
-Rice (African),World,2019,9756,828
+African rice,World,2019,9756,828
 Agave,World,2019,72,5
 Agropyron,World,2019,147,90
 Agrostis,World,2019,69,29
@@ -29,7 +29,7 @@ Arracacha,World,2019,93,93
 Arrhenatherum,World,2019,12,12
 Arrowroot,World,2019,18,8
 Artichokes,World,2019,5,3
-Rice (Asian),World,2019,9756,7591
+Asian rice,World,2019,9756,7591
 Asparagus,World,2019,51,14
 Astragalus,World,2019,516,5
 Atemoya,World,2019,112,0
@@ -46,6 +46,7 @@ Basil,World,2019,97,37
 Bay leaf,World,2019,7,4
 Beech nut,World,2019,35,7
 Beets,World,2019,931,494
+Bitter gourd,World,2019,0,0
 Black gram,World,2019,5211,333
 Black nightshade,World,2019,8000,21
 Black salsify,World,2019,5,3
@@ -188,6 +189,7 @@ Lolium,World,2019,434,356
 Longan,World,2019,17,16
 Loquat,World,2019,5,4
 Lotus,World,2019,241,94
+Luffa,World,2019,0,0
 Lupins,World,2019,1305,1031
 Maca,World,2019,63,7
 Macadamia nut,World,2019,1,1

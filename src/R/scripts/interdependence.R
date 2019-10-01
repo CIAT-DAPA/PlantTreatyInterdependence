@@ -118,6 +118,7 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
       
       
       tmp.crop_rows$global = tmp.crop_rows$outside / tmp.crop_rows$world
+      tmp.crop_rows$global[tmp.crop_rows$global > 1 ] = 1
       tmp.crop_rows$global[is.na(tmp.crop_rows$global)] = 0
       #tmp.crop_rows$global_outside_origin = tmp.crop_rows$outside / tmp.crop_rows$origin
       #tmp.crop_rows$global_outside_origin[is.na(tmp.crop_rows$global_outside_origin)] = 0

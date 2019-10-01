@@ -134,6 +134,7 @@ process.load.measure = function(f){
   # Weight Segregation
   tmp.segregation.file = paste0(conf.folder,"/",tmp.source.group[1],"/segregation-",tmp.source.group[1],"-",tmp.source.group[2],".csv")
   if(file.exists(tmp.segregation.file)){
+    print(paste0("............Segregation"))
     tmp.segregation = read.csv(tmp.segregation.file, header = T)
     tmp.measure = merge(x=tmp.measure, y=tmp.segregation, by.x=c("Item_cleaned","crop"), by.y=c("group","crop"), all.x = T, all.y = F)
     tmp.measure[["percentage"]][is.na(tmp.measure[["percentage"]])] = 1
