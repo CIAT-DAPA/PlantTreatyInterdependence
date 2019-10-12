@@ -2,7 +2,7 @@
 # (data.frame) data: Dataset
 # (string) method: Name of method that want to implement: sum or segregation
 # (bool) normalize: If you want or not to normalized the results
-interdependence.region = function(data, method, normalize = F, type_countries = NA, threshold = NA){
+interdependence.region = function(data, method, normalize = F, type_countries = NA, threshold = NA, filter_origin = T){
   # Loading configurations files
   if(method == "sum"){
     if(is.na(type_countries)){
@@ -126,7 +126,10 @@ interdependence.region = function(data, method, normalize = F, type_countries = 
       
       # Filtering crops with data in origin
       tmp.crop_rows = tmp.crop_rows[!is.na(tmp.crop_rows$origin),]
-      tmp.crop_rows = tmp.crop_rows[tmp.crop_rows$origin>0,]
+      if(filter_origin == TRUE){
+        tmp.crop_rows = tmp.crop_rows[tmp.crop_rows$origin>0,]  
+      }
+      
       
       #return(tmp.crop_rows[,c("crop","year","origin","outside","world","global","global_outside_origin")])
       return(tmp.crop_rows[,c("crop","year","origin","outside","world","global")])

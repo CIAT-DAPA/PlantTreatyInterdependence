@@ -38,7 +38,7 @@ conf.db = "indicator"
 
 conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
 
-point = format_format(big.mark = ".", decimal.mark = ",", scientific = FALSE)
+#point = format_format(big.mark = ".", decimal.mark = ",", scientific = FALSE)
 
 # Load variables
 data.vars = read.csv(paste0(conf.folder,"/metrics.csv"), header = T)
@@ -87,14 +87,21 @@ write.csv(data.raw,paste0(analysis.folder,"/data.raw.csv"), row.names = F)
 data.filtered = ci.variables.exclude(data.raw,data.vars)
 write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
 
+data.n = ci.normalize.full(data = data.filtered,type = "range", global =T)
+write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
+
+
 # aggregation
-data.agg = ci.aggregation.avg(data.filtered)
+#data.agg = ci.aggregation.avg(data.filtered)
+data.agg = ci.aggregation.avg(data.n)
 write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+
 #normalize 
 
-data.n = ci.normalize(data.agg,"range")
-data.n = as.data.frame(data.n)
-write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
+data.n =data.agg
+#data.n = ci.normalize(data.agg,"range")
+#data.n = as.data.frame(data.n)
+#write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 
 data.vars.final = data.vars[data.vars$useable == 1,]
 data.vars.final = data.vars.final[which(data.vars.final$vars %in% names(data.n)),]
@@ -104,7 +111,8 @@ row.names(data.vars.final) = NULL
 indicator.mean = ci.aggregation.hierarchy.indicator(data.n, data.vars.final,"mean")
 write.csv(indicator.mean,paste0(analysis.folder,"/indicator.mean.csv"), row.names = F)
 # Fixing indicator for tableau
-indicator.tableau.mean = ci.aggregation.matrix.table(indicator.mean)
+indicator.mean = as.data.frame(indicator.mean)
+indicator.tableau.mean = ci.aggregation.matrix.table(indicator = indicator.mean)
 write.csv(indicator.tableau.mean,paste0(analysis.folder,"/indicator.tableau.mean.csv"), row.names = F)
 
 # Calculating indicator by weights

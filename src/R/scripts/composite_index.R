@@ -5,7 +5,7 @@ library(ggplot2)
 library(tidyr)
 library(corrplot)
 library(Hmisc)
-library(caret)
+#library(caret)
 library(corrplot)
 library(ade4)
 require(scales)
@@ -173,15 +173,19 @@ ci.normalize = function(data, type = "range"){
       d = tryCatch({
         tmp.model = preProcess(data, method = type )
         tmp.data = predict(tmp.model, data)  
+        #write.csv(tmp.data,paste0(analysis.folder,"/data.n.tmp.csv"), row.names = F)
         return(tmp.data)
       }, warning = function(w) {
         #print(paste0("Warning ",nrow(data)))
-        tmp.data = data
-        #tmp.data[,ci.variables.numeric.vars(data)] = 1
-        numCols = which(sapply(tmp.data,is.numeric))
-        numData = tmp.data[,numCols]
-        numData[!is.na(numData)] = 1
-        tmp.data[,numCols] = numData  
+        #tmp.data = data
+        #numCols = which(sapply(tmp.data,is.numeric))
+        #numData = tmp.data[,numCols]
+        #numData[!is.na(numData)] = 1
+        #tmp.data[,numCols] = numData  
+        tmp.model = preProcess(data, method = type )
+        tmp.data = predict(tmp.model, data)  
+        #write.csv(tmp.data,paste0(analysis.folder,"/data.n.tmp.csv"), row.names = F)
+        
         return(tmp.data)
       })
     } else {
@@ -202,10 +206,6 @@ ci.normalize = function(data, type = "range"){
       # fixing dataset and names of columns
       tmp.data = as.data.frame(data[,c("crop","country","year",v)])
       names(tmp.data) = c("crop","country","year","value")
-      # filtering data and order dataset
-      #tmp.data = tmp.data[complete.cases(tmp.data),]
-      #row.names(tmp.data) = NULL
-      #tmp.data = tmp.data[order(tmp.data$crop,tmp.data$value),]
       # normalizing
       tmp.data$value = tmp.data$value / sum(tmp.data$value,na.rm=T)
       # adding amount of records by each crop
@@ -227,7 +227,7 @@ ci.normalize.year = function(data, type = "range"){
   years = unique(data$year)
   tmp.final = do.call(rbind, lapply(years, function(y){
     tmp.data.year = data[which(data$year == y),]
-    tmp = ci.normalize(tmp.data.year, type)  
+    tmp = ci.normalize(data = tmp.data.year, type)  
     return (tmp)
   }))
   return(tmp.final)
@@ -255,6 +255,7 @@ ci.normalize.field = function(data, field, type = "range"){
 ci.normalize.full = function(data, type = "range", global = F){
   if(global == T){
     tmp.final = ci.normalize.year(data, type)
+    #write.csv(tmp.final,paste0(analysis.folder,"/data.n.tmp.csv"), row.names = F)
   } else{
     countries = unique(data$country)
     tmp.final = do.call(rbind, lapply(countries, function(c){
@@ -547,7 +548,7 @@ ci.aggregation.matrix.table = function(indicator){
                                                     component = component,
                                                     group = group,
                                                     metric = metric,
-                                                    value=indicator[,v])
+                                                    value = indicator[,v])
                                 return(tmp.df)
                                 
                               })

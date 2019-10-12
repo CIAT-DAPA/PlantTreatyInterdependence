@@ -34,7 +34,7 @@ analysis.get.matrix = function(global=F,years=NA, type="indicator"){
     if(is.na(years)){
       raw.query = dbSendQuery(db_cnn,"select domain,component,`group`,metric,crop,country,year,value from vw_data where country not in ('Africa','Americas','Asia','Australia & New Zealand','Caribbean','Central America','Central Asia','Eastern Africa','Eastern Asia','Eastern Europe','EU(12)ex.int','EU(15)ex.int','EU(25)ex.int','EU(27)ex.int','Europe','European Union','European Union (exc intra-trade)','Land Locked Developing Countries',	'Least Developed Countries',	'Low Income Food Deficit Countries',	'Melanesia',	'Micronesia',	'Middle Africa',	'Net Food Importing Developing Countries',	'Northern Africa',	'Northern America',	'Northern Europe',	'Oceania',	'Polynesia',	'Small Island Developing States',	'South America',	'South-Eastern Asia',	'Southern Africa',	'Southern Asia',	'Southern Europe',	'Western Africa',	'Western Asia',	'Western Europe')")
     }else{
-      raw.query = dbSendQuery(db_cnn,paste0("select domain,component,`group`,metric,crop,country,year,value from vw_data where year in (",years,") and country not in ('Africa','Americas','Asia','Australia & New Zealand','Caribbean','Central America','Central Asia','Eastern Africa','Eastern Asia','Eastern Europe','EU(12)ex.int','EU(15)ex.int','EU(25)ex.int','EU(27)ex.int','Europe','European Union','European Union (exc intra-trade)','Land Locked Developing Countries',	'Least Developed Countries',	'Low Income Food Deficit Countries',	'Melanesia',	'Micronesia',	'Middle Africa',	'Net Food Importing Developing Countries',	'Northern Africa',	'Northern America',	'Northern Europe',	'Oceania',	'Polynesia',	'Small Island Developing States',	'South America',	'South-Eastern Asia',	'Southern Africa',	'Southern Asia',	'Southern Europe',	'Western Africa',	'Western Asia',	'Western Europe'"))  
+      raw.query = dbSendQuery(db_cnn,paste0("select domain,component,`group`,metric,crop,country,year,value from vw_data where year in (",years,") and country not in ('Africa','Americas','Asia','Australia & New Zealand','Caribbean','Central America','Central Asia','Eastern Africa','Eastern Asia','Eastern Europe','EU(12)ex.int','EU(15)ex.int','EU(25)ex.int','EU(27)ex.int','Europe','European Union','European Union (exc intra-trade)','Land Locked Developing Countries',	'Least Developed Countries',	'Low Income Food Deficit Countries',	'Melanesia',	'Micronesia',	'Middle Africa',	'Net Food Importing Developing Countries',	'Northern Africa',	'Northern America',	'Northern Europe',	'Oceania',	'Polynesia',	'Small Island Developing States',	'South America',	'South-Eastern Asia',	'Southern Africa',	'Southern Asia',	'Southern Europe',	'Western Africa',	'Western Asia',	'Western Europe')"))  
     }  
   } else {
     if(is.na(years)){
@@ -56,7 +56,7 @@ analysis.get.matrix = function(global=F,years=NA, type="indicator"){
   }
   
   data = analysis.built.matrix(data, type)
-
+  
   # Raw data
   return(data)
 }
@@ -111,7 +111,8 @@ analysis.countries.count.thresholds = function(data,folder,thresholds){
   folder.final = paste0(folder,"/count_countries")
   
   # calculating total amount by year, crop and variable
-  tmp.summary = data.frame(year = data$year, crop = data$crop)
+  #tmp.summary = data.frame(year = data$year, crop = data$crop)
+  tmp.summary = data.frame(year = data$year, country = data$country)
   tmp.summary = unique(tmp.summary)
   
   tmp.vars = names(data)
@@ -120,18 +121,25 @@ analysis.countries.count.thresholds = function(data,folder,thresholds){
   for(v in tmp.vars){
     print(paste0("Acum ",v))
     tmp.df = data %>%
-                group_by(year,crop) %>%
-                summarise_(.dots = setNames( paste0("sum(",v,", na.rm = T)"), paste0("global_",v)))
+      #group_by(year,crop) %>%
+      group_by(country, year) %>%
+      #summarise_(.dots = setNames( paste0("sum(",v,", na.rm = T)"), paste0("global_",v)))
+      summarise_(.dots = setNames( paste0("sum(",v,", na.rm = T)"), paste0("global_",v)))
     
-    tmp.summary = merge(x=tmp.summary,y=tmp.df,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = F)
+    #tmp.summary = merge(x=tmp.summary,y=tmp.df,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = F)
+    tmp.summary = merge(x=tmp.summary,y=tmp.df,by.x=c("country","year"),by.y=c("country","year"),all.x = T,all.y = F)
   }
   
   # calculating total amount by year, crop and variable
   tmp.data = data
-  tmp.data = merge(x=tmp.data,y=tmp.summary,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = T)
+  #tmp.data = merge(x=tmp.data,y=tmp.summary,by.x=c("crop","year"),by.y=c("crop","year"),all.x = T,all.y = T)
+  tmp.data = merge(x=tmp.data,y=tmp.summary,by.x=c("country","year"),by.y=c("country","year"),all.x = T,all.y = T)
   
   # Dataframe to save the amount of countries
-  tmp.final = tmp.summary[,c("crop","year")]
+  #tmp.final = tmp.summary[,c("crop","year")]
+  tmp.final = data.frame( crop = data$crop, year = data$year)
+  tmp.final = unique(tmp.final)
+  #tmp.final = tmp.summary[,c("country","year")]
   
   for(v in tmp.vars){
     print(paste0("Calculating ",v))
@@ -146,11 +154,12 @@ analysis.countries.count.thresholds = function(data,folder,thresholds){
     # Filtering records with data
     tmp.filter = tmp.data[,c("crop","year","country",v,paste0("global_",v), paste0("contrib_",v))]
     tmp.filter = tmp.filter[complete.cases(tmp.filter),]
-    tmp.filter = tmp.filter[order(tmp.filter[,1],tmp.filter[,2],tmp.filter[,4],decreasing=T),]
+    #tmp.filter = tmp.filter[order(tmp.filter[,1],tmp.filter[,2],tmp.filter[,4],decreasing=T),]
+    tmp.filter = tmp.filter[order(tmp.filter[,3],tmp.filter[,2],tmp.filter[,4],decreasing=T),]
     row.names(tmp.filter) = 1:nrow(tmp.filter)
     
     # Cumsum by crop, year, country
-    tmp.filter[,paste0("cumsum_",v)] = ave(tmp.filter[,paste0("contrib_",v)],list(tmp.filter[,"crop"],tmp.filter[,"year"]),FUN=cumsum) 
+    tmp.filter[,paste0("cumsum_",v)] = ave(tmp.filter[,paste0("contrib_",v)],list(tmp.filter[,"country"],tmp.filter[,"year"]),FUN=cumsum) 
     
     # Saving cumulative sum for each variable
     write.csv(tmp.filter,paste0(folder.final,"/data.countries.contrib_",v,".csv"), row.names = F)

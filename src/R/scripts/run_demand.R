@@ -72,6 +72,21 @@ write.csv(tmp.f,paste0(demand.folder,"/f.csv"), row.names = F)
 
 ##############################################
 
+##############################################
+# 03 - PROPORTION
+
+data.raw = read.csv(paste0(demand.folder,"/demand-countries-recipients-world.csv"),header = T)
+data.raw$crop = as.character(data.raw$crop)
+data.raw$country = as.character(data.raw$country)
+data.raw$year = as.character(data.raw$year)
+data.raw$crop_count_recipients_distributions = as.numeric(data.raw$crop_count_recipients_distributions)
+
+data.n = ci.normalize.full(data = data.raw,type = "proportion", global =T)
+write.csv(data.n,paste0(analysis.folder,"/demand-genebank_distributions-recipient_country_genebank_distributions.csv"), row.names = F)
+
+
+##############################################
+
 
 ##############################################
 ####  06 - GINI
@@ -134,7 +149,7 @@ data.filtered =  merge(x=data.raw, y=data.countries, by.x="country", by.y="iso3"
 data.filtered = data.filtered[,c("crop","year","name","crop_count_recipients_distributions")]
 names(data.filtered) = c("crop","year","country","crop_count_recipients_distributions")
 #data.filtered = data.filtered[complete.cases(data.filtered),]
-#write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
+write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.region.dem.csv"), row.names = F)
 
 source("scripts/tools.R")
 source("scripts/analysis.R")
@@ -143,7 +158,7 @@ source("scripts/composite_index.R")
 source("scripts/gini.R")
 library(tidyverse)
 
-inter.dem = interdependence.region(data=data.filtered, method="sum", normalize = F)
+inter.dem = interdependence.region(data=data.filtered, method="sum", normalize = F, filter_origin = FALSE)
 
 inter.final.dem = inter.dem %>% 
                 reduce(full_join, by = c("crop","year","country"))

@@ -7,7 +7,7 @@ Adlay,World,2019,0.0276,0.0282
 Adzuki bean,World,2019,0.8686,0.9351
 Aeschynomene,World,2019,0.5472,0.4672
 African eggplant,World,2019,0.1957,0.3480
-African rice,World,2019,0.3694,0.8651
+Rice (African),World,2019,0.3694,0.8651
 Agave,World,2019,0.0000,0.0000
 Agropyron,World,2019,0.4974,0.4584
 Agrostis,World,2019,0.5650,0.6772
@@ -29,7 +29,7 @@ Arracacha,World,2019,0.0706,0.0683
 Arrhenatherum,World,2019,0.5211,0.5180
 Arrowroot,World,2019,0.0000,0.0000
 Artichokes,World,2019,0.0000,0.0000
-Asian rice,World,2019,0.3694,0.3586
+Rice (Asian),World,2019,0.3694,0.3586
 Asparagus,World,2019,0.9322,0.9510
 Astragalus,World,2019,0.8037,0.7131
 Atemoya,World,2019,0.0273,0.0000
@@ -219,7 +219,7 @@ Myrtle,World,2019,0.0000,0.0000
 Naranjilla,World,2019,0.1957,0.0430
 Neonotonia,World,2019,0.3345,0.3366
 New Zealand flax,World,2019,0.0000,0.0000
-New Zealand spinach,World,2019,0.0204,0.0244
+New Zealand Spinach,World,2019,0.0204,0.0244
 Noog,World,2019,0.0012,0.0000
 Nutmeg,World,2019,0.0000,0.0000
 Oats,World,2019,0.8784,0.8470
@@ -276,7 +276,7 @@ Quinoa,World,2019,0.0043,0.0022
 Radish,World,2019,0.0303,0.0324
 Rambutan,World,2019,0.0061,0.0060
 Ramie,World,2019,0.0000,0.0000
-Rapeseed and mustards,World,2019,0.0296,0.0444
+Rapeseed and Mustards,World,2019,0.0296,0.0444
 Raspberries,World,2019,0.0000,0.0000
 Rhubarb,World,2019,0.0000,0.0000
 Rhynchosia,World,2019,0.6026,0.6411

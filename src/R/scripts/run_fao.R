@@ -9,7 +9,7 @@ library(RMySQL)
 library(tidyr)
 library(corrplot)
 library(Hmisc)
-#library(caret)
+library(caret)
 library(corrplot)
 library(ade4)
 require(scales)
@@ -40,6 +40,7 @@ conf.variables = read.csv(paste0(conf.folder,"/",conf.file ), header = T)
 point = format_format(big.mark = ".", decimal.mark = ",", scientific = FALSE)
 
 # Load variables
+options(scipen=999)
 data.vars = read.csv(paste0(conf.folder,"/variables.csv"), header = T)
 source("scripts/tools.R")
 ##############################################
@@ -88,7 +89,7 @@ process.load.measure(p[3])
 source("scripts/tools.R")
 source("scripts/analysis.R")
 db_cnn = connect_db("fao")
-data.raw = analysis.get.matrix(global=T, years="2010,2011,2012,2013", type=conf.db)
+data.raw = analysis.get.matrix(global=F, years="2010,2011,2012,2013", type=conf.db)
 dbDisconnect(db_cnn)
 
 # COuntries
@@ -114,8 +115,14 @@ data.filtered = ci.variables.exclude(data.raw,data.vars)
 write.csv(data.filtered,paste0(analysis.folder,"/data.filtered.csv"), row.names = F)
 
 #normalize 
+options(scipen=999)
 data.n = ci.normalize.full(data.filtered,"proportion", global =T)
 write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
+
+# aggregation
+data.agg = ci.aggregation.avg(data.n)
+write.csv(data.agg,paste0(analysis.folder,"/data.agg.csv"), row.names = F)
+
 
 ##############################################
 
@@ -123,8 +130,16 @@ write.csv(data.n,paste0(analysis.folder,"/data.normalize.csv"), row.names = F)
 ####  04- COUNTRIES AMOUNT
 
 
-countries.treashold.count = analysis.countries.count.thresholds(data = data.filtered,folder = analysis.folder,thresholds =c(0.9, 0.95))
+countries.treashold.count = analysis.countries.count.thresholds(data = data.filtered,folder = analysis.folder,thresholds =c(0.95))
 write.csv(countries.treashold.count,paste0(analysis.folder,"/countries.treashold.count.csv"), row.names = F)
+countries.indicator = countries.treashold.count
+names(countries.indicator) = gsub("_count_0.95", "", names(countries.indicator))
+for(i in 3:ncol(countries.indicator)){
+  countries.indicator[,i]=countries.indicator[,i]/230
+}
+write.csv(countries.indicator,paste0(analysis.folder,"/countries.indicator.csv"), row.names = F)
+
+
 
 data.countries.count = analysis.countries.count(data.filtered)
 write.csv(data.countries.count,paste0(analysis.folder,"/data.countries.count.csv"), row.names = F)
@@ -187,7 +202,7 @@ inter.seg = inter.seg %>%
                 reduce(full_join, by = c("crop","year","country"))
 #inter.seg = inter.seg[,c(1,2,3,4,5,6,7)]
 
-inter.final = merge(x=inter.sum, y=inter.seg, by.x= c("crop","year","country"), by.y= c("crop","year","country"), all.x =T, all.y = F)
+inter.final = merge(x=inter.sum, y=inter.seg, by.x= c("crop","year","country"), by.y= c("crop","year","country"), all.x =T, all.y = T)
 
 # aggregation
 inter.final[is.na(inter.final)] = 0
