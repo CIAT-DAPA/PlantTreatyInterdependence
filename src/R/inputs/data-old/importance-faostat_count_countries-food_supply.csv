@@ -1,0 +1,1149 @@
+crop,country,year,fs_fat_supply_quantity,fs_food_supply_kcal,fs_food_supply_quantity_g,fs_protein_supply_quantity
+Abaca,World,2013,NA,NA,NA,NA
+Abaca,World,2012,NA,NA,NA,NA
+Abaca,World,2010,NA,NA,NA,NA
+Abaca,World,2011,NA,NA,NA,NA
+Adlay,World,2010,91,121,152,133
+Adlay,World,2011,91,122,151,134
+Adlay,World,2012,100,118,153,135
+Adlay,World,2013,103,123,152,136
+Adzuki bean,World,2010,135,145,152,151
+Adzuki bean,World,2011,134,142,151,149
+Adzuki bean,World,2012,133,142,152,149
+Adzuki bean,World,2013,134,144,151,149
+Agave,World,2010,NA,NA,NA,NA
+Agave,World,2011,NA,NA,NA,NA
+Agave,World,2012,NA,NA,NA,NA
+Agave,World,2013,NA,NA,NA,NA
+Albardine,World,2010,NA,NA,NA,NA
+Albardine,World,2011,NA,NA,NA,NA
+Albardine,World,2012,NA,NA,NA,NA
+Albardine,World,2013,NA,NA,NA,NA
+Alfalfa,World,2010,NA,NA,NA,NA
+Alfalfa,World,2011,NA,NA,NA,NA
+Alfalfa,World,2013,NA,NA,NA,NA
+Alfalfa,World,2012,NA,NA,NA,NA
+Allspice,World,2010,114,92,133,111
+Allspice,World,2011,119,97,138,116
+Allspice,World,2012,118,97,132,113
+Allspice,World,2013,121,95,138,115
+Almonds,World,2010,166,152,168,159
+Almonds,World,2011,167,153,168,157
+Almonds,World,2012,167,155,170,160
+Almonds,World,2013,167,157,170,161
+Amaranth,World,2010,91,121,152,133
+Amaranth,World,2011,91,122,151,134
+Amaranth,World,2012,100,118,153,135
+Amaranth,World,2013,103,123,152,136
+Anise,World,2010,158,139,167,157
+Anise,World,2011,161,140,166,158
+Anise,World,2012,160,144,167,155
+Anise,World,2013,160,143,167,159
+Apple,World,2010,128,142,174,121
+Apple,World,2011,128,143,173,122
+Apple,World,2012,129,142,173,123
+Apple,World,2013,129,144,173,120
+Apricot,World,2010,176,176,176,176
+Apricot,World,2011,175,175,175,175
+Apricot,World,2012,175,175,175,175
+Apricot,World,2013,175,175,175,175
+Areca nuts,World,2010,166,152,168,159
+Areca nuts,World,2011,167,153,168,157
+Areca nuts,World,2012,167,155,170,160
+Areca nuts,World,2013,167,157,170,161
+Arracacha,World,2010,62,83,107,87
+Arracacha,World,2011,64,82,109,86
+Arracacha,World,2012,64,88,118,90
+Arracacha,World,2013,65,87,122,90
+Arrhenatherum,World,2010,NA,NA,NA,NA
+Arrhenatherum,World,2011,NA,NA,NA,NA
+Arrhenatherum,World,2012,NA,NA,NA,NA
+Arrhenatherum,World,2013,NA,NA,NA,NA
+Arrowroot,World,2010,62,83,107,87
+Arrowroot,World,2011,64,82,109,86
+Arrowroot,World,2012,64,88,118,90
+Arrowroot,World,2013,65,87,122,90
+Artichokes,World,2010,176,176,176,176
+Artichokes,World,2011,175,175,175,175
+Artichokes,World,2012,175,175,175,175
+Artichokes,World,2013,175,175,175,175
+Asparagus,World,2010,176,176,176,176
+Asparagus,World,2011,175,175,175,175
+Asparagus,World,2012,175,175,175,175
+Asparagus,World,2013,175,175,175,175
+Atemoya,World,2010,176,176,176,176
+Atemoya,World,2011,175,175,175,175
+Atemoya,World,2012,175,175,175,175
+Atemoya,World,2013,175,175,175,175
+Avocado,World,2010,176,176,176,176
+Avocado,World,2011,175,175,175,175
+Avocado,World,2012,175,175,175,175
+Avocado,World,2013,175,175,175,175
+Azarole,World,2010,176,176,176,176
+Azarole,World,2011,175,175,175,175
+Azarole,World,2012,175,175,175,175
+Azarole,World,2013,175,175,175,175
+Babaco,World,2010,176,176,176,176
+Babaco,World,2011,175,175,175,175
+Babaco,World,2012,175,175,175,175
+Babaco,World,2013,175,175,175,175
+Badian,World,2010,158,139,167,157
+Badian,World,2011,161,140,166,158
+Badian,World,2012,160,144,167,155
+Badian,World,2013,160,143,167,159
+Bambara bean,World,2010,140,143,164,158
+Bambara bean,World,2011,138,144,163,157
+Bambara bean,World,2012,140,145,163,158
+Bambara bean,World,2013,142,147,164,159
+Bamboo shoot,World,2010,176,176,176,176
+Bamboo shoot,World,2011,175,175,175,175
+Bamboo shoot,World,2012,175,175,175,175
+Bamboo shoot,World,2013,175,175,175,175
+Bananas,World,2010,149,158,165,160
+Bananas,World,2011,151,159,166,159
+Bananas,World,2012,149,158,166,160
+Bananas,World,2013,151,159,167,161
+Barley,World,2010,69,96,125,106
+Barley,World,2011,70,98,123,104
+Barley,World,2012,72,99,126,109
+Barley,World,2013,74,94,124,105
+Bay leaf,World,2010,158,139,167,157
+Bay leaf,World,2011,161,140,166,158
+Bay leaf,World,2012,160,144,167,155
+Bay leaf,World,2013,160,143,167,159
+Beech nut,World,2010,61,44,70,59
+Beech nut,World,2011,65,43,75,59
+Beech nut,World,2012,66,43,78,59
+Beech nut,World,2013,73,42,83,64
+Beets,World,2010,176,176,176,176
+Beets,World,2011,175,175,175,175
+Beets,World,2012,175,175,175,175
+Beets,World,2013,175,175,175,175
+Black gram,World,2010,135,145,152,151
+Black gram,World,2011,134,142,151,149
+Black gram,World,2012,133,142,152,149
+Black gram,World,2013,134,144,151,149
+Black salsify,World,2010,176,176,176,176
+Black salsify,World,2011,175,175,175,175
+Black salsify,World,2012,175,175,175,175
+Black salsify,World,2013,175,175,175,175
+Blueberry,World,2010,176,176,176,176
+Blueberry,World,2011,175,175,175,175
+Blueberry,World,2012,175,175,175,175
+Blueberry,World,2013,175,175,175,175
+Brazil nut,World,2010,166,152,168,159
+Brazil nut,World,2011,167,153,168,157
+Brazil nut,World,2012,167,155,170,160
+Brazil nut,World,2013,167,157,170,161
+Breadfruit,World,2010,176,176,176,176
+Breadfruit,World,2011,175,175,175,175
+Breadfruit,World,2012,175,175,175,175
+Breadfruit,World,2013,175,175,175,175
+Buckwheat,World,2010,91,121,152,133
+Buckwheat,World,2011,91,122,151,134
+Buckwheat,World,2012,100,118,153,135
+Buckwheat,World,2013,103,123,152,136
+Butter-nut,World,2010,166,152,168,159
+Butter-nut,World,2011,167,153,168,157
+Butter-nut,World,2012,167,155,170,160
+Butter-nut,World,2013,167,157,170,161
+Butternut squash,World,2010,176,176,176,176
+Butternut squash,World,2011,175,175,175,175
+Butternut squash,World,2012,175,175,175,175
+Butternut squash,World,2013,175,175,175,175
+Cabbages,World,2010,176,176,176,176
+Cabbages,World,2011,175,175,175,175
+Cabbages,World,2012,175,175,175,175
+Cabbages,World,2013,175,175,175,175
+Cabbages and other brassicas,World,2010,176,176,176,176
+Cabbages and other brassicas,World,2011,175,175,175,175
+Cabbages and other brassicas,World,2012,175,175,175,175
+Cabbages and other brassicas,World,2013,175,175,175,175
+Caesarweed,World,2010,NA,NA,NA,NA
+Caesarweed,World,2011,NA,NA,NA,NA
+Caesarweed,World,2012,NA,NA,NA,NA
+Caesarweed,World,2013,NA,NA,NA,NA
+Cainito,World,2010,176,176,176,176
+Cainito,World,2011,175,175,175,175
+Cainito,World,2012,175,175,175,175
+Cainito,World,2013,175,175,175,175
+Calabash,World,2010,176,176,176,176
+Calabash,World,2011,175,175,175,175
+Calabash,World,2012,175,175,175,175
+Calabash,World,2013,175,175,175,175
+Canary seed,World,2010,91,121,152,133
+Canary seed,World,2011,91,122,151,134
+Canary seed,World,2012,100,118,153,135
+Canary seed,World,2013,103,123,152,136
+Candlenut,World,2010,61,44,70,59
+Candlenut,World,2011,65,43,75,59
+Candlenut,World,2012,66,43,78,59
+Candlenut,World,2013,73,42,83,64
+Canola,World,2010,176,176,176,176
+Canola,World,2011,175,175,175,175
+Canola,World,2012,175,175,175,175
+Canola,World,2013,175,175,175,175
+Capers,World,2010,176,176,176,176
+Capers,World,2011,175,175,175,175
+Capers,World,2012,175,175,175,175
+Capers,World,2013,175,175,175,175
+Carambola,World,2010,176,176,176,176
+Carambola,World,2011,175,175,175,175
+Carambola,World,2012,175,175,175,175
+Carambola,World,2013,175,175,175,175
+Carapa,World,2010,61,44,70,59
+Carapa,World,2011,65,43,75,59
+Carapa,World,2012,66,43,78,59
+Carapa,World,2013,73,42,83,64
+Cardamoms,World,2010,158,139,167,157
+Cardamoms,World,2011,161,140,166,158
+Cardamoms,World,2012,160,144,167,155
+Cardamoms,World,2013,160,143,167,159
+Carneros Yucca,World,2010,NA,NA,NA,NA
+Carneros Yucca,World,2011,NA,NA,NA,NA
+Carneros Yucca,World,2012,NA,NA,NA,NA
+Carneros Yucca,World,2013,NA,NA,NA,NA
+Caroa,World,2010,NA,NA,NA,NA
+Caroa,World,2011,NA,NA,NA,NA
+Caroa,World,2012,NA,NA,NA,NA
+Caroa,World,2013,NA,NA,NA,NA
+Carobs,World,2010,176,176,176,176
+Carobs,World,2011,175,175,175,175
+Carobs,World,2012,175,175,175,175
+Carobs,World,2013,175,175,175,175
+Carrots,World,2010,176,176,176,176
+Carrots,World,2011,175,175,175,175
+Carrots,World,2012,175,175,175,175
+Carrots,World,2013,175,175,175,175
+Cashews,World,2010,166,152,168,159
+Cashews,World,2011,167,153,168,157
+Cashews,World,2012,167,155,170,160
+Cashews,World,2013,167,157,170,161
+Cassava,World,2011,77,93,107,87
+Cassava,World,2010,76,93,109,89
+Cassava,World,2012,78,92,108,89
+Cassava,World,2013,77,91,109,87
+Castor bean,World,2010,61,44,70,59
+Castor bean,World,2011,65,43,75,59
+Castor bean,World,2012,66,43,78,59
+Castor bean,World,2013,73,42,83,64
+Ceara,World,2010,NA,NA,NA,NA
+Ceara,World,2011,NA,NA,NA,NA
+Ceara,World,2012,NA,NA,NA,NA
+Ceara,World,2013,NA,NA,NA,NA
+Celery,World,2010,176,176,176,176
+Celery,World,2011,175,175,175,175
+Celery,World,2012,175,175,175,175
+Celery,World,2013,175,175,175,175
+Cherimoya,World,2010,176,176,176,176
+Cherimoya,World,2011,175,175,175,175
+Cherimoya,World,2012,175,175,175,175
+Cherimoya,World,2013,175,175,175,175
+Cherries,World,2010,176,176,176,176
+Cherries,World,2011,175,175,175,175
+Cherries,World,2012,175,175,175,175
+Cherries,World,2013,175,175,175,175
+Chervil,World,2010,176,176,176,176
+Chervil,World,2011,175,175,175,175
+Chervil,World,2012,175,175,175,175
+Chervil,World,2013,175,175,175,175
+Chestnuts,World,2010,166,152,168,159
+Chestnuts,World,2011,167,153,168,157
+Chestnuts,World,2012,167,155,170,160
+Chestnuts,World,2013,167,157,170,161
+Chickpeas,World,2010,140,143,164,158
+Chickpeas,World,2011,138,144,163,157
+Chickpeas,World,2012,140,145,163,158
+Chickpeas,World,2013,142,147,164,159
+Chicle,World,2010,NA,NA,NA,NA
+Chicle,World,2011,NA,NA,NA,NA
+Chicle,World,2012,NA,NA,NA,NA
+Chicle,World,2013,NA,NA,NA,NA
+Chicory,World,2010,176,176,176,176
+Chicory,World,2011,175,175,175,175
+Chicory,World,2012,175,175,175,175
+Chicory,World,2013,175,175,175,175
+Chillies and peppers,World,2010,114,92,133,111
+Chillies and peppers,World,2011,119,97,138,116
+Chillies and peppers,World,2012,118,97,132,113
+Chillies and peppers,World,2013,121,95,138,115
+Chinotto,World,2010,25,40,135,49
+Chinotto,World,2011,24,35,135,43
+Chinotto,World,2012,25,37,138,45
+Chinotto,World,2013,24,41,144,48
+Chontadura,World,2010,61,44,70,59
+Chontadura,World,2011,65,43,75,59
+Chontadura,World,2012,66,43,78,59
+Chontadura,World,2013,73,42,83,64
+Chufa,World,2010,62,83,107,87
+Chufa,World,2011,64,82,109,86
+Chufa,World,2012,64,88,118,90
+Chufa,World,2013,65,87,122,90
+Cinnamon,World,2010,158,139,167,157
+Cinnamon,World,2011,161,140,166,158
+Cinnamon,World,2012,160,144,167,155
+Cinnamon,World,2013,160,143,167,159
+Citron,World,2010,25,40,135,49
+Citron,World,2011,24,35,135,43
+Citron,World,2012,25,37,138,45
+Citron,World,2013,24,41,144,48
+Citronella,World,2010,NA,NA,NA,NA
+Citronella,World,2011,NA,NA,NA,NA
+Citronella,World,2012,NA,NA,NA,NA
+Citronella,World,2013,NA,NA,NA,NA
+Cloves,World,2010,21,5,83,8
+Cloves,World,2011,19,4,78,8
+Cloves,World,2012,26,6,84,11
+Cloves,World,2013,26,6,82,10
+Cocoa,World,2011,172,155,173,161
+Cocoa,World,2012,173,153,174,158
+Cocoa,World,2013,172,156,174,160
+Cocoa,World,2010,173,153,174,159
+Coconuts,World,2010,162,146,165,125
+Coconuts,World,2011,159,144,161,122
+Coconuts,World,2012,160,145,163,129
+Coconuts,World,2013,160,143,164,127
+Coffee,World,2011,NA,129,173,154
+Coffee,World,2012,NA,125,172,156
+Coffee,World,2013,NA,122,170,154
+Coffee,World,2010,NA,125,171,156
+Common bean,World,2010,135,145,152,151
+Common bean,World,2011,134,142,151,149
+Common bean,World,2012,133,142,152,149
+Common bean,World,2013,134,144,151,149
+Coriander,World,2010,158,139,167,157
+Coriander,World,2011,161,140,166,158
+Coriander,World,2012,160,144,167,155
+Coriander,World,2013,160,143,167,159
+Cotton,World,2010,82,70,82,4
+Cotton,World,2011,81,68,81,6
+Cotton,World,2012,84,71,84,7
+Cotton,World,2013,83,73,83,7
+Cowpeas,World,2010,140,143,164,158
+Cowpeas,World,2011,138,144,163,157
+Cowpeas,World,2012,140,145,163,158
+Cowpeas,World,2013,142,147,164,159
+Cranberries,World,2010,176,176,176,176
+Cranberries,World,2011,175,175,175,175
+Cranberries,World,2012,175,175,175,175
+Cranberries,World,2013,175,175,175,175
+Cress,World,2010,176,176,176,176
+Cress,World,2011,175,175,175,175
+Cress,World,2012,175,175,175,175
+Cress,World,2013,175,175,175,175
+Cucumbers and gherkins,World,2010,176,176,176,176
+Cucumbers and gherkins,World,2011,175,175,175,175
+Cucumbers and gherkins,World,2012,175,175,175,175
+Cucumbers and gherkins,World,2013,175,175,175,175
+Cumin,World,2010,158,139,167,157
+Cumin,World,2011,161,140,166,158
+Cumin,World,2012,160,144,167,155
+Cumin,World,2013,160,143,167,159
+Currants,World,2010,176,176,176,176
+Currants,World,2011,175,175,175,175
+Currants,World,2012,175,175,175,175
+Currants,World,2013,175,175,175,175
+Cushaw,World,2010,176,176,176,176
+Cushaw,World,2011,175,175,175,175
+Cushaw,World,2012,175,175,175,175
+Cushaw,World,2013,175,175,175,175
+Custard apple,World,2010,176,176,176,176
+Custard apple,World,2011,175,175,175,175
+Custard apple,World,2012,175,175,175,175
+Custard apple,World,2013,175,175,175,175
+Dates,World,2010,26,60,128,55
+Dates,World,2011,24,60,124,57
+Dates,World,2012,25,65,133,54
+Dates,World,2013,26,63,130,58
+Devil's cotton,World,2010,NA,NA,NA,NA
+Devil's cotton,World,2011,NA,NA,NA,NA
+Devil's cotton,World,2012,NA,NA,NA,NA
+Devil's cotton,World,2013,NA,NA,NA,NA
+Dill,World,2010,158,139,167,157
+Dill,World,2011,161,140,166,158
+Dill,World,2012,160,144,167,155
+Dill,World,2013,160,143,167,159
+Durian,World,2010,176,176,176,176
+Durian,World,2011,175,175,175,175
+Durian,World,2012,175,175,175,175
+Durian,World,2013,175,175,175,175
+Eggplant,World,2010,176,176,176,176
+Eggplant,World,2011,175,175,175,175
+Eggplant,World,2012,175,175,175,175
+Eggplant,World,2013,175,175,175,175
+Elderberry,World,2010,176,176,176,176
+Elderberry,World,2011,175,175,175,175
+Elderberry,World,2012,175,175,175,175
+Elderberry,World,2013,175,175,175,175
+Esparto,World,2010,NA,NA,NA,NA
+Esparto,World,2011,NA,NA,NA,NA
+Esparto,World,2012,NA,NA,NA,NA
+Esparto,World,2013,NA,NA,NA,NA
+Ethiopian rape,World,2010,176,176,176,176
+Ethiopian rape,World,2011,175,175,175,175
+Ethiopian rape,World,2012,175,175,175,175
+Ethiopian rape,World,2013,175,175,175,175
+Faba beans,World,2010,140,143,164,158
+Faba beans,World,2011,138,144,163,157
+Faba beans,World,2012,140,145,163,158
+Faba beans,World,2013,142,147,164,159
+Feijoa,World,2010,176,176,176,176
+Feijoa,World,2011,175,175,175,175
+Feijoa,World,2012,175,175,175,175
+Feijoa,World,2013,175,175,175,175
+Fennel,World,2010,158,139,167,157
+Fennel,World,2011,161,140,166,158
+Fennel,World,2012,160,144,167,155
+Fennel,World,2013,160,143,167,159
+Fenugreek,World,2010,158,139,167,157
+Fenugreek,World,2011,161,140,166,158
+Fenugreek,World,2012,160,144,167,155
+Fenugreek,World,2013,160,143,167,159
+Fig leaf gourd,World,2010,176,176,176,176
+Fig leaf gourd,World,2011,175,175,175,175
+Fig leaf gourd,World,2012,175,175,175,175
+Fig leaf gourd,World,2013,175,175,175,175
+Figs,World,2010,176,176,176,176
+Figs,World,2011,175,175,175,175
+Figs,World,2012,175,175,175,175
+Figs,World,2013,175,175,175,175
+Finger millet,World,2010,52,52,56,55
+Finger millet,World,2011,52,53,56,55
+Finger millet,World,2012,53,53,57,54
+Finger millet,World,2013,53,53,57,54
+Fique,World,2010,NA,NA,NA,NA
+Fique,World,2011,NA,NA,NA,NA
+Fique,World,2012,NA,NA,NA,NA
+Fique,World,2013,NA,NA,NA,NA
+Flax,World,2010,61,44,70,59
+Flax,World,2011,65,43,75,59
+Flax,World,2012,66,43,78,59
+Flax,World,2013,73,42,83,64
+Fonio,World,2010,91,121,152,133
+Fonio,World,2011,91,122,151,134
+Fonio,World,2012,100,118,153,135
+Fonio,World,2013,103,123,152,136
+Foxtail millet,World,2010,52,52,56,55
+Foxtail millet,World,2011,52,53,56,55
+Foxtail millet,World,2012,53,53,57,54
+Foxtail millet,World,2013,53,53,57,54
+Garlic,World,2010,176,176,176,176
+Garlic,World,2011,175,175,175,175
+Garlic,World,2012,175,175,175,175
+Garlic,World,2013,175,175,175,175
+Giant cabuya,World,2010,NA,NA,NA,NA
+Giant cabuya,World,2011,NA,NA,NA,NA
+Giant cabuya,World,2012,NA,NA,NA,NA
+Giant cabuya,World,2013,NA,NA,NA,NA
+Ginger,World,2010,158,139,167,157
+Ginger,World,2011,161,140,166,158
+Ginger,World,2012,160,144,167,155
+Ginger,World,2013,160,143,167,159
+Gooseberries,World,2010,176,176,176,176
+Gooseberries,World,2011,175,175,175,175
+Gooseberries,World,2012,175,175,175,175
+Gooseberries,World,2013,175,175,175,175
+Grapefruits,World,2010,30,66,153,80
+Grapefruits,World,2011,32,63,152,77
+Grapefruits,World,2012,30,67,153,80
+Grapefruits,World,2013,29,73,153,81
+Grapes,World,2010,104,148,175,123
+Grapes,World,2011,100,146,174,120
+Grapes,World,2012,102,147,174,125
+Grapes,World,2013,105,148,174,123
+Grasspea,World,2010,140,143,164,158
+Grasspea,World,2011,138,144,163,157
+Grasspea,World,2012,140,145,163,158
+Grasspea,World,2013,142,147,164,159
+Groundnuts,World,2010,170,168,170,164
+Groundnuts,World,2011,169,169,170,164
+Groundnuts,World,2012,168,168,170,162
+Groundnuts,World,2013,170,166,170,166
+Guavas,World,2010,176,176,176,176
+Guavas,World,2011,175,175,175,175
+Guavas,World,2012,175,175,175,175
+Guavas,World,2013,175,175,175,175
+Guayule,World,2010,NA,NA,NA,NA
+Guayule,World,2011,NA,NA,NA,NA
+Guayule,World,2012,NA,NA,NA,NA
+Guayule,World,2013,NA,NA,NA,NA
+Gutta-percha,World,2010,NA,NA,NA,NA
+Gutta-percha,World,2011,NA,NA,NA,NA
+Gutta-percha,World,2012,NA,NA,NA,NA
+Gutta-percha,World,2013,NA,NA,NA,NA
+Hazelnuts,World,2010,166,152,168,159
+Hazelnuts,World,2011,167,153,168,157
+Hazelnuts,World,2012,167,155,170,160
+Hazelnuts,World,2013,167,157,170,161
+Hemp,World,2010,61,44,70,59
+Hemp,World,2011,65,43,75,59
+Hemp,World,2012,66,43,78,59
+Hemp,World,2013,73,42,83,64
+Hops,World,2010,NA,NA,NA,NA
+Hops,World,2011,NA,NA,NA,NA
+Hops,World,2012,NA,NA,NA,NA
+Hops,World,2013,NA,NA,NA,NA
+Horseradish,World,2010,176,176,176,176
+Horseradish,World,2011,175,175,175,175
+Horseradish,World,2012,175,175,175,175
+Horseradish,World,2013,175,175,175,175
+Huckleberry,World,2010,176,176,176,176
+Huckleberry,World,2011,175,175,175,175
+Huckleberry,World,2012,175,175,175,175
+Huckleberry,World,2013,175,175,175,175
+Jack bean,World,2010,140,143,164,158
+Jack bean,World,2011,138,144,163,157
+Jack bean,World,2012,140,145,163,158
+Jack bean,World,2013,142,147,164,159
+Jackfruit,World,2010,176,176,176,176
+Jackfruit,World,2011,175,175,175,175
+Jackfruit,World,2012,175,175,175,175
+Jackfruit,World,2013,175,175,175,175
+Japanese millet,World,2010,52,52,56,55
+Japanese millet,World,2011,52,53,56,55
+Japanese millet,World,2012,53,53,57,54
+Japanese millet,World,2013,53,53,57,54
+Jelutong,World,2010,NA,NA,NA,NA
+Jelutong,World,2011,NA,NA,NA,NA
+Jelutong,World,2012,NA,NA,NA,NA
+Jelutong,World,2013,NA,NA,NA,NA
+Jerusalem artichoke,World,2010,62,83,107,87
+Jerusalem artichoke,World,2011,64,82,109,86
+Jerusalem artichoke,World,2012,64,88,118,90
+Jerusalem artichoke,World,2013,65,87,122,90
+Jicama,World,2010,140,143,164,158
+Jicama,World,2011,138,144,163,157
+Jicama,World,2012,140,145,163,158
+Jicama,World,2013,142,147,164,159
+Jojoba,World,2010,61,44,70,59
+Jojoba,World,2011,65,43,75,59
+Jojoba,World,2012,66,43,78,59
+Jojoba,World,2013,73,42,83,64
+Jujube,World,2010,176,176,176,176
+Jujube,World,2011,175,175,175,175
+Jujube,World,2012,175,175,175,175
+Jujube,World,2013,175,175,175,175
+Jute,World,2010,NA,NA,NA,NA
+Jute,World,2011,NA,NA,NA,NA
+Jute,World,2012,NA,NA,NA,NA
+Jute,World,2013,NA,NA,NA,NA
+Kaniwa,World,2010,91,121,152,133
+Kaniwa,World,2011,91,122,151,134
+Kaniwa,World,2012,100,118,153,135
+Kaniwa,World,2013,103,123,152,136
+Kapok,World,2010,61,44,70,59
+Kapok,World,2011,65,43,75,59
+Kapok,World,2012,66,43,78,59
+Kapok,World,2013,73,42,83,64
+Karite nuts,World,2010,61,44,70,59
+Karite nuts,World,2011,65,43,75,59
+Karite nuts,World,2012,66,43,78,59
+Karite nuts,World,2013,73,42,83,64
+Kenaf,World,2010,NA,NA,NA,NA
+Kenaf,World,2011,NA,NA,NA,NA
+Kenaf,World,2012,NA,NA,NA,NA
+Kenaf,World,2013,NA,NA,NA,NA
+Kiwi fruit,World,2010,176,176,176,176
+Kiwi fruit,World,2011,175,175,175,175
+Kiwi fruit,World,2012,175,175,175,175
+Kiwi fruit,World,2013,175,175,175,175
+Kiwicha,World,2010,91,121,152,133
+Kiwicha,World,2011,91,122,151,134
+Kiwicha,World,2012,100,118,153,135
+Kiwicha,World,2013,103,123,152,136
+Kodo millet,World,2010,52,52,56,55
+Kodo millet,World,2011,52,53,56,55
+Kodo millet,World,2012,53,53,57,54
+Kodo millet,World,2013,53,53,57,54
+Kola nuts,World,2010,166,152,168,159
+Kola nuts,World,2011,167,153,168,157
+Kola nuts,World,2012,167,155,170,160
+Kola nuts,World,2013,167,157,170,161
+Kumquat,World,2010,25,40,135,49
+Kumquat,World,2011,24,35,135,43
+Kumquat,World,2012,25,37,138,45
+Kumquat,World,2013,24,41,144,48
+Lablab,World,2010,140,143,164,158
+Lablab,World,2011,138,144,163,157
+Lablab,World,2012,140,145,163,158
+Lablab,World,2013,142,147,164,159
+Leeks and other alliaceous vegetables,World,2010,176,176,176,176
+Leeks and other alliaceous vegetables,World,2011,175,175,175,175
+Leeks and other alliaceous vegetables,World,2012,175,175,175,175
+Leeks and other alliaceous vegetables,World,2013,175,175,175,175
+Lemons and limes,World,2010,104,86,148,113
+Lemons and limes,World,2011,104,90,147,114
+Lemons and limes,World,2012,108,95,153,118
+Lemons and limes,World,2013,107,96,151,118
+Lentils,World,2010,140,143,164,158
+Lentils,World,2011,138,144,163,157
+Lentils,World,2012,140,145,163,158
+Lentils,World,2013,142,147,164,159
+Lettuce,World,2010,176,176,176,176
+Lettuce,World,2011,175,175,175,175
+Lettuce,World,2012,175,175,175,175
+Lettuce,World,2013,175,175,175,175
+Lima bean,World,2010,135,145,152,151
+Lima bean,World,2011,134,142,151,149
+Lima bean,World,2012,133,142,152,149
+Lima bean,World,2013,134,144,151,149
+Litchi,World,2010,176,176,176,176
+Litchi,World,2011,175,175,175,175
+Litchi,World,2012,175,175,175,175
+Litchi,World,2013,175,175,175,175
+Little millet,World,2010,52,52,56,55
+Little millet,World,2011,52,53,56,55
+Little millet,World,2012,53,53,57,54
+Little millet,World,2013,53,53,57,54
+Longan,World,2010,176,176,176,176
+Longan,World,2011,175,175,175,175
+Longan,World,2012,175,175,175,175
+Longan,World,2013,175,175,175,175
+Loquat,World,2010,176,176,176,176
+Loquat,World,2011,175,175,175,175
+Loquat,World,2012,175,175,175,175
+Loquat,World,2013,175,175,175,175
+Lupins,World,2010,140,143,164,158
+Lupins,World,2011,138,144,163,157
+Lupins,World,2012,140,145,163,158
+Lupins,World,2013,142,147,164,159
+Maca,World,2010,62,83,107,87
+Maca,World,2011,64,82,109,86
+Maca,World,2012,64,88,118,90
+Maca,World,2013,65,87,122,90
+Macadamia nut,World,2010,166,152,168,159
+Macadamia nut,World,2011,167,153,168,157
+Macadamia nut,World,2012,167,155,170,160
+Macadamia nut,World,2013,167,157,170,161
+Mahuwa,World,2010,61,44,70,59
+Mahuwa,World,2011,65,43,75,59
+Mahuwa,World,2012,66,43,78,59
+Mahuwa,World,2013,73,42,83,64
+Maize,World,2010,170,167,172,166
+Maize,World,2011,168,168,171,163
+Maize,World,2012,168,166,173,165
+Maize,World,2013,170,168,175,166
+Mamey sapote,World,2010,176,176,176,176
+Mamey sapote,World,2011,175,175,175,175
+Mamey sapote,World,2012,175,175,175,175
+Mamey sapote,World,2013,175,175,175,175
+Mammee,World,2010,176,176,176,176
+Mammee,World,2011,175,175,175,175
+Mammee,World,2012,175,175,175,175
+Mammee,World,2013,175,175,175,175
+Mandarines,World,2010,143,155,173,156
+Mandarines,World,2011,142,157,172,155
+Mandarines,World,2012,144,157,173,157
+Mandarines,World,2013,144,157,173,156
+Mango,World,2010,176,176,176,176
+Mango,World,2011,175,175,175,175
+Mango,World,2012,175,175,175,175
+Mango,World,2013,175,175,175,175
+Mangosteen,World,2010,176,176,176,176
+Mangosteen,World,2011,175,175,175,175
+Mangosteen,World,2012,175,175,175,175
+Mangosteen,World,2013,175,175,175,175
+Maple sugar,World,2010,5,176,176,13
+Maple sugar,World,2011,5,175,175,13
+Maple sugar,World,2012,5,175,175,14
+Maple sugar,World,2013,4,175,175,18
+Marjoram,World,2010,176,176,176,176
+Marjoram,World,2011,175,175,175,175
+Marjoram,World,2012,175,175,175,175
+Marjoram,World,2013,175,175,175,175
+Mashua,World,2010,62,83,107,87
+Mashua,World,2011,64,82,109,86
+Mashua,World,2012,64,88,118,90
+Mashua,World,2013,65,87,122,90
+Mat bean,World,2010,135,145,152,151
+Mat bean,World,2011,134,142,151,149
+Mat bean,World,2012,133,142,152,149
+Mat bean,World,2013,134,144,151,149
+Mate,World,2010,NA,70,172,160
+Mate,World,2011,NA,68,171,157
+Mate,World,2012,NA,69,171,162
+Mate,World,2013,NA,73,173,160
+Mauka,World,2010,62,83,107,87
+Mauka,World,2011,64,82,109,86
+Mauka,World,2012,64,88,118,90
+Mauka,World,2013,65,87,122,90
+Medlar,World,2010,176,176,176,176
+Medlar,World,2011,175,175,175,175
+Medlar,World,2012,175,175,175,175
+Medlar,World,2013,175,175,175,175
+Melons,World,2010,176,176,176,176
+Melons,World,2011,175,175,175,175
+Melons,World,2012,175,175,175,175
+Melons,World,2013,175,175,175,175
+Mombin,World,2010,176,176,176,176
+Mombin,World,2011,175,175,175,175
+Mombin,World,2012,175,175,175,175
+Mombin,World,2013,175,175,175,175
+Mulberry,World,2010,176,176,176,176
+Mulberry,World,2011,175,175,175,175
+Mulberry,World,2012,175,175,175,175
+Mulberry,World,2013,175,175,175,175
+Mung bean,World,2010,135,145,152,151
+Mung bean,World,2011,134,142,151,149
+Mung bean,World,2012,133,142,152,149
+Mung bean,World,2013,134,144,151,149
+Myrtle,World,2010,176,176,176,176
+Myrtle,World,2011,175,175,175,175
+Myrtle,World,2012,175,175,175,175
+Myrtle,World,2013,175,175,175,175
+Naranjilla,World,2010,176,176,176,176
+Naranjilla,World,2011,175,175,175,175
+Naranjilla,World,2012,175,175,175,175
+Naranjilla,World,2013,175,175,175,175
+New Zealand flax,World,2010,NA,NA,NA,NA
+New Zealand flax,World,2011,NA,NA,NA,NA
+New Zealand flax,World,2012,NA,NA,NA,NA
+New Zealand flax,World,2013,NA,NA,NA,NA
+New Zealand Spinach,World,2010,176,176,176,176
+New Zealand Spinach,World,2011,175,175,175,175
+New Zealand Spinach,World,2012,175,175,175,175
+New Zealand Spinach,World,2013,175,175,175,175
+Noog,World,2010,61,44,70,59
+Noog,World,2011,65,43,75,59
+Noog,World,2012,66,43,78,59
+Noog,World,2013,73,42,83,64
+Nutmeg,World,2010,158,139,167,157
+Nutmeg,World,2011,161,140,166,158
+Nutmeg,World,2012,160,144,167,155
+Nutmeg,World,2013,160,143,167,159
+Oats,World,2010,101,95,133,116
+Oats,World,2011,105,99,139,115
+Oats,World,2012,107,102,138,119
+Oats,World,2013,106,105,142,117
+Oca,World,2010,62,83,107,87
+Oca,World,2011,64,82,109,86
+Oca,World,2012,64,88,118,90
+Oca,World,2013,65,87,122,90
+Oil palm,World,2010,127,123,128,31
+Oil palm,World,2011,124,120,125,29
+Oil palm,World,2012,128,123,129,33
+Oil palm,World,2013,126,123,127,32
+Oiticica,World,2010,61,44,70,59
+Oiticica,World,2011,65,43,75,59
+Oiticica,World,2012,66,43,78,59
+Oiticica,World,2013,73,42,83,64
+Okra,World,2010,176,176,176,176
+Okra,World,2011,175,175,175,175
+Okra,World,2012,175,175,175,175
+Okra,World,2013,175,175,175,175
+Olives,World,2010,165,121,166,68
+Olives,World,2011,162,126,164,67
+Olives,World,2012,164,127,165,68
+Olives,World,2013,162,130,164,69
+Onions,World,2010,145,157,160,158
+Onions,World,2011,148,156,160,158
+Onions,World,2012,146,157,160,159
+Onions,World,2013,150,157,162,160
+Orache,World,2010,176,176,176,176
+Orache,World,2011,175,175,175,175
+Orache,World,2012,175,175,175,175
+Orache,World,2013,175,175,175,175
+Oranges,World,2010,143,155,173,156
+Oranges,World,2011,142,157,172,155
+Oranges,World,2012,144,157,173,157
+Oranges,World,2013,144,157,173,156
+Papayas,World,2010,176,176,176,176
+Papayas,World,2011,175,175,175,175
+Papayas,World,2012,175,175,175,175
+Papayas,World,2013,175,175,175,175
+Parsley,World,2010,176,176,176,176
+Parsley,World,2011,175,175,175,175
+Parsley,World,2012,175,175,175,175
+Parsley,World,2013,175,175,175,175
+Parsnip,World,2010,176,176,176,176
+Parsnip,World,2011,175,175,175,175
+Parsnip,World,2012,175,175,175,175
+Parsnip,World,2013,175,175,175,175
+Passionfruit,World,2010,176,176,176,176
+Passionfruit,World,2011,175,175,175,175
+Passionfruit,World,2012,175,175,175,175
+Passionfruit,World,2013,175,175,175,175
+Pawpaw,World,2010,176,176,176,176
+Pawpaw,World,2011,175,175,175,175
+Pawpaw,World,2012,175,175,175,175
+Pawpaw,World,2013,175,175,175,175
+Peaches and nectarines,World,2010,176,176,176,176
+Peaches and nectarines,World,2011,175,175,175,175
+Peaches and nectarines,World,2012,175,175,175,175
+Peaches and nectarines,World,2013,175,175,175,175
+Pearl millet,World,2010,52,52,56,55
+Pearl millet,World,2011,52,53,56,55
+Pearl millet,World,2012,53,53,57,54
+Pearl millet,World,2013,53,53,57,54
+Pears,World,2010,176,176,176,176
+Pears,World,2011,175,175,175,175
+Pears,World,2012,175,175,175,175
+Pears,World,2013,175,175,175,175
+Peas,World,2010,108,122,146,138
+Peas,World,2011,107,122,145,139
+Peas,World,2012,110,122,145,138
+Peas,World,2013,111,127,145,141
+Pecan,World,2010,166,152,168,159
+Pecan,World,2011,167,153,168,157
+Pecan,World,2012,167,155,170,160
+Pecan,World,2013,167,157,170,161
+Pepper,World,2010,64,66,150,121
+Pepper,World,2011,68,73,151,121
+Pepper,World,2012,69,72,146,120
+Pepper,World,2013,71,75,150,122
+Peppermint,World,2010,NA,NA,NA,NA
+Peppermint,World,2011,NA,NA,NA,NA
+Peppermint,World,2012,NA,NA,NA,NA
+Peppermint,World,2013,NA,NA,NA,NA
+Perilla,World,2010,61,44,70,59
+Perilla,World,2011,65,43,75,59
+Perilla,World,2012,66,43,78,59
+Perilla,World,2013,73,42,83,64
+Persimmons,World,2010,176,176,176,176
+Persimmons,World,2011,175,175,175,175
+Persimmons,World,2012,175,175,175,175
+Persimmons,World,2013,175,175,175,175
+Physic nut,World,2010,61,44,70,59
+Physic nut,World,2011,65,43,75,59
+Physic nut,World,2012,66,43,78,59
+Physic nut,World,2013,73,42,83,64
+Pigeonpeas,World,2010,140,143,164,158
+Pigeonpeas,World,2011,138,144,163,157
+Pigeonpeas,World,2012,140,145,163,158
+Pigeonpeas,World,2013,142,147,164,159
+Pili nut,World,2010,166,152,168,159
+Pili nut,World,2011,167,153,168,157
+Pili nut,World,2012,167,155,170,160
+Pili nut,World,2013,167,157,170,161
+Pine nut,World,2010,166,152,168,159
+Pine nut,World,2011,167,153,168,157
+Pine nut,World,2012,167,155,170,160
+Pine nut,World,2013,167,157,170,161
+Pineapples,World,2010,74,123,167,107
+Pineapples,World,2011,76,128,166,111
+Pineapples,World,2012,77,125,166,109
+Pineapples,World,2013,80,127,167,110
+Pistachios,World,2010,166,152,168,159
+Pistachios,World,2011,167,153,168,157
+Pistachios,World,2012,167,155,170,160
+Pistachios,World,2013,167,157,170,161
+Plantains,World,2012,50,58,73,58
+Plantains,World,2013,51,58,71,57
+Plantains,World,2011,63,78,96,78
+Plantains,World,2010,65,80,102,77
+Plums,World,2010,176,176,176,176
+Plums,World,2011,175,175,175,175
+Plums,World,2012,175,175,175,175
+Plums,World,2013,175,175,175,175
+Pomegranate,World,2010,176,176,176,176
+Pomegranate,World,2011,175,175,175,175
+Pomegranate,World,2012,175,175,175,175
+Pomegranate,World,2013,175,175,175,175
+Pongamia oil,World,2010,61,44,70,59
+Pongamia oil,World,2011,65,43,75,59
+Pongamia oil,World,2012,66,43,78,59
+Pongamia oil,World,2013,73,42,83,64
+Poppies,World,2010,61,44,70,59
+Poppies,World,2011,65,43,75,59
+Poppies,World,2012,66,43,78,59
+Poppies,World,2013,73,42,83,64
+Potatoes,World,2010,159,169,176,174
+Potatoes,World,2011,155,170,175,174
+Potatoes,World,2012,156,170,175,172
+Potatoes,World,2013,155,170,175,171
+Prickly pear,World,2010,176,176,176,176
+Prickly pear,World,2011,175,175,175,175
+Prickly pear,World,2012,175,175,175,175
+Prickly pear,World,2013,175,175,175,175
+Proso millet,World,2010,52,52,56,55
+Proso millet,World,2011,52,53,56,55
+Proso millet,World,2012,53,53,57,54
+Proso millet,World,2013,53,53,57,54
+Pumpkin,World,2010,176,176,176,176
+Pumpkin,World,2011,175,175,175,175
+Pumpkin,World,2012,175,175,175,175
+Pumpkin,World,2013,175,175,175,175
+Purging croton,World,2010,61,44,70,59
+Purging croton,World,2011,65,43,75,59
+Purging croton,World,2012,66,43,78,59
+Purging croton,World,2013,73,42,83,64
+Pyrethrum,World,2012,NA,NA,NA,NA
+Pyrethrum,World,2013,NA,NA,NA,NA
+Pyrethrum,World,2010,NA,NA,NA,NA
+Pyrethrum,World,2011,NA,NA,NA,NA
+Quinces,World,2010,176,176,176,176
+Quinces,World,2011,175,175,175,175
+Quinces,World,2012,175,175,175,175
+Quinces,World,2013,175,175,175,175
+Quinoa,World,2010,91,121,152,133
+Quinoa,World,2011,91,122,151,134
+Quinoa,World,2012,100,118,153,135
+Quinoa,World,2013,103,123,152,136
+Radish,World,2010,176,176,176,176
+Radish,World,2011,175,175,175,175
+Radish,World,2012,175,175,175,175
+Radish,World,2013,175,175,175,175
+Rambutan,World,2010,176,176,176,176
+Rambutan,World,2011,175,175,175,175
+Rambutan,World,2012,175,175,175,175
+Rambutan,World,2013,175,175,175,175
+Ramie,World,2010,NA,NA,NA,NA
+Ramie,World,2011,NA,NA,NA,NA
+Ramie,World,2012,NA,NA,NA,NA
+Ramie,World,2013,NA,NA,NA,NA
+Rapeseed and Mustards,World,2010,86,69,86,20
+Rapeseed and Mustards,World,2011,90,75,90,21
+Rapeseed and Mustards,World,2012,85,74,85,17
+Rapeseed and Mustards,World,2013,88,76,88,17
+Raspberries,World,2010,176,176,176,176
+Raspberries,World,2011,175,175,175,175
+Raspberries,World,2012,175,175,175,175
+Raspberries,World,2013,175,175,175,175
+Rhubarb,World,2010,176,176,176,176
+Rhubarb,World,2011,175,175,175,175
+Rhubarb,World,2012,175,175,175,175
+Rhubarb,World,2013,175,175,175,175
+Rice (African),World,2010,176,176,176,176
+Rice (African),World,2011,175,175,175,175
+Rice (African),World,2012,175,175,175,175
+Rice (African),World,2013,175,175,175,175
+Rice (Asian),World,2010,176,176,176,176
+Rice (Asian),World,2011,175,175,175,175
+Rice (Asian),World,2012,175,175,175,175
+Rice (Asian),World,2013,175,175,175,175
+Rice bean,World,2010,135,145,152,151
+Rice bean,World,2011,134,142,151,149
+Rice bean,World,2012,133,142,152,149
+Rice bean,World,2013,134,144,151,149
+Roselle,World,2010,NA,NA,NA,NA
+Roselle,World,2011,NA,NA,NA,NA
+Roselle,World,2012,NA,NA,NA,NA
+Roselle,World,2013,NA,NA,NA,NA
+"Rubber, natural",World,2010,NA,NA,NA,NA
+"Rubber, natural",World,2011,NA,NA,NA,NA
+"Rubber, natural",World,2012,NA,NA,NA,NA
+"Rubber, natural",World,2013,NA,NA,NA,NA
+Runner bean,World,2010,135,145,152,151
+Runner bean,World,2011,134,142,151,149
+Runner bean,World,2012,133,142,152,149
+Runner bean,World,2013,134,144,151,149
+Rye,World,2010,49,55,85,64
+Rye,World,2011,52,60,88,68
+Rye,World,2012,50,59,79,61
+Rye,World,2013,48,56,81,61
+Safflower,World,2010,61,44,70,59
+Safflower,World,2011,65,43,75,59
+Safflower,World,2012,66,43,78,59
+Safflower,World,2013,73,42,83,64
+Saffron,World,2010,158,139,167,157
+Saffron,World,2011,161,140,166,158
+Saffron,World,2012,160,144,167,155
+Saffron,World,2013,160,143,167,159
+Sago palm,World,2010,62,83,107,87
+Sago palm,World,2011,64,82,109,86
+Sago palm,World,2012,64,88,118,90
+Sago palm,World,2013,65,87,122,90
+Salsify,World,2010,176,176,176,176
+Salsify,World,2011,175,175,175,175
+Salsify,World,2012,175,175,175,175
+Salsify,World,2013,175,175,175,175
+Sapodilla,World,2010,176,176,176,176
+Sapodilla,World,2011,175,175,175,175
+Sapodilla,World,2012,175,175,175,175
+Sapodilla,World,2013,175,175,175,175
+Savory,World,2010,176,176,176,176
+Savory,World,2011,175,175,175,175
+Savory,World,2012,175,175,175,175
+Savory,World,2013,175,175,175,175
+Service tree,World,2010,176,176,176,176
+Service tree,World,2011,175,175,175,175
+Service tree,World,2012,175,175,175,175
+Service tree,World,2013,175,175,175,175
+Sesame,World,2010,129,108,132,99
+Sesame,World,2011,138,117,138,100
+Sesame,World,2012,135,112,136,100
+Sesame,World,2013,139,112,139,102
+Shala tree,World,2010,61,44,70,59
+Shala tree,World,2011,65,43,75,59
+Shala tree,World,2012,66,43,78,59
+Shala tree,World,2013,73,42,83,64
+Sisal,World,2010,NA,NA,NA,NA
+Sisal,World,2011,NA,NA,NA,NA
+Sisal,World,2012,NA,NA,NA,NA
+Sisal,World,2013,NA,NA,NA,NA
+Snake plant,World,2010,NA,NA,NA,NA
+Snake plant,World,2011,NA,NA,NA,NA
+Snake plant,World,2012,NA,NA,NA,NA
+Snake plant,World,2013,NA,NA,NA,NA
+Sorghum,World,2010,52,52,55,53
+Sorghum,World,2011,52,52,55,53
+Sorghum,World,2012,51,52,55,52
+Sorghum,World,2013,50,52,54,52
+Sorrel,World,2010,176,176,176,176
+Sorrel,World,2011,175,175,175,175
+Sorrel,World,2012,175,175,175,175
+Sorrel,World,2013,175,175,175,175
+Soursop,World,2010,176,176,176,176
+Soursop,World,2011,175,175,175,175
+Soursop,World,2012,175,175,175,175
+Soursop,World,2013,175,175,175,175
+Soybeans,World,2010,168,168,172,118
+Soybeans,World,2011,168,164,171,121
+Soybeans,World,2012,167,165,171,121
+Soybeans,World,2013,168,164,171,123
+Spinach,World,2010,176,176,176,176
+Spinach,World,2011,175,175,175,175
+Spinach,World,2012,175,175,175,175
+Spinach,World,2013,175,175,175,175
+Strawberries,World,2010,176,176,176,176
+Strawberries,World,2011,175,175,175,175
+Strawberries,World,2012,175,175,175,175
+Strawberries,World,2013,175,175,175,175
+Strawberry tree,World,2010,176,176,176,176
+Strawberry tree,World,2011,175,175,175,175
+Strawberry tree,World,2012,175,175,175,175
+Strawberry tree,World,2013,175,175,175,175
+Sugar apple,World,2010,176,176,176,176
+Sugar apple,World,2011,175,175,175,175
+Sugar apple,World,2012,175,175,175,175
+Sugar apple,World,2013,175,175,175,175
+Sugar beets,World,2010,NA,2,4,2
+Sugar beets,World,2011,NA,2,3,2
+Sugar beets,World,2012,NA,2,4,2
+Sugar beets,World,2013,NA,2,4,2
+Sugarcane,World,2010,19,28,35,25
+Sugarcane,World,2011,20,30,37,26
+Sugarcane,World,2012,19,30,38,27
+Sugarcane,World,2013,20,30,40,26
+Sunflowers,World,2010,153,137,155,57
+Sunflowers,World,2011,156,139,156,58
+Sunflowers,World,2012,157,141,158,59
+Sunflowers,World,2013,154,140,156,58
+Sunn hemp,World,2010,NA,NA,NA,NA
+Sunn hemp,World,2011,NA,NA,NA,NA
+Sunn hemp,World,2012,NA,NA,NA,NA
+Sunn hemp,World,2013,NA,NA,NA,NA
+Sweetpotatoes,World,2010,74,100,133,100
+Sweetpotatoes,World,2011,71,101,132,100
+Sweetpotatoes,World,2012,73,97,135,95
+Sweetpotatoes,World,2013,74,101,134,98
+Sword bean,World,2010,140,143,164,158
+Sword bean,World,2011,138,144,163,157
+Sword bean,World,2012,140,145,163,158
+Sword bean,World,2013,142,147,164,159
+Tallowtree,World,2010,NA,NA,NA,NA
+Tallowtree,World,2011,NA,NA,NA,NA
+Tallowtree,World,2012,NA,NA,NA,NA
+Tallowtree,World,2013,NA,NA,NA,NA
+Tamarind,World,2010,176,176,176,176
+Tamarind,World,2011,175,175,175,175
+Tamarind,World,2012,175,175,175,175
+Tamarind,World,2013,175,175,175,175
+Taro,World,2010,62,83,107,87
+Taro,World,2011,64,82,109,86
+Taro,World,2012,64,88,118,90
+Taro,World,2013,65,87,122,90
+Tarragon,World,2010,176,176,176,176
+Tarragon,World,2011,175,175,175,175
+Tarragon,World,2012,175,175,175,175
+Tarragon,World,2013,175,175,175,175
+Tea,World,2010,NA,70,172,160
+Tea,World,2011,NA,68,171,157
+Tea,World,2012,NA,69,171,162
+Tea,World,2013,NA,73,173,160
+Teff,World,2010,52,52,56,55
+Teff,World,2011,52,53,56,55
+Teff,World,2012,53,53,57,54
+Teff,World,2013,53,53,57,54
+Tepary bean,World,2010,135,145,152,151
+Tepary bean,World,2011,134,142,151,149
+Tepary bean,World,2012,133,142,152,149
+Tepary bean,World,2013,134,144,151,149
+Thyme,World,2010,158,139,167,157
+Thyme,World,2011,161,140,166,158
+Thyme,World,2012,160,144,167,155
+Thyme,World,2013,160,143,167,159
+Tobacco,World,2010,NA,NA,NA,NA
+Tobacco,World,2011,NA,NA,NA,NA
+Tobacco,World,2012,NA,NA,NA,NA
+Tobacco,World,2013,NA,NA,NA,NA
+Tomatoes,World,2011,155,160,171,165
+Tomatoes,World,2010,155,159,171,163
+Tomatoes,World,2012,154,159,171,164
+Tomatoes,World,2013,155,159,171,163
+Triticale,World,2010,91,121,152,133
+Triticale,World,2011,91,122,151,134
+Triticale,World,2012,100,118,153,135
+Triticale,World,2013,103,123,152,136
+Tung nuts,World,2010,61,44,70,59
+Tung nuts,World,2011,65,43,75,59
+Tung nuts,World,2012,66,43,78,59
+Tung nuts,World,2013,73,42,83,64
+Turmeric,World,2010,158,139,167,157
+Turmeric,World,2011,161,140,166,158
+Turmeric,World,2012,160,144,167,155
+Turmeric,World,2013,160,143,167,159
+Turnips,World,2010,176,176,176,176
+Turnips,World,2011,175,175,175,175
+Turnips,World,2012,175,175,175,175
+Turnips,World,2013,175,175,175,175
+Ulluco,World,2010,62,83,107,87
+Ulluco,World,2011,64,82,109,86
+Ulluco,World,2012,64,88,118,90
+Ulluco,World,2013,65,87,122,90
+Vanilla,World,2010,158,139,167,157
+Vanilla,World,2011,161,140,166,158
+Vanilla,World,2012,160,144,167,155
+Vanilla,World,2013,160,143,167,159
+Velvet bean,World,2010,140,143,164,158
+Velvet bean,World,2011,138,144,163,157
+Velvet bean,World,2012,140,145,163,158
+Velvet bean,World,2013,142,147,164,159
+Velvet leaf,World,2010,NA,NA,NA,NA
+Velvet leaf,World,2011,NA,NA,NA,NA
+Velvet leaf,World,2012,NA,NA,NA,NA
+Velvet leaf,World,2013,NA,NA,NA,NA
+Vetch,World,2010,140,143,164,158
+Vetch,World,2011,138,144,163,157
+Vetch,World,2012,140,145,163,158
+Vetch,World,2013,142,147,164,159
+Walnuts,World,2010,166,152,168,159
+Walnuts,World,2011,167,153,168,157
+Walnuts,World,2012,167,155,170,160
+Walnuts,World,2013,167,157,170,161
+Watercress,World,2010,176,176,176,176
+Watercress,World,2011,175,175,175,175
+Watercress,World,2012,175,175,175,175
+Watercress,World,2013,175,175,175,175
+Watermelons,World,2010,176,176,176,176
+Watermelons,World,2011,175,175,175,175
+Watermelons,World,2012,175,175,175,175
+Watermelons,World,2013,175,175,175,175
+Wheat,World,2010,176,176,176,176
+Wheat,World,2011,175,175,175,175
+Wheat,World,2012,175,175,175,175
+Wheat,World,2013,175,175,175,175
+Wildrice,World,2010,91,121,152,133
+Wildrice,World,2011,91,122,151,134
+Wildrice,World,2012,100,118,153,135
+Wildrice,World,2013,103,123,152,136
+Winged bean,World,2010,140,143,164,158
+Winged bean,World,2011,138,144,163,157
+Winged bean,World,2012,140,145,163,158
+Winged bean,World,2013,142,147,164,159
+Yams,World,2010,35,44,53,47
+Yams,World,2011,35,44,55,47
+Yams,World,2012,35,44,65,48
+Yams,World,2013,35,47,70,50
+"Yautia, cocoyam",World,2010,62,83,107,87
+"Yautia, cocoyam",World,2011,64,82,109,86
+"Yautia, cocoyam",World,2012,64,88,118,90
+"Yautia, cocoyam",World,2013,65,87,122,90
+Year bean,World,2010,135,145,152,151
+Year bean,World,2011,134,142,151,149
+Year bean,World,2012,133,142,152,149
+Year bean,World,2013,134,144,151,149
+Zucchini,World,2010,176,176,176,176
+Zucchini,World,2011,175,175,175,175
+Zucchini,World,2012,175,175,175,175
+Zucchini,World,2013,175,175,175,175

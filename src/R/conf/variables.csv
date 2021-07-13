@@ -1,0 +1,21 @@
+group,datasource,vars,units,useable
+production,FAOSTAT,c_area_harvested,ha,1
+production,FAOSTAT,c_feed,tonnes,0
+production,FAOSTAT,c_production,tonnes,1
+production,FAOSTAT,c_yield,hg/ha,0
+production,FAOSTAT,vap_gross_production_value_2004_2006_i,1000 Int. $,0
+production,FAOSTAT,vap_gross_production_value_2004_2006_slc,SLC,0
+production,FAOSTAT,vap_gross_production_value_2014_2006_us,USD,0
+production,FAOSTAT,vap_gross_production_value_slc,SLC,0
+production,FAOSTAT,vap_gross_production_value_us,USD,1
+production,FAOSTAT,vap_net_production_value_2004_2006_i,1000 Int. $,0
+trade,FAOSTAT,clp_export_quantity,tonnes,1
+trade,FAOSTAT,clp_export_value,1000 US$,1
+trade,FAOSTAT,clp_import_quantity,tonnes,1
+trade,FAOSTAT,clp_import_value,1000 US$,1
+food_supply,FAOSTAT,fs_fat_supply_quantity,g/capita/day,1
+food_supply,FAOSTAT,fs_food_supply_kcal,kcal/capita/day,1
+food_supply,FAOSTAT,fs_food_supply_quantity_g,g/capita/day,1
+food_supply,FAOSTAT,fs_food_supply_quantity_kg,kg,0
+food_supply,FAOSTAT,fs_food_supply_quantity_t,tonnes,0
+food_supply,FAOSTAT,fs_protein_supply_quantity,g/capita/day,1

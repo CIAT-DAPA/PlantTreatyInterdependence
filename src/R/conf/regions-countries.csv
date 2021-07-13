@@ -1,0 +1,251 @@
+country,region_country
+Afghanistan,WAS
+Albania,EEU-S
+Algeria,SEM
+American Samoa,PAC-T
+Angola,CAF
+Angola,SAF
+Antigua and Barbuda,CAR
+Argentina,SAM-Tem
+Armenia,CAS
+Armenia,EEU-S
+Aruba,CAR
+Australia,PAC-ANZ
+Austria,WEU-N
+Azerbaijan,CAS
+Bahamas,CAR
+Bahrain,WAS
+Bangladesh,SAS
+Barbados,CAR
+Belarus,EEU-N
+Belgium,WEU-N
+Belgium-Luxembourg,WEU-N
+Belize,CAM
+Benin,WAF
+Bermuda,CAR
+Bhutan,SAS
+Bolivia (Plurinational State of),SAM-A
+Bolivia (Plurinational State of),SAM-Tro
+Bosnia and Herzegovina,EEU-S
+Botswana,SAF
+Brazil,SAM-Tro
+British Virgin Islands,CAR
+Brunei Darussalam,SEA
+Bulgaria,EEU-S
+Burkina Faso,WAF
+Burundi,EAF
+Cabo Verde,WAF
+Cambodia,SEA
+Cameroon,CAF
+Canada,NAM
+Cayman Islands,CAR
+Central African Republic,CAF
+Chad,WAF
+Chile,SAM-A
+Chile,SAM-Tem
+China,EAS
+"China, Hong Kong SAR",EAS
+"China, Macao SAR",EAS
+"China, mainland",EAS
+"China, Taiwan Province of",EAS
+Colombia,SAM-A
+Colombia,SAM-Tro
+Comoros,IOI
+Congo,CAF
+Cook Islands,PAC-T
+Costa Rica,CAM
+Côte d'Ivoire,WAF
+Croatia,EEU-S
+Cuba,CAR
+Cyprus,SEM
+Czechia,WEU-N
+Czechoslovakia,EEU-N
+Czechoslovakia,WEU-N
+Democratic People's Republic of Korea,EAS
+Democratic Republic of the Congo,CAF
+Denmark,WEU-N
+Djibouti,EAF
+Dominica,CAR
+Dominican Republic,CAR
+Ecuador,SAM-A
+Ecuador,SAM-Tro
+Egypt,SEM
+El Salvador,CAM
+Equatorial Guinea,CAF
+Eritrea,EAF
+Estonia,EEU-N
+Eswatini,SAF
+Ethiopia,EAF
+Ethiopia PDR,EAF
+Falkland Islands (Malvinas),SAM-Tem
+Faroe Islands,WEU-N
+Fiji,PAC-T
+Finland,WEU-N
+France,WEU-N
+France,WEU-S
+French Guiana,SAM-Tro
+French Polynesia,PAC-T
+Gabon,CAF
+Gambia,WAF
+Georgia,CAS
+Georgia,EEU-S
+Germany,WEU-N
+Ghana,WAF
+Greece,EEU-S
+Greenland,NAM
+Grenada,CAR
+Guadeloupe,CAR
+Guam,PAC-T
+Guatemala,CAM
+Guinea,WAF
+Guinea-Bissau,WAF
+Guyana,SAM-Tro
+Haiti,CAR
+Honduras,CAM
+Hungary,EEU-N
+Iceland,WEU-N
+India,SAS
+Indonesia,SEA
+Iran (Islamic Republic of),WAS
+Iraq,WAS
+Ireland,WEU-N
+Israel,SEM
+Israel,WAS
+Italy,WEU-S
+Jamaica,CAR
+Japan,EAS
+Jordan,SEM
+Jordan,WAS
+Kazakhstan,CAS
+Kenya,EAF
+Kiribati,PAC-T
+Kuwait,WAS
+Kyrgyzstan,CAS
+Lao People's Democratic Republic,SEA
+Latvia,EEU-N
+Lebanon,SEM
+Lebanon,WAS
+Lesotho,SAF
+Liberia,WAF
+Libya,SEM
+Liechtenstein,WEU-N
+Lithuania,EEU-N
+Luxembourg,WEU-N
+Madagascar,IOI
+Malawi,SAF
+Malaysia,SEA
+Maldives,SAS
+Mali,WAF
+Malta,SEM
+Marshall Islands,PAC-T
+Martinique,CAR
+Mauritania,WAF
+Mauritius,IOI
+Mexico,CAM
+Micronesia (Federated States of),PAC-T
+Mongolia,EAS
+Montenegro,EEU-S
+Montserrat,CAR
+Morocco,SEM
+Mozambique,SAF
+Myanmar,SEA
+Namibia,SAF
+Nauru,PAC-T
+Nepal,SAS
+Netherlands,WEU-N
+Netherlands Antilles (former),CAR
+New Caledonia,PAC-T
+New Zealand,PAC-ANZ
+Nicaragua,CAM
+Niger,WAF
+Nigeria,WAF
+Niue,PAC-T
+Norfolk Island,PAC-T
+Norway,WEU-N
+Occupied Palestinian Territory,SEM
+Occupied Palestinian Territory,WAS
+Oman,WAS
+Pacific Islands Trust Territory,PAC-T
+Pakistan,WAS
+Panama,CAM
+Papua New Guinea,PAC-T
+Papua New Guinea,SEA
+Paraguay,SAM-Tro
+Peru,SAM-A
+Peru,SAM-Tro
+Philippines,SEA
+Poland,EEU-N
+Portugal,WEU-S
+Puerto Rico,CAR
+Qatar,WAS
+Republic of Korea,EAS
+Republic of Moldova,EEU-N
+Réunion,IOI
+Romania,EEU-N
+Russian Federation,CAS
+Russian Federation,EEU-N
+Rwanda,EAF
+"Saint Helena, Ascension and Tristan da Cunha",SAF
+Saint Kitts and Nevis,CAR
+Saint Lucia,CAR
+Saint Pierre and Miquelon,NAM
+Saint Vincent and the Grenadines,CAR
+Samoa,PAC-T
+Sao Tome and Principe,CAF
+Saudi Arabia,WAS
+Senegal,WAF
+Serbia,EEU-S
+Serbia and Montenegro,EEU-S
+Seychelles,IOI
+Sierra Leone,WAF
+Singapore,SEA
+Slovakia,EEU-N
+Slovenia,EEU-S
+Solomon Islands,PAC-T
+Somalia,EAF
+South Africa,SAF
+South Sudan,EAF
+Spain,WEU-S
+Sri Lanka,SAS
+Sudan,EAF
+Sudan (former),EAF
+Suriname,SAM-Tro
+Swaziland,SAF
+Sweden,WEU-N
+Switzerland,WEU-N
+Syrian Arab Republic,SEM
+Syrian Arab Republic,WAS
+Tajikistan,CAS
+Thailand,SEA
+The former Yugoslav Republic of Macedonia,EEU-S
+Timor-Leste,SEA
+Togo,WAF
+Tokelau,PAC-T
+Tonga,PAC-T
+Trinidad and Tobago,CAR
+Tunisia,SEM
+Turkey,EEU-S
+Turkey,SEM
+Turkey,WAS
+Turkmenistan,CAS
+Tuvalu,PAC-T
+Uganda,EAF
+Ukraine,EEU-N
+United Arab Emirates,WAS
+United Kingdom,WEU-N
+United Republic of Tanzania,SAF
+United States of America,NAM
+United States Virgin Islands,CAR
+Uruguay,SAM-Tem
+USSR,CAS
+USSR,EEU-N
+Uzbekistan,CAS
+Vanuatu,PAC-T
+Venezuela (Bolivarian Republic of),SAM-Tro
+Viet Nam,SEA
+Wallis and Futuna Islands,PAC-T
+Western Sahara,WAF
+Yemen,WAS
+Yugoslav SFR,EEU-S
+Zambia,SAF
+Zimbabwe,SAF
